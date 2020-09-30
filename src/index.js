@@ -4,11 +4,14 @@ const metadata = require("eth-contract-metadata");
 const { EthereumAddress } = require("wallet.ts");
 const Mainnet = require("./erc20/mainnet.json");
 const Rinkeby = require("./erc20/rinkeby.json");
+const package = require("../package.json");
 
 function generateMaskbookTokenList() {
   const uniqueSet = new Set();
   return {
     name: "Maskbook",
+    logoURI:
+    "https://raw.githubusercontent.com/DimensionDev/Maskbook-Website/master/img/MB--CircleCanvas--WhiteOverBlue.svg",
     keywords: [
       "browser extension",
       "web3",
@@ -25,10 +28,11 @@ function generateMaskbookTokenList() {
     ],
     timestamp: new Date().toISOString(),
     version: {
-      major: 1,
-      minor: 0,
-      patch: 0,
+      major: Number.parseInt(package.version.split(".")[0]),
+      minor: Number.parseInt(package.version.split(".")[1]),
+      patch: Number.parseInt(package.version.split(".")[2]),
     },
+    
     tokens: [
       ...Mainnet.map((x) => ({
         chainId: 1,
@@ -58,14 +62,18 @@ function generateMaskbookTokenList() {
           decimals: metadata[key].decimals,
           name: metadata[key].name,
         })),
-    ].filter((x) => {
-      const key = x.address.toLowerCase();
-      if (uniqueSet.has(key)) return false;
-      uniqueSet.add(key);
-      return true;
-    }),
-    logoURI:
-      "https://raw.githubusercontent.com/DimensionDev/Maskbook-Website/master/img/MB--CircleCanvas--WhiteOverBlue.svg",
+    ]
+      .sort((a, z) => {
+        if (a.name > z.name) return 1;
+        if (a.name < z.name) return -1;
+        return 0;
+      })
+      .filter((x) => {
+        const key = x.address.toLowerCase();
+        if (uniqueSet.has(key)) return false;
+        uniqueSet.add(key);
+        return true;
+      }),
   };
 }
 
