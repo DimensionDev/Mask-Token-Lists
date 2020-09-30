@@ -30,19 +30,15 @@ function generateMaskbookTokenList() {
       patch: 0,
     },
     tokens: [
-      ...[...Mainnet.built_in_tokens, ...Mainnet.predefined_tokens].map(
-        (x) => ({
-          chainId: 1,
-          ...x,
-        })
-      ),
+      ...Mainnet.map((x) => ({
+        chainId: 1,
+        ...x,
+      })),
 
-      ...[...Rinkeby.built_in_tokens, ...Rinkeby.predefined_tokens].map(
-        (x) => ({
-          chainId: 4,
-          ...x,
-        })
-      ),
+      ...Rinkeby.map((x) => ({
+        chainId: 4,
+        ...x,
+      })),
 
       ...Object.keys(metadata)
         .filter((key) => {
