@@ -1,6 +1,12 @@
 [
   {
     "decimals": 18,
+    "symbol": "N0031",
+    "name": "NToken0031",
+    "address": "0x075190c6130ea0a3a7e40802f1d77f4ea8f38fe2"
+  },
+  {
+    "decimals": 18,
     "symbol": "NEST",
     "name": "NEST",
     "address": "0x04abeda201850ac0124161f037efd70c74ddc74c"
