@@ -11,7 +11,7 @@ function generateMaskbookTokenList() {
   return {
     name: "Maskbook",
     logoURI:
-    "https://raw.githubusercontent.com/DimensionDev/Maskbook-Website/master/img/MB--CircleCanvas--WhiteOverBlue.svg",
+      "https://raw.githubusercontent.com/DimensionDev/Maskbook-Website/master/img/MB--CircleCanvas--WhiteOverBlue.svg",
     keywords: [
       "browser extension",
       "web3",
@@ -32,7 +32,7 @@ function generateMaskbookTokenList() {
       minor: Number.parseInt(package.version.split(".")[1]),
       patch: Number.parseInt(package.version.split(".")[2]),
     },
-    
+
     tokens: [
       ...Mainnet.map((x) => ({
         chainId: 1,
@@ -57,12 +57,16 @@ function generateMaskbookTokenList() {
         })
         .map((key) => ({
           chainId: 1,
-          address: EthereumAddress.checksumAddress(key),
+          address: key,
           symbol: metadata[key].symbol,
           decimals: metadata[key].decimals,
           name: metadata[key].name,
         })),
     ]
+      .map((x) => ({
+        ...x,
+        address: EthereumAddress.checksumAddress(x.address),
+      }))
       .sort((a, z) => {
         if (a.name > z.name) return 1;
         if (a.name < z.name) return -1;
