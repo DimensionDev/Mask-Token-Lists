@@ -1,0 +1,14 @@
+[
+  {
+    "decimals": 18,
+    "symbol": "MSKA",
+    "name": "Mask Token A",
+    "address": "0xe54bf69054da160c597f8b5177924b9e4b81e930"
+  },
+  {
+    "decimals": 18,
+    "symbol": "MSKB",
+    "name": "Mask Token B",
+    "address": "0xe379c7a6ba07575a5a49d8f8ebfd04921b86917d"
+  }
+]

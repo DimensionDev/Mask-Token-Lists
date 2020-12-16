@@ -3,6 +3,7 @@ const Ajv = require("ajv");
 const metadata = require("eth-contract-metadata");
 const { EthereumAddress } = require("wallet.ts");
 const Mainnet = require("./erc20/mainnet.json");
+const Ropsten = require("./erc20/ropsten.json");
 const Rinkeby = require("./erc20/rinkeby.json");
 const package = require("../package.json");
 
@@ -36,6 +37,11 @@ function generateMaskbookTokenList() {
     tokens: [
       ...Mainnet.map((x) => ({
         chainId: 1,
+        ...x,
+      })),
+
+      ...Ropsten.map((x) => ({
+        chainId: 3,
         ...x,
       })),
 
