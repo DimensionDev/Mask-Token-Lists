@@ -16,5 +16,17 @@
     "symbol": "MSKC",
     "name": "Mask Token C",
     "address": "0xb1465b954f893D921566D8BB4092B6f03FC8C313"
+  },
+  {
+    "decimals": 6,
+    "symbol": "MSKD",
+    "name": "Mask Token D",
+    "address": "0x49a6d6fe38405e21c4402cceacd23636abe301bf"
+  },
+  {
+    "decimals": 24,
+    "symbol": "MSKE",
+    "name": "Mask Token E",
+    "address": "0xe8f4ddb8c8b655b4e161d3480522d1d576561a4d"
   }
 ]

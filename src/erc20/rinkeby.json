@@ -60,6 +60,24 @@
     "address": "0xbE88c0E7029929f50c81690275395Da1d05745B0"
   },
   {
+    "decimals": 18,
+    "symbol": "MSKC",
+    "name": "MASKBOOK C",
+    "address": "0xbE88c0E7029929f50c81690275395Da1d05745B0"
+  },
+  {
+    "decimals": 6,
+    "symbol": "MSKD",
+    "name": "Mask Token D",
+    "address": "0x57b9bd626507421d82c7542e2877d72fe7815afd"
+  },
+  {
+    "decimals": 24,
+    "symbol": "MSKE",
+    "name": "Mask Token E",
+    "address": "0xb46e44e06b89798af11b8fe456b4796dc9026ce0"
+  },
+  {
     "decimals": 6,
     "symbol": "USDT",
     "name": "Tether USD",
