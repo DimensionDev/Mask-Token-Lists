@@ -8,6 +8,7 @@ The ERC20 token list for Maskbook.
 ## Versions
 
 - [Latest](https://raw.githubusercontent.com/DimensionDev/Maskbook-Token-List/gh-pages/maskbook.json)
+- [v0.0.7](https://raw.githubusercontent.com/DimensionDev/Maskbook-Token-List/gh-pages/maskbook_v_0_0_7.json)
 - [v0.0.6](https://raw.githubusercontent.com/DimensionDev/Maskbook-Token-List/gh-pages/maskbook_v_0_0_6.json)
 - [v0.0.5](https://raw.githubusercontent.com/DimensionDev/Maskbook-Token-List/gh-pages/maskbook_v_0_0_5.json)
 - [v0.0.4](https://raw.githubusercontent.com/DimensionDev/Maskbook-Token-List/gh-pages/maskbook_v_0_0_4.json)
