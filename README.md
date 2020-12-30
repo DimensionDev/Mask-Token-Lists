@@ -3,7 +3,7 @@
 The ERC20 token list for Maskbook.
 
 - List Name: Maskbook
-- Link to the official homepage of the list manager: https://maskbook.com
+- Link to the official homepage of the list manager: https://mask.io
 
 ## Versions
 
