@@ -7,10 +7,10 @@ const Ropsten = require("./erc20/ropsten.json");
 const Rinkeby = require("./erc20/rinkeby.json");
 const package = require("../package.json");
 
-function generateMaskbookTokenList() {
+function generateMaskTokenList() {
   const uniqueSet = new Set();
   return {
-    name: "Maskbook",
+    name: "Mask",
     logoURI:
       "https://raw.githubusercontent.com/DimensionDev/Maskbook-Website/master/img/MB--CircleCanvas--WhiteOverBlue.svg",
     keywords: [
@@ -87,12 +87,12 @@ function generateMaskbookTokenList() {
   };
 }
 
-const MaskbookTokenList = generateMaskbookTokenList();
+const MaskTokenList = generateMaskTokenList();
 
 const ajv = new Ajv();
 const validate = ajv.compile(schema);
-if (validate(MaskbookTokenList)) {
-  process.stdout.write(JSON.stringify(MaskbookTokenList));
+if (validate(MaskTokenList)) {
+  process.stdout.write(JSON.stringify(MaskTokenList));
 } else {
   console.error(validate.errors);
   process.exit(1);

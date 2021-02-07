@@ -1,8 +1,8 @@
 {
-  "name": "Maskbook-Token-List",
+  "name": "mask-token-list",
   "version": "0.0.8",
   "main": "index.js",
-  "repository": "https://github.com/DimensionDev/Maskbook-Token-List.git",
+  "repository": "https://github.com/DimensionDev/Mask-Token-List.git",
   "author": "guanbinrui <guanbinrui@dimension.im>",
   "license": "MIT",
   "scripts": {
