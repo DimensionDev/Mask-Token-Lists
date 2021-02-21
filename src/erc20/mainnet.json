@@ -97,6 +97,12 @@
   },
   {
     "decimals": 18,
+    "symbol": "MASK",
+    "name": "Mask Network",
+    "address": "0x69af81e73a73b40adf4f3d4223cd9b1ece623074"
+  },
+  {
+    "decimals": 18,
     "symbol": "MKR",
     "name": "Maker",
     "address": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2"
