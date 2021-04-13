@@ -1,0 +1,4 @@
+# add following config to .git/config to enable pretty diff for minified json
+# [diff "token-json"]
+#   textconv = prettier --parser=json
+dist/*.json diff=token-json
