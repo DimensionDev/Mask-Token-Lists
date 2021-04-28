@@ -5,6 +5,7 @@ const { EthereumAddress } = require("wallet.ts");
 const Mainnet = require("../src/erc20/mainnet.json");
 const Ropsten = require("../src/erc20/ropsten.json");
 const Rinkeby = require("../src/erc20/rinkeby.json");
+const Bnbt = require("../src/erc20/bnbt.json");
 const { addChainId, generateTokenList } = require("./shared");
 
 const MaskTokenList = generateTokenList(
@@ -12,6 +13,7 @@ const MaskTokenList = generateTokenList(
     ...addChainId(Mainnet, 1),
     ...addChainId(Ropsten, 3),
     ...addChainId(Rinkeby, 4),
+    ...addChainId(Bnbt, 97),
     ...Object.keys(metadata)
       .filter((key) => {
         const record = metadata[key];
