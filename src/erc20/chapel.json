@@ -28,5 +28,11 @@
     "symbol": "MSKE",
     "name": "Mask Token E",
     "address": "0x30b56ab5a13d505060a13e27010b551a49b4d7e7"
+  },
+  {
+    "decimals": 18,
+    "symbol": "USDC",
+    "name": "USDC",
+    "address": "0x9780881bf45b83ee028c4c1de7e0c168df8e9eef"
   }
 ]
