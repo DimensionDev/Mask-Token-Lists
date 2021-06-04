@@ -1,0 +1,66 @@
+name: Sync pancake top 100 token list
+
+on:
+  schedule:
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+
+jobs:
+  sync-pancake-top100
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use node_modules cache
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: |
+            node_modules
+          key: yarn-${{ hashFiles('package.json') }}-${{ hashFiles('yarn.lock') }}
+
+      - name: Yarn install
+        run: yarn install
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+
+      - name: Sync token list
+        id: sync-token-list
+        run: |
+          node scripts/fetch-pancake-top100.js
+
+      - name: Report Error
+        id: report
+        if: failure()
+        run: |
+          echo "GIT_DIFF<<EOF" >> $GITHUB_ENV
+          cat codegen-report.txt >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+
+      - name: Git Diff
+        id: git-diff
+        if: success()
+        run: |
+          rm codegen-report.txt
+          echo "GIT_DIFF<<EOF" >> $GITHUB_ENV
+          git diff >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: ":chore: sync token list from Pancakeswap"
+          committer: Maskbook maintainer bot <bot@mask.io>
+          author: Maskbook maintainer bot <bot@mask.io>
+          branch: auto-sync-token-list
+          title: ":chore: sync token list from Pancakeswap"
+          body: "## (🤖 I am a robot) updates or error report \n\n```diff\n${{ env.GIT_DIFF }}\n```"
+          assignees: |
+            guanbinrui
+            unclebill
+          draft: false
+
+      - name: Check output
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
