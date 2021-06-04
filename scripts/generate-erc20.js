@@ -1,4 +1,5 @@
 const { schema } = require("@uniswap/token-lists");
+const quickswapTokenlist = require("quickswap-default-token-list");
 const Ajv = require("ajv");
 const metadata = require("eth-contract-metadata");
 const { EthereumAddress } = require("wallet.ts");
@@ -9,7 +10,17 @@ const Bsc = require("../src/erc20/bsc.json");
 const Chapel = require("../src/erc20/chapel.json");
 const Matic = require("../src/erc20/matic.json");
 const Mumbai = require("../src/erc20/mumbai.json");
+const PancakeTop100 = require("../src/erc20/pancake-top100.json");
 const { addChainId, generateTokenList } = require("./shared");
+
+const quickswapTokens = quickswapTokenlist.tokens.map(
+  ({ name, address, symbol, decimals }) => ({
+    name,
+    address,
+    symbol,
+    decimals,
+  })
+);
 
 const MaskTokenList = generateTokenList(
   [
@@ -17,8 +28,10 @@ const MaskTokenList = generateTokenList(
     ...addChainId(Ropsten, 3),
     ...addChainId(Rinkeby, 4),
     ...addChainId(Bsc, 56),
+    ...addChainId(PancakeTop100, 56),
     ...addChainId(Chapel, 97),
     ...addChainId(Matic, 137),
+    ...addChainId(quickswapTokens, 137),
     ...addChainId(Mumbai, 80001),
     ...Object.keys(metadata)
       .filter((key) => {
