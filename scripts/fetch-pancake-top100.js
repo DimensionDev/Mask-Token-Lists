@@ -9,11 +9,12 @@ async function fetchTop100() {
   const res = await fetch(url);
   const data = await res.json();
 
-  const tokens = data.tokens.map(({ name, symbol, address, decimals }) => ({
+  const tokens = data.tokens.map(({ name, symbol, address, decimals, logoURI }) => ({
     name,
     symbol,
     address,
     decimals,
+    logoURI
   }));
 
   console.log("tokens:");

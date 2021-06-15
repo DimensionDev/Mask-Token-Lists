@@ -14,11 +14,12 @@ const PancakeTop100 = require("../src/erc20/pancake-top100.json");
 const { addChainId, generateTokenList } = require("./shared");
 
 const quickswapTokens = quickswapTokenlist.tokens.map(
-  ({ name, address, symbol, decimals }) => ({
+  ({ name, address, symbol, decimals, logoURI }) => ({
     name,
     address,
     symbol,
     decimals,
+    logoURI
   })
 );
 
