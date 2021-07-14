@@ -1,6 +1,6 @@
 {
   "name": "mask-token-list",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "main": "index.js",
   "repository": "https://github.com/DimensionDev/Mask-Token-List.git",
   "author": "guanbinrui <guanbinrui@dimension.im>",
@@ -10,9 +10,9 @@
     "publish": "&& gh-pages -d ./dist"
   },
   "dependencies": {
+    "@metamask/contract-metadata": "^1.27.0",
     "@uniswap/token-lists": "^1.0.0-beta.24",
     "ajv": "^6.12.5",
-    "eth-contract-metadata": "^1.15.0",
     "quickswap-default-token-list": "^1.0.63",
     "wallet.ts": "^1.0.1"
   },
