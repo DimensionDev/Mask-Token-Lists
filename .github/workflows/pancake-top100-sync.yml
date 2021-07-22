@@ -6,10 +6,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync-pancake-top100
+  sync-pancake-top100:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: master
 
       - name: Use node_modules cache
         uses: actions/cache@v2
@@ -28,19 +30,10 @@ jobs:
         run: |
           node scripts/fetch-pancake-top100.js
 
-      - name: Report Error
-        id: report
-        if: failure()
-        run: |
-          echo "GIT_DIFF<<EOF" >> $GITHUB_ENV
-          cat codegen-report.txt >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-
       - name: Git Diff
         id: git-diff
         if: success()
         run: |
-          rm codegen-report.txt
           echo "GIT_DIFF<<EOF" >> $GITHUB_ENV
           git diff >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
