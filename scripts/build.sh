@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 VERSION=$(node -p -e "require('./package.json').version")
-for i in {1,3,4,56,97,137,80001}; do
+for i in {1,3,4,56,97,137,42161,80001}; do
   CHAIN[$i]=dist/v$VERSION/$i
 done
 

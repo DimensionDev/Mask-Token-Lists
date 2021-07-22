@@ -1,22 +1,24 @@
-const {schema} = require("@uniswap/token-lists");
+const { schema } = require("@uniswap/token-lists");
 const quickswapTokenlist = require("quickswap-default-token-list");
 const Ajv = require("ajv");
 const metadata = require("@metamask/contract-metadata");
-const {EthereumAddress} = require("wallet.ts");
+const { EthereumAddress } = require("wallet.ts");
 const Mainnet = require("../src/erc20/mainnet.json");
 const Ropsten = require("../src/erc20/ropsten.json");
 const Rinkeby = require("../src/erc20/rinkeby.json");
 const Bsc = require("../src/erc20/bsc.json");
 const Chapel = require("../src/erc20/chapel.json");
 const Matic = require("../src/erc20/matic.json");
+const Arbiturm = require("../src/erc20/arbiturm.json");
 const Mumbai = require("../src/erc20/mumbai.json");
 const PancakeTop100 = require("../src/erc20/pancake-top100.json");
-const {fetchDebankLogoURI} = require("./fetch-debank-logo-uri");
-const {addChainId, generateTokenList} = require("./shared");
+const { fetchDebankLogoURI } = require("./fetch-debank-logo-uri");
+const { addChainId, generateTokenList } = require("./shared");
 
-const getMatamaskLogoURI = (url) => `https://raw.githubusercontent.com/MetaMask/contract-metadata/master/images/${url}`
+const getMatamaskLogoURI = (url) =>
+  `https://raw.githubusercontent.com/MetaMask/contract-metadata/master/images/${url}`;
 
-const chainId = parseInt(process.argv.slice(2)[0])
+const chainId = parseInt(process.argv.slice(2)[0]);
 
 const metaMaskToken = Object.keys(metadata)
   .filter((key) => {
@@ -36,15 +38,15 @@ const metaMaskToken = Object.keys(metadata)
     decimals: metadata[key].decimals,
     name: metadata[key].name,
     logo: metadata[key].logo,
-  }))
+  }));
 
 const quickswapTokens = quickswapTokenlist.tokens.map(
-  ({name, address, symbol, decimals, logoURI}) => ({
+  ({ name, address, symbol, decimals, logoURI }) => ({
     name,
     address,
     symbol,
     decimals,
-    logoURI
+    logoURI,
   })
 );
 
@@ -55,29 +57,44 @@ const chainIdToTokensMapping = {
   56: [Bsc, PancakeTop100],
   97: [Chapel],
   137: [Matic, quickswapTokens],
+  42161: [Arbiturm],
   80001: [Mumbai],
-}
+};
 
 const getUntreatedTokens = async () => {
-  const baseTokens = chainId === 0
-    ? Object.entries(chainIdToTokensMapping).map(([key, value]) => {
-      return value.map((x) => addChainId(x, parseInt(key)))
-    }).flat().flat()
-    : chainIdToTokensMapping[chainId].map((x) => addChainId(x, chainId)).flat()
+  const baseTokens =
+    chainId === 0
+      ? Object.entries(chainIdToTokensMapping)
+          .map(([key, value]) => {
+            return value.map((x) => addChainId(x, parseInt(key)));
+          })
+          .flat()
+          .flat()
+      : chainIdToTokensMapping[chainId]
+          .map((x) => addChainId(x, chainId))
+          .flat();
 
-  const debankTokens = await fetchDebankLogoURI(chainId, baseTokens.map(x => x.address))
+  const debankTokens = await fetchDebankLogoURI(
+    chainId,
+    baseTokens.map((x) => x.address)
+  );
 
-  return baseTokens.map(token => {
-    const {logo, ...rest} = token
-    const tokenWithLogoURI = debankTokens.find(x => x.address.toLowerCase() === token.address.toLowerCase())
-    const logoURI = tokenWithLogoURI?.logoURI || (logo && getMatamaskLogoURI(logo)) || token.logoURI
+  return baseTokens.map((token) => {
+    const { logo, ...rest } = token;
+    const tokenWithLogoURI = debankTokens.find(
+      (x) => x.address.toLowerCase() === token.address.toLowerCase()
+    );
+    const logoURI =
+      tokenWithLogoURI?.logoURI ||
+      (logo && getMatamaskLogoURI(logo)) ||
+      token.logoURI;
 
-    return logoURI ? {...rest, logoURI} : {...rest}
-  })
-}
+    return logoURI ? { ...rest, logoURI } : { ...rest };
+  });
+};
 
 const start = async () => {
-  const tokens = await getUntreatedTokens()
+  const tokens = await getUntreatedTokens();
   const MaskTokenList = generateTokenList(
     tokens
       .map((x) => ({
@@ -120,6 +137,6 @@ const start = async () => {
     console.error(validate.errors);
     process.exit(1);
   }
-}
+};
 
-start()
+start();
