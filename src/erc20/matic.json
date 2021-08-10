@@ -4,5 +4,12 @@
     "symbol": "USDC",
     "name": "USDC",
     "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
+  },
+  {
+    "decimals": 18,
+    "symbol": "Mask",
+    "name": "Mask",
+    "address": "0x2B9E7ccDF0F4e5B24757c1E1a80e311E34Cb10c7",
+    "logoURI": "https://raw.githubusercontent.com/DimensionDev/Maskbook-Website/master/img/MB--CircleCanvas--WhiteOverBlue.svg"
   }
 ]

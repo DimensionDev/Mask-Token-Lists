@@ -10,6 +10,7 @@ The token lists for Mask.
 | mask                                                                                                    | mask_nft                                                                                                  |
 | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | [Latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/tokens.json)   | [Latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft.json)           |
+| [v0.0.19](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.19/tokens.json)  | [v0.0.19](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_19.json) |
 | [v0.0.18](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.18/tokens.json)  | [v0.0.18](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_18.json) |
 | [v0.0.17](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.17/tokens.json)  | [v0.0.17](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_17.json) |
 | [v0.0.16](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_v_0_0_16.json)   | [v0.0.16](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_16.json) |
