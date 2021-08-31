@@ -7,6 +7,13 @@
   },
   {
     "decimals": 18,
+    "symbol": "RABBIT",
+    "name": "Rabbit Coin",
+    "address": "0x95a1199EBA84ac5f19546519e287d43D2F0E1b41",
+    "logoURI": "https://bscscan.com/token/images/rabbitfinance_32.png"
+  },
+  {
+    "decimals": 18,
     "symbol": "Mask",
     "name": "Mask",
     "address": "0x2ed9a5c8c13b93955103b9a7c167b67ef4d568a3",
