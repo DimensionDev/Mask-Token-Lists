@@ -1,6 +1,6 @@
 {
   "name": "mask-token-list",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "main": "index.js",
   "repository": "https://github.com/DimensionDev/Mask-Token-List.git",
   "author": "guanbinrui <guanbinrui@dimension.im>",

@@ -9,7 +9,8 @@ The token lists for Mask.
 
 | mask                                                                                                    | mask_nft                                                                                                  |
 | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| [Latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/tokens.json)   | [Latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft.json)           |
+| [Latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/tokens.json)    | [Latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft.json)           |
+| [v0.0.21](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.21/tokens.json)  | [v0.0.21](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_21.json) |
 | [v0.0.20](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.20/tokens.json)  | [v0.0.20](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_20.json) |
 | [v0.0.19](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.19/tokens.json)  | [v0.0.19](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_19.json) |
 | [v0.0.18](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.18/tokens.json)  | [v0.0.18](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_18.json) |
@@ -47,5 +48,6 @@ e.g.
 | Rinkeby  | 4          | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/4/tokens.json)     |
 | BSC      | 56         | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/56/tokens.json)    |
 | Matic    | 97         | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/97/tokens.json)    |
+| xDai     | 100        | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/100/tokens.json)   |
 | Mumbai   | 80001      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/80001/tokens.json) |
 | Arbiturm | 42161      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42161/tokens.json) |
