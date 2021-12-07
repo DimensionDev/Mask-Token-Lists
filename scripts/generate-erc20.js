@@ -1,7 +1,7 @@
 const { schema } = require("@uniswap/token-lists");
-const quickswapTokenlist = require("quickswap-default-token-list");
+const quickswapTokenlist = require("../src/erc20/quickswap-default-token-list.json");
 const Ajv = require("ajv");
-const metadata = require("@metamask/contract-metadata");
+const metadata = require("../src/erc20/contract-metadata.json");
 const { EthereumAddress } = require("wallet.ts");
 const Mainnet = require("../src/erc20/mainnet.json");
 const Ropsten = require("../src/erc20/ropsten.json");
