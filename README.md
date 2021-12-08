@@ -5,11 +5,28 @@ The token lists for Mask.
 - List Name: Mask
 - Link to the official homepage of the list manager: https://mask.io
 
+### Versions based on chain id
+
+| Chain    | Chain Id   | Link                                                                                                        | Viewer |
+| -------- | ---------- | ----------------------------------------------------------------------------------------------------------- | ------ |
+| Mainnet  | 1          | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/1/tokens.json)      | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/1/tokens.json)
+| Ropsten  | 3          | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/3/tokens.json)     | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/3/tokens.json)
+| Rinkeby  | 4          | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/4/tokens.json)     | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/4/tokens.json)
+| BSC      | 56         | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/56/tokens.json)    | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/56/tokens.json)
+| BSC Test | 97         | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/97/tokens.json)    | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/97/tokens.json)
+| Matic    | 137        | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/97/tokens.json)    | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/137/tokens.json)
+| xDai     | 100        | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/100/tokens.json)   | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/100/tokens.json)
+| Fantom   | 250        | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/250/tokens.json)   | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/250/tokens.json)
+| Mumbai   | 80001      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/80001/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/80001/tokens.json)
+| Arbiturm | 42161      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42161/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42161/tokens.json)
+| CELO | 42220      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42220/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42220/tokens.json)
+
 ## Versions
 
 | mask                                                                                                    | mask_nft                                                                                                  |
 | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | [Latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/tokens.json)    | [Latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft.json)           |
+| [v0.0.25](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.25/tokens.json)  | [v0.0.25](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_24.json) |
 | [v0.0.24](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.24/tokens.json)  | [v0.0.24](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_24.json) |
 | [v0.0.23](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.23/tokens.json)  | [v0.0.23](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_23.json) |
 | [v0.0.22](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.22/tokens.json)  | [v0.0.22](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_22.json) |
@@ -41,19 +58,3 @@ After v0.0.17, User can also get token list by chain id:
 
 e.g.
 `https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.17/1/tokens.json`
-
-### Versions based on chain id
-
-| Chain    | Chain Id   | Link                                                                                                        | Viewer |
-| -------- | ---------- | ----------------------------------------------------------------------------------------------------------- | ------ |
-| Mainnet  | 1          | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/1/tokens.json)      | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/1/tokens.json)
-| Ropsten  | 3          | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/3/tokens.json)     | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/3/tokens.json)
-| Rinkeby  | 4          | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/4/tokens.json)     | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/4/tokens.json)
-| BSC      | 56         | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/56/tokens.json)    | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/56/tokens.json)
-| BSC Test | 97         | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/97/tokens.json)    | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/97/tokens.json)
-| Matic    | 137        | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/97/tokens.json)    | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/137/tokens.json)
-| xDai     | 100        | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/100/tokens.json)   | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/100/tokens.json)
-| Fantom   | 250        | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/250/tokens.json)   | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/250/tokens.json)
-| Mumbai   | 80001      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/80001/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/80001/tokens.json)
-| Arbiturm | 42161      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42161/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42161/tokens.json)
-| CELO | 42220      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42220/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42220/tokens.json)
