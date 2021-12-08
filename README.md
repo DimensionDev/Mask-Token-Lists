@@ -44,15 +44,15 @@ e.g.
 
 ### Versions based on chain id
 
-| Chain    | Chain Id   | Link                                                                                                        |
-| -------- | ---------- | ----------------------------------------------------------------------------------------------------------- |
-| Mainnet  | 1          | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/1/tokens.json)      |
-| Ropsten  | 3          | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/3/tokens.json)     |
-| Rinkeby  | 4          | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/4/tokens.json)     |
-| BSC      | 56         | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/56/tokens.json)    |
-| BSC Test | 97         | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/97/tokens.json)    |
-| Matic    | 137        | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/97/tokens.json)    |
-| xDai     | 100        | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/100/tokens.json)   |
-| Fantom   | 250        | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/250/tokens.json)   |
-| Mumbai   | 80001      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/80001/tokens.json) |
-| Arbiturm | 42161      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42161/tokens.json) |
+| Chain    | Chain Id   | Link                                                                                                        | Viewer |
+| -------- | ---------- | ----------------------------------------------------------------------------------------------------------- | ------ |
+| Mainnet  | 1          | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/1/tokens.json)      | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/1/tokens.json)
+| Ropsten  | 3          | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/3/tokens.json)     | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/3/tokens.json)
+| Rinkeby  | 4          | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/4/tokens.json)     | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/4/tokens.json)
+| BSC      | 56         | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/56/tokens.json)    | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/56/tokens.json)
+| BSC Test | 97         | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/97/tokens.json)    | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/97/tokens.json)
+| Matic    | 137        | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/97/tokens.json)    | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/137/tokens.json)
+| xDai     | 100        | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/100/tokens.json)   | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/100/tokens.json)
+| Fantom   | 250        | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/250/tokens.json)   | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/250/tokens.json)
+| Mumbai   | 80001      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/80001/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/80001/tokens.json)
+| Arbiturm | 42161      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42161/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42161/tokens.json)
