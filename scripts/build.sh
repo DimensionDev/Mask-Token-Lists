@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
+# read versionn
 VERSION=$(node -p -e "require('./package.json').version")
+
 CHAIN[0]=dist/v$VERSION
+
 for i in {1,3,4,56,97,100,137,250,42161,42220,80001}; do
   CHAIN[$i]=dist/v$VERSION/$i
 done
@@ -25,4 +28,3 @@ cp -r dist/v"${VERSION}/" "dist/latest"
 cp dist/mask_nft.json "dist/mask_nft_v_$(echo $VERSION | sed "s/\./_/g").json"
 
 echo "v${VERSION} is built."
-
