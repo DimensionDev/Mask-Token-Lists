@@ -1,13 +1,13 @@
 {
   "name": "mask-token-list",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "main": "index.js",
   "repository": "https://github.com/DimensionDev/Mask-Token-List.git",
   "author": "guanbinrui <guanbinrui@dimension.im>",
   "license": "MIT",
   "scripts": {
     "build": "./scripts/build.sh",
-    "publish": "&& gh-pages -d ./dist"
+    "publish": "gh-pages -d ./dist"
   },
   "dependencies": {
     "@uniswap/token-lists": "^1.0.0-beta.24",

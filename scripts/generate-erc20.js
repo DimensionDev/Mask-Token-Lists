@@ -9,6 +9,7 @@ const Rinkeby = require("../src/erc20/rinkeby.json");
 const Bsc = require("../src/erc20/bsc.json");
 const Chapel = require("../src/erc20/chapel.json");
 const xDai = require("../src/erc20/xdai.json");
+const Fantom = require("../src/erc20/fantom.json");
 const Matic = require("../src/erc20/matic.json");
 const Arbiturm = require("../src/erc20/arbiturm.json");
 const Mumbai = require("../src/erc20/mumbai.json");
@@ -58,6 +59,7 @@ const chainIdToTokensMapping = {
   56: [Bsc, PancakeTop100],
   97: [Chapel],
   100: [xDai],
+  250: [Fantom],
   137: [Matic, quickswapTokens],
   42161: [Arbiturm],
   80001: [Mumbai],
