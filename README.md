@@ -20,6 +20,7 @@ The token lists for Mask.
 | Mumbai   | 80001      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/80001/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/80001/tokens.json)
 | Arbiturm | 42161      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42161/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42161/tokens.json)
 | CELO | 42220      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42220/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42220/tokens.json)
+| CELO | 1088      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/1088/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/1088/tokens.json)
 
 ## Versions
 
