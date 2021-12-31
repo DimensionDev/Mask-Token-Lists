@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Digital Rand on Fuse",
+    "address": "0xBfF749Fa790D4Cbb789a63B5e5173E3F877aD237",
+    "symbol": "DZAR",
+    "decimals": 6,
+    "chainId": 122,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x9Cb2f26A23b8d89973F08c957C4d7cdf75CD341c/logo.png"
+  },
+  {
+    "name": "GoodDollar",
+    "address": "0x495d133B938596C9984d462F007B676bDc57eCEC",
+    "symbol": "G$",
+    "decimals": 2,
+    "chainId": 122,
+    "logoURI": "https://raw.githubusercontent.com/mul53/token-assets/main/assets/etheruem/0x67c5870b4a41d4ebef24d2456547a03f1f3e094b/logo.png"
+  },
+  {
+    "name": "Wrapped Ether on Fuse",
+    "address": "0xd8Bf72f3e163B9CF0C73dFdCC316417A5ac20670",
+    "symbol": "WETH (Deprecated)",
+    "decimals": 18,
+    "chainId": 122,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+    "isDeprecated": true
+  },
+  {
+    "name": "BNB on Fuse",
+    "address": "0x6acb34b1Df86E254b544189Ec32Cf737e2482058",
+    "symbol": "BNB",
+    "decimals": 18,
+    "chainId": 122,
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xB8c77482e45F1F44dE1745F52C74426C631bDD52/logo.png"
+  },
+  {
+    "name": "Elk",
+    "address": "0xE1C110E1B1b4A1deD0cAf3E42BfBdbB7b5d7cE1C",
+    "symbol": "ELK",
+    "decimals": 18,
+    "chainId": 122,
+    "logoURI": "https://raw.githubusercontent.com/elkfinance/tokens/main/logos/avax/0xE1C110E1B1b4A1deD0cAf3E42BfBdbB7b5d7cE1C/logo.png"
+  }
+]

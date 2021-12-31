@@ -20,12 +20,17 @@ The token lists for Mask.
 | Mumbai   | 80001      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/80001/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/80001/tokens.json)
 | Arbiturm | 42161      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42161/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42161/tokens.json)
 | CELO | 42220      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42220/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42220/tokens.json)
+| Avalanche | 43114     | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/43114/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/43114/tokens.json)
+| Optimistic | 10     | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/10/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/10/tokens.json)
+| Boba Network | 288     | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/288/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/288/tokens.json)
+| Fuse Network | 122     | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/122/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/122/tokens.json)
 
 ## Versions
 
 | mask                                                                                                    | mask_nft                                                                                                  |
 | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | [Latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/tokens.json)    | [Latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft.json)           |
+| [v0.0.26](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.26/tokens.json)  | [v0.0.26](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_24.json) |
 | [v0.0.25](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.25/tokens.json)  | [v0.0.25](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_24.json) |
 | [v0.0.24](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.24/tokens.json)  | [v0.0.24](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_24.json) |
 | [v0.0.23](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/v0.0.23/tokens.json)  | [v0.0.23](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/mask_nft_v_0_0_23.json) |
