@@ -16,15 +16,6 @@
     "logoURI": "https://raw.githubusercontent.com/mul53/token-assets/main/assets/etheruem/0x67c5870b4a41d4ebef24d2456547a03f1f3e094b/logo.png"
   },
   {
-    "name": "Wrapped Ether on Fuse",
-    "address": "0xd8Bf72f3e163B9CF0C73dFdCC316417A5ac20670",
-    "symbol": "WETH (Deprecated)",
-    "decimals": 18,
-    "chainId": 122,
-    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
-    "isDeprecated": true
-  },
-  {
     "name": "BNB on Fuse",
     "address": "0x6acb34b1Df86E254b544189Ec32Cf737e2482058",
     "symbol": "BNB",

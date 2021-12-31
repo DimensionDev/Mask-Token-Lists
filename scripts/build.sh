@@ -5,7 +5,7 @@ VERSION=$(node -p -e "require('./package.json').version")
 
 CHAIN[0]=dist/v$VERSION
 
-for i in {1,3,4,56,97,100,137,250,42161,42220,80001}; do
+for i in {1,3,4,10,56,97,100,122,137,250,288,42161,42220,43114,80001}; do
   CHAIN[$i]=dist/v$VERSION/$i
 done
 
