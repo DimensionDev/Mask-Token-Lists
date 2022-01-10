@@ -1,38 +1,6 @@
 [
     {
         "chainId": 43114,
-        "address": "0xce347E069B68C53A9ED5e7DA5952529cAF8ACCd4",
-        "decimals": 18,
-        "name": "JoeToken",
-        "symbol": "JOE",
-        "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x23fc76B53882d8dcaB1900f0D3C1C0c504Ffb8E3/logo.png"
-    },
-    {
-        "chainId": 43114,
-        "address": "0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10",
-        "decimals": 18,
-        "name": "FishToken",
-        "symbol": "FISH",
-        "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10/logo.png"
-    },
-    {
-        "chainId": 43114,
-        "address": "0xc778417E063141139Fce010982780140Aa0cD5Ab",
-        "decimals": 18,
-        "name": "Wrapped AVAX",
-        "symbol": "WAVAX",
-        "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7/logo.png"
-    },
-    {
-        "chainId": 43114,
-        "address": "0x5b8470fbc6B31038aa07aBD3010aCffCA6E36611",
-        "decimals": 18,
-        "name": "Fake USDT",
-        "symbol": "fUSDT",
-        "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10/logo.png"
-    },
-    {
-        "chainId": 43114,
         "address": "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd",
         "decimals": 18,
         "name": "TraderJoe Token",
