@@ -13,7 +13,7 @@
     "symbol": "ABR",
     "name": "Allbridge",
     "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/aurora-is-near/bridge-assets/master/tokens/abr.svg"
+    "logoURI": "https://raw.githubusercontent.com/aurora-is-near/bridge-assets/master/tokens/abr_abr.svg"
   },
   {
     "chainId": 1313161554,
@@ -45,7 +45,7 @@
     "symbol": "atUST",
     "name": "UST Terra",
     "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/aurora-is-near/bridge-assets/master/tokens/atust.svg"
+    "logoURI": "https://raw.githubusercontent.com/aurora-is-near/bridge-assets/master/tokens/abr_atust.svg"
   },
   {
     "chainId": 1313161554,
@@ -269,7 +269,7 @@
     "symbol": "PAD",
     "name": "SmartPad Token",
     "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/aurora-is-near/bridge-assets/master/tokens/smartpad.svg"
+    "logoURI": "https://raw.githubusercontent.com/aurora-is-near/bridge-assets/master/tokens/abr_smartpad.svg"
   },
   {
     "chainId": 1313161554,
