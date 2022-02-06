@@ -24,6 +24,14 @@
     "logoURI": "https://assets.spookyswap.finance/tokens/BAND.png"
   },
   {
+    "name": "SpiritSwap",
+    "symbol": "SPIRIT",
+    "address": "0x5cc61a78f164885776aa610fb0fe1257df78e59b",
+    "chainId": 250,
+    "decimals": 18,
+    "logoURI": "https://swap.spiritswap.finance/images/coins/SPIRIT.png"
+  },
+  {
     "name": "SpookySwap",
     "symbol": "BOO",
     "address": "0x841FAD6EAe12c286d1Fd18d1d525DFfA75C7EFFE",
