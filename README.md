@@ -25,6 +25,7 @@ The token lists for Mask.
 | CELO       | 42220      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42220/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/42220/tokens.json)
 | Avalanche  | 43114      | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/43114/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/43114/tokens.json)
 | AURORA | 1313161554     | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/1313161554/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/1313161554/tokens.json)
+| HECO | 128     | [latest](https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/128/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/DimensionDev/Mask-Token-List/gh-pages/latest/128/tokens.json)
 
 ## Versions
 
