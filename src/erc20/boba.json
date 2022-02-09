@@ -174,5 +174,13 @@
       "decimals": 18,
       "chainId": 288,
       "logoURI": "https://raw.githubusercontent.com/SwapperChan/token-list/master/logos/0xe1E2ec9a85C607092668789581251115bCBD20de/logo.png"
+    },
+    {
+      "name": "SenpaiSwap",
+      "address": "0xaC3a4aF1778203c8B651dAfA73cEd5b79c80F239",
+      "symbol": "SENPAI",
+      "decimals": 18,
+      "chainId": 288,
+      "logoURI": "https://pbs.twimg.com/profile_images/1441273478049501194/quz63sAl_400x400.jpg"
     }
   ]
