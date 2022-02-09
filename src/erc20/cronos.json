@@ -1,0 +1,250 @@
+[
+    {
+        "name": "Crona Token",
+        "symbol": "CRONA",
+        "address": "0xadbd1231fb360047525BEdF962581F3eee7b49fe",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0xadbd1231fb360047525BEdF962581F3eee7b49fe/logo.png"
+    },
+    {
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "address": "0xc21223249ca28397b4b6541dffaecc539bff0c59",
+        "chainId": 25,
+        "decimals": 6,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0xc21223249ca28397b4b6541dffaecc539bff0c59/logo.png"
+    },
+    {
+        "name": "CROTerra",
+        "symbol": "CROTERRA",
+        "address": "0x74F53e67D68A348611979e3012EDf9781C437529",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x74F53e67D68A348611979e3012EDf9781C437529/logo.png"
+    },
+    {
+        "name": "PegasusDAO",
+        "symbol": "SUS",
+        "address": "0x5b5Fe1238aca91C65683aCd7f9D9Bf922e271EAA",
+        "chainId": 25,
+        "decimals": 9,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x5b5Fe1238aca91C65683aCd7f9D9Bf922e271EAA/logo.png"
+    },
+    {
+        "name": "DOGE Coin",
+        "symbol": "DOGE",
+        "address": "0x1a8E39ae59e5556B56b76fCBA98d22c9ae557396",
+        "chainId": 25,
+        "decimals": 8,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x1a8E39ae59e5556B56b76fCBA98d22c9ae557396/logo.png"
+    },
+    {
+        "name": "Bison",
+        "symbol": "BISON",
+        "address": "0x3405A1bd46B85c5C029483FbECf2F3E611026e45",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x3405A1bd46B85c5C029483FbECf2F3E611026e45/logo.png"
+    },
+    {
+        "name": "GSHARE",
+        "symbol": "GSHARE",
+        "address": "0x9CE609804884b862f2149414AC0De6d17994700b",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x9CE609804884b862f2149414AC0De6d17994700b/logo.png"
+    },
+    {
+        "name": "Gaur.money",
+        "symbol": "GAUR",
+        "address": "0xF14AF8434E39e35d4E660A3D93EF920C9711EBB9",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0xF14AF8434E39e35d4E660A3D93EF920C9711EBB9/logo.png"
+    },
+    {
+        "name": "CRO Max Token",
+        "symbol": "CROMAX",
+        "address": "0x1985127d1B21af04d09a69Cdcb1dD33fd8961e9c",
+        "chainId": 25,
+        "decimals": 9,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x1985127d1B21af04d09a69Cdcb1dD33fd8961e9c/logo.png"
+    },
+    {
+        "name": "Degen Protocol",
+        "symbol": "SH33P",
+        "address": "0x0694c9bf930b7456712cEde98bE770e110212B38",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x0694c9bf930b7456712cEde98bE770e110212B38/logo.png"
+    },
+    {
+        "name": "Enjin Coin",
+        "symbol": "ENJ",
+        "address": "0x0A92ea8a197919aCb9BC26660Ed0D43D01ed26b7",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x0A92ea8a197919aCb9BC26660Ed0D43D01ed26b7/logo.svg"
+    },
+    {
+        "name": "ATOM Coin",
+        "symbol": "ATOM",
+        "address": "0xB888d8Dd1733d72681b30c00ee76BDE93ae7aa93",
+        "chainId": 25,
+        "decimals": 6,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0xB888d8Dd1733d72681b30c00ee76BDE93ae7aa93/logo.svg"
+    },
+    {
+        "name": "ChainLink Token",
+        "symbol": "LINK",
+        "address": "0xBc6f24649CCd67eC42342AccdCECCB2eFA27c9d9",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0xBc6f24649CCd67eC42342AccdCECCB2eFA27c9d9/logo.svg"
+    },
+    {
+        "name": "Croblanc Token",
+        "symbol": "CROBLANC",
+        "address": "0xD3ceCBE5639D05Aed446Da11F08D495CA6bF359F",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0xD3ceCBE5639D05Aed446Da11F08D495CA6bF359F/logo.svg"
+    },
+    {
+        "name": "Galatea gDIVS",
+        "symbol": "gDIVS",
+        "address": "0x19B021B9C15707EAdd74AF0A4D5Eb905733f2A32",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x19B021B9C15707EAdd74AF0A4D5Eb905733f2A32/logo.svg"
+    },
+    {
+        "name": "Galatea gCASH",
+        "symbol": "gCASH",
+        "address": "0x8420454d4b5f436dbCb5913609F3848350B8723A",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x8420454d4b5f436dbCb5913609F3848350B8723A/logo.svg"
+    },
+    {
+        "name": "Zeu$Finance",
+        "symbol": "ZEU$",
+        "address": "0x813658e307fA4DAF9B25e7CE1dE3b40012CA2B74",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x813658e307fA4DAF9B25e7CE1dE3b40012CA2B74/ZeusLogo.png"
+    },
+    {
+        "name": "Zeu$Finance",
+        "symbol": "ATH",
+        "address": "0x26d787e06412530EBD4d1eCDE613Eff5bf2eBA04",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x26d787e06412530EBD4d1eCDE613Eff5bf2eBA04/AthLogo.png"
+    },
+    {
+        "name": "Frens",
+        "symbol": "FRENS",
+        "address": "0x0EdeC4bE261B22be6096Ec4960247697891A2045",
+        "chainId": 25,
+        "decimals": 9,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x0EdeC4bE261B22be6096Ec4960247697891A2045/logo.png"
+    },
+    {
+        "name": "Matrix",
+        "symbol": "MTX",
+        "address": "0x35c167b6a1Fc4D1D2b55293367ef5b8D4aF0a696",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x35c167b6a1Fc4D1D2b55293367ef5b8D4aF0a696/logo.png"
+    },
+    {
+        "name": "Lazy Horse Race Club",
+        "symbol": "LHRC",
+        "address": "0xEfD450027bD0EE84AfaFbC75f5A80C367eFBF651",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0xEfD450027bD0EE84AfaFbC75f5A80C367eFBF651/logo.png"
+    },
+    {
+        "name": " DarkCrypto",
+        "symbol": "DARK",
+        "address": "0x83b2AC8642aE46FC2823Bc959fFEB3c1742c48B5",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x83b2AC8642aE46FC2823Bc959fFEB3c1742c48B5/logo.svg"
+    },
+    {
+        "name": "DarkCrypto Share",
+        "symbol": "SKY",
+        "address": "0x9D3BBb0e988D9Fb2d55d07Fe471Be2266AD9c81c",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x9D3BBb0e988D9Fb2d55d07Fe471Be2266AD9c81c/logo.svg"
+    },
+    {
+        "name": "DarkCrypto Share",
+        "symbol": "SKY",
+        "address": "0x9D3BBb0e988D9Fb2d55d07Fe471Be2266AD9c81c",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x9D3BBb0e988D9Fb2d55d07Fe471Be2266AD9c81c/logo.svg"
+    },
+    {
+        "name": "RefuToken",
+        "symbol": "REFU",
+        "address": "0xea0a4546C3AFebcc2Bc53F3d42Ddc66fcBe7c25B",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0xea0a4546C3AFebcc2Bc53F3d42Ddc66fcBe7c25B/logo.svg"
+    },
+    {
+        "name": "RefuToken",
+        "symbol": "REFU",
+        "address": "0xea0a4546C3AFebcc2Bc53F3d42Ddc66fcBe7c25B",
+        "chainId": 25,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0xea0a4546C3AFebcc2Bc53F3d42Ddc66fcBe7c25B/logo.svg"
+    },
+    {
+        "name": "CroKing",
+        "symbol": "CRK",
+        "address": "0x065de42e28e42d90c2052a1b49e7f83806af0e1f",
+        "chainId": 25,
+        "decimals": 9,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0x065de42e28e42d90c2052a1b49e7f83806af0e1f/logo.png"
+    },
+    {
+        "name": "ESSO Token",
+        "symbol": "ESSO",
+        "address": "0xc82eA25896F065cB6E3ae298cD1f23FE58516A35",
+        "chainId": 25,
+        "decimals": 8,
+        "logoURI": "https://raw.githubusercontent.com/cronaswap/cronaswap-tokenlists/main/tokens/0xc82eA25896F065cB6E3ae298cD1f23FE58516A35/logo.svg"
+    },
+    {
+        "name": "WBTC",
+        "symbol": "WBTC",
+        "address": "0x062E66477Faf219F25D27dCED647BF57C3107d52",
+        "chainId": 25,
+        "decimals": 8,
+        "logoURI": "https://raw.githubusercontent.com/dimensiondev/assets/master/blockchains/cronos/assets/0x062E66477Faf219F25D27dCED647BF57C3107d52/logo.svg"
+    },
+    {
+        "name": "USDT",
+        "symbol": "USDT",
+        "address": "0x66e428c3f67a68878562e79A0234c1F83c208770",
+        "chainId": 25,
+        "decimals": 8,
+        "logoURI": "https://raw.githubusercontent.com/dimensiondev/assets/master/blockchains/cronos/assets/0x66e428c3f67a68878562e79A0234c1F83c208770/logo.png"
+    },
+    {
+        "name": "DAI",
+        "symbol": "DAI",
+        "address": "0xF2001B145b43032AAF5Ee2884e456CCd805F677D",
+        "chainId": 25,
+        "decimals": 8,
+        "logoURI": "https://raw.githubusercontent.com/dimensiondev/assets/master/blockchains/cronos/assets/0xF2001B145b43032AAF5Ee2884e456CCd805F677D/logo.png"
+    }
+]
