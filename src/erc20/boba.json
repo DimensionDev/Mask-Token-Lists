@@ -153,11 +153,11 @@
     },
     { 
       "name": "Waifu Token",
-      "address": "0xb27A1bf554657222F2D2c44848BFB508e2230bD2",
+      "address": "0xB5cB0975716A4AA6438d3FA02364886E13fd678c",
       "symbol": "WAIFU",
       "decimals": 18,
       "chainId": 288,
-      "logoURI": "https://raw.githubusercontent.com/SwapperChan/token-list/master/logos/0xb27A1bf554657222F2D2c44848BFB508e2230bD2/logo.png"
+      "logoURI": "https://raw.githubusercontent.com/SwapperChan/token-list/master/logos/0xB5cB0975716A4AA6438d3FA02364886E13fd678c/logo.png"
     },
     {
       "name": "Wrapped Ether",
