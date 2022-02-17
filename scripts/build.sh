@@ -18,6 +18,7 @@ for i in "${!CHAIN[@]}"; do
   mkdir -p "${CHAIN[$i]}"
   touch "${CHAIN[$i]}/tokens.json"
   node scripts/generate-erc20.js $i > "${CHAIN[$i]}/tokens.json"
+  node scripts/risk-check.js $i > "${CHAIN[$i]}/riskInfo.json"
 done
 
 node scripts/generate-erc721.js > "dist/mask_nft.json"

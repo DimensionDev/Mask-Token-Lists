@@ -1,6 +1,5 @@
 const fetch = require("node-fetch");
 
-// https://openapi.debank.com/docs
 const getRequestURL = (chainId, ids) => `https://openapi.debank.com/v1/token/list_by_ids?chain_id=${chainId}&ids=${ids}`
 
 const DEBANK_REQUEST_LIMIT = 60
