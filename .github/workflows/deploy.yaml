@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - master # Set a branch name to trigger deployment
+      - master
 
 jobs:
   deploy:
@@ -17,6 +17,9 @@ jobs:
 
       - name: Install
         run: yarn install
+
+      - name: Prettier Check
+        run: yarn prettier
 
       - name: Build
         run: yarn build
