@@ -1,9 +1,9 @@
 {
-  "name": "mask-token-list",
+  "name": "mask-token-lists",
   "version": "0.0.28",
   "main": "index.js",
-  "repository": "https://github.com/DimensionDev/Mask-Token-List.git",
-  "author": "guanbinrui <guanbinrui@dimension.im>",
+  "repository": "https://github.com/DimensionDev/Mask-Token-Lists.git",
+  "author": "guanbinrui <guanbinrui@mask.io>",
   "license": "MIT",
   "scripts": {
     "build": "./scripts/build.sh",
