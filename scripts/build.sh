@@ -14,10 +14,15 @@ mkdir -p latest
 
 # build the latest version
 for i in "${!CHAIN[@]}"; do
-  printf "Generate for chain id: %s to folder: %s\n" "$i" "${CHAIN[$i]}"
+  printf "Generate for chain id %s to folder: %s\n" "$i" "${CHAIN[$i]}"
   mkdir -p "${CHAIN[$i]}"
   touch "${CHAIN[$i]}/tokens.json"
   node scripts/generate-erc20.js $i > "${CHAIN[$i]}/tokens.json"
+
+  if [ $? -ne 0 ]; then
+    exit 1;
+  fi
+
   node scripts/risk-check.js $i > "${CHAIN[$i]}/riskInfo.json"
 done
 

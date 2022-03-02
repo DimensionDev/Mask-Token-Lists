@@ -1,8 +1,7 @@
-const { schema } = require("@uniswap/token-lists");
-const quickswapTokenlist = require("../src/erc20/quickswap-default-token-list.json");
 const Ajv = require("ajv");
-const metadata = require("../src/erc20/contract-metadata.json");
 const { EthereumAddress } = require("wallet.ts");
+const { schema } = require("@uniswap/token-lists");
+const metadata = require("../src/erc20/contract-metadata.json");
 const Mainnet = require("../src/erc20/mainnet.json");
 const Ropsten = require("../src/erc20/ropsten.json");
 const Rinkeby = require("../src/erc20/rinkeby.json");
@@ -19,16 +18,17 @@ const Mumbai = require("../src/erc20/mumbai.json");
 const Aurora = require("../src/erc20/aurora.json");
 const Avalanche = require("../src/erc20/avalanche.json");
 const Boba = require("../src/erc20/boba.json");
-const PancakeTop100 = require("../src/erc20/pancake-top100.json");
+const Pancake = require("../src/erc20/pancake.json");
+const QucikSwapTokens = require("../src/erc20/quickswap.json");
 const { fetchDebankLogoURI } = require("./fetch-debank-logo-uri");
 const { addChainId, generateTokenList } = require("./shared");
 
-const getMatamaskLogoURI = (url) =>
+const getMetaMaskLogoURL = (url) =>
   `https://raw.githubusercontent.com/MetaMask/contract-metadata/master/images/${url}`;
 
 const chainId = Number.parseInt(process.argv.slice(2)[0]);
 
-const metaMaskToken = Object.keys(metadata)
+const MetaMask = Object.keys(metadata)
   .filter((key) => {
     const record = metadata[key];
     return (
@@ -48,7 +48,7 @@ const metaMaskToken = Object.keys(metadata)
     logo: metadata[key].logo,
   }));
 
-const quickswapTokens = quickswapTokenlist.tokens.map(
+const QuickSwap = QucikSwapTokens.tokens.map(
   ({ name, address, symbol, decimals, logoURI }) => ({
     name,
     address,
@@ -59,17 +59,17 @@ const quickswapTokens = quickswapTokenlist.tokens.map(
 );
 
 const chainIdToTokensMapping = {
-  1: [metaMaskToken, Mainnet],
+  1: [MetaMask, Mainnet],
   3: [Ropsten],
   4: [Rinkeby],
   10: [Optimistic],
-  56: [Bsc, PancakeTop100],
+  56: [Bsc, Pancake],
   97: [Chapel],
   100: [xDai],
   122: [Fuse],
   250: [Fantom],
   288: [Boba],
-  137: [Matic, quickswapTokens],
+  137: [Matic, QuickSwap],
   42161: [Arbiturm],
   42220: [Celo],
   43114: [Avalanche],
@@ -102,7 +102,7 @@ const getUntreatedTokens = async () => {
     );
     const logoURI =
       tokenWithLogoURI?.logoURI ||
-      (logo && getMatamaskLogoURI(logo)) ||
+      (logo && getMetaMaskLogoURL(logo)) ||
       token.logoURI;
 
     return logoURI ? { ...rest, logoURI } : { ...rest };
@@ -123,7 +123,7 @@ const start = async () => {
         return 0;
       }),
     {
-      name: "Mask",
+      name: "Mask Network",
       logoURI:
         "https://raw.githubusercontent.com/DimensionDev/Maskbook-Website/master/img/MB--CircleCanvas--WhiteOverBlue.svg",
       keywords: [
@@ -151,7 +151,7 @@ const start = async () => {
   if (validate(MaskTokenList)) {
     process.stdout.write(JSON.stringify(MaskTokenList));
   } else {
-    console.error("errors on build erc20:");
+    console.error("Failed to build ERC20 token list.");
     console.error(validate.errors);
     process.exit(1);
   }

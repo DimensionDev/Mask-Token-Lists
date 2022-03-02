@@ -2,8 +2,7 @@ name: Build
 
 on:
   pull_request:
-    branches:
-      - * # Set a branch name to trigger deployment
+    branches: [master]
 
 jobs:
   build:
@@ -17,6 +16,9 @@ jobs:
 
       - name: Install
         run: yarn install
+
+      - name: Prettier Check
+        run: yarn prettier
 
       - name: Build
         run: yarn build

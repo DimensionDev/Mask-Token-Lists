@@ -85,7 +85,7 @@ const riskCheck = async () => {
   const url = `${GO_PLUS_LABS_ROOT_URL}/${GO_PLUS_TOKEN_SECURITY_URL}/${chainId}?contract_addresses=${addresses}`;
   try {
     const res = await fetch(url);
-    const data = await res.json()
+    const data = await res.json();
     if (data?.result) {
       const temp = data.result;
       for (const key in temp) {
@@ -94,7 +94,7 @@ const riskCheck = async () => {
       }
     }
   } catch (e) {
-    console.error(e) 
+    console.error(e);
   }
 };
 
