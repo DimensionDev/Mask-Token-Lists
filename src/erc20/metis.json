@@ -1,0 +1,66 @@
+ [
+        {
+            "chainId": 1088,
+            "address": "0xea32a96608495e54156ae48931a7c20f0dcc1a21",
+            "decimals": 6,
+            "name": "USDC Token",
+            "symbol": "m.USDC",
+            "logoURI": "https://raw.githubusercontent.com/MetisProtocol/metis-bridge-resources/master/tokens/USDC/logo.png"
+        },
+        {
+            "chainId": 1088,
+            "address": "0xbb06dca3ae6887fabf931640f67cab3e3a16f4dc",
+            "decimals": 6,
+            "name": "USDT Token",
+            "symbol": "m.USDT",
+            "logoURI": "https://raw.githubusercontent.com/MetisProtocol/metis-bridge-resources/master/tokens/USDT/logo.png"
+        },
+        {
+            "chainId": 1088,
+            "address": "0x5ce34d9abe4bf239cbc08b89287c87f4cd6d80b7",
+            "decimals": 18,
+            "name": "WOW Token",
+            "symbol": "m.WOW",
+            "logoURI": "https://raw.githubusercontent.com/MetisProtocol/metis-bridge-resources/master/tokens/WOW/logo.png"
+        },
+        {
+            "chainId": 1088,
+            "address": "0xf5f66d5daa89c090a7afa10e6c1553b2887a9a33",
+            "decimals": 18,
+            "name": "LINK Token",
+            "symbol": "m.LINK",
+            "logoURI": "https://raw.githubusercontent.com/MetisProtocol/metis-bridge-resources/master/tokens/LINK/logo.png"
+        },
+        {
+            "chainId": 1088,
+            "address": "0x420000000000000000000000000000000000000a",
+            "decimals": 18,
+            "name": "Ether",
+            "symbol": "WETH",
+            "logoURI": "https://raw.githubusercontent.com/MetisProtocol/metis-bridge-resources/master/tokens/ETH/logo.png"
+        },
+        {
+            "chainId": 1088,
+            "address": "0x68D97B7A961a5239B9F911DA8dEb57F6eF6e5e28",
+            "decimals": 18,
+            "name": "AAVE Token",
+            "symbol": "AAVE",
+            "logoURI": "https://raw.githubusercontent.com/MetisProtocol/metis-bridge-resources/master/tokens/AAVE/logo.png"
+        },
+        {
+            "chainId": 1088,
+            "address": "0x87DD4a7Ad23B95cD9fF9C26B5cF325905CaF8663",
+            "decimals": 18,
+            "name": "Curve DAO Token",
+            "symbol": "CRV",
+            "logoURI": "https://raw.githubusercontent.com/MetisProtocol/metis-bridge-resources/master/tokens/CRV/logo.png"
+        },
+        {
+            "chainId": 1088,
+            "address": "0x90fE084F877C65e1b577c7b2eA64B8D8dd1AB278",
+            "decimals": 18,
+            "name": "Netswap Token",
+            "symbol": "NETT",
+            "logoURI": "https://raw.githubusercontent.com/Netswap/tokens/master/assets/0x90fe084f877c65e1b577c7b2ea64b8d8dd1ab278/logo.png"
+        }
+    ]
