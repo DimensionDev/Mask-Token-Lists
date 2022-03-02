@@ -3,7 +3,7 @@
 The token lists for Mask Network.
 
 - List Name: Mask Network
-- Link to the official homepage of the list manager: https://mask.io
+- Link to the official homepage of the list manager: <https://mask.io>
 
 ### Versions based on chain id
 
@@ -25,6 +25,9 @@ The token lists for Mask Network.
 | CELO       | 42220      | [latest](https://tokens.r2d2.to/latest/42220/tokens.json)      | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42220/tokens.json)      |
 | Avalanche  | 43114      | [latest](https://tokens.r2d2.to/latest/43114/tokens.json)      | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/43114/tokens.json)      |
 | Aurora     | 1313161554 | [latest](https://tokens.r2d2.to/latest/1313161554/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json) |
+| Moonbase  | 1284      | [latest](https://tokens.r2d2.to/latest/1284/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1284/tokens.json)
+| Moonriver | 1285     | [latest](https://tokens.r2d2.to/latest/1285/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1285/tokens.json)
+| Palm | 11297108109      | [latest](https://tokens.r2d2.to/latest/11297108109/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/11297108109/tokens.json)
 
 ## Versions
 
