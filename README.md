@@ -3,7 +3,7 @@
 The token lists for Mask Network.
 
 - List Name: Mask Network
-- Link to the official homepage of the list manager: https://mask.io
+- Link to the official homepage of the list manager: <https://mask.io>
 
 ## Versions based on chain id
 

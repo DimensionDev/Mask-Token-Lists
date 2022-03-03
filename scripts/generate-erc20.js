@@ -18,6 +18,7 @@ const Mumbai = require("../src/erc20/mumbai.json");
 const Aurora = require("../src/erc20/aurora.json");
 const Avalanche = require("../src/erc20/avalanche.json");
 const Boba = require("../src/erc20/boba.json");
+const Heco = require("../src/erc20/heco.json");
 const Pancake = require("../src/erc20/pancake.json");
 const QucikSwapTokens = require("../src/erc20/quickswap.json");
 const { fetchDebankLogoURI } = require("./fetch-debank-logo-uri");
@@ -67,6 +68,7 @@ const chainIdToTokensMapping = {
   97: [Chapel],
   100: [xDai],
   122: [Fuse],
+  128: [Heco],
   250: [Fantom],
   288: [Boba],
   137: [Matic, QuickSwap],
