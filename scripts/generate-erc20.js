@@ -20,6 +20,8 @@ const Avalanche = require("../src/erc20/avalanche.json");
 const Boba = require("../src/erc20/boba.json");
 const Heco = require("../src/erc20/heco.json");
 const Pancake = require("../src/erc20/pancake.json");
+const Palm = require("../src/erc20/palm.json");
+const Moonriver = require("../src/erc20/moonriver.json");
 const QucikSwapTokens = require("../src/erc20/quickswap.json");
 const { fetchDebankLogoURI } = require("./fetch-debank-logo-uri");
 const { addChainId, generateTokenList } = require("./shared");
@@ -72,11 +74,13 @@ const chainIdToTokensMapping = {
   250: [Fantom],
   288: [Boba],
   137: [Matic, QuickSwap],
+  11297108109: [Palm],
   42161: [Arbiturm],
   42220: [Celo],
   43114: [Avalanche],
   80001: [Mumbai],
   1313161554: [Aurora],
+  1285: [Moonriver],
 };
 
 const getUntreatedTokens = async () => {

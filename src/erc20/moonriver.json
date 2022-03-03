@@ -143,7 +143,7 @@
     "decimals": 18,
     "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/matic.jpg"
   },
-   {
+  {
     "address": "0x14a0243C333A5b238143068dC3A7323Ba4C30ECB",
     "name": "Avax - AnySwap",
     "symbol": "AVAX",
