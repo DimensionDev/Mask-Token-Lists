@@ -19,7 +19,8 @@ jobs:
         with:
           path: |
             node_modules
-          key: yarn-${{ hashFiles('package.json') }}-${{ hashFiles('yarn.lock') }}
+          key:
+            yarn-${{ hashFiles('package.json') }}-${{ hashFiles('yarn.lock') }}
 
       - name: Yarn install
         run: yarn install
@@ -48,7 +49,9 @@ jobs:
           author: Maskbook maintainer bot <bot@mask.io>
           branch: auto-sync-token-list
           title: ":chore: sync token list from Pancakeswap"
-          body: "## (🤖 I am a robot) updates or error report \n\n```diff\n${{ env.GIT_DIFF }}\n```"
+          body:
+            "## (🤖 I am a robot) updates or error report \n\n```diff\n${{
+            env.GIT_DIFF }}\n```"
           assignees: |
             guanbinrui
             unclebill
