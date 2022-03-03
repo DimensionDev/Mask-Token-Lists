@@ -25,6 +25,7 @@ The token lists for Mask Network.
 | CELO       | 42220      | [latest](https://tokens.r2d2.to/latest/42220/tokens.json)      | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42220/tokens.json)      |
 | Avalanche  | 43114      | [latest](https://tokens.r2d2.to/latest/43114/tokens.json)      | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/43114/tokens.json)      |
 | Aurora     | 1313161554 | [latest](https://tokens.r2d2.to/latest/1313161554/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json) |
+| Nervos    | 71394 | [latest](https://tokens.r2d2.to/latest/71394/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json) |
 
 ## Versions
 
