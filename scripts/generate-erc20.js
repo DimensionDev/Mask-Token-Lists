@@ -19,6 +19,7 @@ const Aurora = require("../src/erc20/aurora.json");
 const Avalanche = require("../src/erc20/avalanche.json");
 const Boba = require("../src/erc20/boba.json");
 const Pancake = require("../src/erc20/pancake.json");
+const Cronos = require("../src/erc20/cronos.json");
 const QucikSwapTokens = require("../src/erc20/quickswap.json");
 const { fetchDebankLogoURI } = require("./fetch-debank-logo-uri");
 const { addChainId, generateTokenList } = require("./shared");
@@ -63,6 +64,7 @@ const chainIdToTokensMapping = {
   3: [Ropsten],
   4: [Rinkeby],
   10: [Optimistic],
+  25: [Cronos],
   56: [Bsc, Pancake],
   97: [Chapel],
   100: [xDai],
