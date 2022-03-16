@@ -32,7 +32,7 @@ const safeRatesRequireCheck = 20;
 // max rates to trigger DANGER
 const maxDangerRates = 40;
 
-// modify ghere to change the rules referer: https://m8j6huhbzo.feishu.cn/docs/doccn5Sh4ZXxpODCVZ2ddgc6HQc
+// modify here to change the rules referer: https://m8j6huhbzo.feishu.cn/docs/doccn5Sh4ZXxpODCVZ2ddgc6HQc
 const rules = [
   {
     key: "is_open_source",
