@@ -26,7 +26,7 @@ The token lists for Mask Network.
 | Avalanche  | 43114      | [latest](https://tokens.r2d2.to/latest/43114/tokens.json)      | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/43114/tokens.json)      |
 | Aurora     | 1313161554 | [latest](https://tokens.r2d2.to/latest/1313161554/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json) |
 | HECO       | 128        | [latest](https://tokens.r2d2.to/latest/128/tokens.json)        | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/128/tokens.json)        |
-| Conflux    | 1030       | [latest](https://tokens.r2d2.to/latest/1030/tokens.json)       | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1030/tokens.json)        |
+| Conflux    | 1030       | [latest](https://tokens.r2d2.to/latest/1030/tokens.json)       | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1030/tokens.json)       |
 
 ## Versions
 
