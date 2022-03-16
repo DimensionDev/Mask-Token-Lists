@@ -18,6 +18,8 @@ const Mumbai = require("../src/erc20/mumbai.json");
 const Aurora = require("../src/erc20/aurora.json");
 const Avalanche = require("../src/erc20/avalanche.json");
 const Boba = require("../src/erc20/boba.json");
+const Harmony = require("../src/erc20/harmony.json");
+const HarmonyTestnet = require("../src/erc20/harmony-testnet.json");
 const Pancake = require("../src/erc20/pancake.json");
 const QucikSwapTokens = require("../src/erc20/quickswap.json");
 const { fetchDebankLogoURI } = require("./fetch-debank-logo-uri");
@@ -75,6 +77,8 @@ const chainIdToTokensMapping = {
   43114: [Avalanche],
   80001: [Mumbai],
   1313161554: [Aurora],
+  1666600000: [Harmony],
+  1666700000: [HarmonyTestnet],
 };
 
 const getUntreatedTokens = async () => {
