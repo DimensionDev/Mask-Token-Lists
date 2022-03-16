@@ -1,16 +1,6 @@
-const package = require("../package.json");
-/**
- * addChainId.
- *
- * @param {Array<object>} tokens
- * @param {1 | 3 | 4} chainId
- */
-function addChainId(tokens, chainId) {
-  return tokens.map((t) => ({
-    chainId,
-    ...t,
-  }));
-}
+import { EthereumAddress } from "wallet.ts";
+import Package from "../../package.json";
+import { FungibleToken, NonFungibleToken } from "../types";
 
 /**
  * generateTokenList.
@@ -18,7 +8,10 @@ function addChainId(tokens, chainId) {
  * @param {Array<object>} specList
  * @param {Object} extraInfo
  */
-function generateTokenList(specList, extraInfo) {
+export function generateTokenList(
+  tokens: FungibleToken[] | NonFungibleToken[],
+  extraInfo: Record<string, string | string[]>
+) {
   const uniqueSet = new Set();
   return {
     name: "Mask",
@@ -41,17 +34,17 @@ function generateTokenList(specList, extraInfo) {
     ...extraInfo,
     timestamp: new Date().toISOString(),
     version: {
-      major: Number.parseInt(package.version.split(".")[0]),
-      minor: Number.parseInt(package.version.split(".")[1]),
-      patch: Number.parseInt(package.version.split(".")[2]),
+      major: Number.parseInt(Package.version.split(".")[0]),
+      minor: Number.parseInt(Package.version.split(".")[1]),
+      patch: Number.parseInt(Package.version.split(".")[2]),
     },
 
-    tokens: specList
-      .filter((record) => {
+    tokens: tokens
+      .filter((token) => {
         return (
-          record.name.length <= 40 &&
-          record.symbol.length <= 20 &&
-          new RegExp("^[ \\w.'+\\-%/À-ÖØ-öø-ÿ]+$").test(record.name)
+          EthereumAddress.isValid(token.address) &&
+          token.name.length <= 40 &&
+          new RegExp("^[ \\w.'+\\-%/À-ÖØ-öø-ÿ]+$").test(token.name)
         );
       })
       .filter((x) => {
@@ -62,6 +55,3 @@ function generateTokenList(specList, extraInfo) {
       }),
   };
 }
-
-exports.addChainId = addChainId;
-exports.generateTokenList = generateTokenList;

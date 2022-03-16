@@ -5,6 +5,13 @@ The token lists for Mask Network.
 - List Name: Mask Network
 - Link to the official homepage of the list manager: <https://mask.io>
 
+## Setup
+
+```bash
+yarn # install dependencies
+yarn build # build token lists
+```
+
 ## Versions based on chain id
 
 | Chain      | Chain Id   | Link                                                           | Viewer                                                                                                   |
@@ -30,7 +37,7 @@ The token lists for Mask Network.
 
 ## Versions
 
-| mask                                                  | mask_nft                                                 |
-| ----------------------------------------------------- | -------------------------------------------------------- |
-| [Latest](https://tokens.r2d2.to/latest/tokens.json)   | [Latest](https://tokens.r2d2.to/mask_nft.json)           |
-| [v0.0.28](https://tokens.r2d2.to/v0.0.28/tokens.json) | [v0.0.28](https://tokens.r2d2.to/mask_nft_v_0_0_28.json) |
+| mask                                                  | mask_nft                                                           |
+| ----------------------------------------------------- | ------------------------------------------------------------------ |
+| [Latest](https://tokens.r2d2.to/latest/tokens.json)   | [Latest](https://tokens.r2d2.to/latest/non-fungible-tokens.json)   |
+| [v0.0.28](https://tokens.r2d2.to/v0.0.28/tokens.json) | [v0.0.28](https://tokens.r2d2.to/v0.0.28/non-fungible-tokens.json) |
