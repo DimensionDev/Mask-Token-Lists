@@ -20,8 +20,10 @@ const Avalanche = require("../src/erc20/avalanche.json");
 const Boba = require("../src/erc20/boba.json");
 const Harmony = require("../src/erc20/harmony.json");
 const HarmonyTestnet = require("../src/erc20/harmony-testnet.json");
+const Heco = require("../src/erc20/heco.json");
 const Pancake = require("../src/erc20/pancake.json");
 const QucikSwapTokens = require("../src/erc20/quickswap.json");
+const ConfluxTokens = require("../src/erc20/conflux.json");
 const { fetchDebankLogoURI } = require("./fetch-debank-logo-uri");
 const { addChainId, generateTokenList } = require("./shared");
 
@@ -69,9 +71,11 @@ const chainIdToTokensMapping = {
   97: [Chapel],
   100: [xDai],
   122: [Fuse],
+  128: [Heco],
   250: [Fantom],
   288: [Boba],
   137: [Matic, QuickSwap],
+  1030: [ConfluxTokens],
   42161: [Arbiturm],
   42220: [Celo],
   43114: [Avalanche],
