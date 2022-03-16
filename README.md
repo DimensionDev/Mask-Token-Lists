@@ -28,6 +28,7 @@ The token lists for Mask Network.
 | Metis      | 1088       | [latest](https://tokens.r2d2.to/latest/1088/tokens.json)       | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1088/tokens.json)       |
 | Stardust   | 588        | [latest](https://tokens.r2d2.to/latest/588/tokens.json)        | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/588/tokens.json)        |
 | HECO       | 128        | [latest](https://tokens.r2d2.to/latest/128/tokens.json)        | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/128/tokens.json)        |
+| Conflux    | 1030       | [latest](https://tokens.r2d2.to/latest/1030/tokens.json)       | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1030/tokens.json)       |
 
 ## Versions
 
