@@ -44,9 +44,3 @@ yarn build # build token lists
 | Aurora     | 1313161554 | [latest](https://tokens.r2d2.to/latest/1313161554/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json) |
 | HECO       | 128        | [latest](https://tokens.r2d2.to/latest/128/tokens.json)        | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/128/tokens.json)        |
 | Conflux    | 1030       | [latest](https://tokens.r2d2.to/latest/1030/tokens.json)       | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1030/tokens.json)       |
-
-## Versions
-
-| mask                                                  | mask_nft                                                           |
-| ----------------------------------------------------- | ------------------------------------------------------------------ |
-| [v0.0.28](https://tokens.r2d2.to/v0.0.28/tokens.json) | [v0.0.28](https://tokens.r2d2.to/v0.0.28/non-fungible-tokens.json) |
