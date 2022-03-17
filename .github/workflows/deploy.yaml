@@ -31,3 +31,26 @@ jobs:
           publish_dir: ./dist
           keep_files: true
           cname: tokens.r2d2.to
+
+      - name: Get Package Version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+
+      - name: Tag Package Version
+        uses: rickstaa/action-create-tag@v1
+        with:
+          tag: v${{ steps.package-version.outputs.current-version }}
+          message: "Latest Release"
+
+      - name: Create Release Package
+        uses: montudor/action-zip@v1
+        with:
+          args:
+            zip -qq -r v${{ steps.package-version.outputs.current-version }}.zip
+            dist/v${{ steps.package-version.outputs.current-version }}
+
+      - name: Upload Latest Release
+        uses: actions/upload-artifact@v2
+        with:
+          name: v${{ steps.package-version.outputs.current-version }}.zip
+          path: v${{ steps.package-version.outputs.current-version }}.zip
