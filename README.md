@@ -5,6 +5,23 @@ The token lists for Mask Network.
 - List Name: Mask Network
 - Link to the official homepage of the list manager: <https://mask.io>
 
+## Setup
+
+```bash
+yarn # install dependencies
+yarn build # build token lists
+```
+
+## Steps for new chain
+
+- Add the chain id in [types.ts](src/types.ts).
+- Add your token lists into [src/fungible-tokens/](src/fungible-tokens/) or
+  [src/non-fungible-tokens/](src/non-fungible-tokens/).
+- Run `yarn build` to ensure everything is working great.
+- Don't forget to bump version in `package.json`.
+- Update below two tables in README file here.
+- Rise a pull request in this repository.
+
 ## Versions based on chain id
 
 | Chain      | Chain Id   | Link                                                           | Viewer                                                                                                   |
@@ -27,11 +44,10 @@ The token lists for Mask Network.
 | Aurora     | 1313161554 | [latest](https://tokens.r2d2.to/latest/1313161554/tokens.json) | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json) |
 | HECO       | 128        | [latest](https://tokens.r2d2.to/latest/128/tokens.json)        | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/128/tokens.json)        |
 | Conflux    | 1030       | [latest](https://tokens.r2d2.to/latest/1030/tokens.json)       | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1030/tokens.json)       |
-| Moonbeam   | 1030       | [latest](https://tokens.r2d2.to/latest/1030/tokens.json)       | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1030/tokens.json)       |
+| Moonbeam   | 1284       | [latest](https://tokens.r2d2.to/latest/1284/tokens.json)       | [token-list](https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1284/tokens.json)       |
 
 ## Versions
 
-| mask                                                  | mask_nft                                                 |
-| ----------------------------------------------------- | -------------------------------------------------------- |
-| [Latest](https://tokens.r2d2.to/latest/tokens.json)   | [Latest](https://tokens.r2d2.to/mask_nft.json)           |
-| [v0.0.28](https://tokens.r2d2.to/v0.0.28/tokens.json) | [v0.0.28](https://tokens.r2d2.to/mask_nft_v_0_0_28.json) |
+| mask                                                  | mask_nft                                                           |
+| ----------------------------------------------------- | ------------------------------------------------------------------ |
+| [v0.0.28](https://tokens.r2d2.to/v0.0.28/tokens.json) | [v0.0.28](https://tokens.r2d2.to/v0.0.28/non-fungible-tokens.json) |
