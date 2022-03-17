@@ -19,7 +19,12 @@ export async function fetchDebankLogoURI(chainId: ChainId, tokenIds: string[]) {
 
   if (!key) return [];
 
-  const allRequest = [];
+  interface DebankTokenInfo {
+    id: string;
+    logo_url: string;
+  }
+
+  const allRequest: Promise<DebankTokenInfo>[] = [];
   for (let i = 0, j = tokenIds.length; i < j; i += DEBANK_REQUEST_LIMIT) {
     const currentIds = tokenIds.slice(i, i + DEBANK_REQUEST_LIMIT);
     allRequest.push(
@@ -27,18 +32,11 @@ export async function fetchDebankLogoURI(chainId: ChainId, tokenIds: string[]) {
     );
   }
   const data = (await Promise.allSettled(allRequest))
-    .filter((x) => x.status === "fulfilled")
-    .map(
-      (x) =>
-        (
-          x as {
-            value: {
-              id: string;
-              logo_url: string;
-            };
-          }
-        ).value
+    .filter(
+      (x): x is PromiseFulfilledResult<DebankTokenInfo> =>
+        x.status === "fulfilled"
     )
+    .map((x) => x.value)
     .flat();
 
   return data.map((x) => ({

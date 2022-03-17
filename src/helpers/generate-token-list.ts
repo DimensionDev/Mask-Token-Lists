@@ -44,7 +44,7 @@ export function generateTokenList(
         return (
           EthereumAddress.isValid(token.address) &&
           token.name.length <= 40 &&
-          new RegExp("^[ \\w.'+\\-%/À-ÖØ-öø-ÿ]+$").test(token.name)
+          /^[ \w.'+\-%/À-ÖØ-öø-ÿ]+$/.test(token.name)
         );
       })
       .filter((x) => {
