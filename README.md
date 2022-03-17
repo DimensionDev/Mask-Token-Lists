@@ -15,8 +15,8 @@ yarn build # build token lists
 ## Steps for new chain
 
 - Add the chain id in [types.ts](src/types.ts).
-- Add your token lists into `src/fungible-tokens/` or
-  `src/non-fungible-tokens/`.
+- Add your token lists into [src/fungible-tokens/](src/fungible-tokens/) or
+  [src/non-fungible-tokens/](src/non-fungible-tokens/).
 - Run `yarn build` to ensure everything is working great.
 - Don't forget to bump version in `package.json`.
 - Update below two tables in README file here.
