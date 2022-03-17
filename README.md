@@ -49,5 +49,4 @@ yarn build # build token lists
 
 | mask                                                  | mask_nft                                                           |
 | ----------------------------------------------------- | ------------------------------------------------------------------ |
-| [Latest](https://tokens.r2d2.to/latest/tokens.json)   | [Latest](https://tokens.r2d2.to/latest/non-fungible-tokens.json)   |
 | [v0.0.28](https://tokens.r2d2.to/v0.0.28/tokens.json) | [v0.0.28](https://tokens.r2d2.to/v0.0.28/non-fungible-tokens.json) |
