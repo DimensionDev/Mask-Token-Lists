@@ -1,35 +1,41 @@
 [
   {
+    "chainId": 97,
     "decimals": 18,
     "symbol": "MSKA",
     "name": "Mask Token A",
     "address": "0xede33f6eb7a220c705c04547f743533d7a9d3771"
   },
   {
+    "chainId": 97,
     "decimals": 18,
     "symbol": "MSKB",
     "name": "Mask Token B",
     "address": "0x8b4a507bfc6a6af794d3699302c8451e5d941e8c"
   },
   {
+    "chainId": 97,
     "decimals": 18,
     "symbol": "MSKC",
     "name": "Mask Token C",
     "address": "0x4c6cf94a6306b2c06fe8eb46f84c79813dda98cc"
   },
   {
+    "chainId": 97,
     "decimals": 18,
     "symbol": "MSKD",
     "name": "Mask Token D",
     "address": "0xbe3a4511d3634dd36d7b6494dce88e02dbf1aabc"
   },
   {
+    "chainId": 97,
     "decimals": 18,
     "symbol": "MSKE",
     "name": "Mask Token E",
     "address": "0x30b56ab5a13d505060a13e27010b551a49b4d7e7"
   },
   {
+    "chainId": 97,
     "decimals": 18,
     "symbol": "USDC",
     "name": "USDC",
