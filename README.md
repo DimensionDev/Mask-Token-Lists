@@ -20,7 +20,7 @@ yarn build # build token lists
 - Run `yarn build` to ensure everything is working great.
 - Don't forget to bump version in `package.json`.
 - Update below two tables in README file here.
-- Risk a pull request in this repository.
+- Rise a pull request in this repository.
 
 ## Versions based on chain id
 
