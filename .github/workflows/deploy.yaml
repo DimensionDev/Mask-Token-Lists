@@ -24,14 +24,6 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          keep_files: true
-          cname: tokens.r2d2.to
-
       - name: Get Package Version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@master
@@ -63,3 +55,11 @@ jobs:
           asset_name: v${{ steps.package-version.outputs.current-version }}.zip
           tag: v${{ steps.package-version.outputs.current-version }}
           overwrite: true
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          keep_files: true
+          cname: tokens.r2d2.to
