@@ -5,7 +5,7 @@
     "symbol": "WETH",
     "decimals": 18,
     "chainId": 1284,
-    "logoURI": "https://assets.coingecko.com/coins/images/2518/thumb/weth.png?1628852295"
+    "logoURI": "assets.coingecko.com/coins/images/2518/thumb/weth.png?1628852295"
   },
   {
     "name": "Wrapped BTC",
@@ -13,7 +13,7 @@
     "symbol": "WBTC",
     "decimals": 8,
     "chainId": 1284,
-    "logoURI": "https://assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png?1548822744"
+    "logoURI": "assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png?1548822744"
   },
   {
     "name": "Dai Stablecoin",
@@ -21,7 +21,7 @@
     "symbol": "DAI",
     "decimals": 18,
     "chainId": 1284,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/DAI.jpg"
+    "logoURI": "raw.githubusercontent.com/sushiswap/icons/master/token/DAI.jpg"
   },
   {
     "name": "USD Coin",
@@ -29,7 +29,7 @@
     "symbol": "USDC",
     "decimals": 6,
     "chainId": 1284,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/USDC.jpg"
+    "logoURI": "raw.githubusercontent.com/sushiswap/icons/master/token/USDC.jpg"
   },
   {
     "name": "Tether USD",
@@ -37,7 +37,7 @@
     "symbol": "USDT",
     "decimals": 6,
     "chainId": 1284,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/usdt.jpg"
+    "logoURI": "raw.githubusercontent.com/sushiswap/icons/master/token/usdt.jpg"
   },
   {
     "name": "Wrapped GLMR",
@@ -45,7 +45,7 @@
     "symbol": "WGLMR",
     "decimals": 18,
     "chainId": 1284,
-    "logoURI": "https://"
+    "logoURI": ""
   },
   {
     "name": "Binance-Peg BUSD Token",
@@ -53,7 +53,7 @@
     "symbol": "multiBUSD",
     "decimals": 18,
     "chainId": 1284,
-    "logoURI": "https://"
+    "logoURI": ""
   },
   {
     "name": "Vested SolarBeam Token",
@@ -61,7 +61,7 @@
     "symbol": "veSOLAR",
     "decimals": 18,
     "chainId": 1284,
-    "logoURI": "https://"
+    "logoURI": ""
   },
   {
     "name": "Vested Flare Token",
@@ -69,7 +69,7 @@
     "symbol": "veFLARE",
     "decimals": 18,
     "chainId": 1284,
-    "logoURI": "https://"
+    "logoURI": ""
   },
   {
     "name": "Flare Token",
@@ -77,7 +77,7 @@
     "symbol": "FLARE",
     "decimals": 18,
     "chainId": 1284,
-    "logoURI": "https://"
+    "logoURI": ""
   },
   {
     "name": "Moonriver",
@@ -85,7 +85,7 @@
     "symbol": "MOVR",
     "decimals": 18,
     "chainId": 1284,
-    "logoURI": "https://"
+    "logoURI": ""
   },
   {
     "name": "Binance",
@@ -93,7 +93,7 @@
     "symbol": "BNB",
     "decimals": 18,
     "chainId": 1284,
-    "logoURI": "https://"
+    "logoURI": ""
   },
   {
     "name": "Moonscape",
@@ -101,7 +101,7 @@
     "symbol": "MSCP",
     "decimals": 18,
     "chainId": 1284,
-    "logoURI": "https://"
+    "logoURI": ""
   },
   {
     "name": "RiverBoat",
@@ -109,7 +109,7 @@
     "symbol": "RIB",
     "decimals": 18,
     "chainId": 1284,
-    "logoURI": "https://"
+    "logoURI": ""
   },
   {
     "name": "Axelar Wrapped UST",
@@ -117,7 +117,7 @@
     "symbol": "UST",
     "decimals": 6,
     "chainId": 1284,
-    "logoURI": "https://"
+    "logoURI": ""
   },
   {
     "name": "USD Coin",
@@ -125,7 +125,7 @@
     "symbol": "multiUSDC",
     "decimals": 6,
     "chainId": 1284,
-    "logoURI": "https://"
+    "logoURI": ""
   },
   {
     "name": "Tether USD",
@@ -133,7 +133,7 @@
     "symbol": "multiUSDT",
     "decimals": 6,
     "chainId": 1284,
-    "logoURI": "https://"
+    "logoURI": ""
   },
   {
     "name": "Axelar Wrapped LUNA",
@@ -141,6 +141,6 @@
     "symbol": "LUNA",
     "decimals": 6,
     "chainId": 1284,
-    "logoURI": "https://"
+    "logoURI": ""
   }
 ]
