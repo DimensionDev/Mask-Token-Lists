@@ -53,4 +53,12 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: v${{ steps.package-version.outputs.current-version }}.zip
-          path: v${{ steps.package-version.outputs.current-version }}.zip
+
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: v${{ steps.package-version.outputs.current-version }}.zip
+          asset_name: v${{ steps.package-version.outputs.current-version }}
+          tag: ${{ github.ref }}
+          overwrite: true
