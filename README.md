@@ -8,7 +8,7 @@ The token lists for Mask Network.
 ## Setup
 
 ```bash
-yarn # install dependencies
+yarn install # install dependencies
 yarn build # build token lists
 ```
 
@@ -26,25 +26,25 @@ yarn build # build token lists
 
 <!-- begin versions -->
 
-| Chain      | Chain Id   | Link                      | Viewer                          |
-| ---------- | ---------- | ------------------------- | ------------------------------- |
-| Mainnet    | 1          | [latest][link-mainnet]    | [token-list][viewer-mainnet]    |
-| Ropsten    | 3          | [latest][link-ropsten]    | [token-list][viewer-ropsten]    |
-| Rinkeby    | 4          | [latest][link-rinkeby]    | [token-list][viewer-rinkeby]    |
-| Optimistic | 10         | [latest][link-optimistic] | [token-list][viewer-optimistic] |
-| BNB        | 56         | [latest][link-bnb]        | [token-list][viewer-bnb]        |
-| Chapel     | 97         | [latest][link-chapel]     | [token-list][viewer-chapel]     |
-| xDai       | 100        | [latest][link-xdai]       | [token-list][viewer-xdai]       |
-| Fuse       | 122        | [latest][link-fuse]       | [token-list][viewer-fuse]       |
-| Heco       | 128        | [latest][link-heco]       | [token-list][viewer-heco]       |
-| Fantom     | 250        | [latest][link-fantom]     | [token-list][viewer-fantom]     |
-| Boba       | 288        | [latest][link-boba]       | [token-list][viewer-boba]       |
-| Polygon    | 137        | [latest][link-polygon]    | [token-list][viewer-polygon]    |
-| Mumbai     | 80001      | [latest][link-mumbai]     | [token-list][viewer-mumbai]     |
-| Conflux    | 1030       | [latest][link-conflux]    | [token-list][viewer-conflux]    |
-| Arbiturm   | 42161      | [latest][link-arbiturm]   | [token-list][viewer-arbiturm]   |
-| Celo       | 42220      | [latest][link-celo]       | [token-list][viewer-celo]       |
-| Avalanche  | 43114      | [latest][link-avalanche]  | [token-list][viewer-avalanche]  |
+| Chain      |   Chain Id | Link                      | Viewer                          |
+| ---------- | ---------: | ------------------------- | ------------------------------- |
+| Mainnet    |          1 | [latest][link-mainnet]    | [token-list][viewer-mainnet]    |
+| Ropsten    |          3 | [latest][link-ropsten]    | [token-list][viewer-ropsten]    |
+| Rinkeby    |          4 | [latest][link-rinkeby]    | [token-list][viewer-rinkeby]    |
+| Optimistic |         10 | [latest][link-optimistic] | [token-list][viewer-optimistic] |
+| BNB        |         56 | [latest][link-bnb]        | [token-list][viewer-bnb]        |
+| Chapel     |         97 | [latest][link-chapel]     | [token-list][viewer-chapel]     |
+| xDai       |        100 | [latest][link-xdai]       | [token-list][viewer-xdai]       |
+| Fuse       |        122 | [latest][link-fuse]       | [token-list][viewer-fuse]       |
+| Heco       |        128 | [latest][link-heco]       | [token-list][viewer-heco]       |
+| Fantom     |        250 | [latest][link-fantom]     | [token-list][viewer-fantom]     |
+| Boba       |        288 | [latest][link-boba]       | [token-list][viewer-boba]       |
+| Polygon    |        137 | [latest][link-polygon]    | [token-list][viewer-polygon]    |
+| Mumbai     |      80001 | [latest][link-mumbai]     | [token-list][viewer-mumbai]     |
+| Conflux    |       1030 | [latest][link-conflux]    | [token-list][viewer-conflux]    |
+| Arbiturm   |      42161 | [latest][link-arbiturm]   | [token-list][viewer-arbiturm]   |
+| Celo       |      42220 | [latest][link-celo]       | [token-list][viewer-celo]       |
+| Avalanche  |      43114 | [latest][link-avalanche]  | [token-list][viewer-avalanche]  |
 | Aurora     | 1313161554 | [latest][link-aurora]     | [token-list][viewer-aurora]     |
 
 [link-mainnet]: https://tokens.r2d2.to/latest/1/tokens.json

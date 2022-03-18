@@ -21,7 +21,7 @@ main();
 
 function* makeVersions() {
   yield "| Chain | Chain Id | Link | Viewer |";
-  yield "| - | - | - | - |";
+  yield "| - | -: | - | - |";
   for (const { key, value } of getEnumAsArray(ChainId)) {
     yield `| ${key} | ${value} | [latest][link-${key}] | [token-list][viewer-${key}] |`;
   }

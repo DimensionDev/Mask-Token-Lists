@@ -1,15 +1,16 @@
 {
   "name": "mask-token-lists",
   "version": "0.0.28",
-  "main": "index.js",
   "repository": "https://github.com/DimensionDev/Mask-Token-Lists.git",
-  "author": "guanbinrui <guanbinrui@mask.io>",
   "license": "MIT",
+  "author": "guanbinrui <guanbinrui@mask.io>",
+  "main": "index.js",
   "scripts": {
     "build": "npx ts-node src/index.ts",
-    "publish": "gh-pages -d ./dist",
+    "generate-readme": "npx ts-node src/generate-readme.ts",
+    "prepare": "husky install",
     "prettier": "prettier -c .",
-    "prepare": "husky install"
+    "publish": "gh-pages -d ./dist"
   },
   "dependencies": {
     "ts-node": "^10.7.0",
