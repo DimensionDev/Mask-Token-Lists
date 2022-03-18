@@ -53,6 +53,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: v${{ steps.package-version.outputs.current-version }}.zip
+          path: v${{ steps.package-version.outputs.current-version }}.zip
 
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
