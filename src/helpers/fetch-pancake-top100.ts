@@ -1,4 +1,4 @@
-import { writeFileSync } from "fs";
+import { writeFile } from "fs/promises";
 import fetch from "node-fetch";
 import { resolve } from "path";
 import { FungibleToken } from "../types";
@@ -22,7 +22,7 @@ async function fetchTop100() {
     })
   );
 
-  writeFileSync(fileDest, JSON.stringify(tokens, null, 2));
+  await writeFile(fileDest, JSON.stringify(tokens, null, 2));
 }
 
 fetchTop100();

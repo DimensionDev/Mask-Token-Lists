@@ -1,5 +1,5 @@
 import Package from "../package.json";
-import { mkdirSync, writeFileSync } from "fs";
+import { mkdir, writeFile } from "fs/promises";
 import { resolve } from "path";
 import { generate as generateFungibleTokens } from "./generate-fungible-tokens";
 import { generate as generateNonFungibleTokens } from "./generate-fungible-tokens";
@@ -18,29 +18,29 @@ async function main() {
     );
 
     // lastest/tokens.ts
-    mkdirSync(pathToLatestFolder, { recursive: true });
-    writeFileSync(
+    await mkdir(pathToLatestFolder, { recursive: true });
+    await writeFile(
       `${pathToLatestFolder}/tokens.json`,
       await generateFungibleTokens(value.value)
     );
 
     // vx.x.x/tokens.ts
-    mkdirSync(pathToVersionFolder, { recursive: true });
-    writeFileSync(
+    await mkdir(pathToVersionFolder, { recursive: true });
+    await writeFile(
       `${pathToVersionFolder}/tokens.json`,
       await generateFungibleTokens(value.value)
     );
 
     // lastest/non-fungible-tokens.ts
-    mkdirSync(pathToLatestFolder, { recursive: true });
-    writeFileSync(
+    await mkdir(pathToLatestFolder, { recursive: true });
+    await writeFile(
       `${pathToLatestFolder}/non-fungible-tokens.json`,
       await generateNonFungibleTokens(value.value)
     );
 
     // vx.x.x/non-fungible-tokens.ts
-    mkdirSync(pathToVersionFolder, { recursive: true });
-    writeFileSync(
+    await mkdir(pathToVersionFolder, { recursive: true });
+    await writeFile(
       `${pathToVersionFolder}/non-fungible-tokens.json`,
       await generateNonFungibleTokens(value.value)
     );
