@@ -40,7 +40,7 @@ jobs:
         uses: rickstaa/action-create-tag@v1
         with:
           tag: v${{ steps.package-version.outputs.current-version }}
-          message: "Latest Release"
+          message: v${{ steps.package-version.outputs.current-version }}
 
       - name: Create Release Package
         uses: montudor/action-zip@v1
