@@ -15,8 +15,7 @@ yarn build # build token lists
 ## Steps for new chain
 
 - Add the chain id in [types.ts](src/types.ts).
-- Add your token lists into [src/fungible-tokens/](src/fungible-tokens/) or
-  [src/non-fungible-tokens/](src/non-fungible-tokens/).
+- Add your token lists into [src/fungible-tokens/](src/fungible-tokens/) or [src/non-fungible-tokens/](src/non-fungible-tokens/).
 - Run `yarn build` to ensure everything is working great.
 - Don't forget to bump version in `package.json`.
 - Update below two tables in README file here.
@@ -65,41 +64,23 @@ yarn build # build token lists
 [link-celo]: https://tokens.r2d2.to/latest/42220/tokens.json
 [link-avalanche]: https://tokens.r2d2.to/latest/43114/tokens.json
 [link-aurora]: https://tokens.r2d2.to/latest/1313161554/tokens.json
-[viewer-mainnet]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1/tokens.json
-[viewer-ropsten]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/3/tokens.json
-[viewer-rinkeby]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/4/tokens.json
-[viewer-optimistic]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/10/tokens.json
-[viewer-bnb]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/56/tokens.json
-[viewer-chapel]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/97/tokens.json
-[viewer-xdai]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/100/tokens.json
-[viewer-fuse]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/122/tokens.json
-[viewer-heco]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/128/tokens.json
-[viewer-fantom]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/250/tokens.json
-[viewer-boba]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/288/tokens.json
-[viewer-polygon]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/137/tokens.json
-[viewer-mumbai]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/80001/tokens.json
-[viewer-conflux]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1030/tokens.json
-[viewer-arbiturm]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42161/tokens.json
-[viewer-celo]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42220/tokens.json
-[viewer-avalanche]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/43114/tokens.json
-[viewer-aurora]:
-  https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json
+[viewer-mainnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1/tokens.json
+[viewer-ropsten]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/3/tokens.json
+[viewer-rinkeby]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/4/tokens.json
+[viewer-optimistic]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/10/tokens.json
+[viewer-bnb]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/56/tokens.json
+[viewer-chapel]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/97/tokens.json
+[viewer-xdai]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/100/tokens.json
+[viewer-fuse]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/122/tokens.json
+[viewer-heco]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/128/tokens.json
+[viewer-fantom]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/250/tokens.json
+[viewer-boba]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/288/tokens.json
+[viewer-polygon]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/137/tokens.json
+[viewer-mumbai]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/80001/tokens.json
+[viewer-conflux]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1030/tokens.json
+[viewer-arbiturm]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42161/tokens.json
+[viewer-celo]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42220/tokens.json
+[viewer-avalanche]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/43114/tokens.json
+[viewer-aurora]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json
 
 <!-- end versions -->

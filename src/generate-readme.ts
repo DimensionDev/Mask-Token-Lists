@@ -13,7 +13,10 @@ async function main() {
     "versions",
     Array.from(makeVersions()).join("\n")
   );
-  const formatted = format(replaced, { parser: "markdown" });
+  const formatted = format(replaced, {
+    parser: "markdown",
+    printWidth: 160,
+  });
   await fs.writeFile(README_PATH, formatted, "utf-8");
 }
 
