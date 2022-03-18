@@ -1,3 +1,11 @@
 {
-  "proseWrap": "always"
+  "proseWrap": "always",
+  "overrides": [
+    {
+      "files": "README.md",
+      "options": {
+        "printWidth": 160
+      }
+    }
+  ]
 }
