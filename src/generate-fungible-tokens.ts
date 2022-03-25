@@ -21,6 +21,7 @@ import Heco from "./fungible-tokens/heco.json";
 import Pancake from "./fungible-tokens/pancake.json";
 import QucikSwapTokens from "./fungible-tokens/quickswap.json";
 import Conflux from "./fungible-tokens/conflux.json";
+import Kardiachain from "./fungible-tokens/kardiachain.json";
 import { fetchDebankLogoURI, generateTokenList } from "./helpers";
 
 const MetaMask = (
@@ -76,6 +77,7 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
     [ChainId.Celo]: [Celo],
     [ChainId.Avalanche]: [Avalanche],
     [ChainId.Aurora]: [Aurora],
+    [ChainId.Kardiachain]: [Kardiachain],
   };
 }
 

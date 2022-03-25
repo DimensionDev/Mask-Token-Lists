@@ -3,6 +3,7 @@ export enum ChainId {
   Ropsten = 3,
   Rinkeby = 4,
   Optimistic = 10,
+  Kardiachain = 24,
   BNB = 56,
   Chapel = 97,
   xDai = 100,
