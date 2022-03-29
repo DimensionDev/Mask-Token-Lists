@@ -5,7 +5,7 @@
     "symbol": "WETH",
     "decimals": 18,
     "chainId": 1284,
-    "logoURI": "assets.coingecko.com/coins/images/2518/thumb/weth.png?1628852295"
+    "logoURI": "https://assets.coingecko.com/coins/images/2518/thumb/weth.png"
   },
   {
     "name": "Wrapped BTC",
@@ -13,7 +13,7 @@
     "symbol": "WBTC",
     "decimals": 8,
     "chainId": 1284,
-    "logoURI": "assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png?1548822744"
+    "logoURI": "https://assets.coingecko.com/coins/images/7598/thumb/wrapped_bitcoin_wbtc.png"
   },
   {
     "name": "Dai Stablecoin",
@@ -21,7 +21,7 @@
     "symbol": "DAI",
     "decimals": 18,
     "chainId": 1284,
-    "logoURI": "raw.githubusercontent.com/sushiswap/icons/master/token/DAI.jpg"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/DAI.jpg"
   },
   {
     "name": "USD Coin",
@@ -29,7 +29,7 @@
     "symbol": "USDC",
     "decimals": 6,
     "chainId": 1284,
-    "logoURI": "raw.githubusercontent.com/sushiswap/icons/master/token/USDC.jpg"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/USDC.jpg"
   },
   {
     "name": "Tether USD",
@@ -37,7 +37,7 @@
     "symbol": "USDT",
     "decimals": 6,
     "chainId": 1284,
-    "logoURI": "raw.githubusercontent.com/sushiswap/icons/master/token/usdt.jpg"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/usdt.jpg"
   },
   {
     "name": "Wrapped GLMR",
