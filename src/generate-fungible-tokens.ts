@@ -18,6 +18,7 @@ import Aurora from "./fungible-tokens/aurora.json";
 import Avalanche from "./fungible-tokens/avalanche.json";
 import Boba from "./fungible-tokens/boba.json";
 import Heco from "./fungible-tokens/heco.json";
+import Moonbeam from "./fungible-tokens/moonbeam.json";
 import Pancake from "./fungible-tokens/pancake.json";
 import QucikSwapTokens from "./fungible-tokens/quickswap.json";
 import Conflux from "./fungible-tokens/conflux.json";
@@ -77,6 +78,7 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
     [ChainId.Celo]: [Celo],
     [ChainId.Avalanche]: [Avalanche],
     [ChainId.Aurora]: [Aurora],
+    [ChainId.Moonbeam]: [Moonbeam],
     [ChainId.Kardiachain]: [Kardiachain],
   };
 }

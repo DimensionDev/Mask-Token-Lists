@@ -18,6 +18,7 @@ export enum ChainId {
   Celo = 42220,
   Avalanche = 43114,
   Aurora = 1313161554,
+  Moonbeam = 1284,
 }
 
 export interface FungibleToken {

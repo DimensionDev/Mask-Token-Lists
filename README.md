@@ -42,6 +42,7 @@ yarn build # build token lists
 | Polygon     |        137 | [latest][link-polygon]    | [token-list][viewer-polygon]    |
 | Mumbai      |      80001 | [latest][link-mumbai]     | [token-list][viewer-mumbai]     |
 | Conflux     |       1030 | [latest][link-conflux]    | [token-list][viewer-conflux]    |
+| Moonbeam    |       1284 | [latest][link-moonbeam]   | [token-list][viewer-moobeam]    |
 | Arbiturm    |      42161 | [latest][link-arbiturm]   | [token-list][viewer-arbiturm]   |
 | Celo        |      42220 | [latest][link-celo]       | [token-list][viewer-celo]       |
 | Avalanche   |      43114 | [latest][link-avalanche]  | [token-list][viewer-avalanche]  |
@@ -65,6 +66,7 @@ yarn build # build token lists
 [link-celo]: https://tokens.r2d2.to/latest/42220/tokens.json
 [link-avalanche]: https://tokens.r2d2.to/latest/43114/tokens.json
 [link-aurora]: https://tokens.r2d2.to/latest/1313161554/tokens.json
+[link-moonbeam]: https://tokens.r2d2.to/latest/1284/tokens.json
 [viewer-mainnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1/tokens.json
 [viewer-ropsten]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/3/tokens.json
 [viewer-rinkeby]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/4/tokens.json
@@ -83,6 +85,7 @@ yarn build # build token lists
 [viewer-celo]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42220/tokens.json
 [viewer-avalanche]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/43114/tokens.json
 [viewer-aurora]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json
+[viewer-moonbeam]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1284/tokens.json
 [viewer-kardiachain]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/24/tokens.json
 
 <!-- end versions -->
