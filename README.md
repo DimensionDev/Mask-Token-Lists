@@ -42,13 +42,13 @@ yarn build # build token lists
 | Polygon         |        137 | [latest][link-polygon]        | [token-list][viewer-polygon]         |
 | Mumbai          |      80001 | [latest][link-mumbai]         | [token-list][viewer-mumbai]          |
 | Conflux         |       1030 | [latest][link-conflux]        | [token-list][viewer-conflux]         |
-| Moonbeam        |       1284 | [latest][link-moonbeam]       | [token-list][viewer-moobeam]         |
+| Moonbeam        |       1284 | [latest][link-moonbeam]       | [token-list][viewer-moonbeam]         |
 | Arbiturm        |      42161 | [latest][link-arbiturm]       | [token-list][viewer-arbiturm]        |
 | Celo            |      42220 | [latest][link-celo]           | [token-list][viewer-celo]            |
 | Avalanche       |      43114 | [latest][link-avalanche]      | [token-list][viewer-avalanche]       |
 | Aurora          | 1313161554 | [latest][link-aurora]         | [token-list][viewer-aurora]          |
 | Harmony         | 1666600000 | [latest][link-harmony]        | [token-list][viewer-harmony]         |
-| Harmony Testnet | 1666700000 | [latest][link-harmony-tesnet] | [token-list][viewer-harmony-testnet] |
+| Harmony Testnet | 1666700000 | [latest][link-harmony-testnet] | [token-list][viewer-harmony-testnet] |
 
 [link-mainnet]: https://tokens.r2d2.to/latest/1/tokens.json
 [link-ropsten]: https://tokens.r2d2.to/latest/3/tokens.json
