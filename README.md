@@ -31,6 +31,7 @@ yarn build # build token lists
 | Ropsten         |          3 | [latest][link-ropsten]        | [token-list][viewer-ropsten]         |
 | Rinkeby         |          4 | [latest][link-rinkeby]        | [token-list][viewer-rinkeby]         |
 | Optimistic      |         10 | [latest][link-optimistic]     | [token-list][viewer-optimistic]      |
+| Kardiachain     |         24 | [latest][link-kardiachain]    | [token-list][viewer-kardiachain]     |
 | BNB             |         56 | [latest][link-bnb]            | [token-list][viewer-bnb]             |
 | Chapel          |         97 | [latest][link-chapel]         | [token-list][viewer-chapel]          |
 | xDai            |        100 | [latest][link-xdai]           | [token-list][viewer-xdai]            |
@@ -41,6 +42,7 @@ yarn build # build token lists
 | Polygon         |        137 | [latest][link-polygon]        | [token-list][viewer-polygon]         |
 | Mumbai          |      80001 | [latest][link-mumbai]         | [token-list][viewer-mumbai]          |
 | Conflux         |       1030 | [latest][link-conflux]        | [token-list][viewer-conflux]         |
+| Moonbeam        |       1284 | [latest][link-moonbeam]       | [token-list][viewer-moobeam]         |
 | Arbiturm        |      42161 | [latest][link-arbiturm]       | [token-list][viewer-arbiturm]        |
 | Celo            |      42220 | [latest][link-celo]           | [token-list][viewer-celo]            |
 | Avalanche       |      43114 | [latest][link-avalanche]      | [token-list][viewer-avalanche]       |
@@ -68,6 +70,8 @@ yarn build # build token lists
 [link-aurora]: https://tokens.r2d2.to/latest/1313161554/tokens.json
 [link-harmony]: https://tokens.r2d2.to/latest/1666600000/tokens.json
 [link-harmony-testnet]: https://tokens.r2d2.to/latest/1666700000/tokens.json
+[link-moonbeam]: https://tokens.r2d2.to/latest/1284/tokens.json
+[link-kardiachain]: https://tokens.r2d2.to/latest/24/tokens.json
 [viewer-mainnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1/tokens.json
 [viewer-ropsten]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/3/tokens.json
 [viewer-rinkeby]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/4/tokens.json
@@ -88,5 +92,7 @@ yarn build # build token lists
 [viewer-aurora]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json
 [viewer-harmony]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666600000/tokens.json
 [viewer-harmony-testnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666700000/tokens.json
+[viewer-moonbeam]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1284/tokens.json
+[viewer-kardiachain]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/24/tokens.json
 
 <!-- end versions -->
