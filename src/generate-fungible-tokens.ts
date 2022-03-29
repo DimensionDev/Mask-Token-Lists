@@ -22,6 +22,8 @@ import Moonbeam from "./fungible-tokens/moonbeam.json";
 import Pancake from "./fungible-tokens/pancake.json";
 import QucikSwapTokens from "./fungible-tokens/quickswap.json";
 import Conflux from "./fungible-tokens/conflux.json";
+import Harmony from "./fungible-tokens/harmony.json";
+import HarmonyTestnet from "./fungible-tokens/harmony-testnet.json";
 import Kardiachain from "./fungible-tokens/kardiachain.json";
 import { fetchDebankLogoURI, generateTokenList } from "./helpers";
 
@@ -80,6 +82,8 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
     [ChainId.Aurora]: [Aurora],
     [ChainId.Moonbeam]: [Moonbeam],
     [ChainId.Kardiachain]: [Kardiachain],
+    [ChainId.Harmony]: [Harmony],
+    [ChainId.Harmony_Testnet]: [HarmonyTestnet],
   };
 }
 

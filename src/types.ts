@@ -14,11 +14,13 @@ export enum ChainId {
   Polygon = 137,
   Mumbai = 80001,
   Conflux = 1030,
+  Moonbeam = 1284,
   Arbiturm = 42161,
   Celo = 42220,
   Avalanche = 43114,
   Aurora = 1313161554,
-  Moonbeam = 1284,
+  Harmony = 1666600000,
+  Harmony_Testnet = 1666700000,
 }
 
 export interface FungibleToken {
