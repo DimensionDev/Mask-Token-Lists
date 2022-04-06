@@ -1890,10 +1890,6 @@
     "decimals": 6,
     "symbol": "CAN"
   },
-  "0x6090A6e47849629b7245Dfa1Ca21D94cd15878Ef": {
-    "name": "ENS Registrar",
-    "logo": "ens.svg"
-  },
   "0x3d1BA9be9f66B8ee101911bC36D3fB562eaC2244": {
     "name": "Rivetz",
     "logo": "rivetz.png",
@@ -1928,10 +1924,6 @@
     "erc20": true,
     "symbol": "BMX",
     "decimals": 18
-  },
-  "0x2af47a65da8CD66729b4209C22017d6A5C2d2400": {
-    "name": "StandardBounties",
-    "logo": "StandardBounties.png"
   },
   "0xF03f8D65BaFA598611C3495124093c56e8F638f0": {
     "name": "Viewly",
