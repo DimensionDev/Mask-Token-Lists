@@ -159,5 +159,12 @@
     "symbol": "O3",
     "name": "O3 Swap Token",
     "address": "0xEe9801669C6138E84bD50dEB500827b776777d28"
+  },
+  {
+    "chainId": 1,
+    "decimals": 18,
+    "symbol": "ATTR",
+    "name": "Attrace",
+    "address": "0x44e2deC86B9F0e0266E9AA66e10323A2bd69CF9A"
   }
 ]
