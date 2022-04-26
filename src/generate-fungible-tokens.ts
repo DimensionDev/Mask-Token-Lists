@@ -25,6 +25,7 @@ import Conflux from "./fungible-tokens/conflux.json";
 import Harmony from "./fungible-tokens/harmony.json";
 import HarmonyTestnet from "./fungible-tokens/harmony-testnet.json";
 import Kardiachain from "./fungible-tokens/kardiachain.json";
+import Astar from "./fungible-tokens/astar.json";
 import { fetchDebankLogoURI, generateTokenList } from "./helpers";
 
 const MetaMask = (
@@ -84,6 +85,7 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
     [ChainId.Kardiachain]: [Kardiachain],
     [ChainId.Harmony]: [Harmony],
     [ChainId.Harmony_Testnet]: [HarmonyTestnet],
+    [ChainId.Astar]: [Astar],
   };
 }
 

@@ -36,39 +36,34 @@
     "address": "0xAeaaf0e2c81Af264101B9129C00F4440cCF0F720",
     "symbol": "WASTR",
     "decimals": 8,
-    "chainId": 592,
-    "logoURI": ""
+    "chainId": 592
   },
   {
     "name": "ASX",
     "address": "0x5D1af739FD538D363Fd61a59d3CBb7B70784A3AC",
     "symbol": "ASX",
-    "decimals": 592,
-    "chainId": 100,
-    "logoURI": ""
+    "decimals": 18,
+    "chainId": 592
   },
   {
     "name": "BUSD",
     "address": "0x65e66a61d0a8f1e686c2d6083ad611a10d84d97a",
     "symbol": "BUSD",
-    "decimals": 592,
-    "chainId": 100,
-    "logoURI": ""
+    "decimals": 18,
+    "chainId": 592
   },
   {
     "name": "VERSA",
     "address": "0xB9dEDB74bd7b298aBf76b9dFbE5b62F0aB05a57b",
     "symbol": "VERSA",
     "decimals": 18,
-    "chainId": 592,
-    "logoURI": ""
+    "chainId": 592
   },
   {
     "name": "ARSW",
     "address": "0xde2578edec4669ba7f41c5d5d2386300bcea4678",
     "symbol": "ARSW",
     "decimals": 18,
-    "chainId": 592,
-    "logoURI": ""
+    "chainId": 592
   }
 ]

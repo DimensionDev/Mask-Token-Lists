@@ -21,7 +21,7 @@ export enum ChainId {
   Aurora = 1313161554,
   Harmony = 1666600000,
   Harmony_Testnet = 1666700000,
-  Astar = 592
+  Astar = 592,
 }
 
 export interface FungibleToken {
