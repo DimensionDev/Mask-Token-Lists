@@ -9,6 +9,7 @@ import Fuse from "./fungible-tokens/fuse.json";
 import BNB from "./fungible-tokens/bnb.json";
 import Chapel from "./fungible-tokens/chapel.json";
 import xDai from "./fungible-tokens/xdai.json";
+import Sokol from "./fungible-tokens/sokol.json";
 import Fantom from "./fungible-tokens/fantom.json";
 import Celo from "./fungible-tokens/celo.json";
 import Polygon from "./fungible-tokens/polygon.json";
@@ -71,6 +72,7 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
     [ChainId.BNB]: [BNB, Pancake],
     [ChainId.Chapel]: [Chapel],
     [ChainId.xDai]: [xDai],
+    [ChainId.Sokol]: [Sokol],
     [ChainId.Fuse]: [Fuse],
     [ChainId.Heco]: [Heco],
     [ChainId.Fantom]: [Fantom],

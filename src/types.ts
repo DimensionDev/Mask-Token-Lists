@@ -7,6 +7,7 @@ export enum ChainId {
   BNB = 56,
   Chapel = 97,
   xDai = 100,
+  Sokol = 77,
   Fuse = 122,
   Heco = 128,
   Fantom = 250,
