@@ -35,6 +35,7 @@ yarn build # build token lists
 | BNB             |         56 | [latest][link-bnb]             | [token-list][viewer-bnb]             |
 | Chapel          |         97 | [latest][link-chapel]          | [token-list][viewer-chapel]          |
 | xDai            |        100 | [latest][link-xdai]            | [token-list][viewer-xdai]            |
+| Sokol           |         77 | [latest][link-sokol]           | [token-list][viewer-sokol]           |
 | Fuse            |        122 | [latest][link-fuse]            | [token-list][viewer-fuse]            |
 | Heco            |        128 | [latest][link-heco]            | [token-list][viewer-heco]            |
 | Fantom          |        250 | [latest][link-fantom]          | [token-list][viewer-fantom]          |
@@ -59,6 +60,7 @@ yarn build # build token lists
 [link-bnb]: https://tokens.r2d2.to/latest/56/tokens.json
 [link-chapel]: https://tokens.r2d2.to/latest/97/tokens.json
 [link-xdai]: https://tokens.r2d2.to/latest/100/tokens.json
+[link-sokol]: https://tokens.r2d2.to/latest/77/tokens.json
 [link-fuse]: https://tokens.r2d2.to/latest/122/tokens.json
 [link-heco]: https://tokens.r2d2.to/latest/128/tokens.json
 [link-fantom]: https://tokens.r2d2.to/latest/250/tokens.json
@@ -82,6 +84,7 @@ yarn build # build token lists
 [viewer-bnb]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/56/tokens.json
 [viewer-chapel]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/97/tokens.json
 [viewer-xdai]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/100/tokens.json
+[viewer-sokol]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/77/tokens.json
 [viewer-fuse]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/122/tokens.json
 [viewer-heco]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/128/tokens.json
 [viewer-fantom]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/250/tokens.json
