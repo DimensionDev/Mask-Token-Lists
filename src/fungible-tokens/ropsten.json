@@ -1,35 +1,41 @@
 [
   {
+    "chainId": 3,
     "decimals": 18,
     "symbol": "MASK",
     "name": "Mask Network",
     "address": "0x5B966f3a32Db9C180843bCb40267A66b73E4f022"
   },
   {
+    "chainId": 3,
     "decimals": 18,
     "symbol": "MSKA",
     "name": "Mask Token A",
     "address": "0xe54bf69054da160c597f8b5177924b9e4b81e930"
   },
   {
+    "chainId": 3,
     "decimals": 18,
     "symbol": "MSKB",
     "name": "Mask Token B",
     "address": "0xe379c7a6ba07575a5a49d8f8ebfd04921b86917d"
   },
   {
+    "chainId": 3,
     "decimals": 18,
     "symbol": "MSKC",
     "name": "Mask Token C",
     "address": "0xb1465b954f893D921566D8BB4092B6f03FC8C313"
   },
   {
+    "chainId": 3,
     "decimals": 6,
     "symbol": "MSKD",
     "name": "Mask Token D",
     "address": "0x49a6d6fe38405e21c4402cceacd23636abe301bf"
   },
   {
+    "chainId": 3,
     "decimals": 24,
     "symbol": "MSKE",
     "name": "Mask Token E",
