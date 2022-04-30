@@ -75,9 +75,11 @@ yarn build # build token lists
 [link-celo]: https://tokens.r2d2.to/latest/42220/tokens.json
 [link-avalanche]: https://tokens.r2d2.to/latest/43114/tokens.json
 [link-aurora]: https://tokens.r2d2.to/latest/1313161554/tokens.json
+[link-cronos]: https://tokens.r2d2.to/latest/25/tokens.json
 [link-harmony]: https://tokens.r2d2.to/latest/1666600000/tokens.json
 [link-harmony_testnet]: https://tokens.r2d2.to/latest/1666700000/tokens.json
 [link-palm]: https://tokens.r2d2.to/latest/11297108109/tokens.json
+[link-astar]: https://tokens.r2d2.to/latest/592/tokens.json
 [viewer-mainnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1/tokens.json
 [viewer-ropsten]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/3/tokens.json
 [viewer-rinkeby]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/4/tokens.json
@@ -100,8 +102,10 @@ yarn build # build token lists
 [viewer-celo]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42220/tokens.json
 [viewer-avalanche]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/43114/tokens.json
 [viewer-aurora]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json
+[viewer-cronos]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/25/tokens.json
 [viewer-harmony]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666600000/tokens.json
 [viewer-harmony_testnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666700000/tokens.json
 [viewer-palm]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/11297108109/tokens.json
+[viewer-astar]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/592/tokens.json
 
 <!-- end versions -->
