@@ -17,12 +17,14 @@ export enum ChainId {
   Mumbai = 80001,
   Conflux = 1030,
   Moonbeam = 1284,
+  Moonriver = 1285,
   Arbiturm = 42161,
   Celo = 42220,
   Avalanche = 43114,
   Aurora = 1313161554,
   Harmony = 1666600000,
   Harmony_Testnet = 1666700000,
+  Palm = 11297108109,
   Astar = 592,
 }
 
