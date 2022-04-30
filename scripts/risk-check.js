@@ -1,19 +1,21 @@
-const Mainnet = require("../src/erc20/mainnet.json");
-const Ropsten = require("../src/erc20/ropsten.json");
-const Rinkeby = require("../src/erc20/rinkeby.json");
-const Optimistic = require("../src/erc20/optimistic.json");
-const Fuse = require("../src/erc20/fuse.json");
-const Bsc = require("../src/erc20/bsc.json");
-const Chapel = require("../src/erc20/chapel.json");
-const xDai = require("../src/erc20/xdai.json");
-const Fantom = require("../src/erc20/fantom.json");
-const Celo = require("../src/erc20/celo.json");
-const Matic = require("../src/erc20/matic.json");
-const Arbiturm = require("../src/erc20/arbiturm.json");
-const Mumbai = require("../src/erc20/mumbai.json");
-const Aurora = require("../src/erc20/aurora.json");
-const Avalanche = require("../src/erc20/avalanche.json");
-const Boba = require("../src/erc20/boba.json");
+const Mainnet = require("../src/fungible-tokens/mainnet.json");
+const Ropsten = require("../src/fungible-tokens/ropsten.json");
+const Rinkeby = require("../src/fungible-tokens/rinkeby.json");
+const Optimistic = require("../src/fungible-tokens/optimistic.json");
+const Fuse = require("../src/fungible-tokens/fuse.json");
+const Bsc = require("../src/fungible-tokens/bsc.json");
+const Heco = require("../src/fungible-tokens/heco.json");
+const Chapel = require("../src/fungible-tokens/chapel.json");
+const xDai = require("../src/fungible-tokens/xdai.json");
+const Fantom = require("../src/fungible-tokens/fantom.json");
+const Celo = require("../src/fungible-tokens/celo.json");
+const Matic = require("../src/fungible-tokens/matic.json");
+const Arbiturm = require("../src/fungible-tokens/arbiturm.json");
+const Mumbai = require("../src/fungible-tokens/mumbai.json");
+const Aurora = require("../src/fungible-tokens/aurora.json");
+const Avalanche = require("../src/fungible-tokens/avalanche.json");
+const Boba = require("../src/fungible-tokens/boba.json");
+const Astar = require("../src/fungible-tokens/astar.json");
 
 const GO_PLUS_LABS_ROOT_URL = "https://api.gopluslabs.io";
 const GO_PLUS_TOKEN_SECURITY_URL = "api/v1/token_security";
@@ -64,6 +66,7 @@ const chainIdToTokensMapping = {
   97: Chapel,
   100: xDai,
   122: Fuse,
+  128: Heco,
   250: Fantom,
   288: Boba,
   137: Matic,
@@ -72,13 +75,12 @@ const chainIdToTokensMapping = {
   43114: Avalanche,
   80001: Mumbai,
   1313161554: Aurora,
+  592: Astar,
 };
 
-const riskCheck = async () => {
-  if (!supportedChainIds.includes(chainId)) {
-    console.log("unsupportedChainId");
-    return;
-  }
+async function riskCheck() {
+  if (!supportedChainIds.includes(chainId)) return;
+
   const addresses = chainIdToTokensMapping[chainId]
     .map((item) => item.address)
     .join(",");
@@ -96,9 +98,9 @@ const riskCheck = async () => {
   } catch (e) {
     console.error(e);
   }
-};
+}
 
-const caculateRiskRates = (item, key) => {
+function caculateRiskRates(item, key) {
   const res = rules.reduce((rates, cur) => {
     if (item[cur.key] == cur.value) {
       rates += 20;
@@ -118,6 +120,6 @@ const caculateRiskRates = (item, key) => {
       chainId
     );
   }
-};
+}
 
 riskCheck();

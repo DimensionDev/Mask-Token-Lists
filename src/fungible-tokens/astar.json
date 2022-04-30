@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Tether USDT",
+    "address": "0xefaeee334f0fd1712f9a8cc375f427d9cdd40d73",
+    "symbol": "USDT",
+    "decimals": 18,
+    "chainId": 592,
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/usdt.jpg"
+  },
+  {
+    "name": "USDC",
+    "address": "0xfa9343c3897324496a05fc75abed6bac29f8a40f",
+    "symbol": "USDC",
+    "decimals": 6,
+    "chainId": 592,
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/usdc.jpg"
+  },
+  {
+    "name": "Ethereum",
+    "address": "0x765277eebeca2e31912c9946eae1021199b39c61",
+    "symbol": "ETH",
+    "decimals": 18,
+    "chainId": 592,
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/dpi.jpg"
+  },
+  {
+    "name": "Wrapped BTC",
+    "address": "0x818ec0a7fe18ff94269904fced6ae3dae6d6dc0b",
+    "symbol": "WBTC",
+    "decimals": 8,
+    "chainId": 592,
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/btc.jpg"
+  },
+  {
+    "name": "Wrapped ASTR",
+    "address": "0xAeaaf0e2c81Af264101B9129C00F4440cCF0F720",
+    "symbol": "WASTR",
+    "decimals": 8,
+    "chainId": 592,
+    "logoURI": "https://versa.finance/images/coins/astar.png"
+  },
+  {
+    "name": "ASX",
+    "address": "0x5D1af739FD538D363Fd61a59d3CBb7B70784A3AC",
+    "symbol": "ASX",
+    "decimals": 18,
+    "chainId": 592,
+    "logoURI": "https://raw.githubusercontent.com/astarexchange/logo/astarex.png"
+  },
+  {
+    "name": "BUSD",
+    "address": "0x65e66a61d0a8f1e686c2d6083ad611a10d84d97a",
+    "symbol": "BUSD",
+    "decimals": 18,
+    "chainId": 592,
+    "logoURI": "https://assets.coingecko.com/coins/images/9576/small/BUSD.png"
+  },
+  {
+    "name": "VERSA",
+    "address": "0xB9dEDB74bd7b298aBf76b9dFbE5b62F0aB05a57b",
+    "symbol": "VERSA",
+    "decimals": 18,
+    "chainId": 592,
+    "logoURI": "https://versa.finance/images/coins/versa.png"
+  },
+  {
+    "name": "ARSW",
+    "address": "0xde2578edec4669ba7f41c5d5d2386300bcea4678",
+    "symbol": "ARSW",
+    "decimals": 18,
+    "chainId": 592,
+    "logoURI": "https://app.arthswap.org/images/arthswaplogo_512.png"
+  }
+]

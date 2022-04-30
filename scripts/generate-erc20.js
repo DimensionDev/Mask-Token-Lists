@@ -21,7 +21,10 @@ const Boba = require("../src/erc20/boba.json");
 const Nervos = require("../src/erc20/nervos.json");
 const Heco = require("../src/erc20/heco.json");
 const Pancake = require("../src/erc20/pancake.json");
+const Metis = require("../src/erc20/metis.json");
+const Stardust = require("../src/erc20/stardust.json");
 const QucikSwapTokens = require("../src/erc20/quickswap.json");
+const ConfluxTokens = require("../src/erc20/conflux.json");
 const { fetchDebankLogoURI } = require("./fetch-debank-logo-uri");
 const { addChainId, generateTokenList } = require("./shared");
 
@@ -73,6 +76,9 @@ const chainIdToTokensMapping = {
   250: [Fantom],
   288: [Boba],
   137: [Matic, QuickSwap],
+  588: [Stardust],
+  1030: [ConfluxTokens],
+  1088: [Metis],
   42161: [Arbiturm],
   42220: [Celo],
   43114: [Avalanche],

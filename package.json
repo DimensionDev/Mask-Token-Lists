@@ -1,26 +1,31 @@
 {
   "name": "mask-token-lists",
-  "version": "0.0.28",
-  "main": "index.js",
+  "version": "0.0.39",
   "repository": "https://github.com/DimensionDev/Mask-Token-Lists.git",
-  "author": "guanbinrui <guanbinrui@mask.io>",
   "license": "MIT",
+  "author": "guanbinrui <guanbinrui@mask.io>",
+  "main": "index.js",
   "scripts": {
-    "build": "./scripts/build.sh",
-    "publish": "gh-pages -d ./dist",
+    "build": "ts-node src/index.ts",
+    "generate-readme": "ts-node src/generate-readme.ts",
+    "prepare": "husky install",
     "prettier": "prettier -c .",
-    "prepare": "husky install"
+    "publish": "gh-pages -d ./dist"
   },
   "dependencies": {
-    "@uniswap/token-lists": "^1.0.0-beta.24",
-    "ajv": "^6.12.5",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2",
     "wallet.ts": "^1.0.1"
   },
   "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/node-fetch": "^2.6.1",
+    "@types/prettier": "^2.4.4",
     "gh-pages": "^3.1.0",
     "husky": "^7.0.0",
     "node-fetch": "^2.6.1",
     "prettier": "2.5.1",
-    "pretty-quick": "^3.1.3"
+    "pretty-quick": "^3.1.3",
+    "tsc": "^2.0.4"
   }
 }

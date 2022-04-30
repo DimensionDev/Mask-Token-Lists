@@ -1,5 +1,13 @@
 [
   {
+    "name": "Boba Token",
+    "address": "0xa18bF3994C0Cc6E3b63ac420308E5383f53120D7",
+    "symbol": "BOBA",
+    "decimals": 18,
+    "chainId": 288,
+    "logoURI": "https://raw.githubusercontent.com/SwapperChan/token-list/master/logos/0xa18bF3994C0Cc6E3b63ac420308E5383f53120D7/logo.png"
+  },
+  {
     "name": "BobaDoge",
     "address": "0x121636C43E96D97AB00B6c6994cDDEBEf27dE1C7",
     "symbol": "BDoge",
@@ -142,5 +150,37 @@
     "decimals": 18,
     "chainId": 288,
     "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/zrx.jpg"
+  },
+  {
+    "name": "Waifu Token",
+    "address": "0xB5cB0975716A4AA6438d3FA02364886E13fd678c",
+    "symbol": "WAIFU",
+    "decimals": 18,
+    "chainId": 288,
+    "logoURI": "https://raw.githubusercontent.com/SwapperChan/token-list/master/logos/0xB5cB0975716A4AA6438d3FA02364886E13fd678c/logo.png"
+  },
+  {
+    "name": "Wrapped Ether",
+    "address": "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000",
+    "symbol": "WETH",
+    "decimals": 18,
+    "chainId": 288,
+    "logoURI": "https://raw.githubusercontent.com/SwapperChan/token-list/master/logos/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000/logo.png"
+  },
+  {
+    "name": "OMG Network",
+    "address": "0xe1E2ec9a85C607092668789581251115bCBD20de",
+    "symbol": "OMG",
+    "decimals": 18,
+    "chainId": 288,
+    "logoURI": "https://raw.githubusercontent.com/SwapperChan/token-list/master/logos/0xe1E2ec9a85C607092668789581251115bCBD20de/logo.png"
+  },
+  {
+    "name": "SenpaiSwap",
+    "address": "0xaC3a4aF1778203c8B651dAfA73cEd5b79c80F239",
+    "symbol": "SENPAI",
+    "decimals": 18,
+    "chainId": 288,
+    "logoURI": "https://pbs.twimg.com/profile_images/1441273478049501194/quz63sAl_400x400.jpg"
   }
 ]
