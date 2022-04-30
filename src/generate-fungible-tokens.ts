@@ -9,6 +9,7 @@ import Fuse from "./fungible-tokens/fuse.json";
 import BNB from "./fungible-tokens/bnb.json";
 import Chapel from "./fungible-tokens/chapel.json";
 import xDai from "./fungible-tokens/xdai.json";
+import Sokol from "./fungible-tokens/sokol.json";
 import Fantom from "./fungible-tokens/fantom.json";
 import Celo from "./fungible-tokens/celo.json";
 import Polygon from "./fungible-tokens/polygon.json";
@@ -18,10 +19,16 @@ import Aurora from "./fungible-tokens/aurora.json";
 import Avalanche from "./fungible-tokens/avalanche.json";
 import Boba from "./fungible-tokens/boba.json";
 import Heco from "./fungible-tokens/heco.json";
+import Moonbeam from "./fungible-tokens/moonbeam.json";
 import Pancake from "./fungible-tokens/pancake.json";
 import QucikSwapTokens from "./fungible-tokens/quickswap.json";
 import Conflux from "./fungible-tokens/conflux.json";
 import Cronos from "./fungible-tokens/cronos.json";
+import Harmony from "./fungible-tokens/harmony.json";
+import HarmonyTestnet from "./fungible-tokens/harmony-testnet.json";
+import Kardiachain from "./fungible-tokens/kardiachain.json";
+import Astar from "./fungible-tokens/astar.json";
+
 import { fetchDebankLogoURI, generateTokenList } from "./helpers";
 
 const MetaMask = (
@@ -66,6 +73,7 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
     [ChainId.BNB]: [BNB, Pancake],
     [ChainId.Chapel]: [Chapel],
     [ChainId.xDai]: [xDai],
+    [ChainId.Sokol]: [Sokol],
     [ChainId.Fuse]: [Fuse],
     [ChainId.Heco]: [Heco],
     [ChainId.Fantom]: [Fantom],
@@ -78,6 +86,11 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
     [ChainId.Avalanche]: [Avalanche],
     [ChainId.Aurora]: [Aurora],
     [ChainId.Cronos]: [Cronos],
+    [ChainId.Moonbeam]: [Moonbeam],
+    [ChainId.Kardiachain]: [Kardiachain],
+    [ChainId.Harmony]: [Harmony],
+    [ChainId.Harmony_Testnet]: [HarmonyTestnet],
+    [ChainId.Astar]: [Astar],
   };
 }
 
