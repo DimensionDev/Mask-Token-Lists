@@ -50,6 +50,7 @@ yarn build # build token lists
 | Aurora          | 1313161554 | [latest][link-aurora]          | [token-list][viewer-aurora]          |
 | Harmony         | 1666600000 | [latest][link-harmony]         | [token-list][viewer-harmony]         |
 | Harmony_Testnet | 1666700000 | [latest][link-harmony_testnet] | [token-list][viewer-harmony_testnet] |
+| Astar           |        592 | [latest][link-astar]           | [token-list][viewer-astar]           |
 
 [link-mainnet]: https://tokens.r2d2.to/latest/1/tokens.json
 [link-ropsten]: https://tokens.r2d2.to/latest/3/tokens.json
@@ -74,6 +75,7 @@ yarn build # build token lists
 [link-aurora]: https://tokens.r2d2.to/latest/1313161554/tokens.json
 [link-harmony]: https://tokens.r2d2.to/latest/1666600000/tokens.json
 [link-harmony_testnet]: https://tokens.r2d2.to/latest/1666700000/tokens.json
+[link-astar]: https://tokens.r2d2.to/latest/592/tokens.json
 [viewer-mainnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1/tokens.json
 [viewer-ropsten]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/3/tokens.json
 [viewer-rinkeby]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/4/tokens.json
@@ -97,5 +99,6 @@ yarn build # build token lists
 [viewer-aurora]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json
 [viewer-harmony]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666600000/tokens.json
 [viewer-harmony_testnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666700000/tokens.json
+[viewer-astar]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/592/tokens.json
 
 <!-- end versions -->
