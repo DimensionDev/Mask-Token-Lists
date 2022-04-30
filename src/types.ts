@@ -4,6 +4,7 @@ export enum ChainId {
   Rinkeby = 4,
   Optimistic = 10,
   Kardiachain = 24,
+  Cronos = 25,
   BNB = 56,
   Chapel = 97,
   xDai = 100,
@@ -16,6 +17,7 @@ export enum ChainId {
   Mumbai = 80001,
   Conflux = 1030,
   Moonbeam = 1284,
+  Moonriver = 1285,
   Arbiturm = 42161,
   Celo = 42220,
   Avalanche = 43114,
@@ -24,6 +26,8 @@ export enum ChainId {
   Harmony_Testnet = 1666700000,
   Metis = 1088,
   Stardust = 588,
+  Palm = 11297108109,
+  Astar = 592,
 }
 
 export interface FungibleToken {

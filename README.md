@@ -70,10 +70,12 @@ yarn build # build token lists
 [link-mumbai]: https://tokens.r2d2.to/latest/80001/tokens.json
 [link-conflux]: https://tokens.r2d2.to/latest/1030/tokens.json
 [link-moonbeam]: https://tokens.r2d2.to/latest/1284/tokens.json
+[link-moonriver]: https://tokens.r2d2.to/latest/1285/tokens.json
 [link-arbiturm]: https://tokens.r2d2.to/latest/42161/tokens.json
 [link-celo]: https://tokens.r2d2.to/latest/42220/tokens.json
 [link-avalanche]: https://tokens.r2d2.to/latest/43114/tokens.json
 [link-aurora]: https://tokens.r2d2.to/latest/1313161554/tokens.json
+[link-cronos]: https://tokens.r2d2.to/latest/25/tokens.json
 [link-harmony]: https://tokens.r2d2.to/latest/1666600000/tokens.json
 [link-harmony_testnet]: https://tokens.r2d2.to/latest/1666700000/tokens.json
 [link-metis]: https://tokens.r2d2.to/latest/1088/tokens.json
@@ -95,10 +97,12 @@ yarn build # build token lists
 [viewer-mumbai]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/80001/tokens.json
 [viewer-conflux]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1030/tokens.json
 [viewer-moonbeam]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1284/tokens.json
+[viewer-moonriver]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1285/tokens.json
 [viewer-arbiturm]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42161/tokens.json
 [viewer-celo]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42220/tokens.json
 [viewer-avalanche]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/43114/tokens.json
 [viewer-aurora]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json
+[viewer-cronos]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/25/tokens.json
 [viewer-harmony]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666600000/tokens.json
 [viewer-harmony_testnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666700000/tokens.json
 [viewer-metis]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1088/tokens.json

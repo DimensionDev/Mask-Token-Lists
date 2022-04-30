@@ -25,9 +25,14 @@ import QucikSwapTokens from "./fungible-tokens/quickswap.json";
 import Conflux from "./fungible-tokens/conflux.json";
 import Metis from "./fungible-tokens/metis.json";
 import Stardust from "./fungible-tokens/stardust.json";
+import Cronos from "./fungible-tokens/cronos.json";
 import Harmony from "./fungible-tokens/harmony.json";
 import HarmonyTestnet from "./fungible-tokens/harmony-testnet.json";
 import Kardiachain from "./fungible-tokens/kardiachain.json";
+import Palm from "./fungible-tokens/palm.json";
+import Moonriver from "./fungible-tokens/moonriver.json";
+import Astar from "./fungible-tokens/astar.json";
+
 import { fetchDebankLogoURI, generateTokenList } from "./helpers";
 
 const MetaMask = (
@@ -86,10 +91,14 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
     [ChainId.Aurora]: [Aurora],
     [ChainId.Metis]: [Metis],
     [ChainId.Stardust]: [Stardust],
+    [ChainId.Cronos]: [Cronos],
     [ChainId.Moonbeam]: [Moonbeam],
+    [ChainId.Moonriver]: [Moonriver],
     [ChainId.Kardiachain]: [Kardiachain],
     [ChainId.Harmony]: [Harmony],
     [ChainId.Harmony_Testnet]: [HarmonyTestnet],
+    [ChainId.Palm]: [Palm],
+    [ChainId.Astar]: [Astar],
   };
 }
 

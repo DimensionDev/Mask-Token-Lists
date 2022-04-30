@@ -8,9 +8,11 @@ function getNonFungileTokenLists(): Record<ChainId, NonFungibleToken[][]> {
     [ChainId.Ropsten]: [],
     [ChainId.Rinkeby]: [],
     [ChainId.Optimistic]: [],
+    [ChainId.Kardiachain]: [],
     [ChainId.BNB]: [],
     [ChainId.Chapel]: [],
     [ChainId.xDai]: [],
+    [ChainId.Skol]: [],
     [ChainId.Fuse]: [],
     [ChainId.Heco]: [],
     [ChainId.Fantom]: [],
@@ -18,10 +20,15 @@ function getNonFungileTokenLists(): Record<ChainId, NonFungibleToken[][]> {
     [ChainId.Polygon]: [],
     [ChainId.Mumbai]: [],
     [ChainId.Conflux]: [],
+    [ChainId.Moonbeam]: [],
+    [ChainId.Moonriver]: [],
     [ChainId.Arbiturm]: [],
     [ChainId.Celo]: [],
     [ChainId.Avalanche]: [],
     [ChainId.Aurora]: [],
+    [ChainId.Harmony]: [],
+    [ChainId.Harmony_Testnet]: [],
+    [ChainId.Palm]: [],
   };
 }
 
