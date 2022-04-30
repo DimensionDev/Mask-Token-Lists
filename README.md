@@ -107,5 +107,4 @@ yarn build # build token lists
 [viewer-harmony_testnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666700000/tokens.json
 [viewer-metis]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1088/tokens.json
 [viewer-stardust]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/588/tokens.json
-
 <!-- end versions -->

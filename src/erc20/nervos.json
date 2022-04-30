@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Wrapped CKB",
+    "symbol": "WCKB",
+    "address": "0xE934f463d026d97F6CE0A10215D0ac4224f0a930",
+    "decimals": 8
+  },
+  {
+    "name": "YokaiSwap Token",
+    "symbol": "YOK",
+    "address": "0xb02c930C2825A960A50ba4Ab005e8264498b64a0",
+    "decimals": 18
+  },
+  {
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "address": "0xca6FcAAA5129aD9e5219397527A17c26E5AD6a6a",
+    "decimals": 18
+  },
+  {
+    "name": "Tether USD",
+    "symbol": "USDT",
+    "address": "0x3380EA6631D4Aa6C6fE0E4eF7600896ad530093A",
+    "decimals": 18
+  },
+  {
+    "name": "NexisDAO TAI",
+    "symbol": "TAI",
+    "address": "0x8290f27935A2D353adc834c9F3c5F6ef19635C2D",
+    "decimals": 8
+  },
+  {
+    "name": "Ethereum Tether USD",
+    "symbol": "ethUSDT",
+    "address": "0xeC8bF93B774a353Fd7244A7e427C021287779b77",
+    "decimals": 18
+  },
+  {
+    "name": "Solana Tether USD",
+    "symbol": "solUSDT",
+    "address": "0x1A0E713d9c91e23c891BDd9e59Db2f1A307417fb",
+    "decimals": 18
+  },
+  {
+    "name": "NexisDAO CKB",
+    "symbol": "dCKB",
+    "address": "0x5716B1187182090d0C5D95d8bc58c71ac8c43C22",
+    "decimals": 8
+  },
+  {
+    "name": "Meow Meow Meow",
+    "symbol": "MEOW",
+    "address": "0x184Fc3C0B889f2a665e2584Fe4c45FEfB35C76A2",
+    "decimals": 18
+  }
+]

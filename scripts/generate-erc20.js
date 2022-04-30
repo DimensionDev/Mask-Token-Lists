@@ -18,6 +18,7 @@ const Mumbai = require("../src/erc20/mumbai.json");
 const Aurora = require("../src/erc20/aurora.json");
 const Avalanche = require("../src/erc20/avalanche.json");
 const Boba = require("../src/erc20/boba.json");
+const Nervos = require("../src/erc20/nervos.json");
 const Heco = require("../src/erc20/heco.json");
 const Pancake = require("../src/erc20/pancake.json");
 const Metis = require("../src/erc20/metis.json");
@@ -83,6 +84,7 @@ const chainIdToTokensMapping = {
   43114: [Avalanche],
   80001: [Mumbai],
   1313161554: [Aurora],
+  71393: [Nervos],
 };
 
 const getUntreatedTokens = async () => {
