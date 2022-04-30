@@ -49,12 +49,14 @@ yarn build # build token lists
 | Avalanche       |      43114 | [latest][link-avalanche]       | [token-list][viewer-avalanche]       |
 | Aurora          | 1313161554 | [latest][link-aurora]          | [token-list][viewer-aurora]          |
 | Harmony         | 1666600000 | [latest][link-harmony]         | [token-list][viewer-harmony]         |
-| Harmony Testnet | 1666700000 | [latest][link-harmony-testnet] | [token-list][viewer-harmony-testnet] |
+| Harmony_Testnet | 1666700000 | [latest][link-harmony_testnet] | [token-list][viewer-harmony_testnet] |
+| Astar           |        592 | [latest][link-astar]           | [token-list][viewer-astar]           |
 
 [link-mainnet]: https://tokens.r2d2.to/latest/1/tokens.json
 [link-ropsten]: https://tokens.r2d2.to/latest/3/tokens.json
 [link-rinkeby]: https://tokens.r2d2.to/latest/4/tokens.json
 [link-optimistic]: https://tokens.r2d2.to/latest/10/tokens.json
+[link-kardiachain]: https://tokens.r2d2.to/latest/24/tokens.json
 [link-bnb]: https://tokens.r2d2.to/latest/56/tokens.json
 [link-chapel]: https://tokens.r2d2.to/latest/97/tokens.json
 [link-xdai]: https://tokens.r2d2.to/latest/100/tokens.json
@@ -66,18 +68,19 @@ yarn build # build token lists
 [link-polygon]: https://tokens.r2d2.to/latest/137/tokens.json
 [link-mumbai]: https://tokens.r2d2.to/latest/80001/tokens.json
 [link-conflux]: https://tokens.r2d2.to/latest/1030/tokens.json
+[link-moonbeam]: https://tokens.r2d2.to/latest/1284/tokens.json
 [link-arbiturm]: https://tokens.r2d2.to/latest/42161/tokens.json
 [link-celo]: https://tokens.r2d2.to/latest/42220/tokens.json
 [link-avalanche]: https://tokens.r2d2.to/latest/43114/tokens.json
 [link-aurora]: https://tokens.r2d2.to/latest/1313161554/tokens.json
 [link-harmony]: https://tokens.r2d2.to/latest/1666600000/tokens.json
-[link-harmony-testnet]: https://tokens.r2d2.to/latest/1666700000/tokens.json
-[link-moonbeam]: https://tokens.r2d2.to/latest/1284/tokens.json
-[link-kardiachain]: https://tokens.r2d2.to/latest/24/tokens.json
+[link-harmony_testnet]: https://tokens.r2d2.to/latest/1666700000/tokens.json
+[link-astar]: https://tokens.r2d2.to/latest/592/tokens.json
 [viewer-mainnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1/tokens.json
 [viewer-ropsten]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/3/tokens.json
 [viewer-rinkeby]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/4/tokens.json
 [viewer-optimistic]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/10/tokens.json
+[viewer-kardiachain]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/24/tokens.json
 [viewer-bnb]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/56/tokens.json
 [viewer-chapel]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/97/tokens.json
 [viewer-xdai]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/100/tokens.json
@@ -89,13 +92,13 @@ yarn build # build token lists
 [viewer-polygon]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/137/tokens.json
 [viewer-mumbai]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/80001/tokens.json
 [viewer-conflux]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1030/tokens.json
+[viewer-moonbeam]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1284/tokens.json
 [viewer-arbiturm]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42161/tokens.json
 [viewer-celo]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42220/tokens.json
 [viewer-avalanche]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/43114/tokens.json
 [viewer-aurora]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json
 [viewer-harmony]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666600000/tokens.json
-[viewer-harmony-testnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666700000/tokens.json
-[viewer-moonbeam]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1284/tokens.json
-[viewer-kardiachain]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/24/tokens.json
+[viewer-harmony_testnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666700000/tokens.json
+[viewer-astar]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/592/tokens.json
 
 <!-- end versions -->
