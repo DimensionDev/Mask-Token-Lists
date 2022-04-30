@@ -4,6 +4,7 @@ export enum ChainId {
   Rinkeby = 4,
   Optimistic = 10,
   Kardiachain = 24,
+  Cronos = 25,
   BNB = 56,
   Chapel = 97,
   xDai = 100,
