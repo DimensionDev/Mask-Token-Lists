@@ -23,6 +23,8 @@ import Moonbeam from "./fungible-tokens/moonbeam.json";
 import Pancake from "./fungible-tokens/pancake.json";
 import QucikSwapTokens from "./fungible-tokens/quickswap.json";
 import Conflux from "./fungible-tokens/conflux.json";
+import Metis from "./fungible-tokens/metis.json";
+import Stardust from "./fungible-tokens/stardust.json";
 import Cronos from "./fungible-tokens/cronos.json";
 import Harmony from "./fungible-tokens/harmony.json";
 import HarmonyTestnet from "./fungible-tokens/harmony-testnet.json";
@@ -87,6 +89,8 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
     [ChainId.Celo]: [Celo],
     [ChainId.Avalanche]: [Avalanche],
     [ChainId.Aurora]: [Aurora],
+    [ChainId.Metis]: [Metis],
+    [ChainId.Stardust]: [Stardust],
     [ChainId.Cronos]: [Cronos],
     [ChainId.Moonbeam]: [Moonbeam],
     [ChainId.Moonriver]: [Moonriver],

@@ -24,6 +24,8 @@ export enum ChainId {
   Aurora = 1313161554,
   Harmony = 1666600000,
   Harmony_Testnet = 1666700000,
+  Metis = 1088,
+  Stardust = 588,
   Palm = 11297108109,
   Astar = 592,
 }
