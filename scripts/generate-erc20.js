@@ -23,6 +23,7 @@ const Heco = require("../src/erc20/heco.json");
 const Pancake = require("../src/erc20/pancake.json");
 const Metis = require("../src/erc20/metis.json");
 const Stardust = require("../src/erc20/stardust.json");
+const Evmos = require("../src/erc20/evmos.json");
 const QucikSwapTokens = require("../src/erc20/quickswap.json");
 const ConfluxTokens = require("../src/erc20/conflux.json");
 const { fetchDebankLogoURI } = require("./fetch-debank-logo-uri");
@@ -85,6 +86,7 @@ const chainIdToTokensMapping = {
   80001: [Mumbai],
   1313161554: [Aurora],
   71393: [Nervos],
+  9001: [Evmos],
 };
 
 const getUntreatedTokens = async () => {

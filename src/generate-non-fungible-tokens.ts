@@ -29,6 +29,7 @@ function getNonFungileTokenLists(): Record<ChainId, NonFungibleToken[][]> {
     [ChainId.Harmony]: [],
     [ChainId.Harmony_Testnet]: [],
     [ChainId.Palm]: [],
+    [ChainId.Evmos]: [],
   };
 }
 

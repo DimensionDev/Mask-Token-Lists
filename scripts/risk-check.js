@@ -16,6 +16,7 @@ const Aurora = require("../src/fungible-tokens/aurora.json");
 const Avalanche = require("../src/fungible-tokens/avalanche.json");
 const Boba = require("../src/fungible-tokens/boba.json");
 const Astar = require("../src/fungible-tokens/astar.json");
+const Evmos = require("../src/fungible-tokens/evmos.json");
 
 const GO_PLUS_LABS_ROOT_URL = "https://api.gopluslabs.io";
 const GO_PLUS_TOKEN_SECURITY_URL = "api/v1/token_security";
@@ -76,6 +77,7 @@ const chainIdToTokensMapping = {
   80001: Mumbai,
   1313161554: Aurora,
   592: Astar,
+  9000: Evmos,
 };
 
 async function riskCheck() {
