@@ -78,6 +78,7 @@ const chainIdToTokensMapping = {
   288: [Boba],
   137: [Matic, QuickSwap],
   588: [Stardust],
+  9001: [Evmos],
   1030: [ConfluxTokens],
   1088: [Metis],
   42161: [Arbiturm],
@@ -86,7 +87,6 @@ const chainIdToTokensMapping = {
   80001: [Mumbai],
   1313161554: [Aurora],
   71393: [Nervos],
-  9001: [Evmos],
 };
 
 const getUntreatedTokens = async () => {

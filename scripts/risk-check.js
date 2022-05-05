@@ -77,7 +77,7 @@ const chainIdToTokensMapping = {
   80001: Mumbai,
   1313161554: Aurora,
   592: Astar,
-  9000: Evmos,
+  9001: Evmos,
 };
 
 async function riskCheck() {
