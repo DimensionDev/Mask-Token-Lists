@@ -166,5 +166,40 @@
     "symbol": "ATTR",
     "name": "Attrace",
     "address": "0x44e2deC86B9F0e0266E9AA66e10323A2bd69CF9A"
+  },
+  {
+    "chainId": 1,
+    "decimals": 18,
+    "symbol": "WRLD",
+    "name": "NFT Worlds",
+    "address": "0xD5d86FC8d5C0Ea1aC1Ac5Dfab6E529c9967a45E9"
+  },
+  {
+    "chainId": 1,
+    "decimals": 18,
+    "symbol": "NTVRK",
+    "name": "NETVRK",
+    "address": "0xFc0d6Cf33e38bcE7CA7D89c0E292274031b7157A"
+  },
+  {
+    "chainId": 1,
+    "decimals": 18,
+    "symbol": "ASTO",
+    "name": "Altered State Machine Utility Token",
+    "address": "0x823556202e86763853b40e9cDE725f412e294689"
+  },
+  {
+    "chainId": 1,
+    "decimals": 18,
+    "symbol": "GHST",
+    "name": "Aavegotchi GHST Token",
+    "address": "0x3F382DbD960E3a9bbCeaE22651E88158d2791550"
+  },
+  {
+    "chainId": 1,
+    "decimals": 18,
+    "symbol": "X2Y2",
+    "name": "X2Y2Token",
+    "address": "0x1E4EDE388cbc9F4b5c79681B7f94d36a11ABEBC9"
   }
 ]
