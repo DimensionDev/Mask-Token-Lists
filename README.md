@@ -56,6 +56,7 @@ yarn build # build token lists
 | Harmony         |  1666600000 | [latest][link-harmony]         | [token-list][viewer-harmony]         |
 | Harmony_Testnet |  1666700000 | [latest][link-harmony_testnet] | [token-list][viewer-harmony_testnet] |
 | Palm            | 11297108109 | [latest][link-palm]            | [token-list][viewer-palm]            |
+| Evmos           |        9001 | [latest][link-evmos]           | [token-list][viewer-evmos]           |
 
 [link-mainnet]: https://tokens.r2d2.to/latest/1/tokens.json
 [link-ropsten]: https://tokens.r2d2.to/latest/3/tokens.json
@@ -86,6 +87,7 @@ yarn build # build token lists
 [link-harmony]: https://tokens.r2d2.to/latest/1666600000/tokens.json
 [link-harmony_testnet]: https://tokens.r2d2.to/latest/1666700000/tokens.json
 [link-palm]: https://tokens.r2d2.to/latest/11297108109/tokens.json
+[link-evmos]: https://tokens.r2d2.to/latest/9001/tokens.json
 [viewer-mainnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1/tokens.json
 [viewer-ropsten]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/3/tokens.json
 [viewer-rinkeby]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/4/tokens.json
@@ -115,5 +117,6 @@ yarn build # build token lists
 [viewer-harmony]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666600000/tokens.json
 [viewer-harmony_testnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666700000/tokens.json
 [viewer-palm]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/11297108109/tokens.json
+[viewer-evmos]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/9001/tokens.json
 
 <!-- end versions -->

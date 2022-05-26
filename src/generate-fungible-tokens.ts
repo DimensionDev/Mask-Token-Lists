@@ -32,6 +32,7 @@ import Kardiachain from "./fungible-tokens/kardiachain.json";
 import Palm from "./fungible-tokens/palm.json";
 import Moonriver from "./fungible-tokens/moonriver.json";
 import Astar from "./fungible-tokens/astar.json";
+import Evmos from "./fungible-tokens/astar.json";
 
 import { fetchDebankLogoURI, generateTokenList } from "./helpers";
 
@@ -99,6 +100,7 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
     [ChainId.Harmony]: [Harmony],
     [ChainId.Harmony_Testnet]: [HarmonyTestnet],
     [ChainId.Palm]: [Palm],
+    [ChainId.Evmos]: [Evmos],
   };
 }
 
