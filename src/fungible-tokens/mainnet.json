@@ -201,5 +201,13 @@
     "symbol": "X2Y2",
     "name": "X2Y2Token",
     "address": "0x1E4EDE388cbc9F4b5c79681B7f94d36a11ABEBC9"
+  },
+  {
+    "chainId": 1,
+    "decimals": 18,
+    "symbol": "ITGR",
+    "name": "Integral",
+    "address": "0xD502F487e1841Fdc805130e13eae80c61186Bc98",
+    "logoURI": "https://assets.website-files.com/6233333c48c5fd468770f97e/6239d4de389d9d22bd9fb8a0_icon.png"
   }
 ]
