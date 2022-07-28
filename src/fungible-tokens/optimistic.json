@@ -86,5 +86,13 @@
     "decimals": 18,
     "chainId": 10,
     "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/slink.jpg"
+  },
+  {
+    "address": "0x4200000000000000000000000000000000000042",
+    "name": "Optimism",
+    "symbol": "OP",
+    "decimals": 18,
+    "chainId": 10,
+    "logoURI": "https://assets.coingecko.com/coins/images/25244/small/OP.jpeg?1651026279"
   }
 ]
