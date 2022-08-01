@@ -35,7 +35,7 @@
     "name": "Wrapped ASTR",
     "address": "0xAeaaf0e2c81Af264101B9129C00F4440cCF0F720",
     "symbol": "WASTR",
-    "decimals": 8,
+    "decimals": 18,
     "chainId": 592,
     "logoURI": "https://versa.finance/images/coins/astar.png"
   },
