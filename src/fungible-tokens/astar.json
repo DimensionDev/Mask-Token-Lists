@@ -8,7 +8,7 @@
     "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/usdt.jpg"
   },
   {
-    "chainId": 1,
+    "chainId": 592,
     "decimals": 18,
     "symbol": "DAI",
     "name": "Dai Stablecoin",
@@ -29,7 +29,7 @@
     "symbol": "ETH",
     "decimals": 18,
     "chainId": 592,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/dpi.jpg"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/eth.jpg"
   },
   {
     "name": "Wrapped BTC",
