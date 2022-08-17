@@ -16,7 +16,7 @@
       "symbol": "$DG",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x2a93172c8DCCbfBC60a39d56183B7279a2F647b4/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x2a93172c8DCCbfBC60a39d56183B7279a2F647b4/logo.png/quality=85"
     },
     {
       "name": "0xBitcoin Token",
@@ -24,7 +24,7 @@
       "symbol": "0xBTC",
       "decimals": 8,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x71B821aa52a49F32EEd535fCA6Eb5aa130085978/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x71B821aa52a49F32EEd535fCA6Eb5aa130085978/logo.png/quality=85"
     },
     {
       "name": "Aave",
@@ -32,7 +32,7 @@
       "symbol": "AAVE",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xD6DF932A45C0f255f85145f286eA0b292B21C90B/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xD6DF932A45C0f255f85145f286eA0b292B21C90B/logo.png/quality=85"
     },
     {
       "name": "Adamant",
@@ -40,7 +40,7 @@
       "symbol": "ADDY",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xc3FdbadC7c795EF1D6Ba111e06fF8F16A20Ea539/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xc3FdbadC7c795EF1D6Ba111e06fF8F16A20Ea539/logo.png/quality=85"
     },
     {
       "name": "AGA Token",
@@ -48,7 +48,7 @@
       "symbol": "AGA",
       "decimals": 4,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x033d942A6b495C4071083f4CDe1f17e986FE856c/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x033d942A6b495C4071083f4CDe1f17e986FE856c/logo.png/quality=85"
     },
     {
       "name": "AGA Rewards",
@@ -56,7 +56,7 @@
       "symbol": "AGAr",
       "decimals": 8,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xF84BD51eab957c2e7B7D646A3427C5A50848281D/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xF84BD51eab957c2e7B7D646A3427C5A50848281D/logo.png/quality=85"
     },
     {
       "name": "Anyswap",
@@ -72,7 +72,7 @@
       "symbol": "ARIA20",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x46F48FbdedAa6F5500993BEDE9539ef85F4BeE8e/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x46F48FbdedAa6F5500993BEDE9539ef85F4BeE8e/logo.png/quality=85"
     },
     {
       "name": "DokiDokiAzuki",
@@ -80,7 +80,7 @@
       "symbol": "AZUKI",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x7CdC0421469398e0F3aA8890693d86c840Ac8931/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x7CdC0421469398e0F3aA8890693d86c840Ac8931/logo.png/quality=85"
     },
     {
       "name": "beefy.finance",
@@ -88,7 +88,7 @@
       "symbol": "BIFI",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xFbdd194376de19a88118e84E279b977f165d01b8/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xFbdd194376de19a88118e84E279b977f165d01b8/logo.png/quality=85"
     },
     {
       "name": "BTU Protocol",
@@ -96,7 +96,7 @@
       "symbol": "BTU",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xFdc26CDA2d2440d0E83CD1DeE8E8bE48405806DC/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xFdc26CDA2d2440d0E83CD1DeE8E8bE48405806DC/logo.png/quality=85"
     },
     {
       "name": "Cryptocurrency Top Tokens Index",
@@ -104,7 +104,7 @@
       "symbol": "CC10",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x9c49BA0212Bb5Db371e66b59D1565b7c06E4894e/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x9c49BA0212Bb5Db371e66b59D1565b7c06E4894e/logo.png/quality=85"
     },
     {
       "name": "Celsius",
@@ -112,7 +112,7 @@
       "symbol": "CEL",
       "decimals": 4,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xD85d1e945766Fea5Eda9103F918Bd915FbCa63E6/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xD85d1e945766Fea5Eda9103F918Bd915FbCa63E6/logo.png/quality=85"
     },
     {
       "name": "CyberFi Token",
@@ -120,7 +120,7 @@
       "symbol": "CFI",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xeCf8f2FA183b1C4d2A269BF98A54fCe86C812d3e/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xeCf8f2FA183b1C4d2A269BF98A54fCe86C812d3e/logo.png/quality=85"
     },
     {
       "name": "Compound",
@@ -128,7 +128,7 @@
       "symbol": "COMP",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x8505b9d2254A7Ae468c0E9dd10Ccea3A837aef5c/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x8505b9d2254A7Ae468c0E9dd10Ccea3A837aef5c/logo.png/quality=85"
     },
     {
       "name": "Cartesi Token",
@@ -136,7 +136,7 @@
       "symbol": "CTSI",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x2727Ab1c2D22170ABc9b595177B2D5C6E1Ab7B7B/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x2727Ab1c2D22170ABc9b595177B2D5C6E1Ab7B7B/logo.png/quality=85"
     },
     {
       "name": "Dai Stablecoin",
@@ -144,7 +144,7 @@
       "symbol": "DAI",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063/logo.png/quality=85"
     },
     {
       "name": "Dark.Build",
@@ -152,7 +152,7 @@
       "symbol": "DB",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x0e59D50adD2d90f5111aca875baE0a72D95B4762/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x0e59D50adD2d90f5111aca875baE0a72D95B4762/logo.png/quality=85"
     },
     {
       "name": "DEFI Top 5 Tokens Index",
@@ -160,7 +160,7 @@
       "symbol": "DEFI5",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x42435F467D33e5C4146a4E8893976ef12BBCE762/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x42435F467D33e5C4146a4E8893976ef12BBCE762/logo.png/quality=85"
     },
     {
       "name": "DEGEN Index",
@@ -168,7 +168,7 @@
       "symbol": "DEGEN",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x8a2870fb69A90000D6439b7aDfB01d4bA383A415/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x8a2870fb69A90000D6439b7aDfB01d4bA383A415/logo.png/quality=85"
     },
     {
       "name": "Dark Matter Token",
@@ -176,7 +176,7 @@
       "symbol": "DMT",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xd28449BB9bB659725aCcAd52947677ccE3719fD7/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xd28449BB9bB659725aCcAd52947677ccE3719fD7/logo.png/quality=85"
     },
     {
       "name": "Digital Reserve Currency",
@@ -184,7 +184,7 @@
       "symbol": "DRC",
       "decimals": 0,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xFeD16c746CB5BFeD009730f9E3e6A673006105c7/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xFeD16c746CB5BFeD009730f9E3e6A673006105c7/logo.png/quality=85"
     },
     {
       "name": "DSLA",
@@ -192,7 +192,7 @@
       "symbol": "DSLA",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xa0E390e9ceA0D0e8cd40048ced9fA9EA10D71639/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xa0E390e9ceA0D0e8cd40048ced9fA9EA10D71639/logo.png/quality=85"
     },
     {
       "name": "Elementeum",
@@ -200,7 +200,7 @@
       "symbol": "ELET",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x07738Eb4ce8932CA961c815Cb12C9d4ab5Bd0Da4/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x07738Eb4ce8932CA961c815Cb12C9d4ab5Bd0Da4/logo.png/quality=85"
     },
     {
       "name": "EthermonToken",
@@ -208,7 +208,7 @@
       "symbol": "EMON",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xd6A5aB46ead26f49b03bBB1F9EB1Ad5c1767974a/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xd6A5aB46ead26f49b03bBB1F9EB1Ad5c1767974a/logo.png/quality=85"
     },
     {
       "name": "Ether",
@@ -216,7 +216,7 @@
       "symbol": "ETH",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619/logo.png/quality=85"
     },
     {
       "name": "Future of Finance Fund",
@@ -224,7 +224,7 @@
       "symbol": "FFF",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x9aCeB6f749396d1930aBc9e263eFc449E5e82c13/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x9aCeB6f749396d1930aBc9e263eFc449E5e82c13/logo.png/quality=85"
     },
     {
       "name": "Fish",
@@ -232,7 +232,7 @@
       "symbol": "FISH",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x3a3Df212b7AA91Aa0402B9035b098891d276572B/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x3a3Df212b7AA91Aa0402B9035b098891d276572B/logo.png/quality=85"
     },
     {
       "name": "Frax",
@@ -240,7 +240,7 @@
       "symbol": "FRAX",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x104592a158490a9228070E0A8e5343B499e125D0/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x104592a158490a9228070E0A8e5343B499e125D0/logo.png/quality=85"
     },
     {
       "name": "Fusion",
@@ -248,7 +248,7 @@
       "symbol": "FSN",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x2bF9b864cdc97b08B6D79ad4663e71B8aB65c45c/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x2bF9b864cdc97b08B6D79ad4663e71B8aB65c45c/logo.png/quality=85"
     },
     {
       "name": "Frax Share",
@@ -256,7 +256,7 @@
       "symbol": "FXS",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x3e121107F6F22DA4911079845a470757aF4e1A1b/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x3e121107F6F22DA4911079845a470757aF4e1A1b/logo.png/quality=85"
     },
     {
       "name": "GAME Credits",
@@ -264,7 +264,7 @@
       "symbol": "GAME",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x8d1566569d5b695d44a9a234540f68D393cDC40D/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x8d1566569d5b695d44a9a234540f68D393cDC40D/logo.png/quality=85"
     },
     {
       "name": "Gains V2",
@@ -272,7 +272,7 @@
       "symbol": "GFARM2",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x7075cAB6bCCA06613e2d071bd918D1a0241379E2/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x7075cAB6bCCA06613e2d071bd918D1a0241379E2/logo.png/quality=85"
     },
     {
       "name": "Aavegotchi GHST Token",
@@ -280,7 +280,7 @@
       "symbol": "GHST",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x385Eeac5cB85A38A9a07A70c73e0a3271CfB54A7/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x385Eeac5cB85A38A9a07A70c73e0a3271CfB54A7/logo.png/quality=85"
     },
     {
       "name": "HEXX",
@@ -288,7 +288,7 @@
       "symbol": "HEX",
       "decimals": 8,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x23D29D30e35C5e8D321e1dc9A8a61BFD846D4C5C/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x23D29D30e35C5e8D321e1dc9A8a61BFD846D4C5C/logo.png/quality=85"
     },
     {
       "name": "Holyheld",
@@ -296,7 +296,7 @@
       "symbol": "HH",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x521CddC0CBa84F14c69C1E99249F781AA73Ee0BC/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x521CddC0CBa84F14c69C1E99249F781AA73Ee0BC/logo.png/quality=85"
     },
     {
       "name": "iFARM",
@@ -304,7 +304,7 @@
       "symbol": "iFARM",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xab0b2ddB9C7e440fAc8E140A89c0dbCBf2d7Bbff/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xab0b2ddB9C7e440fAc8E140A89c0dbCBf2d7Bbff/logo.png/quality=85"
     },
     {
       "name": "IG Gold",
@@ -312,7 +312,7 @@
       "symbol": "IGG",
       "decimals": 6,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xe6FC6C7CB6d2c31b359A49A33eF08aB87F4dE7CE/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xe6FC6C7CB6d2c31b359A49A33eF08aB87F4dE7CE/logo.png/quality=85"
     },
     {
       "name": "Rupeeto",
@@ -320,7 +320,7 @@
       "symbol": "INRP",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xde485931674F4EdD3Ed3bf22e86E7d3C7D5347a1/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xde485931674F4EdD3Ed3bf22e86E7d3C7D5347a1/logo.png/quality=85"
     },
     {
       "name": "Everipedia IQ",
@@ -328,7 +328,7 @@
       "symbol": "IQ",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xB9638272aD6998708de56BBC0A290a1dE534a578/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xB9638272aD6998708de56BBC0A290a1dE534a578/logo.png/quality=85"
     },
     {
       "name": "IRON Stablecoin",
@@ -336,7 +336,7 @@
       "symbol": "IRON",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xD86b5923F3AD7b585eD81B448170ae026c65ae9a/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xD86b5923F3AD7b585eD81B448170ae026c65ae9a/logo.png/quality=85"
     },
     {
       "name": "Krill",
@@ -344,7 +344,7 @@
       "symbol": "Krill",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x05089C9EBFFa4F0AcA269e32056b1b36B37ED71b/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x05089C9EBFFa4F0AcA269e32056b1b36B37ED71b/logo.png/quality=85"
     },
     {
       "name": "EthLend Token",
@@ -352,7 +352,7 @@
       "symbol": "LEND",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x313d009888329C9d1cf4f75CA3f32566335bd604/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x313d009888329C9d1cf4f75CA3f32566335bd604/logo.png/quality=85"
     },
     {
       "name": "ChainLink Token",
@@ -360,7 +360,7 @@
       "symbol": "LINK",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39/logo.png/quality=85"
     },
     {
       "name": "Matic Aave interest bearing AAVE",
@@ -368,7 +368,7 @@
       "symbol": "maAAVE",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x823CD4264C1b951C9209aD0DeAea9988fE8429bF/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x823CD4264C1b951C9209aD0DeAea9988fE8429bF/logo.png/quality=85"
     },
     {
       "name": "Matic Aave interest bearing DAI",
@@ -376,7 +376,7 @@
       "symbol": "maDAI",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xE0b22E0037B130A9F56bBb537684E6fA18192341/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xE0b22E0037B130A9F56bBb537684E6fA18192341/logo.png/quality=85"
     },
     {
       "name": "Matic Aave interest bearing LINK",
@@ -384,7 +384,7 @@
       "symbol": "maLINK",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x98ea609569bD25119707451eF982b90E3eb719cD/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x98ea609569bD25119707451eF982b90E3eb719cD/logo.png/quality=85"
     },
     {
       "name": "Decentraland MANA",
@@ -392,7 +392,7 @@
       "symbol": "MANA",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xA1c57f48F0Deb89f569dFbE6E2B7f46D33606fD4/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xA1c57f48F0Deb89f569dFbE6E2B7f46D33606fD4/logo.png/quality=85"
     },
     {
       "name": "Matic Aave interest bearing TUSD",
@@ -400,7 +400,7 @@
       "symbol": "maTUSD",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xF4b8888427b00d7caf21654408B7CBA2eCf4EbD9/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xF4b8888427b00d7caf21654408B7CBA2eCf4EbD9/logo.png/quality=85"
     },
     {
       "name": "Matic Aave interest bearing UNI",
@@ -408,7 +408,7 @@
       "symbol": "maUNI",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x8c8bdBe9CeE455732525086264a4Bf9Cf821C498/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x8c8bdBe9CeE455732525086264a4Bf9Cf821C498/logo.png/quality=85"
     },
     {
       "name": "Matic Aave interest bearing USDC",
@@ -416,7 +416,7 @@
       "symbol": "maUSDC",
       "decimals": 6,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x9719d867A500Ef117cC201206B8ab51e794d3F82/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x9719d867A500Ef117cC201206B8ab51e794d3F82/logo.png/quality=85"
     },
     {
       "name": "Matic Aave interest bearing USDT",
@@ -424,7 +424,7 @@
       "symbol": "maUSDT",
       "decimals": 6,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xDAE5F1590db13E3B40423B5b5c5fbf175515910b/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xDAE5F1590db13E3B40423B5b5c5fbf175515910b/logo.png/quality=85"
     },
     {
       "name": "Matic Aave interest bearing WETH",
@@ -432,7 +432,7 @@
       "symbol": "maWETH",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x20D3922b4a1A8560E1aC99FBA4faDe0c849e2142/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x20D3922b4a1A8560E1aC99FBA4faDe0c849e2142/logo.png/quality=85"
     },
     {
       "name": "Matic Aave interest bearing YFI",
@@ -440,7 +440,7 @@
       "symbol": "maYFI",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xe20f7d1f0eC39C4d5DB01f53554F2EF54c71f613/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xe20f7d1f0eC39C4d5DB01f53554F2EF54c71f613/logo.png/quality=85"
     },
     {
       "name": "Matic Deflect Protocol",
@@ -448,7 +448,7 @@
       "symbol": "mDEF",
       "decimals": 9,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x82B6205002ecd05e97642D38D61e2cFeaC0E18cE/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x82B6205002ecd05e97642D38D61e2cFeaC0E18cE/logo.png/quality=85"
     },
     {
       "name": "miMATIC",
@@ -456,7 +456,7 @@
       "symbol": "miMATIC",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xa3Fa99A148fA48D14Ed51d610c367C61876997F1/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xa3Fa99A148fA48D14Ed51d610c367C61876997F1/logo.png/quality=85"
     },
     {
       "name": "Ocean Token",
@@ -464,7 +464,7 @@
       "symbol": "mOCEAN",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x282d8efCe846A88B159800bd4130ad77443Fa1A1/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x282d8efCe846A88B159800bd4130ad77443Fa1A1/logo.png/quality=85"
     },
     {
       "name": "Monavale",
@@ -472,7 +472,7 @@
       "symbol": "MONA",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x6968105460f67c3BF751bE7C15f92F5286Fd0CE5/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x6968105460f67c3BF751bE7C15f92F5286Fd0CE5/logo.png/quality=85"
     },
     {
       "name": "Polywolf",
@@ -480,7 +480,7 @@
       "symbol": "MOON",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xc56d17dD519e5eB43a19C9759b5D5372115220BD/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xc56d17dD519e5eB43a19C9759b5D5372115220BD/logo.png/quality=85"
     },
     {
       "name": "Matic Rebalance Token",
@@ -488,7 +488,7 @@
       "symbol": "mRBAL",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x66768ad00746aC4d68ded9f64886d55d5243f5Ec/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x66768ad00746aC4d68ded9f64886d55d5243f5Ec/logo.png/quality=85"
     },
     {
       "name": "Must",
@@ -496,7 +496,7 @@
       "symbol": "MUST",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x9C78EE466D6Cb57A4d01Fd887D2b5dFb2D46288f/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x9C78EE466D6Cb57A4d01Fd887D2b5dFb2D46288f/logo.png/quality=85"
     },
     {
       "name": "NFT Platform Index",
@@ -504,7 +504,7 @@
       "symbol": "NFTP",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xf7d9e281c5Cb4C6796284C5b663b3593D2037aF2/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xf7d9e281c5Cb4C6796284C5b663b3593D2037aF2/logo.png/quality=85"
     },
     {
       "name": "OM",
@@ -512,7 +512,7 @@
       "symbol": "OM",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xC3Ec80343D2bae2F8E680FDADDe7C17E71E114ea/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xC3Ec80343D2bae2F8E680FDADDe7C17E71E114ea/logo.png/quality=85"
     },
     {
       "name": "Opu Coin",
@@ -528,7 +528,7 @@
       "symbol": "PAUTO",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x7f426F6Dc648e50464a0392E60E1BB465a67E9cf/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x7f426F6Dc648e50464a0392E60E1BB465a67E9cf/logo.png/quality=85"
     },
     {
       "name": "PLOT",
@@ -536,7 +536,7 @@
       "symbol": "PLOT",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xe82808eaA78339b06a691fd92E1Be79671cAd8D3/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xe82808eaA78339b06a691fd92E1Be79671cAd8D3/logo.png/quality=85"
     },
     {
       "name": "PolyDoge",
@@ -544,7 +544,7 @@
       "symbol": "PolyDoge",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x8A953CfE442c5E8855cc6c61b1293FA648BAE472/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x8A953CfE442c5E8855cc6c61b1293FA648BAE472/logo.png/quality=85"
     },
     {
       "name": "Pepedex",
@@ -552,7 +552,7 @@
       "symbol": "PPDEX",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x127984b5E6d5c59f81DACc9F1C8b3Bdc8494572e/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x127984b5E6d5c59f81DACc9F1C8b3Bdc8494572e/logo.png/quality=85"
     },
     {
       "name": "Qi Dao",
@@ -560,7 +560,7 @@
       "symbol": "QI",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x580A84C73811E1839F75d86d75d88cCa0c241fF4/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x580A84C73811E1839F75d86d75d88cCa0c241fF4/logo.png/quality=85"
     },
     {
       "name": "Quickswap",
@@ -568,7 +568,7 @@
       "symbol": "QUICK",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x831753DD7087CaC61aB5644b308642cc1c33Dc13/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x831753DD7087CaC61aB5644b308642cc1c33Dc13/logo.png/quality=85"
     },
     {
       "name": "QuickChart",
@@ -576,7 +576,7 @@
       "symbol": "QuickChart",
       "decimals": 9,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x99dA82C5464C49962Cdda44fe30d352Bc5Da0580/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x99dA82C5464C49962Cdda44fe30d352Bc5Da0580/logo.png/quality=85"
     },
     {
       "name": "Rebalance Token",
@@ -584,7 +584,7 @@
       "symbol": "RBAL",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x03247a4368A280bEc8133300cD930A3a61d604f6/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x03247a4368A280bEc8133300cD930A3a61d604f6/logo.png/quality=85"
     },
     {
       "name": "Sentinel",
@@ -592,7 +592,7 @@
       "symbol": "SENT",
       "decimals": 8,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x48e3883233461C2eF4cB3FcF419D6db07fb86CeA/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x48e3883233461C2eF4cB3FcF419D6db07fb86CeA/logo.png/quality=85"
     },
     {
       "name": "SuperFarm",
@@ -600,7 +600,7 @@
       "symbol": "SUPER",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xa1428174F516F527fafdD146b883bB4428682737/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xa1428174F516F527fafdD146b883bB4428682737/logo.png/quality=85"
     },
     {
       "name": "TrustSwap Token",
@@ -608,7 +608,7 @@
       "symbol": "SWAP",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x3809dcDd5dDe24B37AbE64A5a339784c3323c44F/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x3809dcDd5dDe24B37AbE64A5a339784c3323c44F/logo.png/quality=85"
     },
     {
       "name": "Swirge",
@@ -616,7 +616,7 @@
       "symbol": "SWG",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x043A3Aa319B563aC25D4E342d32bFfb51298DB7b/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x043A3Aa319B563aC25D4E342d32bFfb51298DB7b/logo.png/quality=85"
     },
     {
       "name": "SportX",
@@ -624,7 +624,7 @@
       "symbol": "SX",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x840195888Db4D6A99ED9F73FcD3B225Bb3cB1A79/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x840195888Db4D6A99ED9F73FcD3B225Bb3cB1A79/logo.png/quality=85"
     },
     {
       "name": "Telcoin",
@@ -632,7 +632,7 @@
       "symbol": "TEL",
       "decimals": 2,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xdF7837DE1F2Fa4631D716CF2502f8b230F1dcc32/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xdF7837DE1F2Fa4631D716CF2502f8b230F1dcc32/logo.png/quality=85"
     },
     {
       "name": "IRON Titanium Token",
@@ -640,7 +640,7 @@
       "symbol": "TITAN",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xaAa5B9e6c589642f98a1cDA99B9D024B8407285A/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xaAa5B9e6c589642f98a1cDA99B9D024B8407285A/logo.png/quality=85"
     },
     {
       "name": "Unibright",
@@ -648,7 +648,7 @@
       "symbol": "UBT",
       "decimals": 8,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x7FBc10850caE055B27039aF31bD258430e714c62/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x7FBc10850caE055B27039aF31bD258430e714c62/logo.png/quality=85"
     },
     {
       "name": "UniLend Finance Token",
@@ -656,7 +656,7 @@
       "symbol": "UFT",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x5B4CF2C120A9702225814E18543ee658c5f8631e/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x5B4CF2C120A9702225814E18543ee658c5f8631e/logo.png/quality=85"
     },
     {
       "name": "Uniswap",
@@ -664,7 +664,7 @@
       "symbol": "UNI",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xb33EaAd8d922B1083446DC23f610c2567fB5180f/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xb33EaAd8d922B1083446DC23f610c2567fB5180f/logo.png/quality=85"
     },
     {
       "name": "USD Coin",
@@ -672,7 +672,7 @@
       "symbol": "USDC",
       "decimals": 6,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174/logo.png/quality=85"
     },
     {
       "name": "Tether USD",
@@ -680,7 +680,7 @@
       "symbol": "USDT",
       "decimals": 6,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xc2132D05D31c914a87C6611C10748AEb04B58e8F/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xc2132D05D31c914a87C6611C10748AEb04B58e8F/logo.png/quality=85"
     },
     {
       "name": "Vision Token",
@@ -688,7 +688,7 @@
       "symbol": "VISION",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x034b2090b579228482520c589dbD397c53Fc51cC/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x034b2090b579228482520c589dbD397c53Fc51cC/logo.png/quality=85"
     },
     {
       "name": "Wrapped BTC",
@@ -696,7 +696,7 @@
       "symbol": "WBTC",
       "decimals": 8,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6/logo.png/quality=85"
     },
     {
       "name": "Wise Token",
@@ -704,7 +704,7 @@
       "symbol": "WISE",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xB77e62709e39aD1cbeEBE77cF493745AeC0F453a/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xB77e62709e39aD1cbeEBE77cF493745AeC0F453a/logo.png/quality=85"
     },
     {
       "name": "Wrapped Matic",
@@ -712,7 +712,7 @@
       "symbol": "WMATIC",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270/logo.png/quality=85"
     },
     {
       "name": "moonwolf.io",
@@ -720,7 +720,7 @@
       "symbol": "WOLF",
       "decimals": 9,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x8f18dC399594b451EdA8c5da02d0563c0b2d0f16/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x8f18dC399594b451EdA8c5da02d0563c0b2d0f16/logo.png/quality=85"
     },
     {
       "name": "WazirX",
@@ -728,7 +728,7 @@
       "symbol": "WRX",
       "decimals": 8,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x72d6066F486bd0052eefB9114B66ae40e0A6031a/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x72d6066F486bd0052eefB9114B66ae40e0A6031a/logo.png/quality=85"
     },
     {
       "name": "Standard",
@@ -736,7 +736,7 @@
       "symbol": "xMARK",
       "decimals": 9,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xf153EfF70DC0bf3b085134928daeEA248d9B30d0/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xf153EfF70DC0bf3b085134928daeEA248d9B30d0/logo.png/quality=85"
     },
     {
       "name": "yearn.finance",
@@ -744,7 +744,7 @@
       "symbol": "YFI",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xDA537104D6A5edd53c6fBba9A898708E465260b6/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xDA537104D6A5edd53c6fBba9A898708E465260b6/logo.png/quality=85"
     },
     {
       "name": "ZeroSwapToken",
@@ -752,7 +752,7 @@
       "symbol": "ZEE",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xfd4959c06FbCc02250952DAEbf8e0Fb38cF9FD8C/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xfd4959c06FbCc02250952DAEbf8e0Fb38cF9FD8C/logo.png/quality=85"
     },
     {
       "name": "ZeroUtility",
@@ -760,7 +760,7 @@
       "symbol": "ZUT",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0xe86E8beb7340659DDDCE61727E500e3A5aD75a90/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0xe86E8beb7340659DDDCE61727E500e3A5aD75a90/logo.png/quality=85"
     },
     {
       "name": "Zeus",
@@ -768,7 +768,7 @@
       "symbol": "ZUZ",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/quickswap/assets/0x232eaB56c4fB3f84c6Fb0a50c087c74b7B43c6Ad/logo.png/quality=85"
+      "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x232eaB56c4fB3f84c6Fb0a50c087c74b7B43c6Ad/logo.png/quality=85"
     }
   ]
 }
