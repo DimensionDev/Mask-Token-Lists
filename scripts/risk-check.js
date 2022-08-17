@@ -10,7 +10,7 @@ const xDai = require("../src/fungible-tokens/xdai.json");
 const Fantom = require("../src/fungible-tokens/fantom.json");
 const Celo = require("../src/fungible-tokens/celo.json");
 const Matic = require("../src/fungible-tokens/matic.json");
-const Arbiturm = require("../src/fungible-tokens/arbiturm.json");
+const Arbitrum = require("../src/fungible-tokens/arbitrum.json");
 const Mumbai = require("../src/fungible-tokens/mumbai.json");
 const Aurora = require("../src/fungible-tokens/aurora.json");
 const Avalanche = require("../src/fungible-tokens/avalanche.json");
@@ -70,7 +70,7 @@ const chainIdToTokensMapping = {
   250: Fantom,
   288: Boba,
   137: Matic,
-  42161: Arbiturm,
+  42161: Arbitrum,
   42220: Celo,
   43114: Avalanche,
   80001: Mumbai,

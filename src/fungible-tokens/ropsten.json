@@ -4,41 +4,47 @@
     "decimals": 18,
     "symbol": "MASK",
     "name": "Mask Network",
-    "address": "0x5B966f3a32Db9C180843bCb40267A66b73E4f022"
+    "address": "0x5B966f3a32Db9C180843bCb40267A66b73E4f022",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/ropsten/assets/0x5B966f3a32Db9C180843bCb40267A66b73E4f022/logo.png/quality=85"
   },
   {
     "chainId": 3,
     "decimals": 18,
     "symbol": "MSKA",
     "name": "Mask Token A",
-    "address": "0xe54bf69054da160c597f8b5177924b9e4b81e930"
+    "address": "0xe54bf69054da160c597f8b5177924b9e4b81e930",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/ropsten/assets/0xE54bf69054Da160c597F8b5177924B9e4b81E930/logo.png/quality=85"
   },
   {
     "chainId": 3,
     "decimals": 18,
     "symbol": "MSKB",
     "name": "Mask Token B",
-    "address": "0xe379c7a6ba07575a5a49d8f8ebfd04921b86917d"
+    "address": "0xe379c7a6ba07575a5a49d8f8ebfd04921b86917d",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/ropsten/assets/0xe379c7a6BA07575A5a49D8F8EBfD04921b86917D/logo.png/quality=85"
   },
   {
     "chainId": 3,
     "decimals": 18,
     "symbol": "MSKC",
     "name": "Mask Token C",
-    "address": "0xb1465b954f893D921566D8BB4092B6f03FC8C313"
+    "address": "0xb1465b954f893D921566D8BB4092B6f03FC8C313",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/ropsten/assets/0xb1465b954f893D921566D8BB4092B6f03FC8C313/logo.png/quality=85"
   },
   {
     "chainId": 3,
     "decimals": 6,
     "symbol": "MSKD",
     "name": "Mask Token D",
-    "address": "0x49a6d6fe38405e21c4402cceacd23636abe301bf"
+    "address": "0x49a6d6fe38405e21c4402cceacd23636abe301bf",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/ropsten/assets/0x49A6D6FE38405e21C4402CcEacd23636AbE301bf/logo.png/quality=85"
   },
   {
     "chainId": 3,
     "decimals": 24,
     "symbol": "MSKE",
     "name": "Mask Token E",
-    "address": "0xe8f4ddb8c8b655b4e161d3480522d1d576561a4d"
+    "address": "0xe8f4ddb8c8b655b4e161d3480522d1d576561a4d",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/ropsten/assets/0xE8f4dDB8c8b655B4e161d3480522d1d576561A4D/logo.png/quality=85"
   }
 ]

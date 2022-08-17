@@ -13,7 +13,7 @@ import Sokol from "./fungible-tokens/sokol.json";
 import Fantom from "./fungible-tokens/fantom.json";
 import Celo from "./fungible-tokens/celo.json";
 import Polygon from "./fungible-tokens/polygon.json";
-import Arbiturm from "./fungible-tokens/arbiturm.json";
+import Arbitrum from "./fungible-tokens/arbitrum.json";
 import Mumbai from "./fungible-tokens/mumbai.json";
 import Aurora from "./fungible-tokens/aurora.json";
 import Avalanche from "./fungible-tokens/avalanche.json";
@@ -92,7 +92,7 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
     [ChainId.Metis]: [Metis],
     [ChainId.Moonbeam]: [Moonbeam],
     [ChainId.Moonriver]: [Moonriver],
-    [ChainId.Arbiturm]: [Arbiturm],
+    [ChainId.Arbitrum]: [Arbitrum],
     [ChainId.Celo]: [Celo],
     [ChainId.Avalanche]: [Avalanche],
     [ChainId.Aurora]: [Aurora],
