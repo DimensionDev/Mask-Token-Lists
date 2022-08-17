@@ -33,7 +33,7 @@ import Palm from "./fungible-tokens/palm.json";
 import Moonriver from "./fungible-tokens/moonriver.json";
 import Astar from "./fungible-tokens/astar.json";
 
-import { fetchDebankLogoURI, generateTokenList } from "./helpers";
+import { generateTokenList } from "./helpers";
 
 const MetaMask = (
   Object.keys(ContractMetadata) as (keyof typeof ContractMetadata)[]
@@ -102,27 +102,21 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
   };
 }
 
-const getMetaMaskLogoURL = (url: string) =>
-  `https://raw.githubusercontent.com/MetaMask/contract-metadata/master/images/${url}`;
+const getMetaMaskLogoURL = (address: string) =>
+  `https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/ethereum/assets/${address}/logo.png/quality=85`;
 
 async function generateFungibleTokens(chainId: ChainId) {
   const tokenLists = getFungibleTokenLists();
   const baseTokens = tokenLists[chainId].flat();
 
-  const debankTokens = await fetchDebankLogoURI(
-    chainId,
-    baseTokens.map((x) => x.address)
-  );
-
   return baseTokens.map((token) => {
     const { logo, ...rest } = token as FungibleToken & { logo?: string };
-    const tokenWithLogoURI = debankTokens.find(
-      (x) => x.address.toLowerCase() === token.address.toLowerCase()
-    );
-    const logoURI =
-      tokenWithLogoURI?.logoURI ||
-      (logo && getMetaMaskLogoURL(logo)) ||
-      token.logoURI;
+
+    const logoURI = token.logoURI
+      ? token.logoURI
+      : chainId === ChainId.Mainnet
+      ? getMetaMaskLogoURL(EthereumAddress.checksumAddress(token.address))
+      : "";
 
     return logoURI ? { ...rest, logoURI } : { ...rest };
   });
