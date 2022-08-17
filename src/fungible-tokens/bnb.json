@@ -4,7 +4,8 @@
     "decimals": 18,
     "symbol": "USDC",
     "name": "USDC",
-    "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
+    "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/bnb/assets/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d/logo.png/quality=85"
   },
   {
     "chainId": 56,
@@ -12,7 +13,7 @@
     "symbol": "RABBIT",
     "name": "Rabbit Coin",
     "address": "0x95a1199EBA84ac5f19546519e287d43D2F0E1b41",
-    "logoURI": "https://bscscan.com/token/images/rabbitfinance_32.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/bnb/assets/0x95a1199EBA84ac5f19546519e287d43D2F0E1b41/logo.png/quality=85"
   },
   {
     "chainId": 56,
@@ -20,6 +21,6 @@
     "symbol": "MASK",
     "name": "Mask",
     "address": "0x2ed9a5c8c13b93955103b9a7c167b67ef4d568a3",
-    "logoURI": "https://raw.githubusercontent.com/DimensionDev/Maskbook-Website/master/img/MB--CircleCanvas--WhiteOverBlue.svg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/bnb/assets/0x2eD9a5C8C13b93955103B9a7C167B67Ef4d568a3/logo.png/quality=85"
   }
 ]

@@ -21,7 +21,7 @@ export enum ChainId {
   Metis = 1088,
   Moonbeam = 1284,
   Moonriver = 1285,
-  Arbiturm = 42161,
+  Arbitrum = 42161,
   Celo = 42220,
   Avalanche = 43114,
   Aurora = 1313161554,

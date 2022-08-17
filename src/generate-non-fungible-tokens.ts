@@ -22,7 +22,7 @@ function getNonFungileTokenLists(): Record<ChainId, NonFungibleToken[][]> {
     [ChainId.Conflux]: [],
     [ChainId.Moonbeam]: [],
     [ChainId.Moonriver]: [],
-    [ChainId.Arbiturm]: [],
+    [ChainId.Arbitrum]: [],
     [ChainId.Celo]: [],
     [ChainId.Avalanche]: [],
     [ChainId.Aurora]: [],

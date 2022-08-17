@@ -5,7 +5,7 @@
     "symbol": "USDT",
     "chainId": 1030,
     "decimals": 18,
-    "logoURI": "https://conflux-static.oss-cn-beijing.aliyuncs.com/icons/0xdac17f958d2ee523a2206206994597c13d831ec7.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/conflux/assets/0xfe97E85d13ABD9c1c33384E796F10B73905637cE/logo.png/quality=85"
   },
   {
     "address": "0xa47f43DE2f9623aCb395CA4905746496D2014d57",
@@ -13,7 +13,7 @@
     "symbol": "ETH",
     "chainId": 1030,
     "decimals": 18,
-    "logoURI": "https://conflux-static.oss-cn-beijing.aliyuncs.com/icons/eth.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/conflux/assets/0xa47f43DE2f9623aCb395CA4905746496D2014d57/logo.png/quality=85"
   },
   {
     "address": "0x1F545487c62e5ACfEa45dcAdd9c627361d1616D8",
@@ -21,7 +21,7 @@
     "symbol": "WBTC",
     "chainId": 1030,
     "decimals": 18,
-    "logoURI": "https://conflux-static.oss-cn-beijing.aliyuncs.com/icons/btc.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/conflux/assets/0x1F545487c62e5ACfEa45dcAdd9c627361d1616D8/logo.png/quality=85"
   },
   {
     "address": "0x6963EfED0aB40F6C3d7BdA44A05dcf1437C44372",
@@ -29,7 +29,7 @@
     "symbol": "USDC",
     "chainId": 1030,
     "decimals": 18,
-    "logoURI": "https://conflux-static.oss-cn-beijing.aliyuncs.com/icons/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/conflux/assets/0x6963EfED0aB40F6C3d7BdA44A05dcf1437C44372/logo.png/quality=85"
   },
   {
     "address": "0x74eaE367d018A5F29be559752e4B67d01cc6b151",
@@ -37,6 +37,6 @@
     "symbol": "DAI",
     "chainId": 1030,
     "decimals": 18,
-    "logoURI": "https://conflux-static.oss-cn-beijing.aliyuncs.com/icons/0x6b175474e89094c44da98b954eedeac495271d0f.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/conflux/assets/0x74eaE367d018A5F29be559752e4B67d01cc6b151/logo.png/quality=85"
   }
 ]

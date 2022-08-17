@@ -5,7 +5,7 @@
     "symbol": "WMOVR",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/movr.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0xf50225a84382c74CbdeA10b0c176f71fc3DE0C4d/logo.png/quality=85"
   },
   {
     "name": "Wrapped Ether - AnySwap",
@@ -13,7 +13,7 @@
     "symbol": "WETH",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/eth.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x639A647fbe20b6c8ac19E48E2de44ea792c62c5C/logo.png/quality=85"
   },
   {
     "name": "Wrapped Bitcoin - Meter",
@@ -21,7 +21,7 @@
     "symbol": "WBTC",
     "decimals": 8,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/btc.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0xE6a991Ffa8CfE62B0bf6BF72959A3d4f11B2E0f5/logo.png/quality=85"
   },
   {
     "name": "Magic Internet Money - AnySwap",
@@ -29,7 +29,7 @@
     "symbol": "MIM",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/mim.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x0caE51e1032e8461f4806e26332c030E34De3aDb/logo.png/quality=85"
   },
   {
     "name": "Frax",
@@ -37,7 +37,7 @@
     "symbol": "FRAX",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/logos/main/network/moonriver/0x1A93B23281CC1CDE4C4741353F3064709A16197d.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x1A93B23281CC1CDE4C4741353F3064709A16197d/logo.png/quality=85"
   },
   {
     "name": "Dai Stablecoin - AnySwap",
@@ -45,7 +45,7 @@
     "symbol": "DAI",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/dai.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x80A16016cC4A2E6a2CACA8a4a498b1699fF0f844/logo.png/quality=85"
   },
   {
     "name": "BNB - Meter",
@@ -53,7 +53,7 @@
     "address": "0x868892CCcEdbfF0B028F3b3595205Ea91b99376B",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/bnb.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x868892CCcEdbfF0B028F3b3595205Ea91b99376B/logo.png/quality=85"
   },
   {
     "name": "Binance USD - AnySwap",
@@ -61,7 +61,7 @@
     "address": "0x5D9ab5522c64E1F6ef5e3627ECCc093f56167818",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/busd.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x5D9ab5522c64E1F6ef5e3627ECCc093f56167818/logo.png/quality=85"
   },
   {
     "name": "USD Coin - AnySwap",
@@ -69,7 +69,7 @@
     "address": "0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D",
     "decimals": 6,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/usdc.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D/logo.png/quality=85"
   },
   {
     "name": "Tether USD - AnySwap",
@@ -77,7 +77,7 @@
     "symbol": "USDT",
     "decimals": 6,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/usdt.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0xB44a9B6905aF7c801311e8F4E76932ee959c663C/logo.png/quality=85"
   },
   {
     "name": "SushiToken - AnySwap",
@@ -85,7 +85,7 @@
     "symbol": "SUSHI",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/sushi.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0xf390830DF829cf22c53c8840554B98eafC5dCBc2/logo.png/quality=85"
   },
   {
     "name": "Aave - AnySwap",
@@ -93,7 +93,7 @@
     "symbol": "AAVE",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/aave.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0xf27Ee99622C3C9b264583dACB2cCE056e194494f/logo.png/quality=85"
   },
   {
     "name": "ChainLink Token - AnySwap",
@@ -101,7 +101,7 @@
     "symbol": "LINK",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/link.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x0dCb0CB0120d355CdE1ce56040be57Add0185BAa/logo.png/quality=85"
   },
   {
     "address": "0xFEa7a6a0B346362BF88A9e4A88416B77a57D6c2A",
@@ -109,7 +109,7 @@
     "symbol": "CRV",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/crv.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0xFEa7a6a0B346362BF88A9e4A88416B77a57D6c2A/logo.png/quality=85"
   },
   {
     "address": "0xF480f38C366dAaC4305dC484b2Ad7a496FF00CeA",
@@ -117,7 +117,7 @@
     "symbol": "SNX",
     "chainId": 11297108109,
     "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/snx.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0xF480f38C366dAaC4305dC484b2Ad7a496FF00CeA/logo.png/quality=85"
   },
   {
     "address": "0x375488F097176507e39B9653b88FDc52cDE736Bf",
@@ -125,7 +125,7 @@
     "symbol": "YFI",
     "chainId": 11297108109,
     "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/yfi.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x375488F097176507e39B9653b88FDc52cDE736Bf/logo.png/quality=85"
   },
   {
     "name": "RivrDoge",
@@ -133,7 +133,7 @@
     "symbol": "RivrDoge",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://rivrdoge.com/wp-content/uploads/2021/09/logo.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x5D4360f1Be94bD6f182F09cFE5EF9832e65EB1ac/logo.png/quality=85"
   },
   {
     "address": "0x682F81e57EAa716504090C3ECBa8595fB54561D8",
@@ -141,7 +141,7 @@
     "symbol": "MATIC",
     "chainId": 11297108109,
     "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/matic.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x682F81e57EAa716504090C3ECBa8595fB54561D8/logo.png/quality=85"
   },
   {
     "address": "0x14a0243C333A5b238143068dC3A7323Ba4C30ECB",
@@ -149,7 +149,7 @@
     "symbol": "AVAX",
     "chainId": 11297108109,
     "decimals": 18,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/avax.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x14a0243C333A5b238143068dC3A7323Ba4C30ECB/logo.png/quality=85"
   },
   {
     "name": "MoonBeans",
@@ -165,7 +165,7 @@
     "symbol": "POLK",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/moonriver/assets/0x8b29344f368b5FA35595325903fE0eAab70C8E1F/logo.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x8b29344f368b5FA35595325903fE0eAab70C8E1F/logo.png/quality=85"
   },
   {
     "name": "Rivr Shiba",
@@ -173,7 +173,7 @@
     "symbol": "RIVRSHIBA",
     "decimals": 9,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/moonriver/assets/0x3d593056F3e34dB7A4720d7F171447C489CFa195/logo.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x3d593056F3e34dB7A4720d7F171447C489CFa195/logo.png/quality=85"
   },
   {
     "name": "BEPRO Network",
@@ -181,7 +181,7 @@
     "symbol": "BEPRO",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/moonriver/assets/0xCb4a593ce512D78162C58384f0b2Fd6e802c2c47/logo.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0xCb4a593ce512D78162C58384f0b2Fd6e802c2c47/logo.png/quality=85"
   },
   {
     "name": "Mai MiMatic",
@@ -189,7 +189,7 @@
     "symbol": "MAI",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/polygon/assets/0xa3Fa99A148fA48D14Ed51d610c367C61876997F1/logo.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x7f5a79576620C046a293F54FFCdbd8f2468174F1/logo.png/quality=85"
   },
   {
     "name": "Fantom",
@@ -197,7 +197,7 @@
     "symbol": "FTM",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/network/fantom.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0xaD12daB5959f30b9fF3c2d6709f53C335dC39908/logo.png/quality=85"
   },
   {
     "name": "Relay",
@@ -205,7 +205,7 @@
     "symbol": "RELAY",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/solarbeamio/assets/master/blockchains/moonriver/assets/0xAd7F1844696652ddA7959a49063BfFccafafEfe7/logo.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0xAd7F1844696652ddA7959a49063BfFccafafEfe7/logo.png/quality=85"
   },
   {
     "name": "Meter Governance",
@@ -213,7 +213,7 @@
     "symbol": "MTRG",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/solarbeamio/assets/master/blockchains/moonriver/assets/0x1e24EC84F66cd26Dad607d81796DbeB13Cb22692/logo.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x1e24EC84F66cd26Dad607d81796DbeB13Cb22692/logo.png/quality=85"
   },
   {
     "name": "Beefy Finance",
@@ -221,7 +221,7 @@
     "symbol": "BIFI",
     "decimals": 18,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/ethereum/assets/0x173fd7434B8B50dF08e3298f173487ebDB35FD14/logo.png"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x173fd7434B8B50dF08e3298f173487ebDB35FD14/logo.png/quality=85"
   },
   {
     "name": "Alpha Rome",
@@ -229,7 +229,7 @@
     "symbol": "aROME",
     "decimals": 9,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/logos/main/network/moonriver/0x3D2D044E8C6dAd46b4F7896418d3d4DFaAD902bE.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x3D2D044E8C6dAd46b4F7896418d3d4DFaAD902bE/logo.png/quality=85"
   },
   {
     "name": "Rome",
@@ -237,6 +237,6 @@
     "symbol": "ROME",
     "decimals": 9,
     "chainId": 11297108109,
-    "logoURI": "https://raw.githubusercontent.com/sushiswap/logos/main/network/moonriver/0x4a436073552044D5f2f49B176853ad3Ad473d9d6.jpg"
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/palm/assets/0x4a436073552044D5f2f49B176853ad3Ad473d9d6/logo.png/quality=85"
   }
 ]
