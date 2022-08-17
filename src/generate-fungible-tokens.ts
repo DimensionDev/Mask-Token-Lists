@@ -112,7 +112,9 @@ async function generateFungibleTokens(chainId: ChainId) {
   return baseTokens.map((token) => {
     const { logo, ...rest } = token as FungibleToken & { logo?: string };
 
-    const logoURI = token.logoURI || getMetaMaskLogoURL(EthereumAddress.checksumAddress(token.address))
+    const logoURI =
+      token.logoURI ||
+      getMetaMaskLogoURL(EthereumAddress.checksumAddress(token.address));
 
     return logoURI ? { ...rest, logoURI } : { ...rest };
   });
