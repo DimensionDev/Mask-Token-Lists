@@ -19,6 +19,15 @@ yarn build # build token lists
 - Run `yarn build` to ensure everything is working great.
 - Don't forget to bump version in `package.json`.
 - Update below two tables in README file here.
+
+## Steps for adding new token
+
+- Add the new token information to [DimensionDev/assets](https://github.com/DimensionDev/assets/tree/master/blockchains). The token logo file MUST be and named
+  as `logo.png`(`svg` not supported), then from which ci uploads to cloudflare to generate an image link which being logged within `Upload Image` step of the
+  github ci workflow `cf-upload`.
+- Using the above image link for `logoURI` attribute of the token you'd like to add to [src/fungible-tokens/](src/fungible-tokens/) or
+  [src/non-fungible-tokens/](src/non-fungible-tokens/).
+- Don't forget to bump version in `package.json`.
 - Rise a pull request in this repository.
 
 ## Versions based on chain id
