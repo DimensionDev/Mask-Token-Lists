@@ -5,7 +5,7 @@
     "symbol": "BOBA",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0xa18bF3994C0Cc6E3b63ac420308E5383f53120D7/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/SwapperChan/token-list/master/logos/0xa18bF3994C0Cc6E3b63ac420308E5383f53120D7/logo.png"
   },
   {
     "name": "BobaDoge",
@@ -13,7 +13,7 @@
     "symbol": "BDoge",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0x121636C43E96D97AB00B6c6994cDDEBEf27dE1C7/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/OolongSwap/token-logos/main/288/0x121636C43E96D97AB00B6c6994cDDEBEf27dE1C7/logo.png"
   },
   {
     "name": "BobaTeaInu",
@@ -21,7 +21,7 @@
     "symbol": "BTEA",
     "decimals": 9,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0x9c3a582A678BE0B0E954d7a5C07b0C7Eb8EF1e03/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/OolongSwap/token-logos/main/288/0x9c3a582A678BE0B0E954d7a5C07b0C7Eb8EF1e03/logo.png"
   },
   {
     "name": "BoringDAO",
@@ -29,7 +29,7 @@
     "symbol": "BORING",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0x017Ff87AB312301aDE54f7cf9Cc5AEA28C9De024/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/OolongSwap/token-logos/main/288/0x017Ff87AB312301aDE54f7cf9Cc5AEA28C9De024/logo.png"
   },
   {
     "name": "AlphaCyber",
@@ -37,7 +37,7 @@
     "symbol": "aCYBER",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0x641e3C61DBFc5C9eD8f620eb474271cd4439f7d5/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/OolongSwap/token-logos/main/288/0x641e3C61DBFc5C9eD8f620eb474271cd4439f7d5/logo.png"
   },
   {
     "name": "Banana",
@@ -45,7 +45,7 @@
     "symbol": "BANA",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0xc67b9B1B0557aeAfA10AA1fFa1d7c87087a6149E/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/OolongSwap/token-logos/main/288/0xc67b9B1B0557aeAfA10AA1fFa1d7c87087a6149E/logo.png"
   },
   {
     "name": "Ethereum",
@@ -53,7 +53,7 @@
     "symbol": "ETH",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0x4200000000000000000000000000000000000006/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/eth.jpg"
   },
   {
     "name": "USD Coin",
@@ -61,7 +61,7 @@
     "symbol": "USDC",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0x66a2A913e447d6b4BF33EFbec43aAeF87890FBbc/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/USDC.jpg"
   },
   {
     "name": "OMGtoken",
@@ -69,7 +69,7 @@
     "symbol": "OMG",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0xe1E2ec9a85C607092668789581251115bCBD20de/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/OMG.jpg"
   },
   {
     "name": "Dai Stablecoin",
@@ -77,7 +77,7 @@
     "symbol": "DAI",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0xf74195Bb8a5cf652411867c5C2C5b8C2a402be35/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/DAI.jpg"
   },
   {
     "name": "SushiToken",
@@ -85,7 +85,7 @@
     "symbol": "SUSHI",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0x5fFccc55C0d2fd6D3AC32C26C020B3267e933F1b/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/sushi.jpg"
   },
   {
     "name": "Uniswap",
@@ -93,7 +93,7 @@
     "symbol": "UNI",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0xDBDE1347fED5dC03C74059010D571a16417d307e/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/uni.jpg"
   },
   {
     "name": "Theter USD",
@@ -101,7 +101,7 @@
     "symbol": "USDT",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0x5DE1677344D3Cb0D7D465c10b72A8f60699C062d/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/usdt.jpg"
   },
   {
     "name": "Frax",
@@ -109,7 +109,7 @@
     "symbol": "FRAX",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0x7562F525106F5d54E891e005867Bf489B5988CD9/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/frax.jpg"
   },
   {
     "name": "Wrapped BTC",
@@ -117,7 +117,7 @@
     "symbol": "WBTC",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0xdc0486f8bf31DF57a952bcd3c1d3e166e3d9eC8b/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/wbtc.jpg"
   },
   {
     "name": "Fantom",
@@ -125,7 +125,7 @@
     "symbol": "FTM",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/ftm.jpg"
   },
   {
     "name": "Matic",
@@ -133,7 +133,7 @@
     "symbol": "MATIC",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0x922D641a426DcFFaeF11680e5358F34d97d112E1/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/matic.jpg"
   },
   {
     "name": "Basic Attention Token",
@@ -141,7 +141,7 @@
     "symbol": "BAT",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0xc0C16dF1ee7dcEFb88C55003C49F57AA416A3578/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/bat.jpg"
   },
   {
     "name": "0x Protocol Token",
@@ -149,7 +149,7 @@
     "symbol": "ZRX",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0xf135f13Db3B114107dCB0B32B6c9e10fFF5a6987/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/zrx.jpg"
   },
   {
     "name": "Waifu Token",
@@ -157,7 +157,7 @@
     "symbol": "WAIFU",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0xB5cB0975716A4AA6438d3FA02364886E13fd678c/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/SwapperChan/token-list/master/logos/0xB5cB0975716A4AA6438d3FA02364886E13fd678c/logo.png"
   },
   {
     "name": "Wrapped Ether",
@@ -165,7 +165,7 @@
     "symbol": "WETH",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/SwapperChan/token-list/master/logos/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000/logo.png"
   },
   {
     "name": "OMG Network",
@@ -173,7 +173,7 @@
     "symbol": "OMG",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0xe1E2ec9a85C607092668789581251115bCBD20de/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/SwapperChan/token-list/master/logos/0xe1E2ec9a85C607092668789581251115bCBD20de/logo.png"
   },
   {
     "name": "SenpaiSwap",
@@ -181,6 +181,6 @@
     "symbol": "SENPAI",
     "decimals": 18,
     "chainId": 288,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/boba/assets/0xaC3a4aF1778203c8B651dAfA73cEd5b79c80F239/logo.png/quality=85"
+    "logoURI": "https://pbs.twimg.com/profile_images/1441273478049501194/quz63sAl_400x400.jpg"
   }
 ]

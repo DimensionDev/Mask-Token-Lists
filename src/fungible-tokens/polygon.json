@@ -4,8 +4,7 @@
     "decimals": 18,
     "symbol": "USDC",
     "name": "USDC",
-    "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174/logo.png/quality=85"
+    "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
   },
   {
     "chainId": 137,
@@ -13,6 +12,6 @@
     "symbol": "MASK",
     "name": "Mask",
     "address": "0x2B9E7ccDF0F4e5B24757c1E1a80e311E34Cb10c7",
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x2B9E7ccDF0F4e5B24757c1E1a80e311E34Cb10c7/logo.png/quality=85"
+    "logoURI": "https://raw.githubusercontent.com/DimensionDev/Maskbook-Website/master/img/MB--CircleCanvas--WhiteOverBlue.svg"
   }
 ]

@@ -49,7 +49,7 @@ yarn build # build token lists
 | Metis           |        1088 | [latest][link-metis]           | [token-list][viewer-metis]           |
 | Moonbeam        |        1284 | [latest][link-moonbeam]        | [token-list][viewer-moonbeam]        |
 | Moonriver       |        1285 | [latest][link-moonriver]       | [token-list][viewer-moonriver]       |
-| Arbitrum        |       42161 | [latest][link-arbitrum]        | [token-list][viewer-arbitrum]        |
+| Arbiturm        |       42161 | [latest][link-arbiturm]        | [token-list][viewer-arbiturm]        |
 | Celo            |       42220 | [latest][link-celo]            | [token-list][viewer-celo]            |
 | Avalanche       |       43114 | [latest][link-avalanche]       | [token-list][viewer-avalanche]       |
 | Aurora          |  1313161554 | [latest][link-aurora]          | [token-list][viewer-aurora]          |
@@ -79,7 +79,7 @@ yarn build # build token lists
 [link-metis]: https://tokens.r2d2.to/latest/1088/tokens.json
 [link-moonbeam]: https://tokens.r2d2.to/latest/1284/tokens.json
 [link-moonriver]: https://tokens.r2d2.to/latest/1285/tokens.json
-[link-arbitrum]: https://tokens.r2d2.to/latest/42161/tokens.json
+[link-arbiturm]: https://tokens.r2d2.to/latest/42161/tokens.json
 [link-celo]: https://tokens.r2d2.to/latest/42220/tokens.json
 [link-avalanche]: https://tokens.r2d2.to/latest/43114/tokens.json
 [link-aurora]: https://tokens.r2d2.to/latest/1313161554/tokens.json
@@ -108,7 +108,7 @@ yarn build # build token lists
 [viewer-metis]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1088/tokens.json
 [viewer-moonbeam]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1284/tokens.json
 [viewer-moonriver]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1285/tokens.json
-[viewer-arbitrum]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42161/tokens.json
+[viewer-arbiturm]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42161/tokens.json
 [viewer-celo]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42220/tokens.json
 [viewer-avalanche]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/43114/tokens.json
 [viewer-aurora]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json
