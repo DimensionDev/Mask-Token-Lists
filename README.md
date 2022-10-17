@@ -30,6 +30,13 @@ yarn build # build token lists
 - Don't forget to bump version in `package.json`.
 - Rise a pull request in this repository.
 
+## Steps for updating token logo
+
+One update commit could not trigger the cloudflare update its resources. Commit separately:
+
+1. Delete the original `logo.png`.
+2. Add the new `logo.png`.
+
 ## Versions based on chain id
 
 <!-- begin versions -->
