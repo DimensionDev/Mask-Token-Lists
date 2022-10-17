@@ -32,10 +32,10 @@ yarn build # build token lists
 
 ## Steps for updating token logo
 
-One updating commit can not trigger the cloudflare to update its resources. Commit separately:
+It requires two separate commits to trigger Cloudflare to update its resource.
 
-1. Delete the original `logo.png`.
-2. Add the new `logo.png`.
+1. Delete the `logo.png` that needs to be updated.
+1. Add the new `logo.png`.
 
 ## Versions based on chain id
 
