@@ -95,7 +95,7 @@ export class CoinGecko implements Provider {
 
   private async getMarketsCoins(chainId: ChainId) {
     const result: CoinInfo[] = []
-    while (result.length < 1000) {
+    while (result.length < 100) {
       const requestURL = urlcat(baseURL, '/coins/markets', {
         vs_currency: 'usd',
         order: 'market_cap_desc',

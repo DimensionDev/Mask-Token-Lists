@@ -2,7 +2,7 @@ import { ChainId, FungibleToken } from './type'
 import { CoinGecko } from './providers/coingecko'
 import urlcat from 'urlcat'
 import axios from 'axios'
-import { outputDir, writeTokenInfoToArtifact, writeTokensToFile } from './utils'
+import { distDir, writeTokenInfoToArtifact, writeTokensToFile } from './utils'
 import fs from 'node:fs/promises'
 import * as process from 'process'
 import { sortBy, uniqBy } from 'lodash'
@@ -20,13 +20,13 @@ async function getLatestReleaseTokenList(chainId: ChainId) {
 }
 
 async function init() {
-  await fs.rmdir(outputDir, { recursive: true })
-  await fs.mkdir(outputDir)
+  await fs.mkdir(distDir)
 }
 
 // TODO: should use multi-thread
 async function main() {
-  // await init()
+  await init()
+
   const chains = Object.values(ChainId).filter((v) => !isNaN(Number(v))) as ChainId[]
 
   for (const chain of chains) {
