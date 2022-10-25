@@ -37,6 +37,7 @@ export interface FungibleToken {
   symbol: string
   decimals: number
   logoURI?: string
+  originLogoURI?: string
 }
 
 export interface Provider {

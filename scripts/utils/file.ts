@@ -86,13 +86,45 @@ const stringify = fastJson({
   },
 })
 
+const stringifyTokenInfo = fastJson({
+  title: 'FungibleTokenListInfo',
+  type: 'array',
+  items: {
+    anyOf: [
+      {
+        type: 'object',
+        properties: {
+          chainId: { type: 'number' },
+          address: { type: 'string' },
+          name: { type: 'string' },
+          symbol: { type: 'string' },
+          decimals: { type: 'number' },
+          logoURI: { type: 'string' },
+          originLogoURI: { type: 'string' },
+        },
+        required: ['chainId', 'address', 'name', 'symbol', 'decimals', 'logoURI'],
+      },
+    ],
+  },
+})
+
 // @ts-ignore
 export const outputDir = path.join(process.env.PWD, 'src/fungible-tokens')
+// @ts-ignore
+export const distDir = path.join(process.env.PWD, 'dist')
 
 export async function writeTokensToFile(chain: ChainId, tokens: FungibleToken[]) {
   const chains = convertEnumToArray(ChainId)
   const filename = chains.find((x) => x.value === chain)?.key
   await fs.writeFile(path.join(outputDir, `${filename?.toLowerCase()}.json`), stringify(tokens), {
+    encoding: 'utf-8',
+  })
+}
+
+export async function writeTokenInfoToArtifact(chain: ChainId, tokens: FungibleToken[]) {
+  const chains = convertEnumToArray(ChainId)
+  const filename = chains.find((x) => x.value === chain)?.key
+  await fs.writeFile(path.join(distDir, `${filename?.toLowerCase()}.json`), stringifyTokenInfo(tokens), {
     encoding: 'utf-8',
   })
 }

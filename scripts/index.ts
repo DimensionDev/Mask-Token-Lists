@@ -2,7 +2,7 @@ import { ChainId, FungibleToken } from './type'
 import { CoinGecko } from './providers/coingecko'
 import urlcat from 'urlcat'
 import axios from 'axios'
-import { outputDir, writeTokensToFile } from './utils'
+import { outputDir, writeTokenInfoToArtifact, writeTokensToFile } from './utils'
 import fs from 'node:fs/promises'
 import * as process from 'process'
 import { sortBy, uniqBy } from 'lodash'
@@ -24,11 +24,11 @@ async function init() {
   await fs.mkdir(outputDir)
 }
 
-// Open pull request for assets and token list
+// TODO: should use multi-thread
 async function main() {
   // await init()
-
   const chains = Object.values(ChainId).filter((v) => !isNaN(Number(v))) as ChainId[]
+
   for (const chain of chains) {
     const latestReleaseTokenList = await getLatestReleaseTokenList(chain)
     let result: FungibleToken[] = []
@@ -36,19 +36,32 @@ async function main() {
       for (const p of providers) {
         console.log(`Fetching the chain: ${chain} tokens from ${p.getProviderName()}...`)
         if (p.isSupportChain(chain as ChainId)) {
-          const tokens = await p.generateFungibleTokens(chain, latestReleaseTokenList)
-          result = [...result, ...tokens]
+          try {
+            const tokens = await p.generateFungibleTokens(chain, latestReleaseTokenList)
+            result = [...result, ...tokens]
+          } catch {
+            console.log(`Fetch the chain failed`)
+          }
         }
       }
     }
 
-    await writeTokensToFile(
-      chain,
-      sortBy(
-        uniqBy(result, (x) => toChecksumAddress(x.address)),
-        'symbol',
-      ),
-    )
+    if (result.length) {
+      await writeTokensToFile(
+        chain,
+        sortBy(
+          uniqBy(result, (x) => toChecksumAddress(x.address)),
+          'symbol',
+        ),
+      )
+      await writeTokenInfoToArtifact(
+        chain,
+        sortBy(
+          uniqBy(result, (x) => toChecksumAddress(x.address)),
+          'symbol',
+        ),
+      )
+    }
   }
 
   console.log('Generate success!')

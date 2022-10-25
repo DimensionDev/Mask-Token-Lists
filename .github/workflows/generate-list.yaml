@@ -30,7 +30,7 @@ jobs:
         run: yarn install
         if: steps.yarn-cache.outputs.cache-hit != 'true'
 
-      - name: Sync token list
+      - name: Sync Token List
         id: sync-token-list
         run: |
           yarn generate
@@ -48,11 +48,11 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: ':chore: sync token list from providers'
+          commit-message: 'chore: sync token list from providers'
           committer: Maskbook maintainer bot <bot@mask.io>
           author: Maskbook maintainer bot <bot@mask.io>
           branch: auto-sync-token-list
-          title: ':chore: sync token list from providers'
+          title: 'chore: sync token list from providers'
           body: '## (🤖 I am a robot) updates token list'
           assignees: |
             lanttcat
@@ -61,3 +61,10 @@ jobs:
       - name: Check output
         run: |
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+
+      - name: Upload `TokenInfo.zip`
+        uses: actions/upload-artifact@v3
+        with:
+          name: token-info
+          path: dist/*
+          if-no-files-found: error

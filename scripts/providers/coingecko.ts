@@ -164,6 +164,7 @@ export class CoinGecko implements Provider {
         symbol: coin.symbol,
         decimals: detail.decimal_place,
         logoURI: generateLogoURL(chainId, detail.contract_address),
+        originLogoURI: coin.logoURI,
       })
       await delay(6000)
     }
