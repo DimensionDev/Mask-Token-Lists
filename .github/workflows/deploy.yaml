@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - master
+      - master-skip
 
 jobs:
   deploy:
@@ -35,8 +35,8 @@ jobs:
         uses: montudor/action-zip@v1
         with:
           args:
-            zip -qq -r v${{ steps.package-version.outputs.current-version }}.zip
-            dist/v${{ steps.package-version.outputs.current-version }}
+            zip -qq -r v${{ steps.package-version.outputs.current-version }}.zip dist/v${{
+            steps.package-version.outputs.current-version }}
 
       - name: Upload Latest Release
         uses: actions/upload-artifact@v2

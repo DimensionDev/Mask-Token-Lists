@@ -1,12 +1,17 @@
-name: Sync pancake top 100 token list
+name: Fetch token list
 
 on:
-  schedule:
-    - cron: "0 10 * * *"
-  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+# on:
+#   schedule:
+#     - cron: "0 10 * * *"
+#   workflow_dispatch:
 
 jobs:
-  sync-pancake-top100:
+  fetch-list:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,8 +24,7 @@ jobs:
         with:
           path: |
             node_modules
-          key:
-            yarn-${{ hashFiles('package.json') }}-${{ hashFiles('yarn.lock') }}
+          key: yarn-${{ hashFiles('package.json') }}-${{ hashFiles('yarn.lock') }}
 
       - name: Yarn install
         run: yarn install
@@ -29,7 +33,7 @@ jobs:
       - name: Sync token list
         id: sync-token-list
         run: |
-          ts-node src/helpers/fetch-pancake-top100.ts
+          yarn generate
 
       - name: Git Diff
         id: git-diff
@@ -44,17 +48,14 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: ":chore: sync token list from Pancakeswap"
+          commit-message: ':chore: sync token list from providers'
           committer: Maskbook maintainer bot <bot@mask.io>
           author: Maskbook maintainer bot <bot@mask.io>
           branch: auto-sync-token-list
-          title: ":chore: sync token list from Pancakeswap"
-          body:
-            "## (🤖 I am a robot) updates or error report \n\n```diff\n${{
-            env.GIT_DIFF }}\n```"
+          title: ':chore: sync token list from providers'
+          body: '## (🤖 I am a robot) updates token list'
           assignees: |
-            guanbinrui
-            unclebill
+            lanttcat
           draft: false
 
       - name: Check output

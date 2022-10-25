@@ -31,18 +31,18 @@ export enum ChainId {
 }
 
 export interface FungibleToken {
-  chainId: ChainId;
-  address: string;
-  name: string;
-  symbol: string;
-  decimals: number;
-  logoURI?: string;
+  chainId: ChainId
+  address: string
+  name: string
+  symbol: string
+  decimals: number
+  logoURI?: string
 }
 
 export interface NonFungibleToken {
-  chainId: ChainId;
-  address: string;
-  name: string;
-  symbol?: string;
-  logoURI?: string;
+  chainId: ChainId
+  address: string
+  name: string
+  symbol?: string
+  logoURI?: string
 }
