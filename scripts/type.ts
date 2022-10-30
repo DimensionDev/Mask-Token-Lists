@@ -48,6 +48,7 @@ export interface Provider {
 
 export enum Providers {
   coinGeoko = 'coin-geeoko',
+  explorer = 'explorer',
 }
 
 export interface FungibleTokenProvider extends FungibleToken {

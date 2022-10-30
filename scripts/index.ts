@@ -7,9 +7,11 @@ import fs from 'node:fs/promises'
 import * as process from 'process'
 import { sortBy, uniqBy } from 'lodash'
 import { toChecksumAddress } from 'web3-utils'
+import { Explorer } from './providers/explorer'
 
 const coinGeckoAPI = new CoinGecko()
-const providers = [coinGeckoAPI]
+const explorerAPI = new Explorer()
+const providers = [explorerAPI]
 
 const TOKEN_LIST_BASE_URL = 'https://tokens.r2d2.to/'
 
@@ -39,8 +41,9 @@ async function main() {
           try {
             const tokens = await p.generateFungibleTokens(chain, latestReleaseTokenList)
             result = [...result, ...tokens]
-          } catch {
+          } catch (e) {
             console.log(`Fetch the chain failed`)
+            console.log(e)
           }
         }
       }
