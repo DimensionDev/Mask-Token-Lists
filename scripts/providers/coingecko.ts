@@ -149,22 +149,22 @@ export class CoinGecko implements Provider {
     const platformId = await this.getCurrentChainPlatformId(chainId)
 
     const result: FungibleToken[] = []
-    for (const coin of toAddList) {
-      if (coin.symbol === 'eth') continue
+    for (const token of toAddList) {
+      if (token.symbol === 'eth') continue
       if (!platformId) continue
 
-      const detail = await this.getCoinDetail(coin.id, platformId)
+      const detail = await this.getCoinDetail(token.id, platformId)
       if (!detail) continue
       if (detail.contract_address === '') continue
 
       result.push({
         chainId,
         address: toChecksumAddress(detail.contract_address),
-        name: coin.name,
-        symbol: coin.symbol,
+        name: token.name,
+        symbol: token.symbol,
         decimals: detail.decimal_place,
         logoURI: generateLogoURL(chainId, detail.contract_address),
-        originLogoURI: coin.logoURI,
+        originLogoURI: token.logoURI,
       })
       await delay(6000)
     }

@@ -3,15 +3,18 @@ import { CoinGecko } from './providers/coingecko'
 import urlcat from 'urlcat'
 import axios from 'axios'
 import { distDir, writeTokenInfoToArtifact, writeTokensToFile } from './utils'
-import fs from 'node:fs/promises'
+import * as fs from 'node:fs/promises'
 import * as process from 'process'
 import { sortBy, uniqBy } from 'lodash'
 import { toChecksumAddress } from 'web3-utils'
 import { Explorer } from './providers/explorer'
+import { CryptoRank } from './providers/cryptoRank'
 
 const coinGeckoAPI = new CoinGecko()
 const explorerAPI = new Explorer()
-const providers = [explorerAPI]
+const cryptoRankAPI = new CryptoRank()
+
+const providers = [cryptoRankAPI]
 
 const TOKEN_LIST_BASE_URL = 'https://tokens.r2d2.to/'
 
