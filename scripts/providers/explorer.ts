@@ -7,6 +7,14 @@ import { generateLogoURL } from '../utils/asset'
 
 const basURLMapping: Partial<Record<ChainId, string>> = {
   [ChainId.Mainnet]: 'https://etherscan.io',
+  [ChainId.BNB]: 'https://bscscan.com',
+  [ChainId.Polygon]: 'https://polygonscan.com',
+  [ChainId.Arbitrum]: 'https://arbiscan.io',
+  [ChainId.Avalanche]: 'https://snowtrace.io',
+  [ChainId.Fantom]: 'https://ftmscan.com',
+  // [ChainId.Gnosis]: 'https://gnosisscan.io',
+  [ChainId.Aurora]: 'https://aurorascan.dev',
+  [ChainId.Optimistic]: 'https://optimistic.etherscan.io',
 }
 
 const requestAcceptHeader =
@@ -16,9 +24,11 @@ export class Explorer implements Provider {
   getProviderName(): Providers {
     return Providers.explorer
   }
+
   isSupportChain(chainId: ChainId): boolean {
     return !!basURLMapping[chainId]
   }
+
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {
     const baseURL = basURLMapping[chainId]!
     let page = 1
