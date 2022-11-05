@@ -5,6 +5,7 @@ import { differenceBy, pick, some, uniqBy } from 'lodash'
 import { delay } from '../utils'
 import { toChecksumAddress } from 'web3-utils'
 import { generateLogoURL } from '../utils/asset'
+import { getTokenDecimals } from '../utils/base'
 
 export interface TokenInfo {
   id: number
@@ -211,9 +212,25 @@ export class CoinMarketCap implements Provider {
           originLogoURI: metadata.logo,
         }
       })
-      .filter((x) => !!x) as FungibleToken[]
+      .filter((x) => !!x) as FungibleToken[] & {
+      decimals?: number
+    }
 
-    return [...toAddTokenList, ...exclude].filter(
+    const result: FungibleToken[] = []
+    for (const token of toAddTokenList) {
+      if (token.symbol === 'eth') continue
+
+      const decimals = await getTokenDecimals(chainId, token.address)
+      if (!decimals) continue
+
+      result.push({
+        decimals: decimals,
+        ...token,
+      })
+      await delay(500)
+    }
+
+    return [...result, ...exclude].filter(
       (x) => x.address && topList.find((e) => e.symbol.toLowerCase() === x.symbol.toLowerCase()),
     )
   }

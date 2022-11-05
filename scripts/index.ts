@@ -2,8 +2,7 @@ import { ChainId, FungibleToken } from './type'
 import { CoinGecko } from './providers/coingecko'
 import urlcat from 'urlcat'
 import axios from 'axios'
-import { distDir, writeTokenInfoToArtifact, writeTokensToFile } from './utils'
-import * as fs from 'node:fs/promises'
+import { mergeTokenInfoToArtifact, writeTokensToFile } from './utils'
 import * as process from 'process'
 import { sortBy, uniqBy } from 'lodash'
 import { toChecksumAddress } from 'web3-utils'
@@ -26,14 +25,8 @@ async function getLatestReleaseTokenList(chainId: ChainId) {
   return listInfo.data.tokens
 }
 
-async function init() {
-  await fs.mkdir(distDir)
-}
-
 // TODO: should use multi-thread
 async function main() {
-  await init()
-
   const chains = Object.values(ChainId).filter((v) => !isNaN(Number(v))) as ChainId[]
 
   for (const chain of chains) {
@@ -62,7 +55,8 @@ async function main() {
           'symbol',
         ),
       )
-      await writeTokenInfoToArtifact(
+      // Cache the token list info with origin image link for assets repo to fetch image
+      await mergeTokenInfoToArtifact(
         chain,
         sortBy(
           uniqBy(result, (x) => toChecksumAddress(x.address)),

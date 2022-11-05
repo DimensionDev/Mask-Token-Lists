@@ -35,7 +35,7 @@ export interface FungibleToken {
   address: string
   name: string
   symbol: string
-  decimals?: number
+  decimals: number
   logoURI?: string
   originLogoURI?: string
 }

@@ -3,6 +3,7 @@ import fs from 'node:fs/promises'
 import { ChainId, FungibleToken } from '../type'
 import fastJson from 'fast-json-stringify'
 import { convertEnumToArray } from './base'
+import { uniq, uniqBy } from 'lodash'
 
 const listBaseInfo = {
   name: 'Mask Network',
@@ -25,46 +26,6 @@ const listBaseInfo = {
   timestamp: new Date().toISOString(),
 }
 
-// const stringify = fastJson({
-//   title: 'FungibleTokenList',
-//   type: 'object',
-//   properties: {
-//     name: {
-//       type: 'string',
-//     },
-//     logoURI: {
-//       type: 'string',
-//     },
-//     keywords: {
-//       type: 'array',
-//       items: {
-//         anyOf: [{ type: 'string' }],
-//       },
-//     },
-//     timestamp: {
-//       type: 'string',
-//     },
-//     tokens: {
-//       type: 'array',
-//       items: {
-//         anyOf: [
-//           {
-//             type: 'object',
-//             properties: {
-//               chainId: { type: 'number' },
-//               address: { type: 'string' },
-//               name: { type: 'string' },
-//               symbol: { type: 'string' },
-//               decimals: { type: 'number' },
-//               logoURI: { type: 'string' },
-//             },
-//             required: ['chainId', 'address', 'name', 'symbol', 'decimals', 'logoURI'],
-//           },
-//         ],
-//       },
-//     },
-//   },
-// })
 const stringify = fastJson({
   title: 'FungibleTokenList',
   type: 'array',
@@ -111,7 +72,7 @@ const stringifyTokenInfo = fastJson({
 // @ts-ignore
 export const outputDir = path.join(process.env.PWD, 'src/fungible-tokens')
 // @ts-ignore
-export const distDir = path.join(process.env.PWD, 'dist')
+export const cacheDir = path.join(process.env.PWD, 'scripts/cache/origin')
 
 export async function writeTokensToFile(chain: ChainId, tokens: FungibleToken[]) {
   const chains = convertEnumToArray(ChainId)
@@ -121,10 +82,15 @@ export async function writeTokensToFile(chain: ChainId, tokens: FungibleToken[])
   })
 }
 
-export async function writeTokenInfoToArtifact(chain: ChainId, tokens: FungibleToken[]) {
+export async function mergeTokenInfoToArtifact(chain: ChainId, tokens: FungibleToken[]) {
   const chains = convertEnumToArray(ChainId)
   const filename = chains.find((x) => x.value === chain)?.key
-  await fs.writeFile(path.join(distDir, `${filename?.toLowerCase()}.json`), stringifyTokenInfo(tokens), {
+  const filepath = path.join(cacheDir, `${filename?.toLowerCase()}.json`)
+  const existData = await fs.readFile(filepath)
+  const existCache = JSON.parse(existData || '[]') as FungibleToken[]
+  const data = uniqBy([...tokens, ...existCache], 'address')
+
+  await fs.writeFile(filepath, stringifyTokenInfo(data), {
     encoding: 'utf-8',
   })
 }
