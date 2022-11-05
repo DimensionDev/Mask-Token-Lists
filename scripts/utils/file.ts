@@ -85,12 +85,19 @@ export async function writeTokensToFile(chain: ChainId, tokens: FungibleToken[])
 export async function mergeTokenInfoToArtifact(chain: ChainId, tokens: FungibleToken[]) {
   const chains = convertEnumToArray(ChainId)
   const filename = chains.find((x) => x.value === chain)?.key
-  const filepath = path.join(cacheDir, `${filename?.toLowerCase()}.json`)
-  const existData = await fs.readFile(filepath)
-  const existCache = JSON.parse(existData || '[]') as FungibleToken[]
-  const data = uniqBy([...tokens, ...existCache], 'address')
+  const filePath = path.join(cacheDir, `${filename?.toLowerCase()}.json`)
+  let existCache: FungibleToken[] = []
+  await fs.open(filePath, 'a+')
 
-  await fs.writeFile(filepath, stringifyTokenInfo(data), {
-    encoding: 'utf-8',
-  })
+  try {
+    const existData = await fs.readFile(filePath, { encoding: 'utf-8', flag: 'a+' })
+    existCache = JSON.parse(existData || '[]') as FungibleToken[]
+  } finally {
+    const data = uniqBy([...tokens, ...existCache], 'address')
+
+    await fs.writeFile(filePath, stringifyTokenInfo(data), {
+      encoding: 'utf-8',
+      flag: 'w',
+    })
+  }
 }

@@ -123,6 +123,9 @@ export type Metadata = {
 
 const PlatformMapping: Partial<Record<ChainId, string>> = {
   [ChainId.Mainnet]: 'ethereum-ecosystem',
+  [ChainId.BNB]: 'binance-smart-chain',
+  [ChainId.Polygon]: 'polygon-ecosystem',
+  [ChainId.Arbitrum]: 'arbitrum-ecosytem',
 }
 
 const baseURL = 'https://api.coinmarketcap.com'
@@ -197,7 +200,7 @@ export class CoinMarketCap implements Provider {
     const idMapping = await this.getIdMapping()
 
     const toAddTokenList: FungibleToken[] = toAddList
-      .map((x): FungibleToken | undefined => {
+      .map((x) => {
         const metadata = metadatas.find((t) => t.symbol.toLowerCase() === x.symbol.toLowerCase())
         const mapping = idMapping.find((t) => t.symbol.toLowerCase() === x.symbol.toLowerCase())
         if (!mapping || !metadata || !mapping.token_address) return
@@ -207,14 +210,12 @@ export class CoinMarketCap implements Provider {
           address: toChecksumAddress(mapping.token_address),
           name: x.name,
           symbol: x.symbol,
-          decimals: undefined,
+          decimals: 0,
           logoURI: generateLogoURL(chainId, toChecksumAddress(mapping.token_address)),
           originLogoURI: metadata.logo,
         }
       })
-      .filter((x) => !!x) as FungibleToken[] & {
-      decimals?: number
-    }
+      .filter((x) => !!x) as FungibleToken[]
 
     const result: FungibleToken[] = []
     for (const token of toAddTokenList) {
@@ -224,8 +225,8 @@ export class CoinMarketCap implements Provider {
       if (!decimals) continue
 
       result.push({
-        decimals: decimals,
         ...token,
+        decimals: decimals,
       })
       await delay(500)
     }

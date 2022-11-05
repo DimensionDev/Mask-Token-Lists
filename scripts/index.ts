@@ -15,7 +15,7 @@ const explorerAPI = new Explorer()
 const cryptoRankAPI = new CryptoRank()
 const coinMarketCapAPI = new CoinMarketCap()
 
-const providers = [coinMarketCapAPI]
+const providers = [explorerAPI, cryptoRankAPI, coinMarketCapAPI]
 
 const TOKEN_LIST_BASE_URL = 'https://tokens.r2d2.to/'
 
@@ -30,14 +30,20 @@ async function main() {
   const chains = Object.values(ChainId).filter((v) => !isNaN(Number(v))) as ChainId[]
 
   for (const chain of chains) {
+    console.log(new Array(process.stdout.rows).fill('*').join(''))
+    console.log(`The current chain id is: ${chain}`)
+
     const latestReleaseTokenList = await getLatestReleaseTokenList(chain)
+    console.log(`This chain has ${latestReleaseTokenList.length} tokens online`)
+
     let result: FungibleToken[] = []
-    if (chain == ChainId.Mainnet) {
+    if (chain != ChainId.Mainnet) {
       for (const p of providers) {
-        console.log(`Fetching the chain: ${chain} tokens from ${p.getProviderName()}...`)
         if (p.isSupportChain(chain as ChainId)) {
           try {
+            console.log(`Fetching the chain id is ${chain}'s tokens from ${p.getProviderName()}...`)
             const tokens = await p.generateFungibleTokens(chain, latestReleaseTokenList)
+
             result = [...result, ...tokens]
           } catch (e) {
             console.log(`Fetch the chain failed`)
@@ -47,11 +53,13 @@ async function main() {
       }
     }
 
+    console.log(`The current chain get ${result.length} tokens`)
+
     if (result.length) {
       await writeTokensToFile(
         chain,
         sortBy(
-          uniqBy(result, (x) => toChecksumAddress(x.address)),
+          uniqBy([...latestReleaseTokenList, ...result], (x) => toChecksumAddress(x.address)),
           'symbol',
         ),
       )

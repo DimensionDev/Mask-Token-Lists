@@ -77,8 +77,8 @@ export class CryptoRank implements Provider {
       if (!decimals) continue
 
       result.push({
-        decimals: decimals,
         ...token,
+        decimals: decimals,
       })
       await delay(500)
     }
