@@ -9,12 +9,14 @@ import { sortBy, uniqBy } from 'lodash'
 import { toChecksumAddress } from 'web3-utils'
 import { Explorer } from './providers/explorer'
 import { CryptoRank } from './providers/cryptoRank'
+import { CoinMarketCap } from './providers/coinmarketcap'
 
 const coinGeckoAPI = new CoinGecko()
 const explorerAPI = new Explorer()
 const cryptoRankAPI = new CryptoRank()
+const coinMarketCapAPI = new CoinMarketCap()
 
-const providers = [cryptoRankAPI]
+const providers = [coinMarketCapAPI]
 
 const TOKEN_LIST_BASE_URL = 'https://tokens.r2d2.to/'
 

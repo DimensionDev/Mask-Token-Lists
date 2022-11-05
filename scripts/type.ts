@@ -35,7 +35,7 @@ export interface FungibleToken {
   address: string
   name: string
   symbol: string
-  decimals: number
+  decimals?: number
   logoURI?: string
   originLogoURI?: string
 }
@@ -50,6 +50,7 @@ export enum Providers {
   coinGeoko = 'coin-geeoko',
   explorer = 'explorer',
   cryptoRank = 'crypto-rank',
+  coinMarketCap = 'coinmarketcap',
 }
 
 export interface FungibleTokenProvider extends FungibleToken {
