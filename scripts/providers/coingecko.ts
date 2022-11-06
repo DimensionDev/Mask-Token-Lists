@@ -133,8 +133,12 @@ export class CoinGecko implements Provider {
       localization: false,
     })
 
-    const info = await axios.get<CoinDetail>(requestURL)
-    return info.data.detail_platforms[platformId]
+    try {
+      const info = await axios.get<CoinDetail>(requestURL)
+      return info.data.detail_platforms[platformId]
+    } catch {
+      return
+    }
   }
 
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {
