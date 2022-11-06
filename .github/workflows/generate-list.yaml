@@ -62,9 +62,9 @@ jobs:
         run: |
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
 
-      - name: Upload `TokenInfo.zip`
-        uses: actions/upload-artifact@v3
-        with:
-          name: token-info.zip
-          path: dist/*
-          if-no-files-found: error
+#      - name: Upload `TokenInfo.zip`
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: token-info.zip
+#          path: dist/*
+#          if-no-files-found: error
