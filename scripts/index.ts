@@ -9,13 +9,15 @@ import { toChecksumAddress } from 'web3-utils'
 import { Explorer } from './providers/explorer'
 import { CryptoRank } from './providers/cryptoRank'
 import { CoinMarketCap } from './providers/coinmarketcap'
+import { SubScan } from './providers/subScan'
 
 const coinGeckoAPI = new CoinGecko()
 const explorerAPI = new Explorer()
 const cryptoRankAPI = new CryptoRank()
 const coinMarketCapAPI = new CoinMarketCap()
+const subScanAPI = new SubScan()
 
-const providers = [explorerAPI, cryptoRankAPI, coinMarketCapAPI]
+const providers = [subScanAPI]
 
 const TOKEN_LIST_BASE_URL = 'https://tokens.r2d2.to/'
 
@@ -37,7 +39,7 @@ async function main() {
     console.log(`This chain has ${latestReleaseTokenList.length} tokens online`)
 
     let result: FungibleToken[] = []
-    if (chain != ChainId.Mainnet) {
+    if (chain === ChainId.Astar) {
       for (const p of providers) {
         if (p.isSupportChain(chain as ChainId)) {
           try {
@@ -63,6 +65,7 @@ async function main() {
           'symbol',
         ),
       )
+
       // Cache the token list info with origin image link for assets repo to fetch image
       await mergeTokenInfoToArtifact(
         chain,

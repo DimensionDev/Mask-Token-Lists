@@ -51,6 +51,7 @@ export enum Providers {
   explorer = 'explorer',
   cryptoRank = 'crypto-rank',
   coinMarketCap = 'coinmarketcap',
+  subScan = 'subscan',
 }
 
 export interface FungibleTokenProvider extends FungibleToken {

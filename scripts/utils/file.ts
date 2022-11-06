@@ -87,17 +87,18 @@ export async function mergeTokenInfoToArtifact(chain: ChainId, tokens: FungibleT
   const filename = chains.find((x) => x.value === chain)?.key
   const filePath = path.join(cacheDir, `${filename?.toLowerCase()}.json`)
   let existCache: FungibleToken[] = []
-  await fs.open(filePath, 'a+')
+  const f = await fs.open(filePath, 'w+')
+  await f.close()
 
   try {
-    const existData = await fs.readFile(filePath, { encoding: 'utf-8', flag: 'a+' })
+    const existData = await fs.readFile(filePath, { encoding: 'utf-8' })
     existCache = JSON.parse(existData || '[]') as FungibleToken[]
-  } finally {
-    const data = uniqBy([...tokens, ...existCache], 'address')
+  } catch {}
 
-    await fs.writeFile(filePath, stringifyTokenInfo(data), {
-      encoding: 'utf-8',
-      flag: 'w',
-    })
-  }
+  const data = uniqBy([...tokens, ...existCache], 'address')
+
+  await fs.writeFile(filePath, stringifyTokenInfo(data), {
+    encoding: 'utf-8',
+    flag: 'w',
+  })
 }
