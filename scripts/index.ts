@@ -17,7 +17,7 @@ const cryptoRankAPI = new CryptoRank()
 const coinMarketCapAPI = new CoinMarketCap()
 const subScanAPI = new SubScan()
 
-const providers = [subScanAPI]
+const providers = [coinGeckoAPI, explorerAPI, cryptoRankAPI, coinMarketCapAPI, subScanAPI]
 
 const TOKEN_LIST_BASE_URL = 'https://tokens.r2d2.to/'
 
@@ -32,6 +32,7 @@ async function main() {
   const chains = Object.values(ChainId).filter((v) => !isNaN(Number(v))) as ChainId[]
 
   for (const chain of chains) {
+    if (chain !== ChainId.Mainnet) continue
     console.log(new Array(process.stdout.rows).fill('*').join(''))
     console.log(`The current chain id is: ${chain}`)
 
@@ -39,18 +40,16 @@ async function main() {
     console.log(`This chain has ${latestReleaseTokenList.length} tokens online`)
 
     let result: FungibleToken[] = []
-    if (chain === ChainId.Astar) {
-      for (const p of providers) {
-        if (p.isSupportChain(chain as ChainId)) {
-          try {
-            console.log(`Fetching the chain id is ${chain}'s tokens from ${p.getProviderName()}...`)
-            const tokens = await p.generateFungibleTokens(chain, latestReleaseTokenList)
+    for (const p of providers) {
+      if (p.isSupportChain(chain as ChainId)) {
+        try {
+          console.log(`Fetching the chain id is ${chain}'s tokens from ${p.getProviderName()}...`)
+          const tokens = await p.generateFungibleTokens(chain, latestReleaseTokenList)
 
-            result = [...result, ...tokens]
-          } catch (e) {
-            console.log(`Fetch the chain failed`)
-            console.log(e)
-          }
+          result = [...result, ...tokens]
+        } catch (e) {
+          console.log(`Fetch the chain failed by ${p.getProviderName()}`)
+          console.log(e)
         }
       }
     }

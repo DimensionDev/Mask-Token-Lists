@@ -116,7 +116,7 @@ export class CoinGecko implements Provider {
         })),
       )
 
-      delay(6000)
+      await delay(6000)
     }
 
     return result
@@ -147,6 +147,7 @@ export class CoinGecko implements Provider {
     console.log(`The difference tokens length: is: ${toAddList.length}`)
 
     const platformId = await this.getCurrentChainPlatformId(chainId)
+    await delay(6000)
 
     const result: FungibleToken[] = []
     for (const token of toAddList) {
