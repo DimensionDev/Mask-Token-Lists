@@ -1,14 +1,9 @@
 name: Fetch token list
 
 on:
-  push:
-    branches:
-      - master
-
-# on:
-#   schedule:
-#     - cron: "0 10 * * *"
-#   workflow_dispatch:
+  schedule:
+    - cron: '0 10 * * *'
+  workflow_dispatch:
 
 jobs:
   fetch-list:
@@ -61,10 +56,3 @@ jobs:
       - name: Check output
         run: |
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-
-#      - name: Upload `TokenInfo.zip`
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: token-info.zip
-#          path: dist/*
-#          if-no-files-found: error
