@@ -1,9 +1,13 @@
 name: Fetch token list
 
 on:
-  schedule:
-    - cron: '0 10 * * *'
-  workflow_dispatch:
+  push:
+    branches:
+      - 'master'
+      - 'releases/**'
+#  schedule:
+#    - cron: '0 10 1 * 1,4'
+#  workflow_dispatch:
 
 jobs:
   fetch-list:
@@ -28,7 +32,7 @@ jobs:
       - name: Sync Token List
         id: sync-token-list
         run: |
-          yarn generate
+          yarn generate 1
 
       - name: Git Diff
         id: git-diff
@@ -38,17 +42,26 @@ jobs:
           git diff >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
 
+      #      - id: get-pr-body
+      #        run: |
+      #          body=$(cat pr-body.txt)
+      #          delimiter="$(openssl rand -hex 8)"
+      #          echo "body<<$delimiter" >> $GITHUB_OUTPUT
+      #          echo "$body" >> $GITHUB_OUTPUT
+      #          echo "$delimiter" >> $GITHUB_OUTPUT
+
       - name: Create Pull Request
         id: cpr
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'chore: sync token list from providers'
+          commit-message: 'chore: sync ethereum token list from providers'
           committer: Maskbook maintainer bot <bot@mask.io>
           author: Maskbook maintainer bot <bot@mask.io>
           branch: auto-sync-token-list
           title: 'chore: sync token list from providers'
-          body: '## (🤖 I am a robot) updates token list'
+          #          body: '## (🤖 I am a robot) updates token list'
+          #          body: ${{ steps.get-pr-body.outputs.body }}
           assignees: |
             lanttcat
           draft: false
