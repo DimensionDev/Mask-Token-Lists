@@ -95,7 +95,7 @@ export class CoinGecko implements Provider {
 
   private async getMarketsCoins(chainId: ChainId) {
     const result: CoinInfo[] = []
-    while (result.length < 100) {
+    while (result.length < 1000) {
       const requestURL = urlcat(baseURL, '/coins/markets', {
         vs_currency: 'usd',
         order: 'market_cap_desc',
@@ -104,6 +104,8 @@ export class CoinGecko implements Provider {
         page: Math.ceil(result.length / 250),
       })
       const list = await axios.get<Coin[]>(requestURL)
+
+      console.log(`Fetched the ${result.length / 250} page date, the list length is: ${list.data.length}`)
 
       if (!list.data.length) break
 
@@ -142,12 +144,13 @@ export class CoinGecko implements Provider {
   }
 
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {
-    const topList = await this.getMarketsCoins(chainId)
+    const top1000List = await this.getMarketsCoins(chainId)
     // for saving api request times
-    const toAddList = differenceBy(uniqBy(topList, 'id'), exclude, (x) =>
+    const toAddList = differenceBy(uniqBy(top1000List, 'id'), exclude, (x) =>
       some(exclude, (e) => e.symbol.toLowerCase() === x.symbol.toLowerCase()),
     )
-    console.log(`The total tokens length: is: ${topList.length}`)
+
+    console.log(`The total tokens length: is: ${top1000List.length}`)
     console.log(`The difference tokens length: is: ${toAddList.length}`)
 
     const platformId = await this.getCurrentChainPlatformId(chainId)
@@ -174,7 +177,7 @@ export class CoinGecko implements Provider {
       await delay(6000)
     }
     return [...result, ...exclude].filter(
-      (x) => x.address && topList.find((e) => e.symbol.toLowerCase() === x.symbol.toLowerCase()),
+      (x) => x.address && top1000List.find((e) => e.symbol.toLowerCase() === x.symbol.toLowerCase()),
     )
   }
 

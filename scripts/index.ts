@@ -2,7 +2,7 @@ import { ChainId, FungibleToken } from './type'
 import { CoinGecko } from './providers/coingecko'
 import urlcat from 'urlcat'
 import axios from 'axios'
-import { mergeTokenInfoToArtifact, writeTokensToFile } from './utils'
+import { mergeTokenListIntoCache, writeTokensToFile } from './utils'
 import * as process from 'process'
 import { sortBy, uniqBy } from 'lodash'
 import { toChecksumAddress } from 'web3-utils'
@@ -66,7 +66,7 @@ async function main() {
       )
 
       // Cache the token list info with origin image link for assets repo to fetch image
-      await mergeTokenInfoToArtifact(
+      await mergeTokenListIntoCache(
         chain,
         sortBy(
           uniqBy(result, (x) => toChecksumAddress(x.address)),

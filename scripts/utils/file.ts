@@ -26,7 +26,7 @@ const stringify = fastJson({
   },
 })
 
-const stringifyTokenInfo = fastJson({
+const stringifyTokenListCache = fastJson({
   title: 'FungibleTokenListInfo',
   type: 'array',
   items: {
@@ -61,7 +61,7 @@ export async function writeTokensToFile(chain: ChainId, tokens: FungibleToken[])
   })
 }
 
-export async function mergeTokenInfoToArtifact(chain: ChainId, tokens: FungibleToken[]) {
+export async function mergeTokenListIntoCache(chain: ChainId, tokens: FungibleToken[]) {
   const chains = convertEnumToArray(ChainId)
   const filename = chains.find((x) => x.value === chain)?.key
   const filePath = path.join(cacheDir, `${filename?.toLowerCase()}.json`)
@@ -76,7 +76,7 @@ export async function mergeTokenInfoToArtifact(chain: ChainId, tokens: FungibleT
 
   const data = uniqBy([...tokens, ...existCache], 'address')
 
-  await fs.writeFile(filePath, JSON.stringify(data, undefined, 2), {
+  await fs.writeFile(filePath, stringifyTokenListCache(data), {
     encoding: 'utf-8',
     flag: 'w',
   })
