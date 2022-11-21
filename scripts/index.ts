@@ -27,12 +27,12 @@ async function getLatestReleaseTokenList(chainId: ChainId) {
   return listInfo.data.tokens
 }
 
-// TODO: should use multi-thread
 async function main() {
+  const targetChain = process.argv.slice(2)[0]
   const chains = Object.values(ChainId).filter((v) => !isNaN(Number(v))) as ChainId[]
+  const targetChains = targetChain ? [parseInt(targetChain) as ChainId] : chains
 
-  for (const chain of chains) {
-    if (chain !== ChainId.Mainnet) continue
+  for (const chain of targetChains) {
     console.log(new Array(process.stdout.rows).fill('*').join(''))
     console.log(`The current chain id is: ${chain}`)
 

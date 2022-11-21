@@ -5,27 +5,6 @@ import fastJson from 'fast-json-stringify'
 import { convertEnumToArray } from './base'
 import { uniq, uniqBy } from 'lodash'
 
-const listBaseInfo = {
-  name: 'Mask Network',
-  logoURI:
-    'https://raw.githubusercontent.com/DimensionDev/Maskbook-Website/master/img/MB--CircleCanvas--WhiteOverBlue.svg',
-  keywords: [
-    'browser extension',
-    'web3',
-    'peer to peer',
-    'encryption',
-    'cryptography',
-    'gundb',
-    'privacy protection',
-    'ownyourdata',
-    'social network',
-    'blockchain',
-    'crypto',
-    'dweb',
-  ],
-  timestamp: new Date().toISOString(),
-}
-
 const stringify = fastJson({
   title: 'FungibleTokenList',
   type: 'array',
@@ -77,7 +56,7 @@ export const cacheDir = path.join(process.env.PWD, 'scripts/cache/origin')
 export async function writeTokensToFile(chain: ChainId, tokens: FungibleToken[]) {
   const chains = convertEnumToArray(ChainId)
   const filename = chains.find((x) => x.value === chain)?.key
-  await fs.writeFile(path.join(outputDir, `${filename?.toLowerCase()}.json`), stringify(tokens), {
+  await fs.writeFile(path.join(outputDir, `${filename?.toLowerCase()}.json`), JSON.stringify(tokens, undefined, 2), {
     encoding: 'utf-8',
   })
 }
@@ -97,7 +76,7 @@ export async function mergeTokenInfoToArtifact(chain: ChainId, tokens: FungibleT
 
   const data = uniqBy([...tokens, ...existCache], 'address')
 
-  await fs.writeFile(filePath, stringifyTokenInfo(data), {
+  await fs.writeFile(filePath, JSON.stringify(data, undefined, 2), {
     encoding: 'utf-8',
     flag: 'w',
   })
