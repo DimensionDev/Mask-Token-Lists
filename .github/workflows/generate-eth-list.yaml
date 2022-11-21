@@ -25,7 +25,7 @@ jobs:
         run: yarn install
         if: steps.yarn-cache.outputs.cache-hit != 'true'
 
-      - name: Sync Token List
+      - name: Sync ETH Token List
         id: sync-token-list
         run: |
           yarn generate 1
