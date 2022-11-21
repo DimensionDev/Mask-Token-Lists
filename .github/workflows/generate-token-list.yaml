@@ -28,7 +28,7 @@ jobs:
       - name: Sync Token List
         id: sync-token-list
         run: |
-          yarn generate 1
+          yarn generate
 
       - name: Git Diff
         id: git-diff
@@ -47,7 +47,7 @@ jobs:
           committer: Maskbook maintainer bot <bot@mask.io>
           author: Maskbook maintainer bot <bot@mask.io>
           branch: auto-sync-token-list
-          title: 'chore: sync eth token list from providers'
+          title: 'chore: sync token list from providers'
           body: '## (🤖 I am a robot) updates token list'
           assignees: |
             lanttcat
