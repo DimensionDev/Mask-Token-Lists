@@ -52,6 +52,8 @@ const stringifyTokenListCache = fastJson({
 export const outputDir = path.join(process.env.PWD, 'src/fungible-tokens')
 // @ts-ignore
 export const cacheDir = path.join(process.env.PWD, 'scripts/cache/origin')
+// @ts-ignore
+export const cryptoRankcacheDir = path.join(process.env.PWD, 'scripts/cache/cryptorank')
 
 export async function writeTokensToFile(chain: ChainId, tokens: FungibleToken[]) {
   const chains = convertEnumToArray(ChainId)

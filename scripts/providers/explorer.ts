@@ -12,7 +12,7 @@ const basURLMapping: Partial<Record<ChainId, string>> = {
   [ChainId.Arbitrum]: 'https://arbiscan.io',
   [ChainId.Avalanche]: 'https://snowtrace.io',
   [ChainId.Fantom]: 'https://ftmscan.com',
-  // [ChainId.Gnosis]: 'https://gnosisscan.io',
+  [ChainId.xDai]: 'https://gnosisscan.io',
   [ChainId.Aurora]: 'https://aurorascan.dev',
   [ChainId.Optimistic]: 'https://optimistic.etherscan.io',
 }

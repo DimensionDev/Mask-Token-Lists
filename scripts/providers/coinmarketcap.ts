@@ -125,6 +125,7 @@ const PlatformMapping: Partial<Record<ChainId, string>> = {
   [ChainId.Mainnet]: 'ethereum-ecosystem',
   [ChainId.BNB]: 'binance-smart-chain',
   [ChainId.Polygon]: 'polygon-ecosystem',
+  [ChainId.Avalanche]: 'avalanche-ecosystem',
   [ChainId.Arbitrum]: 'arbitrum-ecosytem',
 }
 

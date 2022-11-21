@@ -10,6 +10,7 @@ import { Explorer } from './providers/explorer'
 import { CryptoRank } from './providers/cryptoRank'
 import { CoinMarketCap } from './providers/coinmarketcap'
 import { SubScan } from './providers/subScan'
+import { prefetchCryptoRankCoins } from './cache/cryptorank/batch'
 
 const coinGeckoAPI = new CoinGecko()
 const explorerAPI = new Explorer()
@@ -17,7 +18,7 @@ const cryptoRankAPI = new CryptoRank()
 const coinMarketCapAPI = new CoinMarketCap()
 const subScanAPI = new SubScan()
 
-const providers = [coinGeckoAPI, explorerAPI, cryptoRankAPI, coinMarketCapAPI, subScanAPI]
+const providers = [coinGeckoAPI, explorerAPI, coinMarketCapAPI, subScanAPI, cryptoRankAPI]
 
 const TOKEN_LIST_BASE_URL = 'https://tokens.r2d2.to/'
 
@@ -28,9 +29,13 @@ async function getLatestReleaseTokenList(chainId: ChainId) {
 }
 
 async function main() {
-  const targetChain = process.argv.slice(2)[0]
+  const targetChainArg = process.argv.slice(2)[0]
+  const targetChain = parseInt(targetChainArg) as ChainId
+
   const chains = Object.values(ChainId).filter((v) => !isNaN(Number(v))) as ChainId[]
-  const targetChains = targetChain ? [parseInt(targetChain) as ChainId] : chains
+  const targetChains = targetChainArg ? [targetChain] : chains.filter((x) => x !== 1)
+
+  await prefetchCryptoRankCoins()
 
   for (const chain of targetChains) {
     console.log(new Array(process.stdout.rows).fill('*').join(''))
