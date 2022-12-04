@@ -28,7 +28,7 @@ jobs:
       - name: Sync ETH Token List
         id: sync-token-list
         run: |
-          yarn generate 1
+          yarn cli generate  -i 1
 
       - name: Git Diff
         id: git-diff

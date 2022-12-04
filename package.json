@@ -10,7 +10,7 @@
     "prepare": "husky install",
     "prettier": "prettier -c .",
     "publish": "gh-pages -d ./dist",
-    "generate": "ts-node scripts/index.ts",
+    "cli": "ts-node scripts/index.ts",
     "lint-fix": "prettier --write .",
     "test": "vitest",
     "coverage": "vitest run --coverage"
@@ -19,6 +19,7 @@
     "@types/lodash": "^4.14.186",
     "axios": "^1.1.3",
     "cheerio": "^1.0.0-rc.12",
+    "commander": "^9.4.1",
     "fast-json-stringify": "^5.4.0",
     "lodash": "^4.17.21",
     "puppeteer": "^19.0.0",
