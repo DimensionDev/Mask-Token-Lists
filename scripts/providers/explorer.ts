@@ -4,6 +4,7 @@ import * as cheerio from 'cheerio'
 import axios from 'axios'
 import { toChecksumAddress } from 'web3-utils'
 import { generateLogoURL } from '../utils/asset'
+import { fetchExplorerPage } from '../utils/base'
 
 const basURLMapping: Partial<Record<ChainId, string>> = {
   [ChainId.Mainnet]: 'https://etherscan.io',
@@ -19,8 +20,6 @@ const basURLMapping: Partial<Record<ChainId, string>> = {
 
 const requestAcceptHeader =
   'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
-const userAgent =
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
 
 export class Explorer implements Provider {
   getProviderName(): Providers {
@@ -36,15 +35,14 @@ export class Explorer implements Provider {
     let page = 1
     let result: FungibleToken[] = []
     while (page <= 2) {
+      console.log('------------------explorer generateFungibleTokens')
+      console.log(page)
       const url = urlcat(baseURL, 'tokens', { p: page, ps: 10 })
-      const html = await axios.get(url, {
-        headers: {
-          accept: requestAcceptHeader,
-          'user-agent': userAgent,
-        },
-      })
-      const q = cheerio.load(html.data)
+      const pageData = await fetchExplorerPage(url)
+      console.log(pageData)
+      const q = cheerio.load(pageData)
       const table = q('#tblResult tbody tr').map((_, x) => x)
+      console.log(table.length)
 
       // @ts-ignore
       for (const x of table) {
@@ -60,6 +58,9 @@ export class Explorer implements Provider {
         if (!address) continue
 
         const decimals = await this.getTokenDecimals(urlcat(baseURL, pageLink))
+        console.log('------------------explorer generateFungibleTokens')
+        console.log(x.name)
+        console.log(decimals)
 
         const token = {
           chainId: chainId,

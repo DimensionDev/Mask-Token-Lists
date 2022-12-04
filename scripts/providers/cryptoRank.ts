@@ -52,10 +52,10 @@ const PlatformMapping = [
     tokenPlatformName: 'Astar',
     chainId: ChainId.Astar,
   },
-  {
-    tokenPlatformName: 'Optimism',
-    chainId: ChainId.Optimistic,
-  },
+  // {
+  //   tokenPlatformName: 'Optimism',
+  //   chainId: ChainId.Optimistic,
+  // },
 ]
 
 export interface TokenInfo {
