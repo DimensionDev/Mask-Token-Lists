@@ -52,7 +52,6 @@ export class SubScan implements Provider {
           },
         },
       )
-      console.log(list.data)
       if (list.data.code === 0 && list.data.data.list.length) {
         result = [...result, ...list.data.data.list]
         page++

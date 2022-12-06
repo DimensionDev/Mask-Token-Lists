@@ -1,25 +1,12 @@
 import urlcat from 'urlcat'
 import { ChainId, FungibleToken, Provider, Providers } from '../type'
 import * as cheerio from 'cheerio'
-import axios from 'axios'
 import { toChecksumAddress } from 'web3-utils'
 import { generateLogoURL } from '../utils/asset'
-import { fetchExplorerPage } from '../utils/base'
+import { explorerBasURLMapping, fetchExplorerPage } from '../utils/base'
+import getConfig from '../config'
 
-const basURLMapping: Partial<Record<ChainId, string>> = {
-  [ChainId.Mainnet]: 'https://etherscan.io',
-  [ChainId.BNB]: 'https://bscscan.com',
-  [ChainId.Polygon]: 'https://polygonscan.com',
-  [ChainId.Arbitrum]: 'https://arbiscan.io',
-  [ChainId.Avalanche]: 'https://snowtrace.io',
-  [ChainId.Fantom]: 'https://ftmscan.com',
-  [ChainId.xDai]: 'https://gnosisscan.io',
-  [ChainId.Aurora]: 'https://aurorascan.dev',
-  [ChainId.Optimistic]: 'https://optimistic.etherscan.io',
-}
-
-const requestAcceptHeader =
-  'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+const { EXPLORER_PAGE_SIZE, TOTAL } = getConfig()
 
 export class Explorer implements Provider {
   getProviderName(): Providers {
@@ -27,22 +14,18 @@ export class Explorer implements Provider {
   }
 
   isSupportChain(chainId: ChainId): boolean {
-    return !!basURLMapping[chainId]
+    return !!explorerBasURLMapping[chainId]
   }
 
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {
-    const baseURL = basURLMapping[chainId]!
+    const baseURL = explorerBasURLMapping[chainId]!
     let page = 1
     let result: FungibleToken[] = []
-    while (page <= 2) {
-      console.log('------------------explorer generateFungibleTokens')
-      console.log(page)
-      const url = urlcat(baseURL, 'tokens', { p: page, ps: 10 })
+    while (page <= TOTAL / EXPLORER_PAGE_SIZE) {
+      const url = urlcat(baseURL, 'tokens', { p: page, ps: EXPLORER_PAGE_SIZE })
       const pageData = await fetchExplorerPage(url)
-      console.log(pageData)
       const q = cheerio.load(pageData)
       const table = q('#tblResult tbody tr').map((_, x) => x)
-      console.log(table.length)
 
       // @ts-ignore
       for (const x of table) {
@@ -58,9 +41,6 @@ export class Explorer implements Provider {
         if (!address) continue
 
         const decimals = await this.getTokenDecimals(urlcat(baseURL, pageLink))
-        console.log('------------------explorer generateFungibleTokens')
-        console.log(x.name)
-        console.log(decimals)
 
         const token = {
           chainId: chainId,
@@ -85,12 +65,8 @@ export class Explorer implements Provider {
   }
 
   async getTokenDecimals(link: string) {
-    const html = await axios.get(link, {
-      headers: {
-        accept: requestAcceptHeader,
-      },
-    })
-    const q = cheerio.load(html.data)
+    const data = await fetchExplorerPage(link)
+    const q = cheerio.load(data)
     const decimals = q('#ContentPlaceHolder1_trDecimals .row div:nth-child(2)').text()
     return parseInt(decimals)
   }

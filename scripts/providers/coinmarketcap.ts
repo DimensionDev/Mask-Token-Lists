@@ -6,6 +6,7 @@ import { delay } from '../utils'
 import { toChecksumAddress } from 'web3-utils'
 import { generateLogoURL } from '../utils/asset'
 import { getTokenDecimals } from '../utils/base'
+import getConfig from '../config'
 
 export interface TokenInfo {
   id: number
@@ -132,6 +133,8 @@ const PlatformMapping: Partial<Record<ChainId, string>> = {
 const baseURL = 'https://api.coinmarketcap.com'
 const baseProURL = 'https://pro-api.coinmarketcap.com'
 
+const { TOTAL, CMC_WAIT_TIME } = getConfig()
+
 export class CoinMarketCap implements Provider {
   async getIdMapping() {
     let start: number | undefined = 1
@@ -181,7 +184,7 @@ export class CoinMarketCap implements Provider {
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {
     const url = urlcat(baseURL, '/data-api/v3/cryptocurrency/listing', {
       start: 1,
-      limit: 1000,
+      limit: TOTAL,
       sortBy: 'market_cap',
       sortType: 'desc',
       cryptoType: 'all',
@@ -229,7 +232,7 @@ export class CoinMarketCap implements Provider {
         ...token,
         decimals: decimals,
       })
-      await delay(500)
+      await delay(CMC_WAIT_TIME)
     }
 
     return [...result, ...exclude].filter(

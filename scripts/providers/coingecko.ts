@@ -5,6 +5,7 @@ import { differenceBy, some, uniqBy } from 'lodash'
 import { generateLogoURL } from '../utils/asset'
 import { toChecksumAddress } from 'web3-utils'
 import { delay } from '../utils'
+import getConfig from '../config'
 
 export const baseURL = 'https://api.coingecko.com/api/v3'
 
@@ -83,10 +84,13 @@ interface Platform {
   name: string
 }
 
+const { TOTAL, COIN_GEOKO_PAGE_SIZE, WAIT_TIME } = getConfig()
+
 export class CoinGecko implements Provider {
   getProviderName(): Providers {
     return Providers.coinGeoko
   }
+
   private async getCurrentChainPlatformId(chainId: ChainId) {
     const requestURL = urlcat(baseURL, 'asset_platforms')
     const result = await axios.get<Platform[]>(requestURL)
@@ -95,17 +99,19 @@ export class CoinGecko implements Provider {
 
   private async getMarketsCoins(chainId: ChainId) {
     const result: CoinInfo[] = []
-    while (result.length < 1000) {
+    while (result.length < TOTAL) {
       const requestURL = urlcat(baseURL, '/coins/markets', {
         vs_currency: 'usd',
         order: 'market_cap_desc',
         category: idsMapping[chainId],
         per_page: 250,
-        page: Math.ceil(result.length / 250),
+        page: Math.ceil(result.length / COIN_GEOKO_PAGE_SIZE),
       })
       const list = await axios.get<Coin[]>(requestURL)
 
-      console.log(`Fetched the ${result.length / 250} page date, the list length is: ${list.data.length}`)
+      console.log(
+        `Fetched the ${result.length / COIN_GEOKO_PAGE_SIZE} page date, the list length is: ${list.data.length}`,
+      )
 
       if (!list.data.length) break
 
@@ -117,8 +123,9 @@ export class CoinGecko implements Provider {
           logoURI: x.image,
         })),
       )
+      if (list.data.length < COIN_GEOKO_PAGE_SIZE) break
 
-      await delay(6000)
+      await delay(WAIT_TIME)
     }
 
     return result

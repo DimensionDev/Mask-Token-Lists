@@ -19,7 +19,7 @@ export function convertEnumToArray(e: any) {
     })
 }
 
-const explorerBasURLMapping: Partial<Record<ChainId, string>> = {
+export const explorerBasURLMapping: Partial<Record<ChainId, string>> = {
   [ChainId.Mainnet]: 'https://etherscan.io',
   [ChainId.BNB]: 'https://bscscan.com',
   [ChainId.Polygon]: 'https://polygonscan.com',
@@ -28,7 +28,7 @@ const explorerBasURLMapping: Partial<Record<ChainId, string>> = {
   [ChainId.Fantom]: 'https://ftmscan.com',
   [ChainId.xDai]: 'https://gnosisscan.io',
   [ChainId.Aurora]: 'https://aurorascan.dev',
-  [ChainId.Optimistic]: 'https://optimistic.etherscan.io',
+  // [ChainId.Optimistic]: 'https://optimistic.etherscan.io',
 }
 
 export async function fetchExplorerPage(url: string) {

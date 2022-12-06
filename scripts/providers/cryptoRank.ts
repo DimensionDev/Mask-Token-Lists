@@ -5,6 +5,7 @@ import { differenceBy, some, sortBy, uniqBy } from 'lodash'
 import { getTokenDecimals } from '../utils/base'
 import { toChecksumAddress } from 'web3-utils'
 import { cryptoRankcacheDir, delay } from '../utils'
+import getConfig from '../config'
 
 // data source: https://api.cryptorank.io/v0/tokens/token-platforms
 const PlatformMapping = [
@@ -83,6 +84,8 @@ export interface Token {
   address: string
 }
 
+const { TOTAL, CR_WAIT_TIME } = getConfig()
+
 export class CryptoRank implements Provider {
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {
     const platform = PlatformMapping.find((x) => x.chainId === chainId)!
@@ -105,7 +108,7 @@ export class CryptoRank implements Provider {
         }
       })
 
-    const topList = uniqBy(sortBy(list, 'rank'), 'address').slice(0, 1000)
+    const topList = uniqBy(sortBy(list, 'rank'), 'address').slice(0, TOTAL)
     const toAddList = differenceBy(topList, exclude, (x) =>
       some(exclude, (e) => x.address.toLowerCase() === e.address.toLowerCase()),
     )
@@ -124,7 +127,7 @@ export class CryptoRank implements Provider {
         ...token,
         decimals: decimals,
       })
-      await delay(500)
+      await delay(CR_WAIT_TIME)
     }
     return [...result, ...exclude].filter(
       (x) => x.address && list.find((e) => e.symbol.toLowerCase() === x.symbol.toLowerCase()),
