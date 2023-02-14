@@ -6,8 +6,7 @@ import { generateLogoURL } from '../utils/asset'
 import { toChecksumAddress } from 'web3-utils'
 import { delay } from '../utils'
 import getConfig from '../config'
-
-export const baseURL = 'https://api.coingecko.com/api/v3'
+import { COINGECKO_BASE_URL } from '../config/urls'
 
 interface Coin {
   id: string
@@ -92,7 +91,7 @@ export class CoinGecko implements Provider {
   }
 
   private async getCurrentChainPlatformId(chainId: ChainId) {
-    const requestURL = urlcat(baseURL, 'asset_platforms')
+    const requestURL = urlcat(COINGECKO_BASE_URL, 'asset_platforms')
     const result = await axios.get<Platform[]>(requestURL)
     return result.data.find((x) => x.chain_identifier === chainId)?.id
   }
@@ -100,7 +99,7 @@ export class CoinGecko implements Provider {
   private async getMarketsCoins(chainId: ChainId) {
     const result: CoinInfo[] = []
     while (result.length < TOTAL) {
-      const requestURL = urlcat(baseURL, '/coins/markets', {
+      const requestURL = urlcat(COINGECKO_BASE_URL, '/coins/markets', {
         vs_currency: 'usd',
         order: 'market_cap_desc',
         category: idsMapping[chainId],
@@ -132,7 +131,7 @@ export class CoinGecko implements Provider {
   }
 
   private async getCoinDetail(id: string, platformId: string) {
-    const requestURL = urlcat(baseURL, '/coins/:id', {
+    const requestURL = urlcat(COINGECKO_BASE_URL, '/coins/:id', {
       id,
       market_data: false,
       tickers: false,

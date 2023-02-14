@@ -1,7 +1,7 @@
 import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest'
 import { setupServer } from 'msw/node'
 import { rest } from 'msw'
-import { baseURL, CoinGecko } from './coingecko'
+import { CoinGecko } from './coingecko'
 import { ChainId } from '../type'
 
 // @ts-ignore
@@ -13,9 +13,10 @@ import * as tokensMockData from '../fixture/coingecko-coins-markets.json'
 // @ts-ignore
 import * as coinDetailMockData from '../fixture/coingecko-coin-detail.json'
 import { generateLogoURL } from '../utils/asset'
+import { COINGECKO_BASE_URL } from '../config/urls'
 
 export const restHandlers = [
-  rest.get(`${baseURL}/coins/markets`, (req, res, ctx) => {
+  rest.get(`${COINGECKO_BASE_URL}/coins/markets`, (req, res, ctx) => {
     // @ts-ignore
     if (req.url.searchParams.get('page') === '0') {
       // @ts-ignore
@@ -24,11 +25,11 @@ export const restHandlers = [
       return res(ctx.status(200), ctx.json([]))
     }
   }),
-  rest.get(`${baseURL}/asset_platforms`, (req, res, ctx) => {
+  rest.get(`${COINGECKO_BASE_URL}/asset_platforms`, (req, res, ctx) => {
     // @ts-ignore
     return res(ctx.status(200), ctx.json(platformsMockData.default))
   }),
-  rest.get(`${baseURL}/coins/usd-coin`, (req, res, ctx) => {
+  rest.get(`${COINGECKO_BASE_URL}/coins/usd-coin`, (req, res, ctx) => {
     // @ts-ignore
     return res(ctx.status(200), ctx.json(coinDetailMockData.default))
   }),
