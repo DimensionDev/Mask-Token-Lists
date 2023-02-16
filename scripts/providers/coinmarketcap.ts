@@ -22,6 +22,10 @@ const baseProURL = 'https://pro-api.coinmarketcap.com'
 
 const { TOTAL, CMC_WAIT_TIME } = getConfig()
 
+export function getCoinMarketCapAPIKey() {
+  return process.env.COINMARKETCAP_API_KEY
+}
+
 export class CoinMarketCap implements Provider {
   async getIdMapping() {
     let start: number | undefined = 1
@@ -33,7 +37,7 @@ export class CoinMarketCap implements Provider {
       })
 
       const res = await axios.get<{ data: CMCIDInfo[] }>(url, {
-        headers: { 'X-CMC_PRO_API_KEY': 'bd92d128-3883-45a7-8d45-fb565544f40a' },
+        headers: { 'X-CMC_PRO_API_KEY': getCoinMarketCapAPIKey() },
       })
       if (res.data.data.length) {
         result = [
@@ -62,7 +66,7 @@ export class CoinMarketCap implements Provider {
   async getMetadatas(ids: number[]) {
     const url = urlcat(baseProURL, '/v2/cryptocurrency/info', { id: ids.join() })
     const res = await axios.get<{ data: Record<number, CMCMetadata> }>(url, {
-      headers: { 'X-CMC_PRO_API_KEY': 'bd92d128-3883-45a7-8d45-fb565544f40a' },
+      headers: { 'X-CMC_PRO_API_KEY': getCoinMarketCapAPIKey() },
     })
 
     return Object.values(res.data.data)

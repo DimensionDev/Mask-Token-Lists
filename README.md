@@ -37,6 +37,20 @@ It requires two separate commits to trigger Cloudflare to update its resource.
 1. Delete the `logo.png` that needs to be updated.
 1. Add the new `logo.png`.
 
+## Steps for generate token list
+
+Generate target chain's token list:
+
+```bash
+yarn cli generate -i <chainId>
+```
+
+Generate all support chains list:
+
+```bash
+yarn cli generate
+```
+
 ## Versions based on chain id
 
 <!-- begin versions -->
