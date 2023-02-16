@@ -1,9 +1,12 @@
 name: Fetch token list
 
 on:
-  schedule:
-    - cron: '0 10 1 * 1,4'
-  workflow_dispatch:
+  #  schedule:
+  #    - cron: '0 10 1 * 1,4'
+  #  workflow_dispatch:
+  push:
+    branches:
+      - master
 
 jobs:
   fetch-list:
@@ -28,7 +31,7 @@ jobs:
       - name: Sync ETH Token List
         id: sync-token-list
         run: |
-          yarn cli generate  -i 1
+          yarn cli generate && yarn lint-fix
 
       - name: Git Diff
         id: git-diff

@@ -1,5 +1,6 @@
 const CI = {
   TOTAL: 1000,
+  PROXY_WAIT_TIME: 250,
   WAIT_TIME: 6000,
   CMC_WAIT_TIME: 500,
   CR_WAIT_TIME: 500,
@@ -10,6 +11,7 @@ const CI = {
 
 const DEV = {
   TOTAL: 1000,
+  PROXY_WAIT_TIME: 250,
   WAIT_TIME: 6000,
   CMC_WAIT_TIME: 500,
   CR_WAIT_TIME: 500,

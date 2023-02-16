@@ -4,6 +4,7 @@ import axios from 'axios'
 import { cryptoRankcacheDir } from '../../utils/file'
 
 export async function prefetchCryptoRankCoins() {
+  console.log('Prefetch CryptoRank Coins from remote.')
   const res = await axios.get<{ data: any[] }>('https://api.cryptorank.io/v0/coins', {
     headers: {
       accept: 'application/json, text/plain, */*',
@@ -19,4 +20,5 @@ export async function prefetchCryptoRankCoins() {
   }
 
   await fs.writeFile(`${cryptoRankcacheDir}/data.json`, JSON.stringify(result))
+  console.log(`Prefetched done, the list length is ${result.length}`)
 }

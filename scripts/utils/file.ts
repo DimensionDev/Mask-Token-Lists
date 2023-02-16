@@ -58,9 +58,13 @@ export const cryptoRankcacheDir = path.join(process.env.PWD, 'scripts/cache/cryp
 export async function writeTokensToFile(chain: ChainId, tokens: FungibleToken[]) {
   const chains = convertEnumToArray(ChainId)
   const filename = chains.find((x) => x.value === chain)?.key
-  await fs.writeFile(path.join(outputDir, `${filename?.toLowerCase()}.json`), JSON.stringify(tokens, undefined, 2), {
-    encoding: 'utf-8',
-  })
+  await fs.writeFile(
+    path.join(outputDir, `${filename?.toLowerCase()}.json`),
+    JSON.stringify(JSON.parse(stringifyTokenListCache(tokens)), undefined, 2),
+    {
+      encoding: 'utf-8',
+    },
+  )
 }
 
 export async function mergeTokenListIntoCache(chain: ChainId, tokens: FungibleToken[]) {

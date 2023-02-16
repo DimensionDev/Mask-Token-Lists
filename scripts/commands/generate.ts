@@ -1,5 +1,5 @@
 import { ChainId, FungibleToken } from '../type'
-import { mergeTokenListIntoCache, writeTokensToFile } from '../utils'
+import { writeTokensToFile } from '../utils'
 import { toChecksumAddress } from 'web3-utils'
 import { sortBy, uniqBy } from 'lodash'
 import { prefetchCryptoRankCoins } from '../cache/cryptorank/batch'
@@ -10,6 +10,7 @@ import urlcat from 'urlcat'
 import axios from 'axios'
 import { CoinGecko } from '../providers/coingecko'
 import { Explorer } from '../providers/explorer'
+import { convertEnumToArray } from '../utils/base'
 
 const coinGeckoAPI = new CoinGecko()
 const explorerAPI = new Explorer()
@@ -20,11 +21,24 @@ const subScanAPI = new SubScan()
 const providers = [coinGeckoAPI, explorerAPI, coinMarketCapAPI, subScanAPI, cryptoRankAPI]
 
 const TOKEN_LIST_BASE_URL = 'https://tokens.r2d2.to/'
+const TOKEN_LIST_REPO_BASE_URL =
+  'https://raw.githubusercontent.com/DimensionDev/Mask-Token-Lists/master/src/fungible-tokens'
 
-async function getLatestReleaseTokenList(chainId: ChainId) {
+async function getLatestReleasedTokenList(chainId: ChainId) {
   const requestURL = urlcat(TOKEN_LIST_BASE_URL, 'latest/:chainId/tokens.json', { chainId })
   const listInfo = await axios.get<{ tokens: FungibleToken[] }>(requestURL)
   return listInfo.data.tokens
+}
+
+async function getLatestReleaseTokenList(chainId: ChainId) {
+  const chains = convertEnumToArray(ChainId)
+  const name = chains.find((x) => x.value === chainId)
+  if (!name) {
+    throw 'Not found chain name!'
+  }
+  const requestURL = urlcat(TOKEN_LIST_REPO_BASE_URL, `${name.key.toLowerCase()}.json`)
+  const listInfo = await axios.get<FungibleToken[]>(requestURL)
+  return listInfo.data
 }
 
 export async function generate(targetChains: ChainId[]) {
@@ -60,17 +74,17 @@ export async function generate(targetChains: ChainId[]) {
         sortBy(
           uniqBy([...latestReleaseTokenList, ...result], (x) => toChecksumAddress(x.address)),
           'symbol',
-        ),
+        ).filter((x) => x.address && x.symbol && x.chainId && x.decimals && x.name),
       )
 
       // Cache the token list info with origin image link for assets repo to fetch image
-      await mergeTokenListIntoCache(
-        chain,
-        sortBy(
-          uniqBy(result, (x) => toChecksumAddress(x.address)),
-          'symbol',
-        ),
-      )
+      // await mergeTokenList(
+      //   chain,
+      //   sortBy(
+      //     uniqBy(result, (x) => toChecksumAddress(x.address)),
+      //     'symbol',
+      //   ).filter(x => x.address && x.symbol && x.chainId && x.decimals && x.name),
+      // )
     }
   }
 

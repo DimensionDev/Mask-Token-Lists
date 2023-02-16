@@ -6,7 +6,7 @@ import { generateLogoURL } from '../utils/asset'
 import { toChecksumAddress } from 'web3-utils'
 import { delay } from '../utils'
 import getConfig from '../config'
-import { COINGECKO_BASE_URL } from '../config/urls'
+import { COINGECKO_PROXY_URL } from '../config/urls'
 
 interface Coin {
   id: string
@@ -75,6 +75,7 @@ const idsMapping: Partial<Record<ChainId, string>> = {
   [ChainId.Moonriver]: 'moonriver-ecosystem',
   [ChainId.Celo]: 'celo-ecosystem',
   [ChainId.Harmony]: 'harmony-ecosystem',
+  [ChainId.Optimistic]: 'optimism-ecosystem',
 }
 
 interface Platform {
@@ -83,7 +84,7 @@ interface Platform {
   name: string
 }
 
-const { TOTAL, COIN_GEOKO_PAGE_SIZE, WAIT_TIME } = getConfig()
+const { TOTAL, COIN_GEOKO_PAGE_SIZE, PROXY_WAIT_TIME } = getConfig()
 
 export class CoinGecko implements Provider {
   getProviderName(): Providers {
@@ -91,7 +92,7 @@ export class CoinGecko implements Provider {
   }
 
   private async getCurrentChainPlatformId(chainId: ChainId) {
-    const requestURL = urlcat(COINGECKO_BASE_URL, 'asset_platforms')
+    const requestURL = urlcat(COINGECKO_PROXY_URL, 'asset_platforms')
     const result = await axios.get<Platform[]>(requestURL)
     return result.data.find((x) => x.chain_identifier === chainId)?.id
   }
@@ -99,7 +100,7 @@ export class CoinGecko implements Provider {
   private async getMarketsCoins(chainId: ChainId) {
     const result: CoinInfo[] = []
     while (result.length < TOTAL) {
-      const requestURL = urlcat(COINGECKO_BASE_URL, '/coins/markets', {
+      const requestURL = urlcat(COINGECKO_PROXY_URL, '/coins/markets', {
         vs_currency: 'usd',
         order: 'market_cap_desc',
         category: idsMapping[chainId],
@@ -124,14 +125,14 @@ export class CoinGecko implements Provider {
       )
       if (list.data.length < COIN_GEOKO_PAGE_SIZE) break
 
-      await delay(WAIT_TIME)
+      await delay(PROXY_WAIT_TIME)
     }
 
     return result
   }
 
   private async getCoinDetail(id: string, platformId: string) {
-    const requestURL = urlcat(COINGECKO_BASE_URL, '/coins/:id', {
+    const requestURL = urlcat(COINGECKO_PROXY_URL, '/coins/:id', {
       id,
       market_data: false,
       tickers: false,
@@ -160,7 +161,7 @@ export class CoinGecko implements Provider {
     console.log(`The difference tokens length: is: ${toAddList.length}`)
 
     const platformId = await this.getCurrentChainPlatformId(chainId)
-    await delay(6000)
+    await delay(PROXY_WAIT_TIME)
 
     const result: FungibleToken[] = []
     for (const token of toAddList) {
@@ -170,17 +171,24 @@ export class CoinGecko implements Provider {
       const detail = await this.getCoinDetail(token.id, platformId)
       if (!detail) continue
       if (detail.contract_address === '') continue
+      if (!detail.decimal_place) continue
 
-      result.push({
-        chainId,
-        address: toChecksumAddress(detail.contract_address),
-        name: token.name,
-        symbol: token.symbol,
-        decimals: detail.decimal_place,
-        logoURI: generateLogoURL(chainId, detail.contract_address),
-        originLogoURI: token.logoURI,
-      })
-      await delay(6000)
+      try {
+        result.push({
+          chainId,
+          address: toChecksumAddress(detail.contract_address),
+          name: token.name,
+          symbol: token.symbol,
+          decimals: detail.decimal_place,
+          logoURI: generateLogoURL(chainId, detail.contract_address),
+          originLogoURI: token.logoURI,
+        })
+      } catch (e) {
+        console.log(`Format token ${token.symbol} failed:`)
+        console.log(e)
+      }
+
+      await delay(PROXY_WAIT_TIME)
     }
     return [...result, ...exclude].filter(
       (x) => x.address && top1000List.find((e) => e.symbol.toLowerCase() === x.symbol.toLowerCase()),
