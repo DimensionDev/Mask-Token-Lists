@@ -1,4 +1,4 @@
-name: Fetch token list
+name: Fetch mainnet token list
 
 on:
   #  schedule:
@@ -31,7 +31,7 @@ jobs:
       - name: Sync ETH Token List
         id: sync-token-list
         run: |
-          yarn cli generate && yarn lint-fix
+          yarn cli generate -i 1 && yarn lint-fix
 
       - name: Git Diff
         id: git-diff
