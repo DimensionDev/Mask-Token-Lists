@@ -26,7 +26,6 @@ export enum ChainId {
   Avalanche = 43114,
   Aurora = 1313161554,
   Harmony = 1666600000,
-  Harmony_Testnet = 1666700000,
   Palm = 11297108109,
 }
 
