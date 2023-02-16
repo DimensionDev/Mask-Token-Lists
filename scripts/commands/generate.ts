@@ -76,15 +76,6 @@ export async function generate(targetChains: ChainId[]) {
           'symbol',
         ).filter((x) => x.address && x.symbol && x.chainId && x.decimals && x.name),
       )
-
-      // Cache the token list info with origin image link for assets repo to fetch image
-      // await mergeTokenList(
-      //   chain,
-      //   sortBy(
-      //     uniqBy(result, (x) => toChecksumAddress(x.address)),
-      //     'symbol',
-      //   ).filter(x => x.address && x.symbol && x.chainId && x.decimals && x.name),
-      // )
     }
   }
 
