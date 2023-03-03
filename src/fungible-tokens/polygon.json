@@ -6805,15 +6805,6 @@
   },
   {
     "chainId": 137,
-    "address": "0x0000000000000000000000000000000000001010",
-    "name": "Polygon",
-    "symbol": "matic",
-    "decimals": 18,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/polygon/assets/0x0000000000000000000000000000000000001010/logo.png/quality=85",
-    "originLogoURI": "https://assets.coingecko.com/coins/images/4713/large/matic-token-icon.png?1624446912"
-  },
-  {
-    "chainId": 137,
     "address": "0xf287D97B6345bad3D88856b26Fb7c0ab3F2C7976",
     "name": "Index Coop - MATIC 2x Flexible Leverage Index",
     "symbol": "matic2x-fli-p",
