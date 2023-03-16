@@ -30,17 +30,6 @@ async function getLatestReleasedTokenList(chainId: ChainId) {
   return listInfo.data.tokens
 }
 
-async function getLatestReleaseTokenList(chainId: ChainId) {
-  const chains = convertEnumToArray(ChainId)
-  const name = chains.find((x) => x.value === chainId)
-  if (!name) {
-    throw 'Not found chain name!'
-  }
-  const requestURL = urlcat(TOKEN_LIST_REPO_BASE_URL, `${name.key.toLowerCase()}.json`)
-  const listInfo = await axios.get<FungibleToken[]>(requestURL)
-  return listInfo.data
-}
-
 export async function generate(targetChains: ChainId[]) {
   await prefetchCryptoRankCoins()
 
@@ -48,7 +37,7 @@ export async function generate(targetChains: ChainId[]) {
     console.log(new Array(process.stdout.rows).fill('*').join(''))
     console.log(`The current chain id is: ${chain}`)
 
-    const latestReleaseTokenList = await getLatestReleaseTokenList(chain)
+    const latestReleaseTokenList = await getLatestReleasedTokenList(chain)
     console.log(`This chain has ${latestReleaseTokenList.length} tokens online`)
 
     let result: FungibleToken[] = []
