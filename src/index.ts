@@ -9,14 +9,15 @@ async function main() {
   for await (const value of getEnumAsArray(ChainId)) {
     const pathToLatestFolder = resolve(__dirname, `../dist/latest/${value.value}/`)
     const pathToVersionFolder = resolve(__dirname, `../dist/v${Package.version}/${value.value}/`)
+    const fungibleTokens = await generateFungibleTokens(value.value)
 
-    // lastest/tokens.ts
+    // latest/tokens.ts
     await mkdir(pathToLatestFolder, { recursive: true })
-    await writeFile(`${pathToLatestFolder}/tokens.json`, await generateFungibleTokens(value.value))
+    await writeFile(`${pathToLatestFolder}/tokens.json`, fungibleTokens)
 
     // vx.x.x/tokens.ts
     await mkdir(pathToVersionFolder, { recursive: true })
-    await writeFile(`${pathToVersionFolder}/tokens.json`, await generateFungibleTokens(value.value))
+    await writeFile(`${pathToVersionFolder}/tokens.json`, fungibleTokens)
 
     console.log(`Genereated fungible token list for ${value.key} (Chain ID: ${value.value}).`)
   }
