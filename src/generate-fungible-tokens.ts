@@ -101,7 +101,7 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
 const getMetaMaskLogoURL = (address: string) =>
   `https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/ethereum/assets/${address}/logo.png/quality=85`
 
-async function generateFungibleTokens(chainId: ChainId) {
+function generateFungibleTokens(chainId: ChainId) {
   const tokenLists = getFungibleTokenLists()
   const baseTokens = tokenLists[chainId].flat()
 
@@ -118,8 +118,8 @@ async function generateFungibleTokens(chainId: ChainId) {
   })
 }
 
-export async function generate(chainId: ChainId) {
-  const tokens = await generateFungibleTokens(chainId)
+export function generate(chainId: ChainId) {
+  const tokens = generateFungibleTokens(chainId)
   const tokenList = generateTokenList(
     tokens
       .map((x) => ({
