@@ -26,7 +26,6 @@ export enum ChainId {
   Avalanche = 43114,
   Aurora = 1313161554,
   Harmony = 1666600000,
-  Harmony_Testnet = 1666700000,
   Palm = 11297108109,
 }
 
@@ -37,12 +36,23 @@ export interface FungibleToken {
   symbol: string
   decimals: number
   logoURI?: string
+  originLogoURI?: string
 }
 
-export interface NonFungibleToken {
-  chainId: ChainId
-  address: string
-  name: string
-  symbol?: string
-  logoURI?: string
+export interface Provider {
+  getProviderName(): Providers
+  isSupportChain(chainId: ChainId): boolean
+  generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]>
+}
+
+export enum Providers {
+  coinGeoko = 'coin-geeoko',
+  explorer = 'explorer',
+  cryptoRank = 'crypto-rank',
+  coinMarketCap = 'coinmarketcap',
+  subScan = 'subscan',
+}
+
+export interface FungibleTokenProvider extends FungibleToken {
+  provider: Providers
 }
