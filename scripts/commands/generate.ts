@@ -21,8 +21,6 @@ const subScanAPI = new SubScan()
 const providers = [coinGeckoAPI, explorerAPI, coinMarketCapAPI, subScanAPI, cryptoRankAPI]
 
 const TOKEN_LIST_BASE_URL = 'https://tokens.r2d2.to/'
-const TOKEN_LIST_REPO_BASE_URL =
-  'https://raw.githubusercontent.com/DimensionDev/Mask-Token-Lists/master/src/fungible-tokens'
 
 async function getLatestReleasedTokenList(chainId: ChainId) {
   const requestURL = urlcat(TOKEN_LIST_BASE_URL, 'latest/:chainId/tokens.json', { chainId })
