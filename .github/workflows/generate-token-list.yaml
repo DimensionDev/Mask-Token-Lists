@@ -3,11 +3,13 @@ name: Fetch token list
 on:
   #  schedule:
   #    - cron: '0 10 1 * 1,4'
+  push:
+    branches: ['autoDeploy']
   workflow_dispatch:
 
 jobs:
   fetch-list:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
