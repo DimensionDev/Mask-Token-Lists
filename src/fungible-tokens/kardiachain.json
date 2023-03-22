@@ -1,122 +1,466 @@
 [
   {
     "chainId": 24,
-    "address": "0x72b7181bd4a0B67Ca7dF2c7778D8f70455DC735b",
-    "name": "Big Digital Shares",
-    "symbol": "BDS",
-    "decimals": 8,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x72b7181bd4a0B67Ca7dF2c7778D8f70455DC735b/logo.png/quality=85"
+    "decimals": 6,
+    "symbol": "HNG",
+    "name": "HanaGold Token",
+    "address": "0x148De93957ED77f8D5546323b1EdA0Bf06eB52f3",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x148De93957ED77f8D5546323b1EdA0Bf06eB52f3/logo.png/quality=85"
   },
   {
     "chainId": 24,
-    "address": "0x2Eddba8b949048861d2272068A94792275A51658",
-    "name": "BecoSwap Token",
-    "symbol": "BECO",
     "decimals": 18,
+    "symbol": "BECO",
+    "name": "BecoSwap Token",
+    "address": "0x2Eddba8b949048861d2272068A94792275A51658",
     "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x2Eddba8b949048861d2272068A94792275A51658/logo.png/quality=85"
   },
   {
     "chainId": 24,
-    "address": "0xD675fF2B0ff139E14F86D87b7a6049ca7C66d76e",
-    "name": "DefilyToken",
-    "symbol": "DFL",
     "decimals": 18,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xD675fF2B0ff139E14F86D87b7a6049ca7C66d76e/logo.png/quality=85"
+    "symbol": "WKAI",
+    "name": "Wrapped KAI",
+    "address": "0xAF984E23EAA3E7967F3C5E007fbe397D8566D23d",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xAF984E23EAA3E7967F3C5E007fbe397D8566D23d/logo.png/quality=85"
   },
   {
     "chainId": 24,
-    "address": "0xd8347e9078Ca7F41Ad017fD74B9b6396E6068d9b",
-    "name": "DareNFT",
-    "symbol": "DNFT",
-    "decimals": 18,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xd8347e9078Ca7F41Ad017fD74B9b6396E6068d9b/logo.png/quality=85"
+    "decimals": 9,
+    "symbol": "BossDoge",
+    "name": "BossDoge",
+    "address": "0x5995F16246DfA676A44B8bD7E751C1226093dcd7",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x5995F16246DfA676A44B8bD7E751C1226093dcd7/logo.png/quality=85"
   },
   {
     "chainId": 24,
-    "address": "0xfb62AE373acA027177D1c18Ee0862817f9080d08",
-    "name": "My DeFi Pet Token",
-    "symbol": "DPET",
     "decimals": 18,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xfb62AE373acA027177D1c18Ee0862817f9080d08/logo.png/quality=85"
+    "symbol": "INFO",
+    "name": "Info Token",
+    "address": "0x5FFD7a138422cBbcfB53908AD51F656D7C6c640F",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x5FFD7a138422cBbcfB53908AD51F656D7C6c640F/logo.png/quality=85"
   },
   {
     "chainId": 24,
-    "address": "0x7664e4bF5611352088dc3a58e4bCe2C92BADf43C",
-    "name": "FAM Token",
-    "symbol": "FAM",
-    "decimals": 18,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x7664e4bF5611352088dc3a58e4bCe2C92BADf43C/logo.png/quality=85"
-  },
-  {
-    "chainId": 24,
-    "address": "0x6CD689DefCA80f9F2CBED9D0C6f3B2Cf4abc4598",
-    "name": "Kephi Token",
-    "symbol": "KPHI",
-    "decimals": 18,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x6CD689DefCA80f9F2CBED9D0C6f3B2Cf4abc4598/logo.png/quality=85"
-  },
-  {
-    "chainId": 24,
-    "address": "0x92364Ec610eFa050D296f1EEB131f2139FB8810e",
-    "name": "KUSD-T",
-    "symbol": "KUSD-T",
     "decimals": 6,
+    "symbol": "KUSD-T",
+    "name": "KUSD-T",
+    "address": "0x92364Ec610eFa050D296f1EEB131f2139FB8810e",
     "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x92364Ec610eFa050D296f1EEB131f2139FB8810e/logo.png/quality=85"
   },
   {
     "chainId": 24,
-    "address": "0x32a6bD9800276be19050bd97459A7a36B26bD899",
-    "name": "Lucky Property Development Invest Token",
-    "symbol": "LPDi",
     "decimals": 18,
+    "symbol": "ARKN",
+    "name": "ArkRivals",
+    "address": "0xc8E2747916BeDcf91C17AB13F2E14E67f6aBe0Db",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xc8E2747916BeDcf91C17AB13F2E14E67f6aBe0Db/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "FADO",
+    "name": "Fado Go",
+    "address": "0x827d24bB2aad813fE6F49b798F44cCe4c48Bd478",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x827d24bB2aad813fE6F49b798F44cCe4c48Bd478/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "DKAI",
+    "name": "DKAI",
+    "address": "0xef8F1Cb4E28EBe9649a3A1B1473274B00C068184",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xef8F1Cb4E28EBe9649a3A1B1473274B00C068184/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 8,
+    "symbol": "BDS",
+    "name": "Big Digital Shares",
+    "address": "0x72b7181bd4a0B67Ca7dF2c7778D8f70455DC735b",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x72b7181bd4a0B67Ca7dF2c7778D8f70455DC735b/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 6,
+    "symbol": "USDT",
+    "name": "Tether USD",
+    "address": "0x551A5dcAC57C66aA010940c2dcFf5DA9c53aa53b",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x551A5dcAC57C66aA010940c2dcFf5DA9c53aa53b/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "DFL",
+    "name": "DefilyToken",
+    "address": "0xD675fF2B0ff139E14F86D87b7a6049ca7C66d76e",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xD675fF2B0ff139E14F86D87b7a6049ca7C66d76e/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "LPDi",
+    "name": "Lucky Property Development Invest Token",
+    "address": "0x32a6bD9800276be19050bd97459A7a36B26bD899",
     "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x32a6bD9800276be19050bd97459A7a36B26bD899/logo.png/quality=85"
   },
   {
     "chainId": 24,
-    "address": "0x15E3B9B83BB14cE4beDc87bDAdc107Da7d25Be11",
-    "name": "LaunchZone",
-    "symbol": "LZ",
-    "decimals": 18,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x15E3B9B83BB14cE4beDc87bDAdc107Da7d25Be11/logo.png/quality=85"
+    "decimals": 0,
+    "symbol": "UDA",
+    "name": "UDA",
+    "address": "0xD1bCC0E0707d28bef3D6c3eA356EC8D837BaDB57",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xD1bCC0E0707d28bef3D6c3eA356EC8D837BaDB57/logo.png/quality=85"
   },
   {
     "chainId": 24,
-    "address": "0xbFb1398F4755E861620d25A1Df6Bb8ff25252377",
-    "name": "MOONKA Token",
-    "symbol": "MKA",
     "decimals": 18,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xbFb1398F4755E861620d25A1Df6Bb8ff25252377/logo.png/quality=85"
+    "symbol": "THG",
+    "name": "Thetan Gem",
+    "address": "0xF0051fd4758147F1749D1696C9266d047B4c43Fa",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xF0051fd4758147F1749D1696C9266d047B4c43Fa/logo.png/quality=85"
   },
   {
     "chainId": 24,
-    "address": "0xff706ec9AF6C5C89059479c24068bCd8AaE8E1Fa",
-    "name": "Moniwar",
+    "decimals": 18,
+    "symbol": "DPET",
+    "name": "My DeFi Pet Token",
+    "address": "0xfb62AE373acA027177D1c18Ee0862817f9080d08",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xfb62AE373acA027177D1c18Ee0862817f9080d08/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "LTD Token",
+    "name": "LTD",
+    "address": "0xf631BdC21A77AFAc69B9B3e966E85d7fBcf00b1f",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xf631BdC21A77AFAc69B9B3e966E85d7fBcf00b1f/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "ODIN",
+    "name": "OdinDAO",
+    "address": "0x22b3e7dB80c0Be427eBf0ADE0e66CF5b1Afe1285",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x22b3e7dB80c0Be427eBf0ADE0e66CF5b1Afe1285/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "DHR",
+    "name": "DeHR",
+    "address": "0x9fEf6766ecf9e105b2753f7f8968Dc8293A69460",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x9fEf6766ecf9e105b2753f7f8968Dc8293A69460/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 8,
+    "symbol": "VNDT",
+    "name": "VNDT",
+    "address": "0xCc0595e6a76da207CCaDf8DC7cF548Af0fF8E22b",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xCc0595e6a76da207CCaDf8DC7cF548Af0fF8E22b/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "ETH",
+    "name": "Ether",
+    "address": "0x1540020a94aA8bc189aA97639Da213a4ca49d9a7",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x1540020a94aA8bc189aA97639Da213a4ca49d9a7/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "WSPP",
+    "name": "WolfSafePoorPeople",
+    "address": "0xccB32737C6dFfddFFB24CA8A96b588ac7b1822e7",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xccB32737C6dFfddFFB24CA8A96b588ac7b1822e7/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "BNB",
+    "name": "BNB",
+    "address": "0xd7D045BFBa6Ea93b480F409DB3dd1729337C1d13",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xd7D045BFBa6Ea93b480F409DB3dd1729337C1d13/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "GEM",
+    "name": "GEM",
+    "address": "0xB5e22C047ec2f93E73469Ed790B3aB15ce51F45A",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xB5e22C047ec2f93E73469Ed790B3aB15ce51F45A/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "DRAGON",
+    "name": "DRAGON",
+    "address": "0x18f4f7A1fa6F2c93d40d4Fd83c67E93B88d3a0b1",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x18f4f7A1fa6F2c93d40d4Fd83c67E93B88d3a0b1/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "HTD",
+    "name": "HeroesTD",
+    "address": "0xe58eA819A98c87ab1A763133a234C3954BB15901",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xe58eA819A98c87ab1A763133a234C3954BB15901/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "REAL",
+    "name": "REAL REALM",
+    "address": "0x10c2ED4Dcb8e81a5CE45d985f907364e1bC3e4e1",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x10c2ED4Dcb8e81a5CE45d985f907364e1bC3e4e1/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "DNFT",
+    "name": "DareNFT",
+    "address": "0xd8347e9078Ca7F41Ad017fD74B9b6396E6068d9b",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xd8347e9078Ca7F41Ad017fD74B9b6396E6068d9b/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "MYRA",
+    "name": "Mytheria",
+    "address": "0x6ef238E9E8CD2A96740897761C18894Fc086B9d0",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x6ef238E9E8CD2A96740897761C18894Fc086B9d0/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "COGI",
+    "name": "COGI Coin",
+    "address": "0x32063CD7E2dB807f0361235C01c10b4f8fE64f8e",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x32063CD7E2dB807f0361235C01c10b4f8fE64f8e/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "BUSD",
+    "name": "BUSD",
+    "address": "0x3444273AFdf9E00Fd0491C8a97738acA3ebB2A93",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x3444273AFdf9E00Fd0491C8a97738acA3ebB2A93/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "CHAT",
+    "name": "Chat Token",
+    "address": "0x274064d87952e4782150396153b50b1ab3a81Ca2",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x274064d87952e4782150396153b50b1ab3a81Ca2/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "FAM",
+    "name": "FAM Token",
+    "address": "0x7664e4bF5611352088dc3a58e4bCe2C92BADf43C",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x7664e4bF5611352088dc3a58e4bCe2C92BADf43C/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 0,
+    "symbol": "KEEY",
+    "name": "Iron Sail KEEY",
+    "address": "0xFb2374D19b19E7d91C82B02EE09A913a1Fdb3Dc6",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xFb2374D19b19E7d91C82B02EE09A913a1Fdb3Dc6/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
     "symbol": "MOWA",
-    "decimals": 18,
+    "name": "Moniwar",
+    "address": "0xff706ec9AF6C5C89059479c24068bCd8AaE8E1Fa",
     "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xff706ec9AF6C5C89059479c24068bCd8AaE8E1Fa/logo.png/quality=85"
   },
   {
     "chainId": 24,
-    "address": "0xA43B455F935A7f4184B5B8Aa345e22DbA3bBb286",
-    "name": "Nami Corporation",
-    "symbol": "NAMI",
     "decimals": 18,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xA43B455F935A7f4184B5B8Aa345e22DbA3bBb286/logo.png/quality=85"
+    "symbol": "GDT",
+    "name": "GetDone Token",
+    "address": "0x865Fa6A9DeE299De618A06729DC9e5f7d02055E3",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x865Fa6A9DeE299De618A06729DC9e5f7d02055E3/logo.png/quality=85"
   },
   {
     "chainId": 24,
-    "address": "0xff40318cdA551BF168c7cC8B9DC004FaA07345AC",
-    "name": "RICE",
-    "symbol": "RICE",
     "decimals": 18,
+    "symbol": "KSC",
+    "name": "KShark",
+    "address": "0x7221B169aD5e8415753ebbC583924519AFc96B26",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x7221B169aD5e8415753ebbC583924519AFc96B26/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "RICE",
+    "name": "RICE",
+    "address": "0xff40318cdA551BF168c7cC8B9DC004FaA07345AC",
     "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xff40318cdA551BF168c7cC8B9DC004FaA07345AC/logo.png/quality=85"
   },
   {
     "chainId": 24,
-    "address": "0xF0051fd4758147F1749D1696C9266d047B4c43Fa",
-    "name": "Thetan Gem",
-    "symbol": "THG",
     "decimals": 18,
-    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xF0051fd4758147F1749D1696C9266d047B4c43Fa/logo.png/quality=85"
+    "symbol": "LZ",
+    "name": "LaunchZone",
+    "address": "0x15E3B9B83BB14cE4beDc87bDAdc107Da7d25Be11",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x15E3B9B83BB14cE4beDc87bDAdc107Da7d25Be11/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "ONUS",
+    "name": "ONUS",
+    "address": "0x981FB6159Ae351b7378d0d510930813DE281fCB5",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x981FB6159Ae351b7378d0d510930813DE281fCB5/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "KABA",
+    "name": "Kripto Galaxy Battle",
+    "address": "0x5C5058de24497359Ff64F7318f5C2b5581FF6B05",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x5C5058de24497359Ff64F7318f5C2b5581FF6B05/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 8,
+    "symbol": "SATOSHI",
+    "name": "Satoshi",
+    "address": "0xa0808D4867A6dA3f9b617d513e1dEb7af68B8F6D",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xa0808D4867A6dA3f9b617d513e1dEb7af68B8F6D/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "BAMI",
+    "name": "BamiToken",
+    "address": "0xC0884cCE945fCf7F3AE4471B5A16d83065D35c31",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xC0884cCE945fCf7F3AE4471B5A16d83065D35c31/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "wAADA",
+    "name": "Wrapped AADA",
+    "address": "0x452c651DF673fFA9F4017Cb57Ec1FFd8762B2C8b",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x452c651DF673fFA9F4017Cb57Ec1FFd8762B2C8b/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "SEN",
+    "name": "sleepearn.finance",
+    "address": "0xb697231730C004110A86f51BfF4B8DD085c0CB28",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xb697231730C004110A86f51BfF4B8DD085c0CB28/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "KPHI",
+    "name": "Kephi Token",
+    "address": "0x6CD689DefCA80f9F2CBED9D0C6f3B2Cf4abc4598",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x6CD689DefCA80f9F2CBED9D0C6f3B2Cf4abc4598/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 8,
+    "symbol": "MAN",
+    "name": "100MAN",
+    "address": "0x0acfaa0d0ccA295672E09ad906240C03D54F286a",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x0acfaa0d0ccA295672E09ad906240C03D54F286a/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 8,
+    "symbol": "TPH",
+    "name": "Trustpay Token",
+    "address": "0xc1c319434bd861A335752b4b6993C13f139B26fa",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xc1c319434bd861A335752b4b6993C13f139B26fa/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 3,
+    "symbol": "CHI",
+    "name": "Vietnam Gold Token",
+    "address": "0xf8bB30c912a46f57F2B499111cb536dB13A044c3",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xf8bB30c912a46f57F2B499111cb536dB13A044c3/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "LGBT",
+    "name": "LGBT Token",
+    "address": "0x28bA261e7AbD7E00937f7b5862c7097378eb9369",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x28bA261e7AbD7E00937f7b5862c7097378eb9369/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "MKA",
+    "name": "MOONKA Token",
+    "address": "0xbFb1398F4755E861620d25A1Df6Bb8ff25252377",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xbFb1398F4755E861620d25A1Df6Bb8ff25252377/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 8,
+    "symbol": "Go24",
+    "name": "GO24",
+    "address": "0xbE8752b4141bBA97A1659D7f27FF9f8b8B492692",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xbE8752b4141bBA97A1659D7f27FF9f8b8B492692/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "SHC",
+    "name": "SHC",
+    "address": "0x7c3c1eb131f0d0051c46D035F42900905752238C",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x7c3c1eb131f0d0051c46D035F42900905752238C/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 18,
+    "symbol": "NAMI",
+    "name": "Nami Corporation",
+    "address": "0xA43B455F935A7f4184B5B8Aa345e22DbA3bBb286",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xA43B455F935A7f4184B5B8Aa345e22DbA3bBb286/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 8,
+    "symbol": "VIDB",
+    "name": "VNDC International Digital Banking",
+    "address": "0x75b9d2A0007A6866e32Ac0A976FeF60ccA151f87",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x75b9d2A0007A6866e32Ac0A976FeF60ccA151f87/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 8,
+    "symbol": "WHC",
+    "name": "WhiteHub",
+    "address": "0xC40926e9f3935D00629d26D025c84384F79f3842",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xC40926e9f3935D00629d26D025c84384F79f3842/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 8,
+    "symbol": "VNCT",
+    "name": "VNC Fund Certificate",
+    "address": "0x43F4e604f9bc55B3d13C8e8525CD3F48fc01CBc7",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0x43F4e604f9bc55B3d13C8e8525CD3F48fc01CBc7/logo.png/quality=85"
+  },
+  {
+    "chainId": 24,
+    "decimals": 0,
+    "symbol": "VNDC",
+    "name": "VNDC",
+    "address": "0xeFF34B63f55200a9D635B8ABBBFCC719b4977864",
+    "logoURI": "https://imagedelivery.net/PCnTHRkdRhGodr0AWBAvMA/Assets/blockchains/kardiachain/assets/0xeFF34B63f55200a9D635B8ABBBFCC719b4977864/logo.png/quality=85"
   }
 ]
