@@ -27,7 +27,7 @@ jobs:
       - name: Sync Token List
         id: sync-token-list
         run: |
-          yarn lint-fix
+          yarn cli generate && yarn lint-fix
 
       - name: Git Diff
         id: git-diff
