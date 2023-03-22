@@ -3,7 +3,7 @@ import * as fs from 'node:fs/promises'
 import { generateLogoURL } from '../utils/asset'
 import { differenceBy, some, sortBy, uniqBy } from 'lodash'
 import { getTokenDecimals } from '../utils/base'
-import { toChecksumAddress } from 'web3-utils'
+import { toChecksumAddress, isAddress } from 'web3-utils'
 import { cryptoRankcacheDir, delay } from '../utils'
 import getConfig from '../config'
 
@@ -94,7 +94,7 @@ export class CryptoRank implements Provider {
     const list = contentJSON
       .filter((x) => {
         const t = x.tokens.find((x) => x.platformName === platform.tokenPlatformName)
-        return t && t.address
+        return t && t.address && isAddress(t.address)
       })
       .map((t) => {
         const token = t.tokens.find((x) => x.platformName === platform.tokenPlatformName)!
