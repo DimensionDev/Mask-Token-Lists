@@ -29,29 +29,13 @@ jobs:
         run: |
           yarn cli generate && yarn lint-fix
 
-      - name: Git Diff
-        id: git-diff
-        if: success()
-        run: |
-          echo "GIT_DIFF<<EOF" >> $GITHUB_ENV
-          git diff >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-
-      - name: Create Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v4
+      - name: Create Release Package
+        uses: montudor/action-zip@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'chore: sync token list from providers'
-          committer: Maskbook maintainer bot <bot@mask.io>
-          author: Maskbook maintainer bot <bot@mask.io>
-          branch: auto-sync-token-list
-          title: 'chore: sync token list from providers'
-          body: '## (🤖 I am a robot) updates token list'
-          assignees: |
-            guanbinrui
-          draft: false
+          args: zip -qq -r test.zip src/fungible-tokens
 
-      - name: Check output
-        run: |
-          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+      - name: Upload Latest Release
+        uses: actions/upload-artifact@v2
+        with:
+          name: test.zip
+          path: test.zip
