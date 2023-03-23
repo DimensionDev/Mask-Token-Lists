@@ -28,8 +28,8 @@ export class Explorer implements Provider {
       const table = q('table tbody tr').map((_, x) => x)
       // @ts-ignore
       for (const x of table) {
-        const logo = q('td img', x).attr('src')
         const td = q('td', x)
+        const logo = q('img', td).attr('src')
         const fullName = q('a.text-truncate', x).text()
         console.log({ fullName, logo })
         if (!fullName) continue
