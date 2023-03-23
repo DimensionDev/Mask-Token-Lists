@@ -28,10 +28,10 @@ export class Explorer implements Provider {
       const table = q('table tbody tr').map((_, x) => x)
       // @ts-ignore
       for (const x of table) {
-        const logo = q('img', x).attr('src')
+        const logo = q('td img', x).attr('src')
         const td = q('td', x)
         const fullName = q('a.text-truncate', x).text()
-        console.log({ fullName, logo, td })
+        console.log({ fullName, logo })
         if (!fullName) continue
 
         const pageLink = q('a.text-truncate', x).attr('href')
