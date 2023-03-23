@@ -30,8 +30,9 @@ export class Explorer implements Provider {
       for (const x of table) {
         const logo = q('img', x).attr('src')
 
-        const fullname = q('[data-test="token_link"]', x).text()
-        if (!fullname) continue
+        const fullName = q('[data-test="token_link"]', x).text()
+        console.log({ fullName })
+        if (!fullName) continue
 
         const pageLink = q('[data-test="token_link"]', x).attr('href')
         if (!pageLink) continue
@@ -44,9 +45,9 @@ export class Explorer implements Provider {
         const token = {
           chainId: chainId,
           address: address,
-          name: fullname.replace(/ \(.*\)/g, ''),
+          name: fullName.replace(/ \(.*\)/g, ''),
           symbol:
-            fullname
+            fullName
               .match(/\(.*\)$/g)?.[0]
               ?.replace('(', '')
               .replace(')', '') ?? '',
