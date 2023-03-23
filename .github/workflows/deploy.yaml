@@ -1,8 +1,11 @@
 name: Fetch token list
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  push:
+    branches:
+      - 'ci/test'
+  # schedule:
+  #   - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -25,7 +28,7 @@ jobs:
       - name: Sync Token List
         id: sync-token-list
         run: |
-          yarn cli generate && yarn lint-fix
+          yarn cli generate -i 1313161554 && yarn lint-fix
 
       - name: Prettier Check
         run: yarn prettier
@@ -53,19 +56,19 @@ jobs:
           name: v${{ steps.package-version.outputs.current-version }}.zip
           path: v${{ steps.package-version.outputs.current-version }}.zip
 
-      - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: v${{ steps.package-version.outputs.current-version }}.zip
-          asset_name: v${{ steps.package-version.outputs.current-version }}.zip
-          tag: v${{ steps.package-version.outputs.current-version }}
-          overwrite: true
+      # - name: Upload binaries to release
+      #   uses: svenstaro/upload-release-action@v2
+      #   with:
+      #     repo_token: ${{ secrets.GITHUB_TOKEN }}
+      #     file: v${{ steps.package-version.outputs.current-version }}.zip
+      #     asset_name: v${{ steps.package-version.outputs.current-version }}.zip
+      #     tag: v${{ steps.package-version.outputs.current-version }}
+      #     overwrite: true
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          keep_files: true
-          cname: tokens.r2d2.to
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./dist
+      #     keep_files: true
+      #     cname: tokens.r2d2.to
