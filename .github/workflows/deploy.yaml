@@ -25,36 +25,39 @@ jobs:
         run: yarn install
         if: steps.yarn-cache.outputs.cache-hit != 'true'
 
-      - name: Sync Token List
-        id: sync-token-list
-        run: |
-          node node_modules/puppeteer/install.js && yarn cli generate -i 1313161554 && yarn lint-fix
+      - name: Test puppeteer
+        run: yarn run puppeteer
 
-      - name: Prettier Check
-        run: yarn prettier
+      # - name: Sync Token List
+      #   id: sync-token-list
+      #   run: |
+      #     node node_modules/puppeteer/install.js && yarn cli generate -i 1313161554 && yarn lint-fix
 
-      - name: Build
-        run: yarn build
+      # - name: Prettier Check
+      #   run: yarn prettier
 
-      - name: Get Package Version
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@master
+      # - name: Build
+      #   run: yarn build
 
-      - name: Tag Package Version
-        run: git tag v${{ steps.package-version.outputs.current-version }}
+      # - name: Get Package Version
+      #   id: package-version
+      #   uses: martinbeentjes/npm-get-version-action@master
 
-      - name: Create Release Package
-        uses: montudor/action-zip@v1
-        with:
-          args:
-            zip -qq -r v${{ steps.package-version.outputs.current-version }}.zip dist/v${{
-            steps.package-version.outputs.current-version }}
+      # - name: Tag Package Version
+      #   run: git tag v${{ steps.package-version.outputs.current-version }}
 
-      - name: Upload Latest Release
-        uses: actions/upload-artifact@v2
-        with:
-          name: v${{ steps.package-version.outputs.current-version }}.zip
-          path: v${{ steps.package-version.outputs.current-version }}.zip
+      # - name: Create Release Package
+      #   uses: montudor/action-zip@v1
+      #   with:
+      #     args:
+      #       zip -qq -r v${{ steps.package-version.outputs.current-version }}.zip dist/v${{
+      #       steps.package-version.outputs.current-version }}
+
+      # - name: Upload Latest Release
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: v${{ steps.package-version.outputs.current-version }}.zip
+      #     path: v${{ steps.package-version.outputs.current-version }}.zip
 
       # - name: Upload binaries to release
       #   uses: svenstaro/upload-release-action@v2

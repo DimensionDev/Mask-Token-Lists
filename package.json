@@ -12,6 +12,7 @@
     "publish": "gh-pages -d ./dist",
     "cli": "ts-node scripts/index.ts",
     "lint-fix": "prettier --write .",
+    "puppeteer": "ts-node puppeteer.ts",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
