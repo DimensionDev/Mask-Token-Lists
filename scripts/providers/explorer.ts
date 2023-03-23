@@ -21,17 +21,22 @@ export class Explorer implements Provider {
     const baseURL = explorerBasURLMapping[chainId]!
     let page = 1
     let result: FungibleToken[] = []
-    while (page <= TOTAL / EXPLORER_PAGE_SIZE) {
-      const url = urlcat(baseURL, 'tokens', { p: page, ps: EXPLORER_PAGE_SIZE })
+    while (page <= 1) {
+      const url = urlcat(baseURL, 'tokens')
+      console.log({ url })
       const pageData = await fetchExplorerPage(url)
+
+      if (!pageData) return []
       const q = cheerio.load(pageData)
       const table = q('table tbody tr').map((_, x) => x)
+      console.log({ table: table.html() })
       // @ts-ignore
       for (const x of table) {
         const td = q('td', x)
+        const i = q('td', x).html()
         const logo = q('img', td).attr('src')
         const fullName = q('a.text-truncate', x).text()
-        console.log({ fullName, logo })
+        console.log({ fullName, logo, i })
         if (!fullName) continue
 
         const pageLink = q('a.text-truncate', x).attr('href')

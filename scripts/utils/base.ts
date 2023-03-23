@@ -27,21 +27,19 @@ export const explorerBasURLMapping: Partial<Record<ChainId, string>> = {
   [ChainId.Avalanche]: 'https://snowtrace.io',
   [ChainId.Fantom]: 'https://ftmscan.com',
   [ChainId.xDai]: 'https://gnosisscan.io',
-  [ChainId.Aurora]: 'https://aurorascan.dev',
+  [ChainId.Aurora]: 'https://explorer.aurora.dev',
   // [ChainId.Optimistic]: 'https://optimistic.etherscan.io',
 }
 
 export async function fetchExplorerPage(url: string) {
-  if (url.startsWith(explorerBasURLMapping[ChainId.Optimistic]!)) {
+  if (url.startsWith(explorerBasURLMapping[ChainId.Aurora]!)) {
     puppeteer.use(StealthPlugin())
     const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
     const page = await browser.newPage()
 
-    await page.goto(url, { waitUntil: 'networkidle0' })
-    await page.waitForSelector('#navBar')
-    const data = await page.$('body')
-    await browser.close()
+    await page.goto(url)
 
+    const data = await page.$('body')
     return data
   } else {
     const { data } = await axios.get(url, {
