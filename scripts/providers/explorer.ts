@@ -25,9 +25,7 @@ export class Explorer implements Provider {
       const url = urlcat(baseURL, 'tokens', { p: page, ps: EXPLORER_PAGE_SIZE })
       const pageData = await fetchExplorerPage(url)
       const q = cheerio.load(pageData)
-      const table = q('#tblResult tbody tr').map((_, x) => x)
-      const table2 = q('table tbody tr').map((_, x) => x)
-      console.log({ pageData, table, table2 })
+      const table = q('table tbody tr').map((_, x) => x)
       // @ts-ignore
       for (const x of table) {
         const logo = q('img', x).attr('src')
