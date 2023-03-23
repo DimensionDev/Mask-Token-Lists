@@ -31,7 +31,7 @@ export class Explorer implements Provider {
         const logo = q('img', x).attr('src')
 
         const fullName = q('a.text-truncate', x).text()
-        console.log({ fullName, logo })
+        console.log({ x, fullName, logo })
         if (!fullName) continue
 
         const pageLink = q('a.text-truncate', x).attr('href')
