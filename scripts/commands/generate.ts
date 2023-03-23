@@ -44,7 +44,7 @@ export async function generate(targetChains: ChainId[]) {
         try {
           console.log(`Fetching the chain id is ${chain}'s tokens from ${p.getProviderName()}...`)
           const tokens = await p.generateFungibleTokens(chain, latestReleaseTokenList)
-
+          console.log({ tokens }, p.getProviderName())
           result = [...result, ...tokens]
         } catch (e) {
           console.log(`Fetch the chain failed by ${p.getProviderName()}`)
