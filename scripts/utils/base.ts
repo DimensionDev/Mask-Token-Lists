@@ -35,7 +35,7 @@ export async function fetchExplorerPage(url: string) {
   await page.setViewport({ width: 1080, height: 1024 })
 
   const loadingSelector = '.table-content-loader'
-  const tableSelector = '.top-tokens-list'
+  const tableSelector = '.stakes-table-container'
   await page.waitForSelector(loadingSelector, { hidden: true })
   const tableElementHandler = await page.waitForSelector(tableSelector, { hidden: true })
   const tableElement = await tableElementHandler?.evaluate((x) => x.innerHTML)
