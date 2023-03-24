@@ -34,5 +34,5 @@ export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Prom
   [ChainId.Fantom]: async (url: string) => [],
   [ChainId.xDai]: async (url: string) => [],
   [ChainId.Aurora]: fetchAurora,
-  [ChainId.Optimistic]: async (url: string) => [],
+  [ChainId.Optimistic]: fetchOptimistic,
 }
