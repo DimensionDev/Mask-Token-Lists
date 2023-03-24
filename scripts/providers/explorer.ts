@@ -14,15 +14,20 @@ export class Explorer implements Provider {
     const fetch = explorerFetchMapping[chainId]
     const fetchPages = explorerPagesMapping[chainId]
 
-    let result: FungibleToken[] = []
+    let results: FungibleToken[] = []
 
-    if (!fetch || !fetchPages) return result
+    if (!fetch || !fetchPages) return results
 
     for (let i = 0; i < fetchPages.length; i++) {
       const url = fetchPages[i]
-      result = result.concat(await fetch(url))
+      try {
+        results = results.concat(await fetch(url))
+      } catch {
+        console.log(`Failed to fetch ${url}.`)
+        continue
+      }
     }
-    console.log({ result })
-    return result
+    console.log({ results })
+    return results
   }
 }
