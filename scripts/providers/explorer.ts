@@ -31,10 +31,10 @@ export class Explorer implements Provider {
       for (const x of table) {
         const logo = q('img', x).attr('src')
 
-        const fullname = q('.text-truncate', x).text()
+        const fullname = q('[data-test="token_link"]', x).text()
         if (!fullname) continue
 
-        const pageLink = q('.text-truncate', x).attr('href')
+        const pageLink = q('[data-test="token_link"]', x).attr('href')
         if (!pageLink) continue
 
         const address = toChecksumAddress(pageLink?.replace('/token/', ''))
