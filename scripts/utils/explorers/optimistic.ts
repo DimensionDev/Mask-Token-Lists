@@ -15,6 +15,7 @@ export async function fetchOptimistic(url: string) {
   const tableSelector = '#ContentPlaceHolder1_divresult'
   const tableElementHandler = await page.waitForSelector(tableSelector)
   const tableElement = await tableElementHandler?.evaluate((x) => x.innerHTML)
+  console.log({ tableElement })
   await browser.close()
   const q = cheerio.load(tableElement ?? '')
   const table = q('table tbody tr').map((_, x) => x)
