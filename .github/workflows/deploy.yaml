@@ -26,7 +26,7 @@ jobs:
       - name: Sync Token List
         id: sync-token-list
         run: |
-          node node_modules/puppeteer/install.js && yarn cli generate -i 1313161554 && yarn lint-fix
+          node node_modules/puppeteer/install.js && yarn cli generate -i 10 && yarn lint-fix
 
       - name: Prettier Check
         run: yarn prettier
