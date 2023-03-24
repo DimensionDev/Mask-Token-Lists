@@ -25,22 +25,22 @@ export class Explorer implements Provider {
       const url = urlcat(baseURL, 'tokens', { p: page, ps: EXPLORER_PAGE_SIZE })
       const pageData = await fetchExplorerPage(url)
       const q = cheerio.load(pageData)
-      const table = q('#tblResult tbody tr').map((_, x) => x)
+      const table = q('table tbody tr').map((_, x) => x)
 
       // @ts-ignore
       for (const x of table) {
         const logo = q('img', x).attr('src')
 
-        const fullname = q('.media-body a', x).text()
+        const fullname = q('.text-truncate', x).text()
         if (!fullname) continue
 
-        const pageLink = q('.media-body a', x).attr('href')
+        const pageLink = q('.text-truncate', x).attr('href')
         if (!pageLink) continue
 
         const address = toChecksumAddress(pageLink?.replace('/token/', ''))
         if (!address) continue
-
-        const decimals = await this.getTokenDecimals(urlcat(baseURL, pageLink))
+        console.log({ fullname })
+        const decimals = 18
 
         const token = {
           chainId: chainId,
