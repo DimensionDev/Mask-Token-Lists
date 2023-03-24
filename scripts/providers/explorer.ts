@@ -1,8 +1,5 @@
 import { ChainId, FungibleToken, Provider, Providers } from '../type'
 import { explorerBasURLMapping, explorerFetchMapping, explorerPagesMapping } from '../utils/base'
-import getConfig from '../config'
-
-const { EXPLORER_PAGE_SIZE, TOTAL } = getConfig()
 
 export class Explorer implements Provider {
   getProviderName(): Providers {
@@ -14,7 +11,6 @@ export class Explorer implements Provider {
   }
 
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {
-    const baseURL = explorerBasURLMapping[chainId]!
     const fetch = explorerFetchMapping[chainId]
     const fetchPages = explorerPagesMapping[chainId]
 
