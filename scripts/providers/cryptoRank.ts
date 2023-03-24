@@ -37,10 +37,11 @@ const PlatformMapping = [
     tokenPlatformName: 'Avalanche C-Chain',
     chainId: ChainId.Avalanche,
   },
-  {
-    tokenPlatformName: 'Aurora',
-    chainId: ChainId.Aurora,
-  },
+  // Todo: revert
+  // {
+  //   tokenPlatformName: 'Aurora',
+  //   chainId: ChainId.Aurora,
+  // },
   {
     tokenPlatformName: 'Harmony',
     chainId: ChainId.Harmony,
