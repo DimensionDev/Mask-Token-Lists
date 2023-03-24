@@ -1,9 +1,7 @@
 import { ChainId } from '../type'
-import axios from 'axios'
 import urlcat from 'urlcat'
 import * as cheerio from 'cheerio'
 import puppeteer from 'puppeteer'
-import { executablePath } from 'puppeteer'
 
 export function convertEnumToArray(e: any) {
   return Object.keys(e)
@@ -33,6 +31,7 @@ export async function fetchExplorerPage(url: string) {
   const page = await browser.newPage()
 
   await page.goto(url)
+  page.once('load', () => console.log('Page loaded!'))
   await page.setViewport({ width: 1080, height: 1024 })
 
   const searchResultSelector = '.stakes-td'
