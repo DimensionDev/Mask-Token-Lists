@@ -34,7 +34,7 @@ export async function fetchExplorerPage(url: string) {
   page.once('load', () => console.log('Page loaded!'))
   await page.setViewport({ width: 1080, height: 1024 })
 
-  const searchResultSelector = '.stakes-td'
+  const searchResultSelector = '.card-title'
   const x = await page.waitForSelector(searchResultSelector)
   const textContent = await x?.evaluate((x) => x.innerHTML)
   console.log({ textContent })
