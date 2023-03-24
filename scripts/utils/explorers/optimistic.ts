@@ -10,6 +10,7 @@ export async function fetchOptimistic(url: string) {
 
   await page.goto(url)
   page.once('load', () => console.log('Optimistic Page loaded!'))
+  page.once('error', (error) => console.log('Failed to Optimistic Page load!', error))
   await page.setViewport({ width: 1080, height: 1024 })
 
   const tableSelector = '#ContentPlaceHolder1_divresult'
