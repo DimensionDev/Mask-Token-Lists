@@ -37,7 +37,7 @@ export async function fetchExplorerPage(url: string) {
   const loadingSelector = '.table-content-loader'
   const tableSelector = '.stakes-table-container'
   await page.waitForSelector(loadingSelector, { hidden: true })
-  const tableElementHandler = await page.waitForSelector(tableSelector, { hidden: true })
+  const tableElementHandler = await page.waitForSelector(tableSelector)
   const tableElement = await tableElementHandler?.evaluate((x) => x.innerHTML)
   console.log({ tableElement })
   await browser.close()
