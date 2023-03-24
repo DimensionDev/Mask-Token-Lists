@@ -1,5 +1,5 @@
 import { ChainId, FungibleToken, Provider, Providers } from '../type'
-import { explorerBasURLMapping, explorerFetchMapping, explorerPagesMapping } from '../utils/base'
+import { explorerFetchMapping, explorerPagesMapping } from '../utils/base'
 
 export class Explorer implements Provider {
   getProviderName(): Providers {
@@ -7,7 +7,7 @@ export class Explorer implements Provider {
   }
 
   isSupportChain(chainId: ChainId): boolean {
-    return !!explorerBasURLMapping[chainId]
+    return !!explorerPagesMapping[chainId]?.length
   }
 
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {

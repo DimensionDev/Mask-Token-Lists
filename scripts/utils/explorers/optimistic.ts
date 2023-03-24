@@ -4,17 +4,15 @@ import { createFungibleToken } from '../createFungibleToken'
 import * as cheerio from 'cheerio'
 import puppeteer from 'puppeteer'
 
-export async function fetchAurora(url: string) {
+export async function fetchOptimistic(url: string) {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
   await page.goto(url)
-  page.once('load', () => console.log('Aurora Page loaded!'))
+  page.once('load', () => console.log('Optimistic Page loaded!'))
   await page.setViewport({ width: 1080, height: 1024 })
 
-  const loadingSelector = '.table-content-loader'
-  const tableSelector = '.stakes-table-container'
-  await page.waitForSelector(loadingSelector, { hidden: true })
+  const tableSelector = '#ContentPlaceHolder1_divresult'
   const tableElementHandler = await page.waitForSelector(tableSelector)
   const tableElement = await tableElementHandler?.evaluate((x) => x.innerHTML)
   await browser.close()
@@ -23,16 +21,19 @@ export async function fetchAurora(url: string) {
   let results: FungibleToken[] = []
 
   for (const x of table) {
-    const fullName = q('[data-test="token_link"]', x).text()
+    const logo = q('img', x).attr('src')
+    const fullName = q('.media .media-body a', x).text()
     if (!fullName) continue
 
-    const pageLink = q('[data-test="token_link"]', x).attr('href')
+    const pageLink = q('.media .media-body a', x).attr('href')
     if (!pageLink) continue
 
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(createFungibleToken(ChainId.Aurora, address, fullName, 18, ''))
+    results.push(
+      createFungibleToken(ChainId.Aurora, address, fullName, 18, logo ? `https://optimistic.etherscan.io${logo}` : ''),
+    )
   }
   return results
 }

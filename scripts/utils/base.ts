@@ -1,5 +1,6 @@
 import { ChainId, FungibleToken } from '../type'
 import { fetchAurora } from './explorers/aurora'
+import { fetchOptimistic } from './explorers/optimistic'
 
 export function convertEnumToArray(e: any) {
   return Object.keys(e)
@@ -21,19 +22,7 @@ export const explorerPagesMapping: Partial<Record<ChainId, string[]>> = {
   [ChainId.Fantom]: [],
   [ChainId.xDai]: [],
   [ChainId.Aurora]: ['https://explorer.aurora.dev/tokens'],
-  // [ChainId.Optimistic]: 'https://optimistic.etherscan.io',
-}
-
-export const explorerBasURLMapping: Partial<Record<ChainId, string>> = {
-  [ChainId.Mainnet]: 'https://etherscan.io',
-  [ChainId.BNB]: 'https://bscscan.com',
-  [ChainId.Polygon]: 'https://polygonscan.com',
-  [ChainId.Arbitrum]: 'https://arbiscan.io',
-  [ChainId.Avalanche]: 'https://snowtrace.io',
-  [ChainId.Fantom]: 'https://ftmscan.com',
-  [ChainId.xDai]: 'https://gnosisscan.io',
-  [ChainId.Aurora]: 'https://explorer.aurora.dev',
-  // [ChainId.Optimistic]: 'https://optimistic.etherscan.io',
+  [ChainId.Optimistic]: ['https://optimistic.etherscan.io/tokens'],
 }
 
 export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Promise<FungibleToken[]>>> = {
@@ -45,5 +34,5 @@ export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Prom
   [ChainId.Fantom]: async (url: string) => [],
   [ChainId.xDai]: async (url: string) => [],
   [ChainId.Aurora]: fetchAurora,
-  // [ChainId.Optimistic]: (url: string) => '',
+  [ChainId.Optimistic]: async (url: string) => [],
 }
