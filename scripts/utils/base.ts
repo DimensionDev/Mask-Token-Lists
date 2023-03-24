@@ -34,13 +34,15 @@ export async function fetchExplorerPage(url: string) {
   page.once('load', () => console.log('Page loaded!'))
   await page.setViewport({ width: 1080, height: 1024 })
 
-  const searchResultSelector = '.card-title'
-  const x = await page.waitForSelector(searchResultSelector)
-  const textContent = await x?.evaluate((x) => x.innerHTML)
-  console.log({ textContent })
+  const loadingSelector = '.table-content-loader'
+  const tableSelector = '.top-tokens-list'
+  await page.waitForSelector(loadingSelector, { hidden: true })
+  const tableElementHandler = await page.waitForSelector(tableSelector, { hidden: true })
+  const tableElement = await tableElementHandler?.evaluate((x) => x.innerHTML)
+  console.log({ tableElement })
   await browser.close()
 
-  return textContent ?? ''
+  return tableElement ?? ''
 }
 export async function getTokenDecimals(chainId: ChainId, address: string) {
   const baseURL = explorerBasURLMapping[chainId]
