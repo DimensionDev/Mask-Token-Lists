@@ -7,7 +7,7 @@ import puppeteer from 'puppeteer'
 export async function fetchOptimistic(url: string) {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
-
+  console.log('fetchOptimistic')
   await page.goto(url)
   page.once('load', () => console.log('Optimistic Page loaded!'))
   page.once('error', (error) => console.log('Failed to Optimistic Page load!', error))
