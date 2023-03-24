@@ -2,7 +2,6 @@ import { ChainId, FungibleToken, Provider, Providers } from '../type'
 import * as fs from 'node:fs/promises'
 import { generateLogoURL } from '../utils/asset'
 import { differenceBy, some, sortBy, uniqBy } from 'lodash'
-import { getTokenDecimals } from '../utils/base'
 import { toChecksumAddress, isAddress } from 'web3-utils'
 import { cryptoRankcacheDir, delay } from '../utils'
 import getConfig from '../config'
@@ -121,12 +120,9 @@ export class CryptoRank implements Provider {
     for (const token of toAddList) {
       if (token.symbol === 'eth') continue
 
-      const decimals = await getTokenDecimals(chainId, token.address)
-      if (!decimals) continue
-
       result.push({
         ...token,
-        decimals: decimals,
+        decimals: 18,
       })
       await delay(CR_WAIT_TIME)
     }

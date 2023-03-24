@@ -5,7 +5,6 @@ import { differenceBy, pick, some, uniqBy } from 'lodash'
 import { delay } from '../utils'
 import { toChecksumAddress } from 'web3-utils'
 import { generateLogoURL } from '../utils/asset'
-import { getTokenDecimals } from '../utils/base'
 import getConfig from '../config'
 import { CMCIDInfo, CMCMetadata, CMCResponse } from './types'
 
@@ -116,12 +115,9 @@ export class CoinMarketCap implements Provider {
     for (const token of toAddTokenList) {
       if (token.symbol === 'eth') continue
 
-      const decimals = await getTokenDecimals(chainId, token.address)
-      if (!decimals) continue
-
       result.push({
         ...token,
-        decimals: decimals,
+        decimals: 18,
       })
       await delay(CMC_WAIT_TIME)
     }
