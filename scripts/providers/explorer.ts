@@ -23,7 +23,8 @@ export class Explorer implements Provider {
       try {
         results = results.concat(await fetch(url))
       } catch {
-        console.log(`Failed to fetch ${url}.`)
+        console.log({ url })
+        console.log(`Failed to fetch ${url}`)
         continue
       }
     }
