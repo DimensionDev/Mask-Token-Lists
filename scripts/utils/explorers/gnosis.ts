@@ -4,12 +4,12 @@ import { createFungibleToken } from '../createFungibleToken'
 import * as cheerio from 'cheerio'
 import puppeteer from 'puppeteer'
 
-export async function fetchOptimistic(url: string) {
+export async function fetchGnosis(url: string) {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   await page.goto(url)
-  page.once('load', () => console.log('Optimistic Page loaded!'))
-  page.once('error', (error) => console.log('Failed to Optimistic Page load!', error))
+  page.once('load', () => console.log('Gnosis Page loaded!'))
+  page.once('error', (error) => console.log('Failed to Gnosis Page load!', error))
   await page.setViewport({ width: 1080, height: 1024 })
 
   const tableSelector = '#ContentPlaceHolder1_divresult'
@@ -32,9 +32,7 @@ export async function fetchOptimistic(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(
-      createFungibleToken(ChainId.Aurora, address, fullName, 18, logo ? `https://optimistic.etherscan.io${logo}` : ''),
-    )
+    results.push(createFungibleToken(ChainId.Aurora, address, fullName, 18, logo ? `https://gnosisscan.io${logo}` : ''))
   }
   return results
 }
