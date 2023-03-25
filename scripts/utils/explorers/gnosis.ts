@@ -32,7 +32,7 @@ export async function fetchGnosis(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(createFungibleToken(ChainId.Aurora, address, fullName, 18, logo ? `https://gnosisscan.io${logo}` : ''))
+    results.push(createFungibleToken(ChainId.xDai, address, fullName, 18, logo ? `https://gnosisscan.io${logo}` : ''))
   }
   return results
 }

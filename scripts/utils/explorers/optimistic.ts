@@ -33,7 +33,13 @@ export async function fetchOptimistic(url: string) {
     if (!address) continue
 
     results.push(
-      createFungibleToken(ChainId.Aurora, address, fullName, 18, logo ? `https://optimistic.etherscan.io${logo}` : ''),
+      createFungibleToken(
+        ChainId.Optimistic,
+        address,
+        fullName,
+        18,
+        logo ? `https://optimistic.etherscan.io${logo}` : '',
+      ),
     )
   }
   return results
