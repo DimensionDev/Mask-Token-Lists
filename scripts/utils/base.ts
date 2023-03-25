@@ -4,6 +4,7 @@ import { fetchOptimistic } from './explorers/optimistic'
 import { fetchGnosis } from './explorers/gnosis'
 import { fetchFantom } from './explorers/fantom'
 import { fetchAvalanche } from './explorers/avalanche'
+import { fetchArbitrum } from './explorers/arbitrum'
 
 export function convertEnumToArray(e: any) {
   return Object.keys(e)
@@ -20,7 +21,7 @@ export const explorerPagesMapping: Partial<Record<ChainId, string[]>> = {
   [ChainId.Mainnet]: [],
   [ChainId.BNB]: [],
   [ChainId.Polygon]: [],
-  [ChainId.Arbitrum]: [],
+  [ChainId.Arbitrum]: [...Array(4)].map((x, i) => `https://arbiscan.io/tokens?p=${i}&ps=100`),
   [ChainId.Avalanche]: [...Array(4)].map((x, i) => `https://snowtrace.io/tokens?p=${i}&ps=100`),
   [ChainId.Fantom]: [...Array(5)].map((x, i) => `https://ftmscan.com/tokens?p=${i}&ps=100`),
   [ChainId.xDai]: ['https://gnosisscan.io/tokens'],
@@ -32,7 +33,7 @@ export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Prom
   [ChainId.Mainnet]: async (url: string) => [],
   [ChainId.BNB]: async (url: string) => [],
   [ChainId.Polygon]: async (url: string) => [],
-  [ChainId.Arbitrum]: async (url: string) => [],
+  [ChainId.Arbitrum]: fetchArbitrum,
   [ChainId.Avalanche]: fetchAvalanche,
   [ChainId.Fantom]: fetchFantom,
   [ChainId.xDai]: fetchGnosis,
