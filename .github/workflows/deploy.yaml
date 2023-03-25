@@ -38,10 +38,15 @@ jobs:
       #   run: |
       #     node node_modules/puppeteer/install.js && yarn cli generate -i 100 && yarn lint-fix
 
-      - name: Sync Token List Fantom
-        id: sync-token-list-fantom
+      # - name: Sync Token List Fantom
+      #   id: sync-token-list-fantom
+      #   run: |
+      #     node node_modules/puppeteer/install.js && yarn cli generate -i 250 && yarn lint-fix
+
+      - name: Sync Token List Avalanche
+        id: sync-token-list-avalanche
         run: |
-          node node_modules/puppeteer/install.js && yarn cli generate -i 250 && yarn lint-fix
+          node node_modules/puppeteer/install.js && yarn cli generate -i 43114 && yarn lint-fix
 
       - name: Prettier Check
         run: yarn prettier
