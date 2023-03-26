@@ -4,7 +4,7 @@ import { createFungibleToken } from '../createFungibleToken'
 import * as cheerio from 'cheerio'
 import puppeteer from 'puppeteer'
 
-export async function fetchPolygon(url: string) {
+export async function fetchBSC(url: string) {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   await page.goto(url)
