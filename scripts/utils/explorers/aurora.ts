@@ -10,7 +10,7 @@ export async function fetchAurora(url: string) {
 
   await page.goto(url)
   page.once('load', () => console.log('Aurora Page loaded!'))
-  page.once('error', (error) => console.log('Failed to Aurora Page load!', error))
+  page.once('error', (error) => console.log('Failed to load Aurora Page!', error))
   await page.setViewport({ width: 1080, height: 1024 })
 
   const loadingSelector = '.table-content-loader'

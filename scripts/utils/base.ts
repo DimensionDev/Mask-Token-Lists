@@ -6,6 +6,7 @@ import { fetchFantom } from './explorers/fantom'
 import { fetchAvalanche } from './explorers/avalanche'
 import { fetchArbitrum } from './explorers/arbitrum'
 import { fetchPolygon } from './explorers/polygon'
+import { fetchBSC } from './explorers/bsc'
 
 export function convertEnumToArray(e: any) {
   return Object.keys(e)
@@ -20,8 +21,8 @@ export function convertEnumToArray(e: any) {
 
 export const explorerPagesMapping: Partial<Record<ChainId, string[]>> = {
   [ChainId.Mainnet]: [],
-  [ChainId.BNB]: [],
-  [ChainId.Polygon]: [...Array(10)].map((x, i) => `https://polygonscan.com/tokens?p=${i}&ps=100`),
+  [ChainId.BNB]: [...Array(10)].map((x, i) => `https://bscscan.com/tokens?p=${i}&ps=100`),
+  [ChainId.Polygon]: [...Array(8)].map((x, i) => `https://polygonscan.com/tokens?p=${i}&ps=100`),
   [ChainId.Arbitrum]: [...Array(4)].map((x, i) => `https://arbiscan.io/tokens?p=${i}&ps=100`),
   [ChainId.Avalanche]: [...Array(4)].map((x, i) => `https://snowtrace.io/tokens?p=${i}&ps=100`),
   [ChainId.Fantom]: [...Array(5)].map((x, i) => `https://ftmscan.com/tokens?p=${i}&ps=100`),
@@ -32,7 +33,7 @@ export const explorerPagesMapping: Partial<Record<ChainId, string[]>> = {
 
 export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Promise<FungibleToken[]>>> = {
   [ChainId.Mainnet]: async (url: string) => [],
-  [ChainId.BNB]: async (url: string) => [],
+  [ChainId.BNB]: fetchBSC,
   [ChainId.Polygon]: fetchPolygon,
   [ChainId.Arbitrum]: fetchArbitrum,
   [ChainId.Avalanche]: fetchAvalanche,

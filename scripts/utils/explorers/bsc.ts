@@ -4,12 +4,12 @@ import { createFungibleToken } from '../createFungibleToken'
 import * as cheerio from 'cheerio'
 import puppeteer from 'puppeteer'
 
-export async function fetchArbitrum(url: string) {
+export async function fetchPolygon(url: string) {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   await page.goto(url)
-  page.once('load', () => console.log('Arbitrum Page loaded!'))
-  page.once('error', (error) => console.log('Failed to load Arbitrum Page!', error))
+  page.once('load', () => console.log('BSC Page loaded!'))
+  page.once('error', (error) => console.log('Failed to load BSC Page!', error))
   await page.setViewport({ width: 1080, height: 1024 })
 
   const tableSelector = '#ContentPlaceHolder1_divresult'
@@ -32,7 +32,7 @@ export async function fetchArbitrum(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(createFungibleToken(ChainId.Fantom, address, fullName, 18, logo ? `https://arbiscan.io${logo}` : ''))
+    results.push(createFungibleToken(ChainId.Fantom, address, fullName, 18, logo ? `https://bscscan.com${logo}` : ''))
   }
   return results
 }

@@ -9,7 +9,7 @@ export async function fetchFantom(url: string) {
   const page = await browser.newPage()
   await page.goto(url)
   page.once('load', () => console.log('Fantom Page loaded!'))
-  page.once('error', (error) => console.log('Failed to Fantom Page load!', error))
+  page.once('error', (error) => console.log('Failed to load Fantom Page!', error))
   await page.setViewport({ width: 1080, height: 1024 })
 
   const tableSelector = '#ContentPlaceHolder1_divresult'

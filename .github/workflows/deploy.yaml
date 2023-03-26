@@ -48,15 +48,20 @@ jobs:
       #   run: |
       #     node node_modules/puppeteer/install.js && yarn cli generate -i 43114 && yarn lint-fix
 
-      # - name: Sync Token List Arbitrum
+      # - name: Sync Arbitrum Token List
       #   id: sync-token-list-arbitrum
       #   run: |
       #     node node_modules/puppeteer/install.js && yarn cli generate -i 42161 && yarn lint-fix
 
-      - name: Sync Token List Polygon
-        id: sync-token-list-polygon
+      # - name: Sync Polygon Token List
+      #   id: sync-token-list-polygon
+      #   run: |
+      #     node node_modules/puppeteer/install.js && yarn cli generate -i 137 && yarn lint-fix
+
+      - name: Sync BSC Token List
+        id: sync-token-list-bsc
         run: |
-          node node_modules/puppeteer/install.js && yarn cli generate -i 137 && yarn lint-fix
+          node node_modules/puppeteer/install.js && yarn cli generate -i 56 && yarn lint-fix
 
       - name: Prettier Check
         run: yarn prettier
