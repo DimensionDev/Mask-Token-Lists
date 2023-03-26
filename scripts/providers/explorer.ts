@@ -22,9 +22,9 @@ export class Explorer implements Provider {
       const url = fetchPages[i]
       try {
         results = results.concat(await fetch(url))
-      } catch {
+      } catch (error) {
         console.log({ url })
-        console.log(`Failed to fetch ${url}`)
+        console.log(`Failed to fetch ${url}`, error)
         continue
       }
     }
