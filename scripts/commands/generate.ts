@@ -29,14 +29,13 @@ async function getLatestReleasedTokenList(chainId: ChainId) {
 }
 
 export async function generate(targetChains: ChainId[]) {
-  // Todo: revert
-  // await prefetchCryptoRankCoins()
+  await prefetchCryptoRankCoins()
 
   for (const chain of targetChains) {
     console.log(new Array(process.stdout.rows).fill('*').join(''))
     console.log(`The current chain id is: ${chain}`)
-    // Todo: revert
-    const latestReleaseTokenList: FungibleToken[] = []
+
+    const latestReleaseTokenList: FungibleToken[] = await getLatestReleasedTokenList(chain)
     console.log(`This chain has ${latestReleaseTokenList.length} tokens online`)
 
     let result: FungibleToken[] = []
