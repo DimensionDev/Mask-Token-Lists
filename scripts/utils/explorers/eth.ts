@@ -18,7 +18,7 @@ export async function fetchETH(url: string) {
   await page.setViewport({ width: 1080, height: 1024 })
 
   const tableSelector = '#ContentPlaceHolder1_tblErc20Tokens'
-  const tableElementHandler = await page.waitForSelector(tableSelector)
+  const tableElementHandler = await page.waitForSelector(tableSelector, { timeout: 120000 })
   const tableElement = await tableElementHandler?.evaluate((x) => x.innerHTML)
 
   await browser.close()
