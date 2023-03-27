@@ -10,7 +10,6 @@ import urlcat from 'urlcat'
 import axios from 'axios'
 import { CoinGecko } from '../providers/coingecko'
 import { Explorer } from '../providers/explorer'
-import { convertEnumToArray } from '../utils/base'
 
 const coinGeckoAPI = new CoinGecko()
 const explorerAPI = new Explorer()
