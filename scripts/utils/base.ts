@@ -25,7 +25,7 @@ export const explorerPagesMapping: Partial<Record<ChainId, string[]>> = {
   [ChainId.Mainnet]: [...Array(10)].map((x, i) => `https://etherscan.io/tokens?p=${i}&ps=100`),
   [ChainId.BNB]: [...Array(10)].map((x, i) => `https://bscscan.com/tokens?p=${i}&ps=100`),
   [ChainId.Polygon]: [...Array(8)].map((x, i) => `https://polygonscan.com/tokens?p=${i}&ps=100`),
-  [ChainId.Arbitrum]: [...Array(4)].map((x, i) => `https://arbiscan.io/tokens?p=${i}&ps=100`),
+  [ChainId.Arbitrum]: [...Array(3)].map((x, i) => `https://arbiscan.io/tokens?p=${i}&ps=100`),
   [ChainId.Avalanche]: [...Array(4)].map((x, i) => `https://snowtrace.io/tokens?p=${i}&ps=100`),
   [ChainId.Fantom]: [...Array(5)].map((x, i) => `https://ftmscan.com/tokens?p=${i}&ps=100`),
   [ChainId.xDai]: ['https://gnosisscan.io/tokens?ps=100'],
