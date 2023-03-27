@@ -33,7 +33,7 @@ export async function fetchAurora(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(createFungibleToken(ChainId.Aurora, address, fullName, 1, ''))
+    results.push(createFungibleToken(ChainId.Aurora, address, fullName, 0, ''))
   }
   return results
 }
@@ -50,7 +50,5 @@ export async function fetchAuroraForTokenDecimal(url: string, browser: puppeteer
   const cardElement = await cardElementHandler?.evaluate((x) => x.innerHTML)
   const q = cheerio.load(cardElement ?? '')
   const card = q('.card-body')
-  const decimals = q(decimalsSelector, card).text()
-  console.log({ decimals })
-  return 16
+  return Number(q(decimalsSelector, card).text().trim())
 }
