@@ -23,10 +23,10 @@ jobs:
         run: yarn install
         if: steps.yarn-cache.outputs.cache-hit != 'true'
 
-      # - name: Sync OP Token List
-      #   id: sync-token-list-op
-      #   run: |
-      #     node node_modules/puppeteer/install.js && yarn cli generate -i 10 && yarn lint-fix
+      - name: Sync OP Token List
+        id: sync-token-list-op
+        run: |
+          node node_modules/puppeteer/install.js && yarn cli generate -i 10 && yarn lint-fix
 
       # - name: Sync Aurora Token List
       #   id: sync-token-list-aurora
@@ -63,10 +63,10 @@ jobs:
       #   run: |
       #     node node_modules/puppeteer/install.js && yarn cli generate -i 56 && yarn lint-fix
 
-      - name: Sync ETH Token List
-        id: sync-token-list-eth
-        run: |
-          node node_modules/puppeteer/install.js && yarn cli generate -i 1 && yarn lint-fix
+      # - name: Sync ETH Token List
+      #   id: sync-token-list-eth
+      #   run: |
+      #     node node_modules/puppeteer/install.js && yarn cli generate -i 1 && yarn lint-fix
 
       - name: Prettier Check
         run: yarn prettier
