@@ -9,7 +9,6 @@ import StealthPlugin from 'puppeteer-extra-plugin-stealth'
 puppeteer.use(StealthPlugin())
 
 export async function fetchETH(url: string) {
-  puppeteer.use(StealthPlugin())
   const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
   const page = await browser.newPage()
   await page.goto(url)
