@@ -1,5 +1,5 @@
 import { ChainId, FungibleToken } from '../type'
-import { fetchAurora } from './explorers/aurora'
+import { fetchAurora, fetchAuroraForTokenDecimal } from './explorers/aurora'
 import { fetchOptimistic } from './explorers/optimistic'
 import { fetchGnosis } from './explorers/gnosis'
 import { fetchFantom } from './explorers/fantom'
@@ -54,4 +54,16 @@ export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Prom
   [ChainId.xDai]: fetchGnosis,
   [ChainId.Aurora]: fetchAurora,
   [ChainId.Optimistic]: fetchOptimistic,
+}
+
+export const explorerFetchTokenDecimalMapping: Partial<Record<ChainId, (url: string) => Promise<number>>> = {
+  [ChainId.Mainnet]: async () => 0,
+  [ChainId.BNB]: async () => 0,
+  [ChainId.Polygon]: async () => 0,
+  [ChainId.Arbitrum]: async () => 0,
+  [ChainId.Avalanche]: async () => 0,
+  [ChainId.Fantom]: async () => 0,
+  [ChainId.xDai]: async () => 0,
+  [ChainId.Aurora]: fetchAuroraForTokenDecimal,
+  [ChainId.Optimistic]: async () => 0,
 }
