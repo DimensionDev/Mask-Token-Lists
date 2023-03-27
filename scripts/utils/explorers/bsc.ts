@@ -53,6 +53,5 @@ export async function fetchBSCForTokenDecimal(url: string, browser: Browser): Pr
   const q = cheerio.load(cardElement ?? '')
   const card = q('.row')
   const decimals = Number(q(decimalsSelector, card).text().trim())
-  console.log({ decimals })
   return decimals
 }

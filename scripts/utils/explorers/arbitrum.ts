@@ -53,6 +53,5 @@ export async function fetchArbitrumForTokenDecimal(url: string, browser: Browser
   const q = cheerio.load(cardElement ?? '')
   const card = q('.row')
   const decimals = Number(q(decimalsSelector, card).text().trim())
-  console.log({ decimals })
   return decimals
 }

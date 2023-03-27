@@ -58,15 +58,15 @@ jobs:
       #   run: |
       #     node node_modules/puppeteer/install.js && yarn cli generate -i 137 && yarn lint-fix
 
-      - name: Sync BSC Token List
-        id: sync-token-list-bsc
-        run: |
-          node node_modules/puppeteer/install.js && yarn cli generate -i 56 && yarn lint-fix
-
-      # - name: Sync ETH Token List
-      #   id: sync-token-list-eth
+      # - name: Sync BSC Token List
+      #   id: sync-token-list-bsc
       #   run: |
-      #     node node_modules/puppeteer/install.js && yarn cli generate -i 1 && yarn lint-fix
+      #     node node_modules/puppeteer/install.js && yarn cli generate -i 56 && yarn lint-fix
+
+      - name: Sync ETH Token List
+        id: sync-token-list-eth
+        run: |
+          node node_modules/puppeteer/install.js && yarn cli generate -i 1 && yarn lint-fix
 
       - name: Prettier Check
         run: yarn prettier

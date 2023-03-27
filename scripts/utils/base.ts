@@ -7,7 +7,7 @@ import { fetchAvalanche, fetchAvalancheForTokenDecimal } from './explorers/avala
 import { fetchArbitrum, fetchArbitrumForTokenDecimal } from './explorers/arbitrum'
 import { fetchPolygon, fetchPolygonForTokenDecimal } from './explorers/polygon'
 import { fetchBSC, fetchBSCForTokenDecimal } from './explorers/bsc'
-import { fetchETH } from './explorers/eth'
+import { fetchETH, fetchETHForTokenDecimal } from './explorers/eth'
 import { Browser } from 'puppeteer'
 
 export function convertEnumToArray(e: any) {
@@ -34,7 +34,7 @@ export const explorerPagesMapping: Partial<Record<ChainId, string[]>> = {
 }
 
 export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: string) => string>> = {
-  [ChainId.Mainnet]: () => '',
+  [ChainId.Mainnet]: (address) => `https://etherscan.io/token/${address}`,
   [ChainId.BNB]: (address) => `https://bscscan.com/token/${address}`,
   [ChainId.Polygon]: (address) => `https://polygonscan.com/token/${address}`,
   [ChainId.Arbitrum]: (address) => `https://arbiscan.io/token/${address}`,
@@ -60,7 +60,7 @@ export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Prom
 export const explorerFetchTokenDecimalMapping: Partial<
   Record<ChainId, (url: string, browser: Browser) => Promise<number>>
 > = {
-  [ChainId.Mainnet]: async () => 0,
+  [ChainId.Mainnet]: fetchETHForTokenDecimal,
   [ChainId.BNB]: fetchBSCForTokenDecimal,
   [ChainId.Polygon]: fetchPolygonForTokenDecimal,
   [ChainId.Arbitrum]: fetchArbitrumForTokenDecimal,
