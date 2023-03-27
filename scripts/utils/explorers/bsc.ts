@@ -41,3 +41,18 @@ export async function fetchBSC(url: string) {
   }
   return results
 }
+
+export async function fetchBSCForTokenDecimal(url: string, browser: Browser): Promise<number> {
+  const page = await browser.newPage()
+  await page.goto(url)
+  await page.setViewport({ width: 1080, height: 1024 })
+  const cardSelector = '#ContentPlaceHolder1_trDecimals'
+  const decimalsSelector = 'div:nth-child(2)'
+  const cardElementHandler = await page.waitForSelector(cardSelector)
+  const cardElement = await cardElementHandler?.evaluate((x) => x.innerHTML)
+  const q = cheerio.load(cardElement ?? '')
+  const card = q('.row')
+  const decimals = Number(q(decimalsSelector, card).text().trim())
+  console.log({ decimals })
+  return decimals
+}

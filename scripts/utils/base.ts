@@ -6,7 +6,7 @@ import { fetchFantom, fetchFantomForTokenDecimal } from './explorers/fantom'
 import { fetchAvalanche, fetchAvalancheForTokenDecimal } from './explorers/avalanche'
 import { fetchArbitrum, fetchArbitrumForTokenDecimal } from './explorers/arbitrum'
 import { fetchPolygon, fetchPolygonForTokenDecimal } from './explorers/polygon'
-import { fetchBSC } from './explorers/bsc'
+import { fetchBSC, fetchBSCForTokenDecimal } from './explorers/bsc'
 import { fetchETH } from './explorers/eth'
 import { Browser } from 'puppeteer'
 
@@ -35,7 +35,7 @@ export const explorerPagesMapping: Partial<Record<ChainId, string[]>> = {
 
 export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: string) => string>> = {
   [ChainId.Mainnet]: () => '',
-  [ChainId.BNB]: () => '',
+  [ChainId.BNB]: (address) => `https://bscscan.com/token/${address}`,
   [ChainId.Polygon]: (address) => `https://polygonscan.com/token/${address}`,
   [ChainId.Arbitrum]: (address) => `https://arbiscan.io/token/${address}`,
   [ChainId.Avalanche]: (address) => `https://snowtrace.io/token/${address}`,
@@ -61,7 +61,7 @@ export const explorerFetchTokenDecimalMapping: Partial<
   Record<ChainId, (url: string, browser: Browser) => Promise<number>>
 > = {
   [ChainId.Mainnet]: async () => 0,
-  [ChainId.BNB]: async () => 0,
+  [ChainId.BNB]: fetchBSCForTokenDecimal,
   [ChainId.Polygon]: fetchPolygonForTokenDecimal,
   [ChainId.Arbitrum]: fetchArbitrumForTokenDecimal,
   [ChainId.Avalanche]: fetchAvalancheForTokenDecimal,

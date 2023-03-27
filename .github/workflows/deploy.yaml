@@ -53,15 +53,15 @@ jobs:
       #   run: |
       #     node node_modules/puppeteer/install.js && yarn cli generate -i 42161 && yarn lint-fix
 
-      - name: Sync Polygon Token List
-        id: sync-token-list-polygon
-        run: |
-          node node_modules/puppeteer/install.js && yarn cli generate -i 137 && yarn lint-fix
-
-      # - name: Sync BSC Token List
-      #   id: sync-token-list-bsc
+      # - name: Sync Polygon Token List
+      #   id: sync-token-list-polygon
       #   run: |
-      #     node node_modules/puppeteer/install.js && yarn cli generate -i 56 && yarn lint-fix
+      #     node node_modules/puppeteer/install.js && yarn cli generate -i 137 && yarn lint-fix
+
+      - name: Sync BSC Token List
+        id: sync-token-list-bsc
+        run: |
+          node node_modules/puppeteer/install.js && yarn cli generate -i 56 && yarn lint-fix
 
       # - name: Sync ETH Token List
       #   id: sync-token-list-eth
