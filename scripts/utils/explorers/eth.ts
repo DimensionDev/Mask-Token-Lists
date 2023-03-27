@@ -17,8 +17,8 @@ export async function fetchETH(url: string) {
   page.once('error', (error) => console.log('Failed to load ETH Page!', error))
   await page.setViewport({ width: 1080, height: 1024 })
 
-  const tableSelector = '#ContentPlaceHolder1_tblErc20Tokens'
-  const tableElementHandler = await page.waitForSelector(tableSelector, { timeout: 120000 })
+  const tableSelector = '#ContentPlaceHolder1_divERC20Tokens'
+  const tableElementHandler = await page.waitForSelector(tableSelector)
   const tableElement = await tableElementHandler?.evaluate((x) => x.innerHTML)
 
   await browser.close()
