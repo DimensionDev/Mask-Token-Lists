@@ -33,7 +33,7 @@ export async function fetchPolygon(url: string) {
     if (!address) continue
 
     results.push(
-      createFungibleToken(ChainId.Fantom, address, fullName, 18, logo ? `https://polygonscan.com${logo}` : ''),
+      createFungibleToken(ChainId.Polygon, address, fullName, 18, logo ? `https://polygonscan.com${logo}` : ''),
     )
   }
   return results

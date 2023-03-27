@@ -3,6 +3,7 @@ import { toChecksumAddress } from 'web3-utils'
 import { createFungibleToken } from '../createFungibleToken'
 import * as cheerio from 'cheerio'
 import puppeteer from 'puppeteer'
+import { Browser } from 'puppeteer'
 
 export async function fetchAvalanche(url: string) {
   const browser = await puppeteer.launch()
@@ -32,7 +33,24 @@ export async function fetchAvalanche(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(createFungibleToken(ChainId.Fantom, address, fullName, 18, logo ? `https://snowtrace.io${logo}` : ''))
+    results.push(
+      createFungibleToken(ChainId.Avalanche, address, fullName, 18, logo ? `https://snowtrace.io${logo}` : ''),
+    )
   }
   return results
+}
+
+export async function fetchAvalancheForTokenDecimal(url: string, browser: Browser): Promise<number> {
+  const page = await browser.newPage()
+  await page.goto(url)
+  await page.setViewport({ width: 1080, height: 1024 })
+  const cardSelector = '#ContentPlaceHolder1_trDecimals'
+  const decimalsSelector = 'div:nth-child(2)'
+  const cardElementHandler = await page.waitForSelector(cardSelector)
+  const cardElement = await cardElementHandler?.evaluate((x) => x.innerHTML)
+  const q = cheerio.load(cardElement ?? '')
+  const card = q('.row')
+  const decimals = Number(q(decimalsSelector, card).text().trim())
+  console.log({ decimals })
+  return decimals
 }

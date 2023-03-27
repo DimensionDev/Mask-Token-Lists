@@ -3,7 +3,7 @@ import { fetchAurora, fetchAuroraForTokenDecimal } from './explorers/aurora'
 import { fetchOptimistic, fetchOptimisticForTokenDecimal } from './explorers/optimistic'
 import { fetchGnosis, fetchGnosisForTokenDecimal } from './explorers/gnosis'
 import { fetchFantom, fetchFantomForTokenDecimal } from './explorers/fantom'
-import { fetchAvalanche } from './explorers/avalanche'
+import { fetchAvalanche, fetchAvalancheForTokenDecimal } from './explorers/avalanche'
 import { fetchArbitrum } from './explorers/arbitrum'
 import { fetchPolygon } from './explorers/polygon'
 import { fetchBSC } from './explorers/bsc'
@@ -38,7 +38,7 @@ export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: strin
   [ChainId.BNB]: () => '',
   [ChainId.Polygon]: () => '',
   [ChainId.Arbitrum]: () => '',
-  [ChainId.Avalanche]: () => '',
+  [ChainId.Avalanche]: (address) => `https://snowtrace.io/token/${address}`,
   [ChainId.Fantom]: (address) => `https://ftmscan.com/token/${address}`,
   [ChainId.xDai]: (address) => `https://gnosisscan.io/token/${address}`,
   [ChainId.Aurora]: (address) => `https://explorer.aurora.dev/token/${address}/token-transfers`,
@@ -64,7 +64,7 @@ export const explorerFetchTokenDecimalMapping: Partial<
   [ChainId.BNB]: async () => 0,
   [ChainId.Polygon]: async () => 0,
   [ChainId.Arbitrum]: async () => 0,
-  [ChainId.Avalanche]: async () => 0,
+  [ChainId.Avalanche]: fetchAvalancheForTokenDecimal,
   [ChainId.Fantom]: fetchFantomForTokenDecimal,
   [ChainId.xDai]: fetchGnosisForTokenDecimal,
   [ChainId.Aurora]: fetchAuroraForTokenDecimal,

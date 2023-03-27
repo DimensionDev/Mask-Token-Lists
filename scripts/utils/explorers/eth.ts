@@ -36,7 +36,7 @@ export async function fetchETH(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(createFungibleToken(ChainId.Fantom, address, fullName, 18, logo ? `https://etherscan.io${logo}` : ''))
+    results.push(createFungibleToken(ChainId.Mainnet, address, fullName, 18, logo ? `https://etherscan.io${logo}` : ''))
   }
   return results
 }

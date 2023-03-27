@@ -38,15 +38,15 @@ jobs:
       #   run: |
       #     node node_modules/puppeteer/install.js && yarn cli generate -i 100 && yarn lint-fix
 
-      - name: Sync Fantom Token List
-        id: sync-token-list-fantom
-        run: |
-          node node_modules/puppeteer/install.js && yarn cli generate -i 250 && yarn lint-fix
-
-      # - name: Sync Avalanche Token List
-      #   id: sync-token-list-avalanche
+      # - name: Sync Fantom Token List
+      #   id: sync-token-list-fantom
       #   run: |
-      #     node node_modules/puppeteer/install.js && yarn cli generate -i 43114 && yarn lint-fix
+      #     node node_modules/puppeteer/install.js && yarn cli generate -i 250 && yarn lint-fix
+
+      - name: Sync Avalanche Token List
+        id: sync-token-list-avalanche
+        run: |
+          node node_modules/puppeteer/install.js && yarn cli generate -i 43114 && yarn lint-fix
 
       # - name: Sync Arbitrum Token List
       #   id: sync-token-list-arbitrum

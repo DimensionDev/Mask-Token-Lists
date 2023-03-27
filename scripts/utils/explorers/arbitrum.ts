@@ -32,7 +32,7 @@ export async function fetchArbitrum(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(createFungibleToken(ChainId.Fantom, address, fullName, 18, logo ? `https://arbiscan.io${logo}` : ''))
+    results.push(createFungibleToken(ChainId.Arbitrum, address, fullName, 18, logo ? `https://arbiscan.io${logo}` : ''))
   }
   return results
 }
