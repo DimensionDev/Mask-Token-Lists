@@ -43,14 +43,13 @@ export async function fetchAuroraForTokenDecimal(url: string, browser: puppeteer
   console.log({ url })
   await page.goto(url)
   await page.setViewport({ width: 1080, height: 1024 })
-  const cardSelector = '.card-body:nth-child(1)'
+  const cardSelector = '.card:nth-child(1)'
   const decimalsSelector = 'dl:nth-child(6) dd'
   const cardElementHandler = await page.waitForSelector(cardSelector)
   await page.waitForSelector(decimalsSelector)
   const cardElement = await cardElementHandler?.evaluate((x) => x.innerHTML)
-  console.log({ cardElement })
   const q = cheerio.load(cardElement ?? '')
-  const card = q(cardSelector)
+  const card = q('.card-body')
   for (const x of card) {
     const decimals = q(decimalsSelector, x).text()
     console.log({ decimals })
