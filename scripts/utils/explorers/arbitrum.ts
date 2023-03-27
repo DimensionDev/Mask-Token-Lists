@@ -2,11 +2,15 @@ import { ChainId, FungibleToken } from '../../type'
 import { toChecksumAddress } from 'web3-utils'
 import { createFungibleToken } from '../createFungibleToken'
 import * as cheerio from 'cheerio'
-import puppeteer from 'puppeteer'
+import puppeteer from 'puppeteer-extra'
+import { executablePath } from 'puppeteer'
+import StealthPlugin from 'puppeteer-extra-plugin-stealth'
+
+puppeteer.use(StealthPlugin())
 import { Browser } from 'puppeteer'
 
 export async function fetchArbitrum(url: string) {
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
   const page = await browser.newPage()
   await page.goto(url)
   page.once('load', () => console.log('Arbitrum Page loaded!'))
@@ -14,7 +18,7 @@ export async function fetchArbitrum(url: string) {
   await page.setViewport({ width: 1080, height: 1024 })
 
   const tableSelector = '#ContentPlaceHolder1_divresult'
-  const tableElementHandler = await page.waitForSelector(tableSelector, { timeout: 120000 })
+  const tableElementHandler = await page.waitForSelector(tableSelector)
   const tableElement = await tableElementHandler?.evaluate((x) => x.innerHTML)
 
   await browser.close()
