@@ -6,6 +6,12 @@ import {
   explorerFetchTokenDecimalMapping,
 } from '../utils/base'
 
+import puppeteer from 'puppeteer-extra'
+import { executablePath } from 'puppeteer'
+import StealthPlugin from 'puppeteer-extra-plugin-stealth'
+
+puppeteer.use(StealthPlugin())
+
 export class Explorer implements Provider {
   getProviderName(): Providers {
     return Providers.explorer
@@ -32,19 +38,21 @@ export class Explorer implements Provider {
         const results_ = await fetch(url)
 
         const newAddedResults = results_.filter((x) => !excludedTokenAddressList.includes(x.address.toLowerCase()))
-
+        // Reuse the same browser in the loop. It will be faster and will use less resources.
+        // To prevent MaxListenersExceededWarning: Possible EventEmitter memory leak detected.
+        const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
         const allSettled = await Promise.allSettled(
           newAddedResults.map(async (x) => {
             const url = fetchTokenDecimalPage(x.address)
             try {
-              const decimals = await fetchTokenDecimal(url)
+              const decimals = await fetchTokenDecimal(url, browser)
               return { ...x, decimals } as FungibleToken
             } catch {
               return undefined
             }
           }),
         )
-
+        await browser.close()
         const results = allSettled
           .map((x) => (x.status === 'fulfilled' && x.value ? x.value : undefined))
           .filter((x) => Boolean(x)) as FungibleToken[]

@@ -8,6 +8,7 @@ import { fetchArbitrum } from './explorers/arbitrum'
 import { fetchPolygon } from './explorers/polygon'
 import { fetchBSC } from './explorers/bsc'
 import { fetchETH } from './explorers/eth'
+import { Browser } from 'puppeteer'
 
 export function convertEnumToArray(e: any) {
   return Object.keys(e)
@@ -56,7 +57,9 @@ export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Prom
   [ChainId.Optimistic]: fetchOptimistic,
 }
 
-export const explorerFetchTokenDecimalMapping: Partial<Record<ChainId, (url: string) => Promise<number>>> = {
+export const explorerFetchTokenDecimalMapping: Partial<
+  Record<ChainId, (url: string, browser: Browser) => Promise<number>>
+> = {
   [ChainId.Mainnet]: async () => 0,
   [ChainId.BNB]: async () => 0,
   [ChainId.Polygon]: async () => 0,
