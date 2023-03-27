@@ -1,7 +1,7 @@
 import { ChainId, FungibleToken } from '../type'
 import { fetchAurora, fetchAuroraForTokenDecimal } from './explorers/aurora'
 import { fetchOptimistic, fetchOptimisticForTokenDecimal } from './explorers/optimistic'
-import { fetchGnosis } from './explorers/gnosis'
+import { fetchGnosis, fetchGnosisForTokenDecimal } from './explorers/gnosis'
 import { fetchFantom } from './explorers/fantom'
 import { fetchAvalanche } from './explorers/avalanche'
 import { fetchArbitrum } from './explorers/arbitrum'
@@ -40,7 +40,7 @@ export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: strin
   [ChainId.Arbitrum]: () => '',
   [ChainId.Avalanche]: () => '',
   [ChainId.Fantom]: () => '',
-  [ChainId.xDai]: () => '',
+  [ChainId.xDai]: (address) => `https://gnosisscan.io/token/${address}`,
   [ChainId.Aurora]: (address) => `https://explorer.aurora.dev/token/${address}/token-transfers`,
   [ChainId.Optimistic]: (address) => `https://optimistic.etherscan.io/token/${address}`,
 }
@@ -66,7 +66,7 @@ export const explorerFetchTokenDecimalMapping: Partial<
   [ChainId.Arbitrum]: async () => 0,
   [ChainId.Avalanche]: async () => 0,
   [ChainId.Fantom]: async () => 0,
-  [ChainId.xDai]: async () => 0,
+  [ChainId.xDai]: fetchGnosisForTokenDecimal,
   [ChainId.Aurora]: fetchAuroraForTokenDecimal,
   [ChainId.Optimistic]: fetchOptimisticForTokenDecimal,
 }

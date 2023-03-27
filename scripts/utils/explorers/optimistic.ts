@@ -61,6 +61,5 @@ export async function fetchOptimisticForTokenDecimal(url: string, browser: Brows
   const q = cheerio.load(cardElement ?? '')
   const card = q('.row')
   const decimals = Number(q(decimalsSelector, card).text().trim())
-  console.log({ decimals })
   return decimals
 }
