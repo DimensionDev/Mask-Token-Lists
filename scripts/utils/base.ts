@@ -1,6 +1,6 @@
 import { ChainId, FungibleToken } from '../type'
 import { fetchAurora, fetchAuroraForTokenDecimal } from './explorers/aurora'
-import { fetchOptimistic } from './explorers/optimistic'
+import { fetchOptimistic, fetchOptimisticForTokenDecimal } from './explorers/optimistic'
 import { fetchGnosis } from './explorers/gnosis'
 import { fetchFantom } from './explorers/fantom'
 import { fetchAvalanche } from './explorers/avalanche'
@@ -42,7 +42,7 @@ export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: strin
   [ChainId.Fantom]: () => '',
   [ChainId.xDai]: () => '',
   [ChainId.Aurora]: (address) => `https://explorer.aurora.dev/token/${address}/token-transfers`,
-  [ChainId.Optimistic]: () => '',
+  [ChainId.Optimistic]: (address) => `https://optimistic.etherscan.io/token/${address}`,
 }
 
 export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Promise<FungibleToken[]>>> = {
@@ -68,5 +68,5 @@ export const explorerFetchTokenDecimalMapping: Partial<
   [ChainId.Fantom]: async () => 0,
   [ChainId.xDai]: async () => 0,
   [ChainId.Aurora]: fetchAuroraForTokenDecimal,
-  [ChainId.Optimistic]: async () => 0,
+  [ChainId.Optimistic]: fetchOptimisticForTokenDecimal,
 }

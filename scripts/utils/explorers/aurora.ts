@@ -40,7 +40,6 @@ export async function fetchAurora(url: string) {
 
 export async function fetchAuroraForTokenDecimal(url: string, browser: puppeteer.Browser): Promise<number> {
   const page = await browser.newPage()
-  console.log({ url })
   await page.goto(url)
   await page.setViewport({ width: 1080, height: 1024 })
   const cardSelector = '.card:nth-child(1)'

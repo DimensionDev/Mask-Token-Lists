@@ -38,15 +38,16 @@ export class Explorer implements Provider {
         const results_ = await fetch(url)
 
         const newAddedResults = results_.filter((x) => !excludedTokenAddressList.includes(x.address.toLowerCase()))
-        // To prevent MaxListenersExceededWarning: Possible EventEmitter memory leak detected,
-        // reuse the same browser in the loop. It will be faster and will use less resources.
+        // To prevent MaxListenersExceededWarning: Possible EventEmitter memory leak detected.
+        // Reuse the same browser in the loop. It will be faster and will use less resources.
         const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
         const allSettled = await Promise.allSettled(
           newAddedResults.map(async (x) => {
             const url = fetchTokenDecimalPage(x.address)
             try {
               const decimals = await fetchTokenDecimal(url, browser)
-              return { ...x, decimals } as FungibleToken
+              if (decimals && decimals > 0) return { ...x, decimals } as FungibleToken
+              return undefined
             } catch {
               return undefined
             }
@@ -59,7 +60,6 @@ export class Explorer implements Provider {
         console.log({ results, newAddedResultsLength: newAddedResults.length, originResultsLength: results_.length })
         totalResults = totalResults.concat(results)
       } catch (error) {
-        console.log({ url })
         console.log(`Failed to fetch ${url}`, error)
         continue
       }

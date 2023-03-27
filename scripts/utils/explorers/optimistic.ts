@@ -5,6 +5,7 @@ import * as cheerio from 'cheerio'
 import puppeteer from 'puppeteer-extra'
 import { executablePath } from 'puppeteer'
 import StealthPlugin from 'puppeteer-extra-plugin-stealth'
+import { Browser } from 'puppeteer'
 
 puppeteer.use(StealthPlugin())
 
@@ -47,4 +48,19 @@ export async function fetchOptimistic(url: string) {
     )
   }
   return results
+}
+
+export async function fetchOptimisticForTokenDecimal(url: string, browser: Browser): Promise<number> {
+  const page = await browser.newPage()
+  await page.goto(url)
+  await page.setViewport({ width: 1080, height: 1024 })
+  const cardSelector = '#ContentPlaceHolder1_trDecimals'
+  const decimalsSelector = 'div:nth-child(2)'
+  const cardElementHandler = await page.waitForSelector(cardSelector)
+  const cardElement = await cardElementHandler?.evaluate((x) => x.innerHTML)
+  const q = cheerio.load(cardElement ?? '')
+  const card = q('.row')
+  const decimals = Number(q(decimalsSelector, card).text().trim())
+  console.log({ decimals })
+  return decimals
 }
