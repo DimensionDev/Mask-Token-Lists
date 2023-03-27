@@ -51,6 +51,5 @@ export async function fetchAvalancheForTokenDecimal(url: string, browser: Browse
   const q = cheerio.load(cardElement ?? '')
   const card = q('.row')
   const decimals = Number(q(decimalsSelector, card).text().trim())
-  console.log({ decimals })
   return decimals
 }

@@ -3,6 +3,7 @@ import { toChecksumAddress } from 'web3-utils'
 import { createFungibleToken } from '../createFungibleToken'
 import * as cheerio from 'cheerio'
 import puppeteer from 'puppeteer'
+import { Browser } from 'puppeteer'
 
 export async function fetchArbitrum(url: string) {
   const browser = await puppeteer.launch()
@@ -35,4 +36,19 @@ export async function fetchArbitrum(url: string) {
     results.push(createFungibleToken(ChainId.Arbitrum, address, fullName, 18, logo ? `https://arbiscan.io${logo}` : ''))
   }
   return results
+}
+
+export async function fetchArbitrumForTokenDecimal(url: string, browser: Browser): Promise<number> {
+  const page = await browser.newPage()
+  await page.goto(url)
+  await page.setViewport({ width: 1080, height: 1024 })
+  const cardSelector = '#ContentPlaceHolder1_trDecimals'
+  const decimalsSelector = 'div:nth-child(2)'
+  const cardElementHandler = await page.waitForSelector(cardSelector)
+  const cardElement = await cardElementHandler?.evaluate((x) => x.innerHTML)
+  const q = cheerio.load(cardElement ?? '')
+  const card = q('.row')
+  const decimals = Number(q(decimalsSelector, card).text().trim())
+  console.log({ decimals })
+  return decimals
 }
