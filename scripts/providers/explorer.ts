@@ -38,8 +38,8 @@ export class Explorer implements Provider {
         const results_ = await fetch(url)
 
         const newAddedResults = results_.filter((x) => !excludedTokenAddressList.includes(x.address.toLowerCase()))
-        // Reuse the same browser in the loop. It will be faster and will use less resources.
-        // To prevent MaxListenersExceededWarning: Possible EventEmitter memory leak detected.
+        // To prevent MaxListenersExceededWarning: Possible EventEmitter memory leak detected,
+        // reuse the same browser in the loop. It will be faster and will use less resources.
         const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
         const allSettled = await Promise.allSettled(
           newAddedResults.map(async (x) => {
