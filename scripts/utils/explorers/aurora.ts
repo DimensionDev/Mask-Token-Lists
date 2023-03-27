@@ -33,7 +33,7 @@ export async function fetchAurora(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(createFungibleToken(ChainId.Aurora, address, fullName, 0, ''))
+    results.push(createFungibleToken(ChainId.Aurora, address, fullName, 1, ''))
   }
   return results
 }
