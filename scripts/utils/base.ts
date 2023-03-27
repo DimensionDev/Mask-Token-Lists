@@ -5,7 +5,7 @@ import { fetchGnosis, fetchGnosisForTokenDecimal } from './explorers/gnosis'
 import { fetchFantom, fetchFantomForTokenDecimal } from './explorers/fantom'
 import { fetchAvalanche, fetchAvalancheForTokenDecimal } from './explorers/avalanche'
 import { fetchArbitrum, fetchArbitrumForTokenDecimal } from './explorers/arbitrum'
-import { fetchPolygon } from './explorers/polygon'
+import { fetchPolygon, fetchPolygonForTokenDecimal } from './explorers/polygon'
 import { fetchBSC } from './explorers/bsc'
 import { fetchETH } from './explorers/eth'
 import { Browser } from 'puppeteer'
@@ -36,7 +36,7 @@ export const explorerPagesMapping: Partial<Record<ChainId, string[]>> = {
 export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: string) => string>> = {
   [ChainId.Mainnet]: () => '',
   [ChainId.BNB]: () => '',
-  [ChainId.Polygon]: () => '',
+  [ChainId.Polygon]: (address) => `https://polygonscan.com/token/${address}`,
   [ChainId.Arbitrum]: (address) => `https://arbiscan.io/token/${address}`,
   [ChainId.Avalanche]: (address) => `https://snowtrace.io/token/${address}`,
   [ChainId.Fantom]: (address) => `https://ftmscan.com/token/${address}`,
@@ -62,7 +62,7 @@ export const explorerFetchTokenDecimalMapping: Partial<
 > = {
   [ChainId.Mainnet]: async () => 0,
   [ChainId.BNB]: async () => 0,
-  [ChainId.Polygon]: async () => 0,
+  [ChainId.Polygon]: fetchPolygonForTokenDecimal,
   [ChainId.Arbitrum]: fetchArbitrumForTokenDecimal,
   [ChainId.Avalanche]: fetchAvalancheForTokenDecimal,
   [ChainId.Fantom]: fetchFantomForTokenDecimal,
