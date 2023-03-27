@@ -51,9 +51,10 @@ export async function fetchAuroraForTokenDecimal(url: string, browser: puppeteer
   console.log({ cardElement })
   const q = cheerio.load(cardElement ?? '')
   const card = q(cardSelector)
-
-  const decimals = q(decimalsSelector, card).text()
-  console.log({ decimals })
+  for (const x of card) {
+    const decimals = q(decimalsSelector, x).text()
+    console.log({ decimals })
+  }
 
   return 16
 }
