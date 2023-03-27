@@ -32,6 +32,18 @@ export const explorerPagesMapping: Partial<Record<ChainId, string[]>> = {
   [ChainId.Optimistic]: ['https://optimistic.etherscan.io/tokens'],
 }
 
+export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: string) => string>> = {
+  [ChainId.Mainnet]: () => '',
+  [ChainId.BNB]: () => '',
+  [ChainId.Polygon]: () => '',
+  [ChainId.Arbitrum]: () => '',
+  [ChainId.Avalanche]: () => '',
+  [ChainId.Fantom]: () => '',
+  [ChainId.xDai]: () => '',
+  [ChainId.Aurora]: (address) => `https://explorer.aurora.dev/token/${address}/token-transfers`,
+  [ChainId.Optimistic]: () => '',
+}
+
 export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Promise<FungibleToken[]>>> = {
   [ChainId.Mainnet]: fetchETH,
   [ChainId.BNB]: fetchBSC,
