@@ -1,5 +1,6 @@
 import path from 'node:path'
 import Package from '../../package.json'
+import { mkdir } from 'fs/promises'
 import fs from 'node:fs/promises'
 import { ChainId, FungibleToken } from '../type'
 import { generateTokenList } from '../../src/helpers/generate-token-list'
@@ -13,10 +14,11 @@ export const pathToLatestFolder = path.join(__dirname, `dist/latest`)
 export const cryptoRankcacheDir = path.join(process.env.PWD, 'scripts/cache/cryptorank')
 
 export async function writeTokensToFile(chain: ChainId, tokens: FungibleToken[]) {
+  await mkdir(pathToVersionFolder, { recursive: true })
   await fs.writeFile(path.join(pathToVersionFolder, chain.toString(), 'tokens.json'), generate(tokens), {
     encoding: 'utf-8',
   })
-
+  await mkdir(pathToLatestFolder, { recursive: true })
   await fs.writeFile(path.join(pathToLatestFolder, chain.toString(), 'tokens.json'), generate(tokens), {
     encoding: 'utf-8',
   })
