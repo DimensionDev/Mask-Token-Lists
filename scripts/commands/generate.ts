@@ -10,7 +10,6 @@ import urlcat from 'urlcat'
 import axios from 'axios'
 import { CoinGecko } from '../providers/coingecko'
 import { Explorer } from '../providers/explorer'
-import { convertEnumToArray } from '../utils/base'
 
 const coinGeckoAPI = new CoinGecko()
 const explorerAPI = new Explorer()
@@ -35,7 +34,7 @@ export async function generate(targetChains: ChainId[]) {
     console.log(new Array(process.stdout.rows).fill('*').join(''))
     console.log(`The current chain id is: ${chain}`)
 
-    const latestReleaseTokenList = await getLatestReleasedTokenList(chain)
+    const latestReleaseTokenList: FungibleToken[] = await getLatestReleasedTokenList(chain)
     console.log(`This chain has ${latestReleaseTokenList.length} tokens online`)
 
     let result: FungibleToken[] = []
@@ -53,16 +52,14 @@ export async function generate(targetChains: ChainId[]) {
       }
     }
 
-    console.log(`The current chain get ${result.length} tokens`)
+    console.log(`The current chain get ${result.length} tokens`, { result })
 
     if (result.length) {
-      await writeTokensToFile(
-        chain,
-        sortBy(
-          uniqBy([...latestReleaseTokenList, ...result], (x) => toChecksumAddress(x.address)),
-          'symbol',
-        ).filter((x) => x.address && x.symbol && x.chainId && x.decimals && x.name),
-      )
+      const tokens = sortBy(
+        uniqBy([...latestReleaseTokenList, ...result], (x) => toChecksumAddress(x.address)),
+        'symbol',
+      ).filter((x) => x.address && x.symbol && x.chainId && x.decimals && x.name)
+      await writeTokensToFile(chain, tokens)
     }
   }
 

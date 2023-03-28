@@ -1,12 +1,14 @@
-import { ChainId } from '../type'
-import axios from 'axios'
-import urlcat from 'urlcat'
-import * as cheerio from 'cheerio'
-import puppeteer from 'puppeteer-extra'
-import { executablePath } from 'puppeteer'
-import StealthPlugin from 'puppeteer-extra-plugin-stealth'
-
-puppeteer.use(StealthPlugin())
+import { ChainId, FungibleToken } from '../type'
+import { fetchAurora, fetchAuroraForTokenDecimal } from './explorers/aurora'
+import { fetchOptimistic, fetchOptimisticForTokenDecimal } from './explorers/optimistic'
+import { fetchGnosis, fetchGnosisForTokenDecimal } from './explorers/gnosis'
+import { fetchFantom, fetchFantomForTokenDecimal } from './explorers/fantom'
+import { fetchAvalanche, fetchAvalancheForTokenDecimal } from './explorers/avalanche'
+import { fetchArbitrum, fetchArbitrumForTokenDecimal } from './explorers/arbitrum'
+import { fetchPolygon, fetchPolygonForTokenDecimal } from './explorers/polygon'
+import { fetchBSC, fetchBSCForTokenDecimal } from './explorers/bsc'
+import { fetchETH, fetchETHForTokenDecimal } from './explorers/eth'
+import { Browser } from 'puppeteer'
 
 export function convertEnumToArray(e: any) {
   return Object.keys(e)
@@ -19,54 +21,52 @@ export function convertEnumToArray(e: any) {
     })
 }
 
-export const explorerBasURLMapping: Partial<Record<ChainId, string>> = {
-  [ChainId.Mainnet]: 'https://etherscan.io',
-  [ChainId.BNB]: 'https://bscscan.com',
-  [ChainId.Polygon]: 'https://polygonscan.com',
-  [ChainId.Arbitrum]: 'https://arbiscan.io',
-  [ChainId.Avalanche]: 'https://snowtrace.io',
-  [ChainId.Fantom]: 'https://ftmscan.com',
-  [ChainId.xDai]: 'https://gnosisscan.io',
-  [ChainId.Aurora]: 'https://aurorascan.dev',
-  // [ChainId.Optimistic]: 'https://optimistic.etherscan.io',
+export const explorerPagesMapping: Partial<Record<ChainId, string[]>> = {
+  [ChainId.Mainnet]: [...Array(10)].map((x, i) => `https://etherscan.io/tokens?p=${i}&ps=100`),
+  [ChainId.BNB]: [...Array(10)].map((x, i) => `https://bscscan.com/tokens?p=${i}&ps=100`),
+  [ChainId.Polygon]: [...Array(8)].map((x, i) => `https://polygonscan.com/tokens?p=${i}&ps=100`),
+  [ChainId.Arbitrum]: [...Array(3)].map((x, i) => `https://arbiscan.io/tokens?p=${i}&ps=100`),
+  [ChainId.Avalanche]: [...Array(4)].map((x, i) => `https://snowtrace.io/tokens?p=${i}&ps=100`),
+  [ChainId.Fantom]: [...Array(5)].map((x, i) => `https://ftmscan.com/tokens?p=${i}&ps=100`),
+  [ChainId.xDai]: ['https://gnosisscan.io/tokens?ps=100'],
+  [ChainId.Aurora]: ['https://explorer.aurora.dev/tokens'],
+  [ChainId.Optimistic]: ['https://optimistic.etherscan.io/tokens'],
 }
 
-export async function fetchExplorerPage(url: string) {
-  if (url.startsWith(explorerBasURLMapping[ChainId.Optimistic]!)) {
-    puppeteer.use(StealthPlugin())
-    const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
-    const page = await browser.newPage()
-
-    await page.goto(url, { waitUntil: 'networkidle0' })
-    await page.waitForSelector('#navBar')
-    const data = await page.$('body')
-    await browser.close()
-
-    return data
-  } else {
-    const { data } = await axios.get(url, {
-      headers: {
-        accept: requestAcceptHeader,
-        'user-agent': userAgent,
-      },
-    })
-    return data
-  }
+export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: string) => string>> = {
+  [ChainId.Mainnet]: (address) => `https://etherscan.io/token/${address}`,
+  [ChainId.BNB]: (address) => `https://bscscan.com/token/${address}`,
+  [ChainId.Polygon]: (address) => `https://polygonscan.com/token/${address}`,
+  [ChainId.Arbitrum]: (address) => `https://arbiscan.io/token/${address}`,
+  [ChainId.Avalanche]: (address) => `https://snowtrace.io/token/${address}`,
+  [ChainId.Fantom]: (address) => `https://ftmscan.com/token/${address}`,
+  [ChainId.xDai]: (address) => `https://gnosisscan.io/token/${address}`,
+  [ChainId.Aurora]: (address) => `https://explorer.aurora.dev/token/${address}/token-transfers`,
+  [ChainId.Optimistic]: (address) => `https://optimistic.etherscan.io/token/${address}`,
 }
 
-const requestAcceptHeader =
-  'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
-const userAgent =
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Promise<FungibleToken[]>>> = {
+  [ChainId.Mainnet]: fetchETH,
+  [ChainId.BNB]: fetchBSC,
+  [ChainId.Polygon]: fetchPolygon,
+  [ChainId.Arbitrum]: fetchArbitrum,
+  [ChainId.Avalanche]: fetchAvalanche,
+  [ChainId.Fantom]: fetchFantom,
+  [ChainId.xDai]: fetchGnosis,
+  [ChainId.Aurora]: fetchAurora,
+  [ChainId.Optimistic]: fetchOptimistic,
+}
 
-export async function getTokenDecimals(chainId: ChainId, address: string) {
-  const baseURL = explorerBasURLMapping[chainId]
-  if (!baseURL) return
-  const link = urlcat(baseURL, 'token/:address', { address })
-  const data = await fetchExplorerPage(link)
-
-  const q = cheerio.load(data)
-  const decimals = q('#ContentPlaceHolder1_trDecimals .row div:nth-child(2)').text()
-
-  return parseInt(decimals)
+export const explorerFetchTokenDecimalMapping: Partial<
+  Record<ChainId, (url: string, browser: Browser) => Promise<number>>
+> = {
+  [ChainId.Mainnet]: fetchETHForTokenDecimal,
+  [ChainId.BNB]: fetchBSCForTokenDecimal,
+  [ChainId.Polygon]: fetchPolygonForTokenDecimal,
+  [ChainId.Arbitrum]: fetchArbitrumForTokenDecimal,
+  [ChainId.Avalanche]: fetchAvalancheForTokenDecimal,
+  [ChainId.Fantom]: fetchFantomForTokenDecimal,
+  [ChainId.xDai]: fetchGnosisForTokenDecimal,
+  [ChainId.Aurora]: fetchAuroraForTokenDecimal,
+  [ChainId.Optimistic]: fetchOptimisticForTokenDecimal,
 }

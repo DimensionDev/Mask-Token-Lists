@@ -5,9 +5,14 @@ import { differenceBy, pick, some, uniqBy } from 'lodash'
 import { delay } from '../utils'
 import { toChecksumAddress } from 'web3-utils'
 import { generateLogoURL } from '../utils/asset'
-import { getTokenDecimals } from '../utils/base'
 import getConfig from '../config'
 import { CMCIDInfo, CMCMetadata, CMCResponse } from './types'
+import { explorerDecimalPageMapping, explorerFetchTokenDecimalMapping } from '../utils/base'
+import puppeteer from 'puppeteer-extra'
+import { executablePath } from 'puppeteer'
+import StealthPlugin from 'puppeteer-extra-plugin-stealth'
+
+puppeteer.use(StealthPlugin())
 
 const PlatformMapping: Partial<Record<ChainId, string>> = {
   [ChainId.Mainnet]: 'ethereum-ecosystem',
@@ -112,21 +117,30 @@ export class CoinMarketCap implements Provider {
       })
       .filter((x) => !!x) as FungibleToken[]
 
-    const result: FungibleToken[] = []
-    for (const token of toAddTokenList) {
-      if (token.symbol === 'eth') continue
+    const fetchTokenDecimalPage = explorerDecimalPageMapping[chainId]!
+    const fetchTokenDecimal = explorerFetchTokenDecimalMapping[chainId]!
+    const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
 
-      const decimals = await getTokenDecimals(chainId, token.address)
-      if (!decimals) continue
+    const allSettled = await Promise.allSettled(
+      toAddTokenList.map(async (x) => {
+        const url = fetchTokenDecimalPage(x.address)
+        try {
+          const decimals = await fetchTokenDecimal(url, browser)
+          if (decimals && decimals > 0) return { ...x, decimals } as FungibleToken
+          return undefined
+        } catch {
+          return undefined
+        }
+      }),
+    )
 
-      result.push({
-        ...token,
-        decimals: decimals,
-      })
-      await delay(CMC_WAIT_TIME)
-    }
+    await browser.close()
 
-    return [...result, ...exclude].filter(
+    const results = allSettled
+      .map((x) => (x.status === 'fulfilled' && x.value ? x.value : undefined))
+      .filter((x) => Boolean(x)) as FungibleToken[]
+
+    return [...results, ...exclude].filter(
       (x) => x.address && topList.find((e) => e.symbol.toLowerCase() === x.symbol.toLowerCase()),
     )
   }

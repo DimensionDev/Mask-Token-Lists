@@ -1,12 +1,16 @@
-import urlcat from 'urlcat'
 import { ChainId, FungibleToken, Provider, Providers } from '../type'
-import * as cheerio from 'cheerio'
-import { toChecksumAddress } from 'web3-utils'
-import { generateLogoURL } from '../utils/asset'
-import { explorerBasURLMapping, fetchExplorerPage } from '../utils/base'
-import getConfig from '../config'
+import {
+  explorerFetchMapping,
+  explorerPagesMapping,
+  explorerDecimalPageMapping,
+  explorerFetchTokenDecimalMapping,
+} from '../utils/base'
 
-const { EXPLORER_PAGE_SIZE, TOTAL } = getConfig()
+import puppeteer from 'puppeteer-extra'
+import { executablePath } from 'puppeteer'
+import StealthPlugin from 'puppeteer-extra-plugin-stealth'
+
+puppeteer.use(StealthPlugin())
 
 export class Explorer implements Provider {
   getProviderName(): Providers {
@@ -14,60 +18,52 @@ export class Explorer implements Provider {
   }
 
   isSupportChain(chainId: ChainId): boolean {
-    return !!explorerBasURLMapping[chainId]
+    return !!explorerPagesMapping[chainId]?.length
   }
 
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {
-    const baseURL = explorerBasURLMapping[chainId]!
-    let page = 1
-    let result: FungibleToken[] = []
-    while (page <= TOTAL / EXPLORER_PAGE_SIZE) {
-      const url = urlcat(baseURL, 'tokens', { p: page, ps: EXPLORER_PAGE_SIZE })
-      const pageData = await fetchExplorerPage(url)
-      const q = cheerio.load(pageData)
-      const table = q('#tblResult tbody tr').map((_, x) => x)
+    const fetch = explorerFetchMapping[chainId]
+    const fetchPages = explorerPagesMapping[chainId]
+    const fetchTokenDecimalPage = explorerDecimalPageMapping[chainId]
+    const fetchTokenDecimal = explorerFetchTokenDecimalMapping[chainId]
+    const excludedTokenAddressList = exclude.map((x) => x.address.toLowerCase())
 
-      // @ts-ignore
-      for (const x of table) {
-        const logo = q('img', x).attr('src')
+    let totalResults: FungibleToken[] = []
 
-        const fullname = q('.media-body a', x).text()
-        if (!fullname) continue
+    if (!fetch || !fetchPages || !fetchTokenDecimalPage || !fetchTokenDecimal) return totalResults
 
-        const pageLink = q('.media-body a', x).attr('href')
-        if (!pageLink) continue
+    for (let i = 0; i < fetchPages.length; i++) {
+      const url = fetchPages[i]
+      try {
+        const results_ = await fetch(url)
 
-        const address = toChecksumAddress(pageLink?.replace('/token/', ''))
-        if (!address) continue
-
-        const decimals = await this.getTokenDecimals(urlcat(baseURL, pageLink))
-
-        const token = {
-          chainId: chainId,
-          address: address,
-          name: fullname.replace(/ \(.*\)/g, ''),
-          symbol:
-            fullname
-              .match(/\(.*\)$/g)?.[0]
-              ?.replace('(', '')
-              .replace(')', '') ?? '',
-          decimals: decimals,
-          logoURI: generateLogoURL(chainId, address),
-          originLogoURI: urlcat(baseURL, logo ?? ''),
-        }
-
-        result.push(token)
+        const newAddedResults = results_.filter((x) => !excludedTokenAddressList.includes(x.address.toLowerCase()))
+        // To prevent MaxListenersExceededWarning: Possible EventEmitter memory leak detected.
+        // Reuse the same browser in the loop. It will be faster and will use less resources.
+        const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
+        const allSettled = await Promise.allSettled(
+          newAddedResults.map(async (x) => {
+            const url = fetchTokenDecimalPage(x.address)
+            try {
+              const decimals = await fetchTokenDecimal(url, browser)
+              if (decimals && decimals > 0) return { ...x, decimals } as FungibleToken
+              return undefined
+            } catch {
+              return undefined
+            }
+          }),
+        )
+        await browser.close()
+        const results = allSettled
+          .map((x) => (x.status === 'fulfilled' && x.value ? x.value : undefined))
+          .filter((x) => Boolean(x)) as FungibleToken[]
+        console.log({ results, newAddedResultsLength: newAddedResults.length, originResultsLength: results_.length })
+        totalResults = totalResults.concat(results)
+      } catch (error) {
+        console.log(`Failed to fetch ${url}`, error)
+        continue
       }
-
-      page++
     }
-    return result
-  }
-
-  async getTokenDecimals(link: string) {
-    const data = await fetchExplorerPage(link)
-    const q = cheerio.load(data)
-    const decimals = q('#ContentPlaceHolder1_trDecimals .row div:nth-child(2)').text()
-    return parseInt(decimals)
+    return totalResults
   }
 }
