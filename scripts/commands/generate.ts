@@ -55,13 +55,13 @@ export async function generate(targetChains: ChainId[]) {
     console.log(`The current chain get ${result.length} tokens`, { result })
 
     if (result.length) {
-      await writeTokensToFile(
-        chain,
-        sortBy(
-          uniqBy([...latestReleaseTokenList, ...result], (x) => toChecksumAddress(x.address)),
-          'symbol',
-        ).filter((x) => x.address && x.symbol && x.chainId && x.decimals && x.name),
-      )
+      const tokens = sortBy(
+        uniqBy([...latestReleaseTokenList, ...result], (x) => toChecksumAddress(x.address)),
+        'symbol',
+      ).filter((x) => x.address && x.symbol && x.chainId && x.decimals && x.name)
+
+      console.log({ tokens }, 'hhh')
+      await writeTokensToFile(chain, tokens)
     }
   }
 
