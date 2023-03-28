@@ -52,7 +52,7 @@ export async function generate(targetChains: ChainId[]) {
       }
     }
 
-    console.log(`The current chain get ${result.length} tokens`)
+    console.log(`The current chain get ${result.length} tokens`, { result })
 
     if (result.length) {
       await writeTokensToFile(
