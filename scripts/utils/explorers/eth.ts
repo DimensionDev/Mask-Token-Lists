@@ -46,12 +46,12 @@ export async function fetchETHForTokenDecimal(url: string, browser: Browser): Pr
   const page = await browser.newPage()
   await page.goto(url)
   await page.setViewport({ width: 1080, height: 1024 })
-  const cardSelector = '#ContentPlaceHolder1_trDecimals'
-  const decimalsSelector = 'div:nth-child(2)'
+  const cardSelector = '#ContentPlaceHolder1_divSummary'
+  const decimalsSelector = 'h4 b'
   const cardElementHandler = await page.waitForSelector(cardSelector)
   const cardElement = await cardElementHandler?.evaluate((x) => x.innerHTML)
   const q = cheerio.load(cardElement ?? '')
-  const card = q('.row')
+  const card = q('.row > div:nth-child(3) .card')
   const decimals = Number(q(decimalsSelector, card).text().trim())
   console.log({ decimals })
   return decimals
