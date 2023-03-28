@@ -6,9 +6,9 @@ import { generateTokenList } from '../../src/helpers/generate-token-list'
 import { EthereumAddress } from 'wallet.ts'
 
 // @ts-ignore
-export const pathToVersionFolder = path.join(process.env.PWD, `dist/v${Package.version}`)
+export const pathToVersionFolder = path.join(__dirname, `dist/v${Package.version}`)
 // @ts-ignore
-export const pathToLatestFolder = path.join(process.env.PWD, `dist/latest`)
+export const pathToLatestFolder = path.join(__dirname, `dist/latest`)
 // @ts-ignore
 export const cryptoRankcacheDir = path.join(process.env.PWD, 'scripts/cache/cryptorank')
 
