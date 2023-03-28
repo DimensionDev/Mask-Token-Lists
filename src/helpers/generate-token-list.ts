@@ -12,7 +12,6 @@ export function generateTokenList(
   tokens: FungibleToken[] | NonFungibleToken[],
   extraInfo: Record<string, string | string[]>,
 ) {
-  const uniqueSet = new Set()
   return {
     name: 'Mask',
     logoURI:
@@ -38,20 +37,6 @@ export function generateTokenList(
       minor: Number.parseInt(Package.version.split('.')[1]),
       patch: Number.parseInt(Package.version.split('.')[2]),
     },
-
-    tokens: tokens
-      .filter((token) => {
-        return (
-          EthereumAddress.isValid(token.address) &&
-          token.name.length <= 40 &&
-          /^[ \w.'+\-%/À-ÖØ-öø-ÿ]+$/.test(token.name)
-        )
-      })
-      .filter((x) => {
-        const key = x.address.toLowerCase()
-        if (uniqueSet.has(key)) return false
-        uniqueSet.add(key)
-        return true
-      }),
+    tokens,
   }
 }
