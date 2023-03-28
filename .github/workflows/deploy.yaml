@@ -71,9 +71,6 @@ jobs:
       - name: Prettier Check
         run: yarn prettier
 
-      - name: Build
-        run: yarn build
-
       - name: Get Package Version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@master
