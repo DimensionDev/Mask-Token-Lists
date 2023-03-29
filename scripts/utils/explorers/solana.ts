@@ -13,7 +13,7 @@ export async function fetchSolanaForTokenDecimal(url: string, browser: Browser):
   page.once('error', (error) => console.log('Failed to Solana Page load!', error))
   await page.setViewport({ width: 1080, height: 1024 })
   const cardSelector = '.card:first-child div div'
-  const cardLoadingSelector = '.card:first-child div div.placeholder'
+  const cardLoadingSelector = '.card:first-child div div .placeholder'
   const decimalsSelector = 'span'
   await page.waitForSelector(cardLoadingSelector, { hidden: true })
   const cardElementHandler = await page.waitForSelector(cardSelector)
