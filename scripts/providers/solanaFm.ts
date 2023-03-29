@@ -1,68 +1,12 @@
 import { ChainId, FungibleToken, Provider, Providers } from '../type'
 import * as fs from 'node:fs/promises'
-import { generateLogoURL } from '../utils/asset'
-import { differenceBy, some, sortBy, uniqBy } from 'lodash'
-import { toChecksumAddress, isAddress } from 'web3-utils'
-import { cryptoRankcacheDir, delay } from '../utils'
-import getConfig from '../config'
+import { cryptoRankcacheDir } from '../utils'
 import { explorerDecimalPageMapping, explorerFetchTokenDecimalMapping } from '../utils/base'
 import puppeteer from 'puppeteer-extra'
 import { executablePath } from 'puppeteer'
 import StealthPlugin from 'puppeteer-extra-plugin-stealth'
 
 puppeteer.use(StealthPlugin())
-
-// data source: https://api.cryptorank.io/v0/tokens/token-platforms
-const PlatformMapping = [
-  {
-    tokenPlatformName: 'Ethereum',
-    chainId: ChainId.Mainnet,
-  },
-  {
-    tokenPlatformName: 'BNB',
-    chainId: ChainId.BNB,
-  },
-  {
-    tokenPlatformName: 'Polygon',
-    chainId: ChainId.Polygon,
-  },
-  {
-    tokenPlatformName: 'Arbitrum',
-    chainId: ChainId.Arbitrum,
-  },
-  {
-    tokenPlatformName: 'XDAI',
-    chainId: ChainId.xDai,
-  },
-  {
-    tokenPlatformName: 'Fantom',
-    chainId: ChainId.Fantom,
-  },
-  {
-    tokenPlatformName: 'Avalanche C-Chain',
-    chainId: ChainId.Avalanche,
-  },
-  {
-    tokenPlatformName: 'Aurora',
-    chainId: ChainId.Aurora,
-  },
-  {
-    tokenPlatformName: 'Harmony',
-    chainId: ChainId.Harmony,
-  },
-  {
-    tokenPlatformName: 'Conflux Network',
-    chainId: ChainId.Conflux,
-  },
-  {
-    tokenPlatformName: 'Astar',
-    chainId: ChainId.Astar,
-  },
-  // {
-  //   tokenPlatformName: 'Optimism',
-  //   chainId: ChainId.Optimistic,
-  // },
-]
 
 export interface TokenInfo {
   rank: number
@@ -89,10 +33,9 @@ export interface Token {
   address: string
 }
 
-const { TOTAL, CR_WAIT_TIME } = getConfig()
-
 export class SolanaFm implements Provider {
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {
+    const excludedTokenAddressList = exclude.map((x) => x.address.toLowerCase())
     const content = await fs.readFile(`${cryptoRankcacheDir}/data.json`, { encoding: 'utf-8' })
     const contentJSON = JSON.parse(content) as TokenInfo[]
     const list = contentJSON
@@ -112,6 +55,7 @@ export class SolanaFm implements Provider {
           originLogoURI: x.image.x150 ?? x.image.native,
         }
       })
+      .filter((x) => !excludedTokenAddressList.includes(x.address.toLowerCase()))
 
     const fetchTokenDecimalPage = explorerDecimalPageMapping[chainId]!
     const fetchTokenDecimal = explorerFetchTokenDecimalMapping[chainId]!
