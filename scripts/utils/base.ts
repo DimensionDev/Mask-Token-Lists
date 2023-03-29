@@ -8,6 +8,7 @@ import { fetchArbitrum, fetchArbitrumForTokenDecimal } from './explorers/arbitru
 import { fetchPolygon, fetchPolygonForTokenDecimal } from './explorers/polygon'
 import { fetchBSC, fetchBSCForTokenDecimal } from './explorers/bsc'
 import { fetchETH, fetchETHForTokenDecimal } from './explorers/eth'
+import { fetchSolanaForTokenDecimal } from './explorers/solana'
 import { Browser } from 'puppeteer'
 
 export function convertEnumToArray(e: any) {
@@ -43,6 +44,7 @@ export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: strin
   [ChainId.xDai]: (address) => `https://gnosisscan.io/token/${address}`,
   [ChainId.Aurora]: (address) => `https://explorer.aurora.dev/token/${address}/token-transfers`,
   [ChainId.Optimistic]: (address) => `https://optimistic.etherscan.io/token/${address}`,
+  [ChainId.Solana]: (address) => `https://solana.fm/address/${address}?cluster=mainnet-solanafmbeta`,
 }
 
 export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Promise<FungibleToken[]>>> = {
@@ -69,4 +71,5 @@ export const explorerFetchTokenDecimalMapping: Partial<
   [ChainId.xDai]: fetchGnosisForTokenDecimal,
   [ChainId.Aurora]: fetchAuroraForTokenDecimal,
   [ChainId.Optimistic]: fetchOptimisticForTokenDecimal,
+  [ChainId.Solana]: fetchSolanaForTokenDecimal,
 }

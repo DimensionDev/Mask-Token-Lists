@@ -113,8 +113,29 @@ export class SolanaFm implements Provider {
         }
       })
 
-    console.log({ list })
-    return []
+    const fetchTokenDecimalPage = explorerDecimalPageMapping[chainId]!
+    const fetchTokenDecimal = explorerFetchTokenDecimalMapping[chainId]!
+    const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
+
+    const allSettled = await Promise.allSettled(
+      list.map(async (x) => {
+        const url = fetchTokenDecimalPage(x.address)
+        try {
+          const decimals = await fetchTokenDecimal(url, browser)
+          if (decimals && decimals > 0) return { ...x, decimals } as FungibleToken
+          return undefined
+        } catch {
+          return undefined
+        }
+      }),
+    )
+    await browser.close()
+    const results = allSettled
+      .map((x) => (x.status === 'fulfilled' && x.value ? x.value : undefined))
+      .filter((x) => Boolean(x)) as FungibleToken[]
+
+    console.log({ results })
+    return results
   }
 
   getProviderName(): Providers {
