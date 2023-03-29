@@ -28,6 +28,7 @@ export enum ChainId {
   Harmony = 1666600000,
   Harmony_Testnet = 1666700000,
   Palm = 11297108109,
+  Solana = 101,
 }
 
 export interface FungibleToken {
