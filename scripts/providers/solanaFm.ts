@@ -91,68 +91,37 @@ export interface Token {
 
 const { TOTAL, CR_WAIT_TIME } = getConfig()
 
-export class CryptoRank implements Provider {
+export class SolanaFm implements Provider {
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {
-    const platform = PlatformMapping.find((x) => x.chainId === chainId)!
     const content = await fs.readFile(`${cryptoRankcacheDir}/data.json`, { encoding: 'utf-8' })
     const contentJSON = JSON.parse(content) as TokenInfo[]
     const list = contentJSON
       .filter((x) => {
-        const t = x.tokens.find((x) => x.platformName === platform.tokenPlatformName)
-        return t && t.address && isAddress(t.address)
+        const t = x.tokens.find((x) => x.platformName === 'solana')
+        return t && t.address
       })
-      .map((t) => {
-        const token = t.tokens.find((x) => x.platformName === platform.tokenPlatformName)!
+      .slice(0, 10)
+      .map((x) => {
+        const token = x.tokens.find((x) => x.platformName === 'solana')!
         return {
-          chainId,
-          address: toChecksumAddress(token.address),
-          name: t.name,
-          symbol: t.symbol,
-          logoURI: t.image.x150 ?? t.image.native,
-          originLogoURI: t.image.x150 ?? t.image.native,
+          chainId: ChainId.Solana,
+          address: token.address,
+          name: x.name,
+          symbol: x.symbol,
+          logoURI: generateLogoURL(chainId, token.address),
+          originLogoURI: x.image.x150 ?? x.image.native,
         }
       })
 
-    const fetchTokenDecimalPage = explorerDecimalPageMapping[chainId]!
-    const fetchTokenDecimal = explorerFetchTokenDecimalMapping[chainId]!
-    const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
-    const topList = uniqBy(sortBy(list, 'rank'), 'address').slice(0, TOTAL)
-    const toAddList = differenceBy(topList, exclude, (x) =>
-      some(exclude, (e) => x.address.toLowerCase() === e.address.toLowerCase()),
-    )
-
-    console.log(`The total tokens length: is: ${topList.length}`)
-    console.log(`The difference tokens length: is: ${toAddList.length}`)
-
-    const allSettled = await Promise.allSettled(
-      toAddList.map(async (x) => {
-        const url = fetchTokenDecimalPage(x.address)
-        try {
-          const decimals = await fetchTokenDecimal(url, browser)
-          if (decimals && decimals > 0) return { ...x, decimals } as FungibleToken
-          return undefined
-        } catch {
-          return undefined
-        }
-      }),
-    )
-
-    await browser.close()
-
-    const results = allSettled
-      .map((x) => (x.status === 'fulfilled' && x.value ? x.value : undefined))
-      .filter((x) => Boolean(x)) as FungibleToken[]
-
-    return [...results, ...exclude].filter(
-      (x) => x.address && list.find((e) => e.symbol.toLowerCase() === x.symbol.toLowerCase()),
-    )
+    console.log({ list })
+    return []
   }
 
   getProviderName(): Providers {
-    return Providers.cryptoRank
+    return Providers.solanaFm
   }
 
   isSupportChain(chainId: ChainId): boolean {
-    return !!PlatformMapping.find((x) => x.chainId === chainId)
+    return chainId === ChainId.Solana
   }
 }
