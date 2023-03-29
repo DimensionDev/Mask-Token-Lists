@@ -12,8 +12,8 @@ export async function fetchSolanaForTokenDecimal(url: string, browser: Browser):
   page.once('load', () => console.log('Solana Page loaded!'))
   page.once('error', (error) => console.log('Failed to Solana Page load!', error))
   await page.setViewport({ width: 1080, height: 1024 })
-  const cardSelector = '.card:first-child'
-  const decimalsSelector = '.card-header-title'
+  const cardSelector = '.card:first-child div div'
+  const decimalsSelector = 'span'
   const cardElementHandler = await page.waitForSelector(cardSelector)
   const cardElement = await cardElementHandler?.evaluate((x) => x.innerHTML)
   const q = cheerio.load(cardElement ?? '')
