@@ -97,12 +97,12 @@ export class SolanaFm implements Provider {
     const contentJSON = JSON.parse(content) as TokenInfo[]
     const list = contentJSON
       .filter((x) => {
-        const t = x.tokens.find((x) => x.platformName === 'solana')
+        const t = x.tokens.find((x) => x.platformName === 'Solana')
         return t && t.address
       })
       .slice(0, 10)
       .map((x) => {
-        const token = x.tokens.find((x) => x.platformName === 'solana')!
+        const token = x.tokens.find((x) => x.platformName === 'Solana')!
         return {
           chainId: ChainId.Solana,
           address: token.address,
