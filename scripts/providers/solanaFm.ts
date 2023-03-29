@@ -108,7 +108,7 @@ export class SolanaFm implements Provider {
           address: token.address,
           name: x.name,
           symbol: x.symbol,
-          logoURI: generateLogoURL(chainId, token.address),
+          logoURI: x.image.x150 ?? x.image.native,
           originLogoURI: x.image.x150 ?? x.image.native,
         }
       })

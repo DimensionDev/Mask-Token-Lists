@@ -108,7 +108,7 @@ export class CryptoRank implements Provider {
           address: toChecksumAddress(token.address),
           name: t.name,
           symbol: t.symbol,
-          logoURI: t.image.x150 ?? t.image.native,
+          logoURI: generateLogoURL(chainId, toChecksumAddress(token.address)),
           originLogoURI: t.image.x150 ?? t.image.native,
         }
       })
