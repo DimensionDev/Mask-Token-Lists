@@ -1,10 +1,11 @@
 import { Command } from 'commander'
 import { ChainId, FungibleToken } from './type'
 import { generate } from './commands/generate'
+import Package from '../package.json'
 
 const program = new Command()
 
-program.name('mask-list-generator').description('CLI to generate token list').version('0.0.1')
+program.name('mask-list-generator').description('CLI to generate token list').version(Package.version)
 
 program
   .command('generate')
