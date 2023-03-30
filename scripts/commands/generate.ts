@@ -29,7 +29,7 @@ async function getLatestReleasedTokenList(chainId: ChainId) {
     const listInfo = await axios.get<{ tokens: FungibleToken[] }>(requestURL)
     return listInfo.data.tokens
   } catch (e) {
-    console.log(`fetch latest released token list failed(${chainId})`)
+    console.log(`fetch latest released token list failed(chainId: ${chainId})`)
     return []
   }
 }
