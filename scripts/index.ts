@@ -16,9 +16,8 @@ program
     const chains = Object.values(ChainId) as ChainId[]
 
     const target = chains
-      .filter((x) => (options.include ? x.toString() === options.include.toString() : true))
-      .filter((x) => (options.exclude ? x.toString() !== options.exclude.toString() : true))
-    console.log({ options, chains, target })
+      .filter((x) => (options.include ? x.toString().toLowerCase() === options.include.toString().toLowerCase() : true))
+      .filter((x) => (options.exclude ? x.toString().toLowerCase() !== options.exclude.toString().toLowerCase() : true))
     generate(target)
   })
 
