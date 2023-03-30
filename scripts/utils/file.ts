@@ -29,7 +29,7 @@ function generate(tokens: FungibleToken[]) {
     tokens
       .map((x) => ({
         ...x,
-        address: EthereumAddress.checksumAddress(x.address),
+        address: x.chainId !== ChainId.Solana ? EthereumAddress.checksumAddress(x.address) : x.address,
       }))
       .sort((a, z) => {
         if (a.name > z.name) return 1
