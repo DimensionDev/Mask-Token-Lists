@@ -66,9 +66,11 @@ export class SolanaFm implements Provider {
         const url = fetchTokenDecimalPage(x.address)
         try {
           const decimals = await fetchTokenDecimal(url, browser)
+          console.log({ decimals, url })
           if (decimals && decimals > 0) return { ...x, decimals } as FungibleToken
           return undefined
-        } catch {
+        } catch (e) {
+          console.log({ e })
           return undefined
         }
       }),
