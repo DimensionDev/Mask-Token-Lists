@@ -56,7 +56,7 @@ export class SolanaFm implements Provider {
         }
       })
       .filter((x) => !excludedTokenAddressList.includes(x.address.toLowerCase()))
-
+    console.log({ list })
     const fetchTokenDecimalPage = explorerDecimalPageMapping[chainId]!
     const fetchTokenDecimal = explorerFetchTokenDecimalMapping[chainId]!
     const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
