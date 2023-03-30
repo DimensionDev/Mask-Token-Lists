@@ -21,7 +21,7 @@ export async function fetchSolanaForTokenDecimal(url: string, browser: Browser):
   await page.waitForSelector(tokenLoadingSelector, { hidden: true, timeout: 100000 })
   await page.waitForSelector(cardItemLoadingSelector, { hidden: true, timeout: 100000 })
   await page.waitForSelector(cardItemLoadingSelector, { hidden: true, timeout: 100000 })
-  await page.waitForSelector(decimalsFullPathSelector)
+  await page.waitForSelector(decimalsFullPathSelector, { timeout: 100000 })
   const cardElementHandler = await page.waitForSelector(cardSelector)
   const cardElement = await cardElementHandler?.evaluate((x) => x.innerHTML)
   const q = cheerio.load(cardElement ?? '')
