@@ -9,14 +9,14 @@ program.name('mask-list-generator').description('CLI to generate token list').ve
 program
   .command('generate')
   .description('Generate token list for chain(s)')
-  .option('-i, --include <number>', 'The target chain to generate token list')
-  .option('-e, --exclude <number>', 'The filtered target chain from all support chains to generate token list')
+  .option('-i, --include <string>', 'The target chain to generate token list')
+  .option('-e, --exclude <string>', 'The filtered target chain from all support chains to generate token list')
   .action((options) => {
-    const chains = Object.values(ChainId).filter((v) => !isNaN(Number(v))) as ChainId[]
+    const chains = Object.values(ChainId) as ChainId[]
 
     const target = chains
-      .filter((x) => (options.include ? x === parseInt(options.include) : true))
-      .filter((x) => (options.exclude ? x !== parseInt(options.exclude) : true))
+      .filter((x) => (options.include ? x.toString() === options.include.toString() : true))
+      .filter((x) => (options.exclude ? x.toString() !== options.exclude.toString() : true))
 
     generate(target)
   })
