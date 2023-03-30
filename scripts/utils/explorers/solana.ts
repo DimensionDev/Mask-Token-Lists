@@ -16,11 +16,13 @@ export async function fetchSolanaForTokenDecimal(url: string, browser: Browser):
   const cardLoadingSelector = '.card:first-child div div.placeholder-glow'
   const cardItemLoadingSelector = '.card .placeholder'
   const tokenLoadingSelector = '.card:first-child .spinner-grow'
+  const decimalsFullPathSelector = '.card:first-child div div .gap-4:nth-child(2) span'
   const decimalsSelector = 'span'
   await page.waitForSelector(cardLoadingSelector, { hidden: true })
   await page.waitForSelector(tokenLoadingSelector, { hidden: true })
   await page.waitForSelector(cardItemLoadingSelector, { hidden: true })
-  await page.waitForNetworkIdle({ timeout: 20000 })
+  await page.waitForSelector(cardItemLoadingSelector, { hidden: true })
+  await page.waitForSelector(decimalsFullPathSelector)
   const cardElementHandler = await page.waitForSelector(cardSelector)
   const cardElement = await cardElementHandler?.evaluate((x) => x.innerHTML)
   console.log({ cardElement })
