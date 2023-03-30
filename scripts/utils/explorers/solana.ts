@@ -7,8 +7,7 @@ puppeteer.use(StealthPlugin())
 
 export async function fetchSolanaForTokenDecimal(url: string, browser: Browser): Promise<number> {
   const page = await browser.newPage()
-  const status = await page.goto(url, { timeout: 0 })
-  console.log({ url, code: status?.status() })
+  const status = await page.goto(url, { timeout: 100000 })
   page.once('load', () => console.log('Solana Page loaded!'))
   page.once('error', (error) => console.log('Failed to Solana Page load!', error))
   await page.setViewport({ width: 1080, height: 1024 })
@@ -18,17 +17,15 @@ export async function fetchSolanaForTokenDecimal(url: string, browser: Browser):
   const tokenLoadingSelector = '.card:first-child .spinner-grow'
   const decimalsFullPathSelector = '.card:first-child div div .gap-4:nth-child(2) span'
   const decimalsSelector = 'span'
-  await page.waitForSelector(cardLoadingSelector, { hidden: true })
-  await page.waitForSelector(tokenLoadingSelector, { hidden: true })
-  await page.waitForSelector(cardItemLoadingSelector, { hidden: true })
-  await page.waitForSelector(cardItemLoadingSelector, { hidden: true })
+  await page.waitForSelector(cardLoadingSelector, { hidden: true, timeout: 100000 })
+  await page.waitForSelector(tokenLoadingSelector, { hidden: true, timeout: 100000 })
+  await page.waitForSelector(cardItemLoadingSelector, { hidden: true, timeout: 100000 })
+  await page.waitForSelector(cardItemLoadingSelector, { hidden: true, timeout: 100000 })
   await page.waitForSelector(decimalsFullPathSelector)
   const cardElementHandler = await page.waitForSelector(cardSelector)
   const cardElement = await cardElementHandler?.evaluate((x) => x.innerHTML)
-  console.log({ cardElement })
   const q = cheerio.load(cardElement ?? '')
   const card = q('.gap-4:nth-child(2)')
   const decimals = Number(q(decimalsSelector, card).text().trim())
-  console.log({ decimals: q(decimalsSelector, card).text() })
   return decimals
 }
