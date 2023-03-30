@@ -63,7 +63,7 @@ export async function generate(targetChains: ChainId[]) {
 
     if (result.length) {
       const tokens = sortBy(
-        uniqBy([...latestReleaseTokenList, ...result], (x) => toChecksumAddress(x.address)),
+        uniqBy([...latestReleaseTokenList, ...result], (x) => x.address.toLowerCase()),
         'symbol',
       ).filter((x) => x.address && x.symbol && x.chainId && x.decimals && x.name)
       await writeTokensToFile(chain, tokens)
