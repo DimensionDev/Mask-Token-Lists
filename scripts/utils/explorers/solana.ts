@@ -20,7 +20,7 @@ export async function fetchSolanaForTokenDecimal(url: string, browser: Browser):
   await page.waitForSelector(cardLoadingSelector, { hidden: true })
   await page.waitForSelector(tokenLoadingSelector, { hidden: true })
   await page.waitForSelector(cardItemLoadingSelector, { hidden: true })
-  await page.waitForNetworkIdle()
+  await page.waitForNetworkIdle({ timeout: 20000 })
   const cardElementHandler = await page.waitForSelector(cardSelector)
   const cardElement = await cardElementHandler?.evaluate((x) => x.innerHTML)
   console.log({ cardElement })
