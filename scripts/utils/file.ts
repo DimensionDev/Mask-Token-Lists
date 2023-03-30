@@ -15,11 +15,11 @@ export const cryptoRankcacheDir = path.join(process.env.PWD, 'scripts/cache/cryp
 
 export async function writeTokensToFile(chain: ChainId, tokens: FungibleToken[]) {
   await mkdir(path.join(pathToVersionFolder, chain.toString()), { recursive: true })
-  await fs.writeFile(path.join(pathToVersionFolder, chain.toString(), 'tokens.json'), generate(tokens), {
+  await fs.writeFile(path.join(pathToVersionFolder, chain.toString().toLowerCase(), 'tokens.json'), generate(tokens), {
     encoding: 'utf-8',
   })
   await mkdir(path.join(pathToLatestFolder, chain.toString()), { recursive: true })
-  await fs.writeFile(path.join(pathToLatestFolder, chain.toString(), 'tokens.json'), generate(tokens), {
+  await fs.writeFile(path.join(pathToLatestFolder, chain.toString().toLowerCase(), 'tokens.json'), generate(tokens), {
     encoding: 'utf-8',
   })
 }
