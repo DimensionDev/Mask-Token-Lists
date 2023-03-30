@@ -26,7 +26,6 @@ export async function fetchSolanaForTokenDecimal(url: string, browser: Browser):
   const cardElement = await cardElementHandler?.evaluate((x) => x.innerHTML)
   const q = cheerio.load(cardElement ?? '')
   const card = q('.gap-4:nth-child(2)')
-  await page.close()
   const decimals = Number(q(decimalsSelector, card).text().trim())
   return decimals
 }
