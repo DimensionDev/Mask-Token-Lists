@@ -7,8 +7,8 @@ puppeteer.use(StealthPlugin())
 
 export async function fetchSolanaForTokenDecimal(url: string, browser: Browser): Promise<number> {
   const page = await browser.newPage()
-  await page.goto(url)
-  console.log({ url })
+  const status = await page.goto(url)
+  console.log({ url, status })
   page.once('load', () => console.log('Solana Page loaded!'))
   page.once('error', (error) => console.log('Failed to Solana Page load!', error))
   await page.setViewport({ width: 1080, height: 1024 })
