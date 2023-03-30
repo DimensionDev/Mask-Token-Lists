@@ -43,7 +43,7 @@ export class SolanaFm implements Provider {
         const t = x.tokens.find((x) => x.platformName === 'Solana')
         return t && t.address
       })
-      .slice(0, 20)
+      .slice(0, 50)
       .map((x) => {
         const token = x.tokens.find((x) => x.platformName === 'Solana')!
         return {
@@ -56,7 +56,6 @@ export class SolanaFm implements Provider {
         }
       })
       .filter((x) => !excludedTokenAddressList.includes(x.address.toLowerCase()))
-    console.log({ list })
     const fetchTokenDecimalPage = explorerDecimalPageMapping[chainId]!
     const fetchTokenDecimal = explorerFetchTokenDecimalMapping[chainId]!
     const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
