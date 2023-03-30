@@ -27,6 +27,7 @@ export enum ChainId {
   Aurora = 1313161554,
   Harmony = 1666600000,
   Palm = 11297108109,
+  Solana = 'Solana',
 }
 
 export interface FungibleToken {
@@ -51,6 +52,7 @@ export enum Providers {
   cryptoRank = 'crypto-rank',
   coinMarketCap = 'coinmarketcap',
   subScan = 'subscan',
+  solanaFm = 'solanaFm',
 }
 
 export interface FungibleTokenProvider extends FungibleToken {

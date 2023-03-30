@@ -10,21 +10,28 @@ import urlcat from 'urlcat'
 import axios from 'axios'
 import { CoinGecko } from '../providers/coingecko'
 import { Explorer } from '../providers/explorer'
+import { SolanaFm } from '../providers/solanaFm'
 
 const coinGeckoAPI = new CoinGecko()
 const explorerAPI = new Explorer()
 const cryptoRankAPI = new CryptoRank()
 const coinMarketCapAPI = new CoinMarketCap()
 const subScanAPI = new SubScan()
+const SolanaFmAPI = new SolanaFm()
 
-const providers = [coinGeckoAPI, explorerAPI, coinMarketCapAPI, subScanAPI, cryptoRankAPI]
+const providers = [coinGeckoAPI, explorerAPI, coinMarketCapAPI, subScanAPI, cryptoRankAPI, SolanaFmAPI]
 
 const TOKEN_LIST_BASE_URL = 'https://tokens.r2d2.to/'
 
 async function getLatestReleasedTokenList(chainId: ChainId) {
   const requestURL = urlcat(TOKEN_LIST_BASE_URL, 'latest/:chainId/tokens.json', { chainId })
-  const listInfo = await axios.get<{ tokens: FungibleToken[] }>(requestURL)
-  return listInfo.data.tokens
+  try {
+    const listInfo = await axios.get<{ tokens: FungibleToken[] }>(requestURL)
+    return listInfo.data.tokens
+  } catch (e) {
+    console.log(`fetch latest released token list failed(chainId: ${chainId})`)
+    return []
+  }
 }
 
 export async function generate(targetChains: ChainId[]) {
@@ -56,7 +63,7 @@ export async function generate(targetChains: ChainId[]) {
 
     if (result.length) {
       const tokens = sortBy(
-        uniqBy([...latestReleaseTokenList, ...result], (x) => toChecksumAddress(x.address)),
+        uniqBy([...latestReleaseTokenList, ...result], (x) => x.address.toLowerCase()),
         'symbol',
       ).filter((x) => x.address && x.symbol && x.chainId && x.decimals && x.name)
       await writeTokensToFile(chain, tokens)
