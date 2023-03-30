@@ -18,7 +18,7 @@ program
     const target = chains
       .filter((x) => (options.include ? x.toString() === options.include.toString() : true))
       .filter((x) => (options.exclude ? x.toString() !== options.exclude.toString() : true))
-
+    console.log({ options, chains, target })
     generate(target)
   })
 
