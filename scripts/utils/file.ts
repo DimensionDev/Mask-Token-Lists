@@ -14,11 +14,11 @@ export const pathToLatestFolder = path.join(process.env.PWD, `dist/latest`)
 export const cryptoRankcacheDir = path.join(process.env.PWD, 'scripts/cache/cryptorank')
 
 export async function writeTokensToFile(chain: ChainId, tokens: FungibleToken[]) {
-  await mkdir(path.join(pathToVersionFolder, chain.toString()), { recursive: true })
+  await mkdir(path.join(pathToVersionFolder, chain.toString().toLowerCase()), { recursive: true })
   await fs.writeFile(path.join(pathToVersionFolder, chain.toString().toLowerCase(), 'tokens.json'), generate(tokens), {
     encoding: 'utf-8',
   })
-  await mkdir(path.join(pathToLatestFolder, chain.toString()), { recursive: true })
+  await mkdir(path.join(pathToLatestFolder, chain.toString().toLowerCase()), { recursive: true })
   await fs.writeFile(path.join(pathToLatestFolder, chain.toString().toLowerCase(), 'tokens.json'), generate(tokens), {
     encoding: 'utf-8',
   })
