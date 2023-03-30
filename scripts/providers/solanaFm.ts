@@ -43,7 +43,7 @@ export class SolanaFm implements Provider {
         const t = x.tokens.find((x) => x.platformName === 'Solana')
         return t && t.address
       })
-      .slice(0, 10)
+      .slice(0, 100)
       .map((x) => {
         const token = x.tokens.find((x) => x.platformName === 'Solana')!
         return {
