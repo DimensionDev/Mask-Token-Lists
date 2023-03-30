@@ -1,5 +1,5 @@
 import { Command } from 'commander'
-import { ChainId, FungibleToken } from './type'
+import { ChainId } from './type'
 import { generate } from './commands/generate'
 import Package from '../package.json'
 
