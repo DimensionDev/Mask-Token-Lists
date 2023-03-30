@@ -59,12 +59,14 @@ export class SolanaFm implements Provider {
     const fetchTokenDecimalPage = explorerDecimalPageMapping[chainId]!
     const fetchTokenDecimal = explorerFetchTokenDecimalMapping[chainId]!
     const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
+    const page = await browser.newPage()
+    await page.setDefaultNavigationTimeout(0)
 
     const allSettled = await Promise.allSettled(
       list.map(async (x) => {
         const url = fetchTokenDecimalPage(x.address)
         try {
-          const decimals = await fetchTokenDecimal(url, browser)
+          const decimals = await fetchTokenDecimal(url, browser, page)
           console.log({ decimals, url })
           if (decimals && decimals > 0) return { ...x, decimals } as FungibleToken
           return undefined
