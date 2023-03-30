@@ -1,12 +1,12 @@
 import * as cheerio from 'cheerio'
 import puppeteer from 'puppeteer-extra'
 import StealthPlugin from 'puppeteer-extra-plugin-stealth'
-import { Browser, Page } from 'puppeteer'
+import { Browser } from 'puppeteer'
 
 puppeteer.use(StealthPlugin())
 
-export async function fetchSolanaForTokenDecimal(url: string, browser: Browser, page_?: Page): Promise<number> {
-  const page = page_ ?? (await browser.newPage())
+export async function fetchSolanaForTokenDecimal(url: string, browser: Browser): Promise<number> {
+  const page = await browser.newPage()
   const status = await page.goto(url, { timeout: 100000 })
   page.once('load', () => console.log('Solana Page loaded!'))
   page.once('error', (error) => console.log('Failed to Solana Page load!', error))

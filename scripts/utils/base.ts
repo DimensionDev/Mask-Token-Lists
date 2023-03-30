@@ -9,7 +9,7 @@ import { fetchPolygon, fetchPolygonForTokenDecimal } from './explorers/polygon'
 import { fetchBSC, fetchBSCForTokenDecimal } from './explorers/bsc'
 import { fetchETH, fetchETHForTokenDecimal } from './explorers/eth'
 import { fetchSolanaForTokenDecimal } from './explorers/solana'
-import { Browser, Page } from 'puppeteer'
+import { Browser } from 'puppeteer'
 
 export function convertEnumToArray(e: any) {
   return Object.keys(e)
@@ -60,7 +60,7 @@ export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Prom
 }
 
 export const explorerFetchTokenDecimalMapping: Partial<
-  Record<ChainId, (url: string, browser: Browser, page?: Page) => Promise<number>>
+  Record<ChainId, (url: string, browser: Browser) => Promise<number>>
 > = {
   [ChainId.Mainnet]: fetchETHForTokenDecimal,
   [ChainId.BNB]: fetchBSCForTokenDecimal,
