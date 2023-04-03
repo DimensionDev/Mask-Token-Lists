@@ -1,6 +1,6 @@
 import { ChainId, FungibleToken } from '../type'
 import { writeTokensToFile } from '../utils'
-import { toChecksumAddress } from 'web3-utils'
+import { blockedTokenAddressMapping } from '../utils/blockedTokenAddressMapping'
 import { sortBy, uniqBy } from 'lodash'
 import { prefetchCryptoRankCoins } from '../cache/cryptorank/batch'
 import { CryptoRank } from '../providers/cryptoRank'
@@ -11,6 +11,7 @@ import axios from 'axios'
 import { CoinGecko } from '../providers/coingecko'
 import { Explorer } from '../providers/explorer'
 import { SolanaFm } from '../providers/solanaFm'
+import { isSameAddress } from '../utils/helpers'
 
 const coinGeckoAPI = new CoinGecko()
 const explorerAPI = new Explorer()
@@ -65,7 +66,17 @@ export async function generate(targetChains: ChainId[]) {
       const tokens = sortBy(
         uniqBy([...latestReleaseTokenList, ...result], (x) => x.address.toLowerCase()),
         'symbol',
-      ).filter((x) => x.address && x.symbol && x.chainId && x.decimals && x.name)
+      ).filter((x) => {
+        const blockedList = blockedTokenAddressMapping[x.chainId]
+        return (
+          x.address &&
+          x.symbol &&
+          x.chainId &&
+          x.decimals &&
+          x.name &&
+          !blockedList?.some((blockedAddress) => isSameAddress(x.address, blockedAddress))
+        )
+      })
       await writeTokensToFile(chain, tokens)
     }
   }
