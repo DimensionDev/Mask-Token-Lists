@@ -1,9 +1,8 @@
 name: Fetch token list
 
 on:
-  push:
-    branches:
-      - blocked-list
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -23,55 +22,55 @@ jobs:
         run: yarn install
         if: steps.yarn-cache.outputs.cache-hit != 'true'
 
-      # - name: Sync Solana Token List
-      #   id: sync-token-list-solana
-      #   run: |
-      #     node node_modules/puppeteer/install.js && yarn cli generate -i solana && yarn lint-fix
+      - name: Sync Solana Token List
+        id: sync-token-list-solana
+        run: |
+          node node_modules/puppeteer/install.js && yarn cli generate -i solana && yarn lint-fix
 
-      # - name: Sync OP Token List
-      #   id: sync-token-list-op
-      #   run: |
-      #     node node_modules/puppeteer/install.js && yarn cli generate -i 10 && yarn lint-fix
+      - name: Sync OP Token List
+        id: sync-token-list-op
+        run: |
+          node node_modules/puppeteer/install.js && yarn cli generate -i 10 && yarn lint-fix
 
-      # - name: Sync Aurora Token List
-      #   id: sync-token-list-aurora
-      #   run: |
-      #     node node_modules/puppeteer/install.js && yarn cli generate -i 1313161554 && yarn lint-fix
+      - name: Sync Aurora Token List
+        id: sync-token-list-aurora
+        run: |
+          node node_modules/puppeteer/install.js && yarn cli generate -i 1313161554 && yarn lint-fix
 
-      # - name: Sync Gnosis Token List
-      #   id: sync-token-list-gnosis
-      #   run: |
-      #     node node_modules/puppeteer/install.js && yarn cli generate -i 100 && yarn lint-fix
+      - name: Sync Gnosis Token List
+        id: sync-token-list-gnosis
+        run: |
+          node node_modules/puppeteer/install.js && yarn cli generate -i 100 && yarn lint-fix
 
-      # - name: Sync Fantom Token List
-      #   id: sync-token-list-fantom
-      #   run: |
-      #     node node_modules/puppeteer/install.js && yarn cli generate -i 250 && yarn lint-fix
+      - name: Sync Fantom Token List
+        id: sync-token-list-fantom
+        run: |
+          node node_modules/puppeteer/install.js && yarn cli generate -i 250 && yarn lint-fix
 
-      # - name: Sync Avalanche Token List
-      #   id: sync-token-list-avalanche
-      #   run: |
-      #     node node_modules/puppeteer/install.js && yarn cli generate -i 43114 && yarn lint-fix
+      - name: Sync Avalanche Token List
+        id: sync-token-list-avalanche
+        run: |
+          node node_modules/puppeteer/install.js && yarn cli generate -i 43114 && yarn lint-fix
 
-      # - name: Sync Arbitrum Token List
-      #   id: sync-token-list-arbitrum
-      #   run: |
-      #     node node_modules/puppeteer/install.js && yarn cli generate -i 42161 && yarn lint-fix
+      - name: Sync Arbitrum Token List
+        id: sync-token-list-arbitrum
+        run: |
+          node node_modules/puppeteer/install.js && yarn cli generate -i 42161 && yarn lint-fix
 
       - name: Sync Polygon Token List
         id: sync-token-list-polygon
         run: |
           node node_modules/puppeteer/install.js && yarn cli generate -i 137 && yarn lint-fix
 
-      # - name: Sync BSC Token List
-      #   id: sync-token-list-bsc
-      #   run: |
-      #     node node_modules/puppeteer/install.js && yarn cli generate -i 56 && yarn lint-fix
+      - name: Sync BSC Token List
+        id: sync-token-list-bsc
+        run: |
+          node node_modules/puppeteer/install.js && yarn cli generate -i 56 && yarn lint-fix
 
-      # - name: Sync ETH Token List
-      #   id: sync-token-list-eth
-      #   run: |
-      #     node node_modules/puppeteer/install.js && yarn cli generate -i 1 && yarn lint-fix
+      - name: Sync ETH Token List
+        id: sync-token-list-eth
+        run: |
+          node node_modules/puppeteer/install.js && yarn cli generate -i 1 && yarn lint-fix
 
       - name: Prettier Check
         run: yarn prettier
