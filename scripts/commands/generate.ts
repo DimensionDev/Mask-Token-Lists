@@ -1,6 +1,6 @@
 import { ChainId, FungibleToken } from '../type'
 import { writeTokensToFile } from '../utils'
-import { toChecksumAddress } from 'web3-utils'
+import { blockedTokenAddressMapping } from '../utils/blockedTokenAddressMapping'
 import { sortBy, uniqBy } from 'lodash'
 import { prefetchCryptoRankCoins } from '../cache/cryptorank/batch'
 import { CryptoRank } from '../providers/cryptoRank'
@@ -65,7 +65,12 @@ export async function generate(targetChains: ChainId[]) {
       const tokens = sortBy(
         uniqBy([...latestReleaseTokenList, ...result], (x) => x.address.toLowerCase()),
         'symbol',
-      ).filter((x) => x.address && x.symbol && x.chainId && x.decimals && x.name)
+      ).filter((x) => {
+        const blockedList = blockedTokenAddressMapping[x.chainId]
+        return (
+          x.address && x.symbol && x.chainId && x.decimals && x.name && !blockedList?.includes(x.address.toLowerCase())
+        )
+      })
       await writeTokensToFile(chain, tokens)
     }
   }
