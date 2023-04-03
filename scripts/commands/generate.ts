@@ -11,6 +11,7 @@ import axios from 'axios'
 import { CoinGecko } from '../providers/coingecko'
 import { Explorer } from '../providers/explorer'
 import { SolanaFm } from '../providers/solanaFm'
+import { isSameAddress } from '../utils/helpers'
 
 const coinGeckoAPI = new CoinGecko()
 const explorerAPI = new Explorer()
@@ -68,7 +69,12 @@ export async function generate(targetChains: ChainId[]) {
       ).filter((x) => {
         const blockedList = blockedTokenAddressMapping[x.chainId]
         return (
-          x.address && x.symbol && x.chainId && x.decimals && x.name && !blockedList?.includes(x.address.toLowerCase())
+          x.address &&
+          x.symbol &&
+          x.chainId &&
+          x.decimals &&
+          x.name &&
+          !blockedList?.some((blockedAddress) => isSameAddress(x.address, blockedAddress))
         )
       })
       await writeTokensToFile(chain, tokens)
