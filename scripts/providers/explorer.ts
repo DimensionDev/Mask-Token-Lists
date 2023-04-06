@@ -18,7 +18,7 @@ export class Explorer implements Provider {
   }
 
   isSupportChain(chainId: ChainId): boolean {
-    return !!explorerPagesMapping[chainId]?.length
+    return false
   }
 
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {

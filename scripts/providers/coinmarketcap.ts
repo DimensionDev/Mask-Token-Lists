@@ -111,7 +111,7 @@ export class CoinMarketCap implements Provider {
           name: x.name,
           symbol: x.symbol,
           decimals: 0,
-          logoURI: generateLogoURL(chainId, toChecksumAddress(mapping.token_address)),
+          logoURI: metadata.logo || generateLogoURL(chainId, toChecksumAddress(mapping.token_address)),
           originLogoURI: metadata.logo,
         }
       })
@@ -150,6 +150,6 @@ export class CoinMarketCap implements Provider {
   }
 
   isSupportChain(chainId: ChainId): boolean {
-    return !!PlatformMapping[chainId]
+    return false
   }
 }

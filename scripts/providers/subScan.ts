@@ -93,6 +93,6 @@ export class SubScan implements Provider {
   }
 
   isSupportChain(chainId: ChainId): boolean {
-    return chainId === ChainId.Astar
+    return false
   }
 }

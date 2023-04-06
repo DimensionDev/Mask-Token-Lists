@@ -88,6 +88,6 @@ export class SolanaFm implements Provider {
   }
 
   isSupportChain(chainId: ChainId): boolean {
-    return chainId === ChainId.Solana
+    return false
   }
 }

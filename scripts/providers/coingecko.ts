@@ -153,9 +153,7 @@ export class CoinGecko implements Provider {
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {
     const top1000List = await this.getMarketsCoins(chainId)
     // for saving api request times
-    const toAddList = differenceBy(uniqBy(top1000List, 'id'), exclude, (x) =>
-      some(exclude, (e) => e.symbol.toLowerCase() === x.symbol.toLowerCase()),
-    )
+    const toAddList = differenceBy(uniqBy(top1000List, 'id'))
 
     console.log(`The total tokens length: is: ${top1000List.length}`)
     console.log(`The difference tokens length: is: ${toAddList.length}`)
@@ -180,7 +178,7 @@ export class CoinGecko implements Provider {
           name: token.name,
           symbol: token.symbol,
           decimals: detail.decimal_place,
-          logoURI: generateLogoURL(chainId, detail.contract_address),
+          logoURI: token.logoURI || generateLogoURL(chainId, detail.contract_address),
           originLogoURI: token.logoURI,
         })
       } catch (e) {
@@ -190,7 +188,7 @@ export class CoinGecko implements Provider {
 
       await delay(PROXY_WAIT_TIME)
     }
-    return [...result, ...exclude].filter(
+    return [...result].filter(
       (x) => x.address && top1000List.find((e) => e.symbol.toLowerCase() === x.symbol.toLowerCase()),
     )
   }
