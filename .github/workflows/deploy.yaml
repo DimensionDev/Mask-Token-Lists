@@ -1,9 +1,9 @@
 name: Fetch token list
 
 on:
-  pull_request:
-    branches:
-      - fix-logo-url
+  push:
+    on:
+      - 'fix-logo-url'
   workflow_dispatch:
 
 jobs:
