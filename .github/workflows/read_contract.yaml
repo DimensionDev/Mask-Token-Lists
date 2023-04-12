@@ -26,4 +26,4 @@ jobs:
       - name: Sync Polygon Token List
         id: sync-token-list-polygon
         run: |
-          node node_modules/puppeteer/install.js && npm run cli read-contract -i 137 && npm run lint-fix
+          node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=137 && npm run lint-fix

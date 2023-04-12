@@ -42,7 +42,7 @@ It requires two separate commits to trigger Cloudflare to update its resource.
 Generate target chain's token list:
 
 ```bash
-npm run cli generate -i <chainId>
+npm run cli generate -- --include=<chainId>
 ```
 
 Generate all support chains list:
