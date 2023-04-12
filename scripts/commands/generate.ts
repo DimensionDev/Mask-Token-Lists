@@ -46,9 +46,7 @@ export async function generate(targetChains: ChainId[]) {
       }
     }
 
-    if (!result[0]) return
-
-    const resultReadFromContract = await readTokenInfoFromContract(result[0].chainId, result)
+    const resultReadFromContract = await readTokenInfoFromContract(chain, result)
 
     if (!resultReadFromContract) return
 
