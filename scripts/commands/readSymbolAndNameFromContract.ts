@@ -20,7 +20,7 @@ export async function readSymbolAndNameFromContract(chainId: ChainId) {
         const symbol = await contract?.methods.symbol().call()
         const name = await contract?.methods.name().call()
         console.log({ symbol, name })
-        return { ...token, name, symbol }
+        return { ...token, name, symbol, isFromContract: true }
       } catch (e) {
         console.log({ e })
         return token
