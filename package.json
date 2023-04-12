@@ -7,7 +7,6 @@
   "main": "index.js",
   "scripts": {
     "build": "ts-node src/index.ts && ts-node src/generate-readme.ts",
-    "read-contract": "ts-node scripts/commands/readContract.ts",
     "prepare": "husky install",
     "prettier": "prettier -c .",
     "publish": "gh-pages -d ./dist",
