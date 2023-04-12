@@ -8,15 +8,15 @@ The token lists for Mask Network.
 ## Setup
 
 ```bash
-yarn install # install dependencies
-yarn build # build token lists
+npm run install # install dependencies
+npm run build # build token lists
 ```
 
 ## Steps for new chain
 
 - Add the chain id in [types.ts](src/types.ts).
 - Add your token lists into [src/fungible-tokens/](src/fungible-tokens/) or [src/non-fungible-tokens/](src/non-fungible-tokens/).
-- Run `yarn build` to ensure everything is working great.
+- Run `npm run build` to ensure everything is working great.
 - Don't forget to bump version in `package.json`.
 - Update below two tables in README file here.
 
@@ -42,13 +42,13 @@ It requires two separate commits to trigger Cloudflare to update its resource.
 Generate target chain's token list:
 
 ```bash
-yarn cli generate -i <chainId>
+npm run cli generate -- --include=<chainId>
 ```
 
 Generate all support chains list:
 
 ```bash
-yarn cli generate
+npm run cli generate
 ```
 
 ## Versions based on chain id

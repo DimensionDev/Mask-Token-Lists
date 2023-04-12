@@ -1,12 +1,13 @@
-name: Fetch token list
+name: Read contract
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  push:
+    branches:
+      - 'sync-token-list-from-contract'
   workflow_dispatch:
 
 jobs:
-  fetch-list:
+  read-contract:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -18,59 +19,54 @@ jobs:
             node_modules
           key: npm-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
 
-      - name: NPM install
-        run: npm run install
+      - name: npm install
+        run: npm install
         if: steps.npm-cache.outputs.cache-hit != 'true'
-
-      - name: Sync Solana Token List
-        id: sync-token-list-solana
-        run: |
-          node node_modules/puppeteer/install.js && npm run cli generate -- --include=solana && npm run lint-fix
-
-      - name: Sync OP Token List
-        id: sync-token-list-op
-        run: |
-          node node_modules/puppeteer/install.js && npm run cli generate -- --include=10 && npm run lint-fix
-
-      - name: Sync Aurora Token List
-        id: sync-token-list-aurora
-        run: |
-          node node_modules/puppeteer/install.js && npm run cli generate -- --include=1313161554 && npm run lint-fix
-
-      - name: Sync Gnosis Token List
-        id: sync-token-list-gnosis
-        run: |
-          node node_modules/puppeteer/install.js && npm run cli generate -- --include=100 && npm run lint-fix
-
-      - name: Sync Fantom Token List
-        id: sync-token-list-fantom
-        run: |
-          node node_modules/puppeteer/install.js && npm run cli generate -- --include=250 && npm run lint-fix
-
-      - name: Sync Avalanche Token List
-        id: sync-token-list-avalanche
-        run: |
-          node node_modules/puppeteer/install.js && npm run cli generate -- --include=43114 && npm run lint-fix
-
-      - name: Sync Arbitrum Token List
-        id: sync-token-list-arbitrum
-        run: |
-          node node_modules/puppeteer/install.js && npm run cli generate -- --include=42161 && npm run lint-fix
-
-      - name: Sync Polygon Token List
-        id: sync-token-list-polygon
-        run: |
-          node node_modules/puppeteer/install.js && npm run cli generate -- --include=137 && npm run lint-fix
-
-      - name: Sync BSC Token List
-        id: sync-token-list-bsc
-        run: |
-          node node_modules/puppeteer/install.js && npm run cli generate -- --include=56 && npm run lint-fix
 
       - name: Sync ETH Token List
         id: sync-token-list-eth
         run: |
-          node node_modules/puppeteer/install.js && npm run cli generate -- --include=1 && npm run lint-fix
+          node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=1 && npm run lint-fix
+
+      - name: Sync BSC Token List
+        id: sync-token-list-bsc
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=56 && npm run lint-fix
+
+      - name: Sync Polygon Token List
+        id: sync-token-list-polygon
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=137 && npm run lint-fix
+
+      - name: Sync OP Token List
+        id: sync-token-list-op
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=10 && npm run lint-fix
+
+      - name: Sync Aurora Token List
+        id: sync-token-list-aurora
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=1313161554 && npm run lint-fix
+
+      - name: Sync Gnosis Token List
+        id: sync-token-list-gnosis
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=100 && npm run lint-fix
+
+      - name: Sync Fantom Token List
+        id: sync-token-list-fantom
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=250 && npm run lint-fix
+
+      - name: Sync Avalanche Token List
+        id: sync-token-list-avalanche
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=43114 && npm run lint-fix
+
+      - name: Sync Arbitrum Token List
+        id: sync-token-list-arbitrum
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=42161 && npm run lint-fix
 
       - name: Prettier Check
         run: npm run prettier

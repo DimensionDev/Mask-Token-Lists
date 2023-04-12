@@ -73,3 +73,15 @@ export const explorerFetchTokenDecimalMapping: Partial<
   [ChainId.Optimistic]: fetchOptimisticForTokenDecimal,
   [ChainId.Solana]: fetchSolanaForTokenDecimal,
 }
+
+export const rpcMapping: Partial<Record<ChainId, string>> = {
+  [ChainId.Mainnet]: 'https://mainnet.infura.io/v3/d74bd8586b9e44449cef131d39ceeefb',
+  [ChainId.BNB]: 'https://bsc-dataseed.binance.org/',
+  [ChainId.Polygon]: 'https://polygon-mainnet.infura.io/v3/d74bd8586b9e44449cef131d39ceeefb',
+  [ChainId.Arbitrum]: 'https://arb1.arbitrum.io/rpc',
+  [ChainId.Avalanche]: 'https://api.avax.network/ext/bc/C/rpc',
+  [ChainId.Fantom]: 'https://rpc.ftm.tools',
+  [ChainId.xDai]: 'https://rpc.gnosischain.com',
+  [ChainId.Aurora]: 'https://mainnet.aurora.dev',
+  [ChainId.Optimistic]: 'https://node.onekey.so/optimism',
+}
