@@ -6,9 +6,14 @@ import Web3 from 'web3'
 
 export async function readContract() {
   const web3 = new Web3('https://polygon-mainnet.infura.io/v3/d74bd8586b9e44449cef131d39ceeefb')
-  const contract = createContract<ERC20>(web3, '0x750e4C4984a9e0f12978eA6742Bc1c5D248f40ed', ERC20ABI as AbiItem[])
-  const symbol = await contract?.methods.symbol().call()
-  console.log({ symbol })
+  const contract = createContract<ERC20>(web3, '0xc2132D05D31c914a87C6611C10748AEb04B58e8F', ERC20ABI as AbiItem[])
+  console.log({ web3, contract })
+  try {
+    const symbol = await contract?.methods.symbol().call()
+    console.log({ symbol })
+  } catch (e) {
+    console.log({ e })
+  }
 }
 
 function createContract<T extends BaseContract>(web3: Web3 | null, address: string, ABI: AbiItem[]) {
