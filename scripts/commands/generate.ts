@@ -24,7 +24,7 @@ const providers = [coinGeckoAPI, explorerAPI, coinMarketCapAPI, subScanAPI, cryp
 
 const TOKEN_LIST_BASE_URL = 'https://tokens.r2d2.to/'
 
-async function getLatestReleasedTokenList(chainId: ChainId) {
+export async function getLatestReleasedTokenList(chainId: ChainId) {
   const requestURL = urlcat(TOKEN_LIST_BASE_URL, 'latest/:chainId/tokens.json', { chainId })
   try {
     const listInfo = await axios.get<{ tokens: FungibleToken[] }>(requestURL)
