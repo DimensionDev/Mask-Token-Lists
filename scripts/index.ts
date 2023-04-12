@@ -1,7 +1,7 @@
 import { Command } from 'commander'
 import { ChainId } from './type'
 import { generate } from './commands/generate'
-import { readSymbolAndNameFromContract } from './commands/readSymbolAndNameFromContract'
+import { readTokenInfoFromContract } from './commands/readTokenInfoFromContract'
 import Package from '../package.json'
 
 const program = new Command()
@@ -33,7 +33,7 @@ program
     const target = chains
       .filter((x) => (options.include ? x.toString().toLowerCase() === options.include.toString().toLowerCase() : true))
       .filter((x) => (options.exclude ? x.toString().toLowerCase() !== options.exclude.toString().toLowerCase() : true))
-    readSymbolAndNameFromContract(target[0])
+    readTokenInfoFromContract(target[0])
   })
 
 program.parse()

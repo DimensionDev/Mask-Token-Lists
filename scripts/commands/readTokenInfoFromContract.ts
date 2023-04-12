@@ -8,19 +8,20 @@ import type { AbiItem } from 'web3-utils'
 import Web3 from 'web3'
 import { getLatestReleasedTokenList } from './generate'
 
-export async function readSymbolAndNameFromContract(chainId: ChainId) {
+export async function readTokenInfoFromContract(chainId: ChainId) {
   const rpcUrl = rpcMapping[chainId] ?? ''
   const latestReleaseTokenList: FungibleToken[] = await getLatestReleasedTokenList(chainId)
   const web3 = new Web3(rpcUrl)
 
   const allSettled = await Promise.allSettled(
     latestReleaseTokenList.map(async (token) => {
-      if (token.isFromContract) return token
+      // if (token.isFromContract) return token
       const contract = createContract<ERC20>(web3, token.address, ERC20ABI as AbiItem[])
       try {
         const symbol = (await contract?.methods.symbol().call())?.trim()
         const name = (await contract?.methods.name().call())?.trim()
-        return { ...token, name, symbol, isFromContract: true }
+        const decimals = (await contract?.methods.decimals().call())?.trim()
+        return { ...token, name, symbol, decimals, isFromContract: true }
       } catch (e) {
         console.log({ token, e })
         return token
