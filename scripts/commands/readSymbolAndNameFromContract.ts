@@ -1,4 +1,5 @@
 import { EthereumAddress } from 'wallet.ts'
+import { writeTokensToFile } from '../utils'
 import { BaseContract, ERC20 } from '../contract/type'
 import ERC20ABI from '../contract/ERC20.json'
 import { rpcMapping } from '../utils/base'
@@ -31,7 +32,9 @@ export async function readSymbolAndNameFromContract(chainId: ChainId) {
     .map((x) => (x.status === 'fulfilled' && x.value ? x.value : undefined))
     .filter((x) => Boolean(x)) as FungibleToken[]
 
-  console.log({ results })
+  if (results.length) {
+    await writeTokensToFile(chainId, results)
+  }
 
   process.exit(0)
 }
