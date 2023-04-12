@@ -10,12 +10,13 @@ import { getLatestReleasedTokenList } from '../utils/helpers'
 
 export async function readTokenInfoFromContract(chainId: ChainId, toAddList?: FungibleToken[]) {
   const rpcUrl = rpcMapping[chainId] ?? ''
+  if (!rpcUrl) return toAddList
   const tokenList: FungibleToken[] = toAddList ?? (await getLatestReleasedTokenList(chainId))
   const web3 = new Web3(rpcUrl)
 
   const allSettled = await Promise.allSettled(
     tokenList.map(async (token) => {
-      // if (token.isFromContract) return token
+      if (token.isFromContract) return token
       const contract = createContract<ERC20>(web3, token.address, ERC20ABI as AbiItem[])
       try {
         const symbol = (await contract?.methods.symbol().call())?.trim()
