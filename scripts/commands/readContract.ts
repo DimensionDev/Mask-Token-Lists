@@ -2,23 +2,37 @@ import { EthereumAddress } from 'wallet.ts'
 import { BaseContract, ERC20 } from '../contract/type'
 import ERC20ABI from '../contract/ERC20.json'
 import { rpcMapping } from '../utils/base'
-import { ChainId } from '../type'
+import { ChainId, FungibleToken } from '../type'
 import type { AbiItem } from 'web3-utils'
 import Web3 from 'web3'
+import { getLatestReleasedTokenList } from './generate'
 
-export async function readContract(chainId: ChainId) {
-  const rpcUrl = rpcMapping[chainId]
-  if (!rpcUrl) process.exit(0)
-
+export async function readSymbolAndNameFromContract(chainId: ChainId) {
+  const rpcUrl = rpcMapping[chainId] ?? ''
+  const latestReleaseTokenList: FungibleToken[] = await getLatestReleasedTokenList(chainId)
   const web3 = new Web3(rpcUrl)
-  const contract = createContract<ERC20>(web3, '0xc2132D05D31c914a87C6611C10748AEb04B58e8F', ERC20ABI as AbiItem[])
-  console.log({ web3, contract })
-  try {
-    const symbol = await contract?.methods.symbol().call()
-    console.log({ symbol })
-  } catch (e) {
-    console.log({ e })
-  }
+
+  const allSettled = await Promise.allSettled(
+    latestReleaseTokenList.map(async (token) => {
+      const contract = createContract<ERC20>(web3, token.address, ERC20ABI as AbiItem[])
+      try {
+        const symbol = await contract?.methods.symbol().call()
+        const name = await contract?.methods.name().call()
+        console.log({ symbol, name })
+        return { ...token, name, symbol }
+      } catch (e) {
+        console.log({ e })
+        return token
+      }
+    }),
+  )
+
+  const results = allSettled
+    .map((x) => (x.status === 'fulfilled' && x.value ? x.value : undefined))
+    .filter((x) => Boolean(x)) as FungibleToken[]
+
+  console.log({ results })
+
   process.exit(0)
 }
 
