@@ -15,14 +15,14 @@ export async function readSymbolAndNameFromContract(chainId: ChainId) {
 
   const allSettled = await Promise.allSettled(
     latestReleaseTokenList.map(async (token) => {
+      if (token.isFromContract) return token
       const contract = createContract<ERC20>(web3, token.address, ERC20ABI as AbiItem[])
       try {
-        const symbol = await contract?.methods.symbol().call()
-        const name = await contract?.methods.name().call()
-        console.log({ symbol, name })
+        const symbol = (await contract?.methods.symbol().call())?.trim()
+        const name = (await contract?.methods.name().call())?.trim()
         return { ...token, name, symbol, isFromContract: true }
       } catch (e) {
-        console.log({ e })
+        console.log({ token, e })
         return token
       }
     }),

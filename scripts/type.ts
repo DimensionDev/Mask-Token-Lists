@@ -38,6 +38,7 @@ export interface FungibleToken {
   decimals: number
   logoURI?: string
   originLogoURI?: string
+  isFromContract?: boolean
 }
 
 export interface Provider {

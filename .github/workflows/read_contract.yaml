@@ -23,15 +23,20 @@ jobs:
         run: npm install
         if: steps.npm-cache.outputs.cache-hit != 'true'
 
-      - name: Sync Mainnet Token List
+      - name: Sync ETH Token List
         id: sync-token-list-eth
         run: |
           node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=1 && npm run lint-fix
 
-      - name: Sync bsc Token List
+      - name: Sync BSC Token List
         id: sync-token-list-bsc
         run: |
           node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=56 && npm run lint-fix
+
+      - name: Sync Polygon Token List
+        id: sync-token-list-polygon
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=137 && npm run lint-fix
 
       - name: Sync OP Token List
         id: sync-token-list-op
