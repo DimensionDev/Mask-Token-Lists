@@ -1,0 +1,69 @@
+name: Read contract
+
+on:
+  push:
+    branches:
+      - 'read-contract'
+  workflow_dispatch:
+
+jobs:
+  read-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use node_modules cache
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: |
+            node_modules
+          key: yarn-${{ hashFiles('package.json') }}-${{ hashFiles('yarn.lock') }}
+
+      - name: Yarn install
+        run: yarn install
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+
+      - name: Sync Polygon Token List
+        id: sync-token-list-polygon
+        run: |
+          node node_modules/puppeteer/install.js && yarn run read-contract && yarn lint-fix
+
+      - name: Prettier Check
+        run: yarn prettier
+
+      - name: Get Package Version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+
+      - name: Tag Package Version
+        run: git tag v${{ steps.package-version.outputs.current-version }}
+
+      - name: Create Release Package
+        uses: montudor/action-zip@v1
+        with:
+          args:
+            zip -qq -r v${{ steps.package-version.outputs.current-version }}.zip dist/v${{
+            steps.package-version.outputs.current-version }}
+
+      - name: Upload Latest Release
+        uses: actions/upload-artifact@v2
+        with:
+          name: v${{ steps.package-version.outputs.current-version }}.zip
+          path: v${{ steps.package-version.outputs.current-version }}.zip
+
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: v${{ steps.package-version.outputs.current-version }}.zip
+          asset_name: v${{ steps.package-version.outputs.current-version }}.zip
+          tag: v${{ steps.package-version.outputs.current-version }}
+          overwrite: true
+
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./dist
+      #     keep_files: true
+      #     cname: tokens.r2d2.to
