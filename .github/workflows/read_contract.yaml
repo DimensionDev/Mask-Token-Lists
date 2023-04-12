@@ -3,7 +3,7 @@ name: Read contract
 on:
   push:
     branches:
-      - 'read-token-name-from-contract'
+      - 'sync-token-list-from-contract'
   workflow_dispatch:
 
 jobs:
