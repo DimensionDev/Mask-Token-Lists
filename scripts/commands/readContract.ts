@@ -14,6 +14,7 @@ export async function readContract() {
   } catch (e) {
     console.log({ e })
   }
+  process.exit(0)
 }
 
 function createContract<T extends BaseContract>(web3: Web3 | null, address: string, ABI: AbiItem[]) {
@@ -26,3 +27,5 @@ function isValidAddress(address?: string): address is string {
   if (!address) return false
   return EthereumAddress.isValid(address)
 }
+
+readContract()
