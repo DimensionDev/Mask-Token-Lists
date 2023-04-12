@@ -7,7 +7,7 @@
   "main": "index.js",
   "scripts": {
     "build": "ts-node src/index.ts && ts-node src/generate-readme.ts",
-    "read-contract": "ts-node scripts/contract/index.ts",
+    "read-contract": "ts-node scripts/commands/readContract.ts",
     "prepare": "husky install",
     "prettier": "prettier -c .",
     "publish": "gh-pages -d ./dist",
@@ -22,6 +22,7 @@
     "bn.js": "^5.2.1",
     "cheerio": "^1.0.0-rc.12",
     "commander": "^9.4.1",
+    "events": "^3.3.0",
     "fast-json-stringify": "^5.4.0",
     "lodash": "^4.17.21",
     "puppeteer": "^19.0.0",
@@ -30,6 +31,9 @@
     "typescript": "^4.8.4",
     "urlcat": "^2.0.4",
     "wallet.ts": "^1.0.1",
+    "web3": "^1.9.0",
+    "web3-core": "^1.9.0",
+    "web3-eth-contract": "^1.9.0",
     "web3-utils": "^1.8.0"
   },
   "devDependencies": {
