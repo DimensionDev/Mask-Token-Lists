@@ -6,15 +6,15 @@ import { rpcMapping } from '../utils/base'
 import { ChainId, FungibleToken } from '../type'
 import type { AbiItem } from 'web3-utils'
 import Web3 from 'web3'
-import { getLatestReleasedTokenList } from './generate'
+import { getLatestReleasedTokenList } from '../utils/helpers'
 
-export async function readTokenInfoFromContract(chainId: ChainId) {
+export async function readTokenInfoFromContract(chainId: ChainId, toAddList?: FungibleToken[]) {
   const rpcUrl = rpcMapping[chainId] ?? ''
-  const latestReleaseTokenList: FungibleToken[] = await getLatestReleasedTokenList(chainId)
+  const tokenList: FungibleToken[] = toAddList ?? (await getLatestReleasedTokenList(chainId))
   const web3 = new Web3(rpcUrl)
 
   const allSettled = await Promise.allSettled(
-    latestReleaseTokenList.map(async (token) => {
+    tokenList.map(async (token) => {
       // if (token.isFromContract) return token
       const contract = createContract<ERC20>(web3, token.address, ERC20ABI as AbiItem[])
       try {
@@ -33,11 +33,12 @@ export async function readTokenInfoFromContract(chainId: ChainId) {
     .map((x) => (x.status === 'fulfilled' && x.value ? x.value : undefined))
     .filter((x) => Boolean(x)) as FungibleToken[]
 
-  if (results.length) {
+  if (results.length && !toAddList) {
     await writeTokensToFile(chainId, results)
+    process.exit(0)
+  } else {
+    return results
   }
-
-  process.exit(0)
 }
 
 function createContract<T extends BaseContract>(web3: Web3 | null, address: string, ABI: AbiItem[]) {

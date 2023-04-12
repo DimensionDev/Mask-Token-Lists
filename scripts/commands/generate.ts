@@ -6,12 +6,11 @@ import { prefetchCryptoRankCoins } from '../cache/cryptorank/batch'
 import { CryptoRank } from '../providers/cryptoRank'
 import { CoinMarketCap } from '../providers/coinmarketcap'
 import { SubScan } from '../providers/subScan'
-import urlcat from 'urlcat'
-import axios from 'axios'
 import { CoinGecko } from '../providers/coingecko'
 import { Explorer } from '../providers/explorer'
 import { SolanaFm } from '../providers/solanaFm'
-import { isSameAddress } from '../utils/helpers'
+import { isSameAddress, getLatestReleasedTokenList } from '../utils/helpers'
+import { readTokenInfoFromContract } from './readTokenInfoFromContract'
 
 const coinGeckoAPI = new CoinGecko()
 const explorerAPI = new Explorer()
@@ -21,19 +20,6 @@ const subScanAPI = new SubScan()
 const SolanaFmAPI = new SolanaFm()
 
 const providers = [coinGeckoAPI, explorerAPI, coinMarketCapAPI, subScanAPI, cryptoRankAPI, SolanaFmAPI]
-
-const TOKEN_LIST_BASE_URL = 'https://tokens.r2d2.to/'
-
-export async function getLatestReleasedTokenList(chainId: ChainId) {
-  const requestURL = urlcat(TOKEN_LIST_BASE_URL, 'latest/:chainId/tokens.json', { chainId })
-  try {
-    const listInfo = await axios.get<{ tokens: FungibleToken[] }>(requestURL)
-    return listInfo.data.tokens
-  } catch (e) {
-    console.log(`fetch latest released token list failed(chainId: ${chainId})`)
-    return []
-  }
-}
 
 export async function generate(targetChains: ChainId[]) {
   await prefetchCryptoRankCoins()
@@ -60,11 +46,13 @@ export async function generate(targetChains: ChainId[]) {
       }
     }
 
-    console.log(`The current chain get ${result.length} tokens`, { result })
+    const resultReadFromContract = await readTokenInfoFromContract(chain, result)
 
-    if (result.length) {
+    console.log(`The current chain get ${resultReadFromContract.length} tokens`, { result: resultReadFromContract })
+
+    if (resultReadFromContract.length) {
       const tokens = sortBy(
-        uniqBy([...latestReleaseTokenList, ...result], (x) => x.address.toLowerCase()),
+        uniqBy([...latestReleaseTokenList, ...resultReadFromContract], (x) => x.address.toLowerCase()),
         'symbol',
       ).filter((x) => {
         const blockedList = blockedTokenAddressMapping[x.chainId]

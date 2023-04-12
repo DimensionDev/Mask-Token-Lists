@@ -1,8 +1,9 @@
 name: Fetch token list
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  push:
+    branches:
+      - 'read-contract'
   workflow_dispatch:
 
 jobs:
