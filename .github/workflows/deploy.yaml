@@ -3,7 +3,7 @@ name: Fetch token list
 on:
   push:
     branches:
-      - 'add-conflux'
+      - 'add-conflux-2'
   workflow_dispatch:
 
 jobs:
