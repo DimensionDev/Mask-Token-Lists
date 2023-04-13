@@ -47,7 +47,6 @@ export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: strin
   [ChainId.Aurora]: (address) => `https://explorer.aurora.dev/token/${address}/token-transfers`,
   [ChainId.Optimistic]: (address) => `https://optimistic.etherscan.io/token/${address}`,
   [ChainId.Solana]: (address) => `https://solana.fm/address/${address}?cluster=mainnet-solanafmbeta`,
-  [ChainId.Conflux]: (address) => `https://evm.confluxscan.net/token/${address}`,
 }
 
 export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Promise<FungibleToken[]>>> = {
