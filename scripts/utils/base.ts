@@ -9,6 +9,7 @@ import { fetchPolygon, fetchPolygonForTokenDecimal } from './explorers/polygon'
 import { fetchBSC, fetchBSCForTokenDecimal } from './explorers/bsc'
 import { fetchETH, fetchETHForTokenDecimal } from './explorers/eth'
 import { fetchSolanaForTokenDecimal } from './explorers/solana'
+import { fetchConflux } from './explorers/conflux'
 import { Browser } from 'puppeteer'
 
 export function convertEnumToArray(e: any) {
@@ -32,6 +33,7 @@ export const explorerPagesMapping: Partial<Record<ChainId, string[]>> = {
   [ChainId.xDai]: ['https://gnosisscan.io/tokens?ps=100'],
   [ChainId.Aurora]: ['https://explorer.aurora.dev/tokens'],
   [ChainId.Optimistic]: ['https://optimistic.etherscan.io/tokens'],
+  [ChainId.Conflux]: ['https://evm.confluxscan.net/tokens'],
 }
 
 export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: string) => string>> = {
@@ -45,6 +47,7 @@ export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: strin
   [ChainId.Aurora]: (address) => `https://explorer.aurora.dev/token/${address}/token-transfers`,
   [ChainId.Optimistic]: (address) => `https://optimistic.etherscan.io/token/${address}`,
   [ChainId.Solana]: (address) => `https://solana.fm/address/${address}?cluster=mainnet-solanafmbeta`,
+  [ChainId.Conflux]: (address) => `https://evm.confluxscan.net/token/${address}`,
 }
 
 export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Promise<FungibleToken[]>>> = {
@@ -57,6 +60,7 @@ export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Prom
   [ChainId.xDai]: fetchGnosis,
   [ChainId.Aurora]: fetchAurora,
   [ChainId.Optimistic]: fetchOptimistic,
+  [ChainId.Conflux]: fetchConflux,
 }
 
 export const explorerFetchTokenDecimalMapping: Partial<
@@ -84,4 +88,5 @@ export const rpcMapping: Partial<Record<ChainId, string>> = {
   [ChainId.xDai]: 'https://rpc.gnosischain.com',
   [ChainId.Aurora]: 'https://mainnet.aurora.dev',
   [ChainId.Optimistic]: 'https://node.onekey.so/optimism',
+  [ChainId.Conflux]: 'https://evm.confluxrpc.com',
 }
