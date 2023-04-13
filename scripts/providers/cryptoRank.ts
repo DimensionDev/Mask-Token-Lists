@@ -126,6 +126,7 @@ export class CryptoRank implements Provider {
 
     const allSettled = await Promise.allSettled(
       toAddList.map(async (x) => {
+        if (!fetchTokenDecimalPage || !fetchTokenDecimal) return x
         const url = fetchTokenDecimalPage(x.address)
         try {
           const decimals = await fetchTokenDecimal(url, browser)

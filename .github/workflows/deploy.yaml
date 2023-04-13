@@ -22,6 +22,11 @@ jobs:
         run: npm run install
         if: steps.npm-cache.outputs.cache-hit != 'true'
 
+      - name: Sync Conflux Token List
+        id: sync-token-list-conflux
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli generate -- --include=1030 && npm run lint-fix
+
       - name: Sync Solana Token List
         id: sync-token-list-solana
         run: |

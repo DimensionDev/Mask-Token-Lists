@@ -68,6 +68,11 @@ jobs:
         run: |
           node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=42161 && npm run lint-fix
 
+      - name: Sync Conflux Token List
+        id: sync-token-list-conflux
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli read-contract -- --include=1030 && npm run lint-fix
+
       - name: Prettier Check
         run: npm run prettier
 
