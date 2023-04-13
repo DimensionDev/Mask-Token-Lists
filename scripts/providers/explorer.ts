@@ -30,7 +30,7 @@ export class Explorer implements Provider {
 
     let totalResults: FungibleToken[] = []
 
-    if (!fetch || !fetchPages || !fetchTokenDecimalPage || !fetchTokenDecimal) return totalResults
+    if (!fetch || !fetchPages) return totalResults
 
     for (let i = 0; i < fetchPages.length; i++) {
       const url = fetchPages[i]
@@ -43,6 +43,7 @@ export class Explorer implements Provider {
         const browser = await puppeteer.launch({ executablePath: executablePath(), timeout: 1000000 })
         const allSettled = await Promise.allSettled(
           newAddedResults.map(async (x) => {
+            if (!fetchTokenDecimalPage || !fetchTokenDecimal) return x
             const url = fetchTokenDecimalPage(x.address)
             try {
               const decimals = await fetchTokenDecimal(url, browser)
