@@ -1,6 +1,7 @@
 import { ChainId, FungibleToken } from '../type'
 import { getLatestReleasedTokenList, isSameAddress } from '../utils/helpers'
 import { explorerFetchMapping, explorerPagesMapping } from '../utils/base'
+import { writeTokensToFile } from '../utils'
 
 export async function rankByMarketCap(chainId: ChainId, toAddList?: FungibleToken[]) {
   const fetch = explorerFetchMapping[chainId]
@@ -16,16 +17,9 @@ export async function rankByMarketCap(chainId: ChainId, toAddList?: FungibleToke
     return tokenWithRank?.rank ? { ...x, rank: tokenWithRank.rank } : x
   })
 
-  console.log({ tokenListWithRank })
+  if (results.length && !toAddList) {
+    await writeTokensToFile(chainId, results)
+  }
 
-  // const results = allSettled
-  //   .map((x) => (x.status === 'fulfilled' && x.value ? x.value : undefined))
-  //   .filter((x) => Boolean(x)) as FungibleToken[]
-
-  // if (results.length && !toAddList) {
-  //   await writeTokensToFile(chainId, results)
-  //   process.exit(0)
-  // } else {
-  //   return results
-  // }
+  process.exit(0)
 }
