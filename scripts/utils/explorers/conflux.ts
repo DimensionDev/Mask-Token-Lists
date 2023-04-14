@@ -5,7 +5,6 @@ import * as cheerio from 'cheerio'
 import puppeteer from 'puppeteer-extra'
 import { executablePath } from 'puppeteer'
 import StealthPlugin from 'puppeteer-extra-plugin-stealth'
-import { Browser } from 'puppeteer'
 
 puppeteer.use(StealthPlugin())
 

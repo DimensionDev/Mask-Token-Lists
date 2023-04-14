@@ -6,6 +6,7 @@ export function createFungibleToken(
   fullName: string,
   decimals: number,
   originLogoURI: string,
+  rank?: number,
 ): FungibleToken {
   return {
     chainId,
@@ -19,5 +20,6 @@ export function createFungibleToken(
     decimals,
     logoURI: generateLogoURL(ChainId.Aurora, address),
     originLogoURI,
+    rank,
   }
 }
