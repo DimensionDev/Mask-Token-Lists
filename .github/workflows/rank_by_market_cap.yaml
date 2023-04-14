@@ -38,15 +38,15 @@ jobs:
       #   run: |
       #     node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=137 && npm run lint-fix
 
-      - name: Sync OP Token List
-        id: sync-token-list-op
-        run: |
-          node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=10 && npm run lint-fix
-
-      # - name: Sync Aurora Token List
-      #   id: sync-token-list-aurora
+      # - name: Sync OP Token List
+      #   id: sync-token-list-op
       #   run: |
-      #     node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=1313161554 && npm run lint-fix
+      #     node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=10 && npm run lint-fix
+
+      - name: Sync Aurora Token List
+        id: sync-token-list-aurora
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=1313161554 && npm run lint-fix
 
       # - name: Sync Gnosis Token List
       #   id: sync-token-list-gnosis
