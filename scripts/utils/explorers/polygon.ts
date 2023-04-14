@@ -37,8 +37,17 @@ export async function fetchPolygon(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
+    const rank = q('td:first-child', x).text()
+
     results.push(
-      createFungibleToken(ChainId.Polygon, address, fullName, 18, logo ? `https://polygonscan.com${logo}` : ''),
+      createFungibleToken(
+        ChainId.Polygon,
+        address,
+        fullName,
+        18,
+        logo ? `https://polygonscan.com${logo}` : '',
+        rank ? Number(rank) : undefined,
+      ),
     )
   }
   return results
