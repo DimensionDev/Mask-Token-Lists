@@ -26,16 +26,10 @@ export async function writeTokensToFile(chain: ChainId, tokens: FungibleToken[])
 
 function generate(tokens: FungibleToken[]) {
   const tokenList = generateTokenList(
-    tokens
-      .map((x) => ({
-        ...x,
-        address: x.chainId !== ChainId.Solana ? EthereumAddress.checksumAddress(x.address) : x.address,
-      }))
-      .sort((a, z) => {
-        if (a.name > z.name) return 1
-        if (a.name < z.name) return -1
-        return 0
-      }),
+    tokens.map((x) => ({
+      ...x,
+      address: x.chainId !== ChainId.Solana ? EthereumAddress.checksumAddress(x.address) : x.address,
+    })),
     {
       name: 'Mask Network',
       logoURI:
