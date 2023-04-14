@@ -48,30 +48,30 @@ jobs:
       #   run: |
       #     node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=1313161554 && npm run lint-fix
 
-      - name: Sync Gnosis Token List
-        id: sync-token-list-gnosis
+      # - name: Sync Gnosis Token List
+      #   id: sync-token-list-gnosis
+      #   run: |
+      #     node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=100 && npm run lint-fix
+
+      - name: Sync Fantom Token List
+        id: sync-token-list-fantom
         run: |
-          node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=100 && npm run lint-fix
+          node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=250 && npm run lint-fix
 
-      # - name: Sync Fantom Token List
-      #   id: sync-token-list-fantom
-      #   run: |
-      #     node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=250 && npm run lint-fix
+      - name: Sync Avalanche Token List
+        id: sync-token-list-avalanche
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=43114 && npm run lint-fix
 
-      # - name: Sync Avalanche Token List
-      #   id: sync-token-list-avalanche
-      #   run: |
-      #     node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=43114 && npm run lint-fix
+      - name: Sync Arbitrum Token List
+        id: sync-token-list-arbitrum
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=42161 && npm run lint-fix
 
-      # - name: Sync Arbitrum Token List
-      #   id: sync-token-list-arbitrum
-      #   run: |
-      #     node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=42161 && npm run lint-fix
-
-      # - name: Sync Conflux Token List
-      #   id: sync-token-list-conflux
-      #   run: |
-      #     node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=1030 && npm run lint-fix
+      - name: Sync Conflux Token List
+        id: sync-token-list-conflux
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=1030 && npm run lint-fix
 
       - name: Prettier Check
         run: npm run prettier

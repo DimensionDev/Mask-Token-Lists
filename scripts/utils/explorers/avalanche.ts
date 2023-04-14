@@ -37,8 +37,17 @@ export async function fetchAvalanche(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
+    const rank = q('td:first-child', x).text()
+
     results.push(
-      createFungibleToken(ChainId.Avalanche, address, fullName, 18, logo ? `https://snowtrace.io${logo}` : ''),
+      createFungibleToken(
+        ChainId.Avalanche,
+        address,
+        fullName,
+        18,
+        logo ? `https://snowtrace.io${logo}` : '',
+        rank ? Number(rank) : undefined,
+      ),
     )
   }
   return results

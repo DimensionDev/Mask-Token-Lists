@@ -22,21 +22,25 @@ export async function fetchConflux(url: string) {
 
   await browser.close()
   const q = cheerio.load(tableElement ?? '')
-  const table = q('table tbody .ant-table-row td:nth-child(2)').map((_, x) => x)
+  const table = q('table tbody .ant-table-row').map((_, x) => x)
   let results: FungibleToken[] = []
 
   for (const x of table) {
-    const logo = q('img', x).attr('src')
-    const fullName = q('a span', x).text()
+    const logo = q('td:nth-child(2) img', x).attr('src')
+    const fullName = q('td:nth-child(2) a span', x).text()
     if (!fullName) continue
 
-    const pageLink = q('a', x).attr('href')
+    const pageLink = q('td:nth-child(2) a', x).attr('href')
     if (!pageLink) continue
 
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(createFungibleToken(ChainId.Conflux, address, fullName, 18, logo ?? ''))
+    const rank = q('td:first-child', x).text()
+
+    results.push(
+      createFungibleToken(ChainId.Conflux, address, fullName, 18, logo ?? '', rank ? Number(rank) : undefined),
+    )
   }
   return results
 }
