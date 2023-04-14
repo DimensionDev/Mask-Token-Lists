@@ -18,7 +18,7 @@ export async function fetchETH(url: string) {
   await page.setViewport({ width: 1080, height: 1024 })
 
   const tableSelector = '#ContentPlaceHolder1_divERC20Tokens'
-  const tableElementHandler = await page.waitForSelector(tableSelector)
+  const tableElementHandler = await page.waitForSelector(tableSelector, { timeout: 0 })
   const tableElement = await tableElementHandler?.evaluate((x) => x.innerHTML)
 
   await browser.close()
@@ -37,7 +37,18 @@ export async function fetchETH(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(createFungibleToken(ChainId.Mainnet, address, fullName, 18, logo ? `https://etherscan.io${logo}` : ''))
+    const rank = q('td:first-child', x).text()
+
+    results.push(
+      createFungibleToken(
+        ChainId.Mainnet,
+        address,
+        fullName,
+        18,
+        logo ? `https://etherscan.io${logo}` : '',
+        rank ? Number(rank) : undefined,
+      ),
+    )
   }
   return results
 }

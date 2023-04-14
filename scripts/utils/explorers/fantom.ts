@@ -37,7 +37,18 @@ export async function fetchFantom(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(createFungibleToken(ChainId.Fantom, address, fullName, 18, logo ? `https://ftmscan.com${logo}` : ''))
+    const rank = q('td:first-child', x).text()
+
+    results.push(
+      createFungibleToken(
+        ChainId.Fantom,
+        address,
+        fullName,
+        18,
+        logo ? `https://ftmscan.com${logo}` : '',
+        rank ? Number(rank) : undefined,
+      ),
+    )
   }
   return results
 }

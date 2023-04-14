@@ -37,6 +37,8 @@ export async function fetchOptimistic(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
+    const rank = q('td:first-child', x).text()
+
     results.push(
       createFungibleToken(
         ChainId.Optimistic,
@@ -44,6 +46,7 @@ export async function fetchOptimistic(url: string) {
         fullName,
         18,
         logo ? `https://optimistic.etherscan.io${logo}` : '',
+        rank ? Number(rank) : undefined,
       ),
     )
   }

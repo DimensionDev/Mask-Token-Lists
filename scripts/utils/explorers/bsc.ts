@@ -37,7 +37,18 @@ export async function fetchBSC(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(createFungibleToken(ChainId.BNB, address, fullName, 18, logo ? `https://bscscan.com${logo}` : ''))
+    const rank = q('td:first-child', x).text()
+
+    results.push(
+      createFungibleToken(
+        ChainId.BNB,
+        address,
+        fullName,
+        18,
+        logo ? `https://bscscan.com${logo}` : '',
+        rank ? Number(rank) : undefined,
+      ),
+    )
   }
   return results
 }

@@ -37,7 +37,18 @@ export async function fetchGnosis(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    results.push(createFungibleToken(ChainId.xDai, address, fullName, 18, logo ? `https://gnosisscan.io${logo}` : ''))
+    const rank = q('td:first-child', x).text()
+
+    results.push(
+      createFungibleToken(
+        ChainId.xDai,
+        address,
+        fullName,
+        18,
+        logo ? `https://gnosisscan.io${logo}` : '',
+        rank ? Number(rank) : undefined,
+      ),
+    )
   }
   return results
 }

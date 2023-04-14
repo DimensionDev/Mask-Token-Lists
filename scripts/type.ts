@@ -39,6 +39,7 @@ export interface FungibleToken {
   logoURI?: string
   originLogoURI?: string
   isFromContract?: boolean
+  rank?: number
 }
 
 export interface Provider {
