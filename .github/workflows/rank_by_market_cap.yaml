@@ -1,4 +1,4 @@
-name: Read contract
+name: Rank by market cap
 
 on:
   push:
