@@ -37,7 +37,7 @@ export async function fetchETH(url: string) {
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))
     if (!address) continue
 
-    const rank = q('td:first-child').text()
+    const rank = q('td:first-child', x).text()
 
     results.push(
       createFungibleToken(
