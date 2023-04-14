@@ -23,15 +23,15 @@ jobs:
         run: npm install
         if: steps.npm-cache.outputs.cache-hit != 'true'
 
-      - name: Sync ETH Token List
-        id: sync-token-list-eth
-        run: |
-          node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=1 && npm run lint-fix
-
-      # - name: Sync BSC Token List
-      #   id: sync-token-list-bsc
+      # - name: Sync ETH Token List
+      #   id: sync-token-list-eth
       #   run: |
-      #     node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=56 && npm run lint-fix
+      #     node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=1 && npm run lint-fix
+
+      - name: Sync BSC Token List
+        id: sync-token-list-bsc
+        run: |
+          node node_modules/puppeteer/install.js && npm run cli rank-by-market-cap -- --include=56 && npm run lint-fix
 
       # - name: Sync Polygon Token List
       #   id: sync-token-list-polygon
