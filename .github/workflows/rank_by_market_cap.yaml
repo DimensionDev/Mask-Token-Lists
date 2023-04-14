@@ -1,9 +1,8 @@
 name: Rank by market cap
 
 on:
-  push:
-    branches:
-      - 'rank-by-market-cap-2'
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
