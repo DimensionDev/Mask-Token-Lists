@@ -38,7 +38,7 @@ export async function fetchETH(url: string) {
     if (!address) continue
 
     const rank = q('td:first-child', x).text()
-
+    console.log({ rank })
     results.push(
       createFungibleToken(
         ChainId.Mainnet,
