@@ -33,7 +33,9 @@ export const explorerPagesMapping: Partial<Record<ChainId, string[]>> = {
   [ChainId.xDai]: ['https://gnosisscan.io/tokens?ps=100'],
   [ChainId.Aurora]: ['https://explorer.aurora.dev/tokens'],
   [ChainId.Optimistic]: ['https://optimistic.etherscan.io/tokens'],
-  [ChainId.Conflux]: ['https://evm.confluxscan.net/tokens'],
+  [ChainId.Conflux]: [...Array(3)].map(
+    (x, i) => `https://evm.confluxscan.net/tokens?limit=100&orderBy=totalPrice&reverse=true&skip=${i * 100}`,
+  ),
 }
 
 export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: string) => string>> = {

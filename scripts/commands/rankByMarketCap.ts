@@ -7,7 +7,7 @@ export async function rankByMarketCap(chainId: ChainId, toAddList?: FungibleToke
   const fetch = explorerFetchMapping[chainId]
   const fetchPage = explorerPagesMapping[chainId]?.[0]
 
-  if (!fetch || !fetchPage) return
+  if (!fetch || !fetchPage) return []
   const tokenList: FungibleToken[] = toAddList ?? (await getLatestReleasedTokenList(chainId))
 
   const tokenListWithRank = await fetch(fetchPage)
@@ -22,10 +22,8 @@ export async function rankByMarketCap(chainId: ChainId, toAddList?: FungibleToke
       if (a.rank && (!z.rank || z.rank - a.rank > 0)) return -1
       return 0
     })
-
   if (results.length && !toAddList) {
     await writeTokensToFile(chainId, results)
   }
-
-  process.exit(0)
+  return results
 }
