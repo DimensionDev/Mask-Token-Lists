@@ -2,7 +2,7 @@ name: Rank by market cap
 
 on:
   push:
-    on:
+    branches:
       - 'rank-by-market-cap'
   workflow_dispatch:
 

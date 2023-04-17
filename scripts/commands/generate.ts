@@ -52,22 +52,23 @@ export async function generate(targetChains: ChainId[]) {
     if (!resultReadFromContract) return
 
     console.log(`The current chain get ${resultReadFromContract.length} tokens`, { result: resultReadFromContract })
+    if (resultReadFromContract.length) {
+      const tokens = uniqBy([...latestReleaseTokenList, ...resultReadFromContract], (x) =>
+        x.address.toLowerCase(),
+      ).filter((x) => {
+        const blockedList = blockedTokenAddressMapping[x.chainId]
+        return (
+          x.address &&
+          x.symbol &&
+          x.chainId &&
+          x.decimals &&
+          x.name &&
+          !blockedList?.some((blockedAddress) => isSameAddress(x.address, blockedAddress))
+        )
+      })
 
-    const tokens = uniqBy([...latestReleaseTokenList, ...resultReadFromContract], (x) =>
-      x.address.toLowerCase(),
-    ).filter((x) => {
-      const blockedList = blockedTokenAddressMapping[x.chainId]
-      return (
-        x.address &&
-        x.symbol &&
-        x.chainId &&
-        x.decimals &&
-        x.name &&
-        !blockedList?.some((blockedAddress) => isSameAddress(x.address, blockedAddress))
-      )
-    })
-
-    await writeTokensToFile(chain, await rankByMarketCap(chain, tokens))
+      await writeTokensToFile(chain, await rankByMarketCap(chain, tokens))
+    }
   }
 
   console.log('Generate success!')
