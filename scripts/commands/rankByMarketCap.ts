@@ -22,7 +22,6 @@ export async function rankByMarketCap(chainId: ChainId, toAddList?: FungibleToke
       if (a.rank && (!z.rank || z.rank - a.rank > 0)) return -1
       return 0
     })
-  console.log({ results })
   if (results.length && !toAddList) {
     await writeTokensToFile(chainId, results)
   }
