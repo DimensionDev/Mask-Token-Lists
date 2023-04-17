@@ -1,7 +1,7 @@
 import { ChainId, FungibleToken } from '../type'
 import { writeTokensToFile } from '../utils'
 import { blockedTokenAddressMapping } from '../utils/blockedTokenAddressMapping'
-import { sortBy, uniqBy } from 'lodash'
+import { uniqBy } from 'lodash'
 import { prefetchCryptoRankCoins } from '../cache/cryptorank/batch'
 import { CryptoRank } from '../providers/cryptoRank'
 import { CoinMarketCap } from '../providers/coinmarketcap'
@@ -11,6 +11,7 @@ import { Explorer } from '../providers/explorer'
 import { SolanaFm } from '../providers/solanaFm'
 import { isSameAddress, getLatestReleasedTokenList } from '../utils/helpers'
 import { readTokenInfoFromContract } from './readTokenInfoFromContract'
+import { rankByMarketCap } from './rankByMarketCap'
 
 const coinGeckoAPI = new CoinGecko()
 const explorerAPI = new Explorer()
@@ -52,23 +53,21 @@ export async function generate(targetChains: ChainId[]) {
 
     console.log(`The current chain get ${resultReadFromContract.length} tokens`, { result: resultReadFromContract })
 
-    if (resultReadFromContract.length) {
-      const tokens = sortBy(
-        uniqBy([...latestReleaseTokenList, ...resultReadFromContract], (x) => x.address.toLowerCase()),
-        'symbol',
-      ).filter((x) => {
-        const blockedList = blockedTokenAddressMapping[x.chainId]
-        return (
-          x.address &&
-          x.symbol &&
-          x.chainId &&
-          x.decimals &&
-          x.name &&
-          !blockedList?.some((blockedAddress) => isSameAddress(x.address, blockedAddress))
-        )
-      })
-      await writeTokensToFile(chain, tokens)
-    }
+    const tokens = uniqBy([...latestReleaseTokenList, ...resultReadFromContract], (x) =>
+      x.address.toLowerCase(),
+    ).filter((x) => {
+      const blockedList = blockedTokenAddressMapping[x.chainId]
+      return (
+        x.address &&
+        x.symbol &&
+        x.chainId &&
+        x.decimals &&
+        x.name &&
+        !blockedList?.some((blockedAddress) => isSameAddress(x.address, blockedAddress))
+      )
+    })
+
+    await writeTokensToFile(chain, await rankByMarketCap(chain, tokens))
   }
 
   console.log('Generate success!')

@@ -95,6 +95,7 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
     [ChainId.Harmony]: [Harmony],
     [ChainId.Harmony_Testnet]: [HarmonyTestnet],
     [ChainId.Palm]: [Palm],
+    [ChainId.Solana]: [],
   }
 }
 
@@ -121,16 +122,10 @@ function generateFungibleTokens(chainId: ChainId) {
 export function generate(chainId: ChainId) {
   const tokens = generateFungibleTokens(chainId)
   const tokenList = generateTokenList(
-    tokens
-      .map((x) => ({
-        ...x,
-        address: EthereumAddress.checksumAddress(x.address),
-      }))
-      .sort((a, z) => {
-        if (a.name > z.name) return 1
-        if (a.name < z.name) return -1
-        return 0
-      }),
+    tokens.map((x) => ({
+      ...x,
+      address: EthereumAddress.checksumAddress(x.address),
+    })),
     {
       name: 'Mask Network',
       logoURI:
