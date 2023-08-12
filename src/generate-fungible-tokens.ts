@@ -7,6 +7,7 @@ import Rinkeby from './fungible-tokens/rinkeby.json'
 import Optimistic from './fungible-tokens/optimistic.json'
 import Fuse from './fungible-tokens/fuse.json'
 import BNB from './fungible-tokens/bnb.json'
+import Base from './fungible-tokens/base.json'
 import Chapel from './fungible-tokens/chapel.json'
 import xDai from './fungible-tokens/xdai.json'
 import Sokol from './fungible-tokens/sokol.json'
@@ -73,6 +74,7 @@ function getFungibleTokenLists(): Record<ChainId, FungibleToken[][]> {
     [ChainId.Kardiachain]: [Kardiachain],
     [ChainId.Cronos]: [Cronos],
     [ChainId.BNB]: [BNB, Pancake],
+    [ChainId.Base]: [Base],
     [ChainId.Sokol]: [Sokol],
     [ChainId.Chapel]: [Chapel],
     [ChainId.xDai]: [xDai],
@@ -112,8 +114,8 @@ function generateFungibleTokens(chainId: ChainId) {
     const logoURI = token.logoURI
       ? token.logoURI
       : chainId === ChainId.Mainnet
-      ? getMetaMaskLogoURL(EthereumAddress.checksumAddress(token.address))
-      : ''
+        ? getMetaMaskLogoURL(EthereumAddress.checksumAddress(token.address))
+        : ''
 
     return logoURI ? { ...rest, logoURI } : { ...rest }
   })

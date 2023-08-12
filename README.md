@@ -64,6 +64,7 @@ npm run cli generate
 | Kardiachain     |          24 | [latest][link-kardiachain]     | [token-list][viewer-kardiachain]     |
 | Cronos          |          25 | [latest][link-cronos]          | [token-list][viewer-cronos]          |
 | BNB             |          56 | [latest][link-bnb]             | [token-list][viewer-bnb]             |
+| Base            |        8453 | [latest][link-base]            | [token-list][viewer-base]            |
 | Sokol           |          77 | [latest][link-sokol]           | [token-list][viewer-sokol]           |
 | Chapel          |          97 | [latest][link-chapel]          | [token-list][viewer-chapel]          |
 | xDai            |         100 | [latest][link-xdai]            | [token-list][viewer-xdai]            |
@@ -86,6 +87,7 @@ npm run cli generate
 | Harmony         |  1666600000 | [latest][link-harmony]         | [token-list][viewer-harmony]         |
 | Harmony_Testnet |  1666700000 | [latest][link-harmony_testnet] | [token-list][viewer-harmony_testnet] |
 | Palm            | 11297108109 | [latest][link-palm]            | [token-list][viewer-palm]            |
+| Solana          |      solana | [latest][link-solana]          | [token-list][viewer-solana]          |
 
 [link-mainnet]: https://tokens.r2d2.to/latest/1/tokens.json
 [link-ropsten]: https://tokens.r2d2.to/latest/3/tokens.json
@@ -94,6 +96,7 @@ npm run cli generate
 [link-kardiachain]: https://tokens.r2d2.to/latest/24/tokens.json
 [link-cronos]: https://tokens.r2d2.to/latest/25/tokens.json
 [link-bnb]: https://tokens.r2d2.to/latest/56/tokens.json
+[link-base]: https://tokens.r2d2.to/latest/8453/tokens.json
 [link-sokol]: https://tokens.r2d2.to/latest/77/tokens.json
 [link-chapel]: https://tokens.r2d2.to/latest/97/tokens.json
 [link-xdai]: https://tokens.r2d2.to/latest/100/tokens.json
@@ -116,6 +119,7 @@ npm run cli generate
 [link-harmony]: https://tokens.r2d2.to/latest/1666600000/tokens.json
 [link-harmony_testnet]: https://tokens.r2d2.to/latest/1666700000/tokens.json
 [link-palm]: https://tokens.r2d2.to/latest/11297108109/tokens.json
+[link-solana]: https://tokens.r2d2.to/latest/solana/tokens.json
 [viewer-mainnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1/tokens.json
 [viewer-ropsten]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/3/tokens.json
 [viewer-rinkeby]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/4/tokens.json
@@ -123,6 +127,7 @@ npm run cli generate
 [viewer-kardiachain]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/24/tokens.json
 [viewer-cronos]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/25/tokens.json
 [viewer-bnb]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/56/tokens.json
+[viewer-base]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/8453/tokens.json
 [viewer-sokol]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/77/tokens.json
 [viewer-chapel]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/97/tokens.json
 [viewer-xdai]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/100/tokens.json
@@ -145,5 +150,6 @@ npm run cli generate
 [viewer-harmony]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666600000/tokens.json
 [viewer-harmony_testnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666700000/tokens.json
 [viewer-palm]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/11297108109/tokens.json
+[viewer-solana]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/solana/tokens.json
 
 <!-- end versions -->
