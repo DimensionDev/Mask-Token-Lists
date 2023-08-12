@@ -114,8 +114,8 @@ function generateFungibleTokens(chainId: ChainId) {
     const logoURI = token.logoURI
       ? token.logoURI
       : chainId === ChainId.Mainnet
-        ? getMetaMaskLogoURL(EthereumAddress.checksumAddress(token.address))
-        : ''
+      ? getMetaMaskLogoURL(EthereumAddress.checksumAddress(token.address))
+      : ''
 
     return logoURI ? { ...rest, logoURI } : { ...rest }
   })
