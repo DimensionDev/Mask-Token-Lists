@@ -6,6 +6,7 @@ export enum ChainId {
   Kardiachain = 24,
   Cronos = 25,
   BNB = 56,
+  Base = 8453,
   Sokol = 77,
   Chapel = 97,
   xDai = 100,
