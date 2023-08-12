@@ -1,34 +1,34 @@
 [
-    {
-        "name": "Dackie",
-        "symbol": "DACKIE",
-        "address": "0xc2BC7A73613B9bD5F373FE10B55C59a69F4D617B",
-        "chainId": 8453,
-        "decimals": 18,
-        "logoURI": "https://raw.githubusercontent.com/DackieSwap/dackieswap-tokens/main/images/8453/tokens/0xc2BC7A73613B9bD5F373FE10B55C59a69F4D617B.png"
-    },
-    {
-        "name": "Axelar Wrapped USDC",
-        "symbol": "axlUSDC",
-        "address": "0xEB466342C4d449BC9f53A865D5Cb90586f405215",
-        "chainId": 8453,
-        "decimals": 6,
-        "logoURI": "https://raw.githubusercontent.com/DackieSwap/dackieswap-tokens/main/images/8453/tokens/0xEB466342C4d449BC9f53A865D5Cb90586f405215.png"
-    },
-    {
-        "name": "USD Base Coin",
-        "symbol": "USDbC",
-        "address": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
-        "chainId": 8453,
-        "decimals": 6,
-        "logoURI": "https://raw.githubusercontent.com/DackieSwap/dackieswap-tokens/main/images/8453/tokens/0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA.png"
-    },
-    {
-        "name": "Coinbase Wrapped Staked ETH",
-        "symbol": "cbETH",
-        "address": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
-        "chainId": 8453,
-        "decimals": 18,
-        "logoURI": "https://raw.githubusercontent.com/DackieSwap/dackieswap-tokens/main/images/8453/tokens/0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22.png"
-    }
+  {
+    "name": "Dackie",
+    "symbol": "DACKIE",
+    "address": "0xc2BC7A73613B9bD5F373FE10B55C59a69F4D617B",
+    "chainId": 8453,
+    "decimals": 18,
+    "originLogoURI": "https://raw.githubusercontent.com/DackieSwap/dackieswap-tokens/main/images/8453/tokens/0xc2BC7A73613B9bD5F373FE10B55C59a69F4D617B.png"
+  },
+  {
+    "name": "Axelar Wrapped USDC",
+    "symbol": "axlUSDC",
+    "address": "0xEB466342C4d449BC9f53A865D5Cb90586f405215",
+    "chainId": 8453,
+    "decimals": 6,
+    "originLogoURI": "https://raw.githubusercontent.com/DackieSwap/dackieswap-tokens/main/images/8453/tokens/0xEB466342C4d449BC9f53A865D5Cb90586f405215.png"
+  },
+  {
+    "name": "USD Base Coin",
+    "symbol": "USDbC",
+    "address": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
+    "chainId": 8453,
+    "decimals": 6,
+    "originLogoURI": "https://raw.githubusercontent.com/DackieSwap/dackieswap-tokens/main/images/8453/tokens/0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA.png"
+  },
+  {
+    "name": "Coinbase Wrapped Staked ETH",
+    "symbol": "cbETH",
+    "address": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
+    "chainId": 8453,
+    "decimals": 18,
+    "originLogoURI": "https://raw.githubusercontent.com/DackieSwap/dackieswap-tokens/main/images/8453/tokens/0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22.png"
+  }
 ]
