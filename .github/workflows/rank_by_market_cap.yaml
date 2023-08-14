@@ -3,7 +3,7 @@ name: Rank by market cap
 on:
   push:
     branches:
-      - 'rank-by-market-cap'
+      - 'add-base'
   workflow_dispatch:
 
 jobs:
