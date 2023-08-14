@@ -19,13 +19,18 @@ jobs:
           key: npm-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
 
       - name: NPM install
-        run: npm run install
+        run: npm install
         if: steps.npm-cache.outputs.cache-hit != 'true'
 
       - name: Sync Conflux Token List
         id: sync-token-list-conflux
         run: |
           node node_modules/puppeteer/install.js && npm run cli generate -- --include=1030 && npm run lint-fix
+
+      - name: Sync Base Token List
+        id: sync-token-list-base
+        run: |
+          npm run cli generate -- --include=8453 --static && npm run lint-fix
 
       - name: Sync Solana Token List
         id: sync-token-list-solana
