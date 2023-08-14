@@ -3,7 +3,7 @@ name: Fetch token list
 on:
   push:
     branches:
-      - 'add-base'
+      - 'rank-by-market-cap'
   workflow_dispatch:
 
 jobs:
