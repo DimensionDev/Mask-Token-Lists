@@ -1,9 +1,8 @@
 name: Fetch token list
 
 on:
-  push:
-    branches:
-      - 'add-base'
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
