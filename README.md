@@ -3,53 +3,7 @@
 The token lists for Mask Network.
 
 - List Name: Mask Network
-- Link to the official homepage of the list manager: <https://mask.io>
-
-## Setup
-
-```bash
-npm run install # install dependencies
-npm run build # build token lists
-```
-
-## Steps for new chain
-
-- Add the chain id in [types.ts](src/types.ts).
-- Add your token lists into [src/fungible-tokens/](src/fungible-tokens/) or [src/non-fungible-tokens/](src/non-fungible-tokens/).
-- Run `npm run build` to ensure everything is working great.
-- Don't forget to bump version in `package.json`.
-- Update below two tables in README file here.
-
-## Steps for adding new token
-
-- Add the new token information to [DimensionDev/assets](https://github.com/DimensionDev/assets/tree/master/blockchains). The token logo file MUST be and named
-  as `logo.png`(`svg` not supported), then from which ci uploads to cloudflare to generate an image link which being logged within `Upload Image` step of the
-  github ci workflow `cf-upload`.
-- Using the above image link for `logoURI` attribute of the token you'd like to add to [src/fungible-tokens/](src/fungible-tokens/) or
-  [src/non-fungible-tokens/](src/non-fungible-tokens/).
-- Don't forget to bump version in `package.json`.
-- Rise a pull request in this repository.
-
-## Steps for updating token logo
-
-It requires two separate commits to trigger Cloudflare to update its resource.
-
-1. Delete the `logo.png` that needs to be updated.
-1. Add the new `logo.png`.
-
-## Steps for generate token list
-
-Generate target chain's token list:
-
-```bash
-npm run cli generate -- --include=<chainId>
-```
-
-Generate all support chains list:
-
-```bash
-npm run cli generate
-```
+- Link to the official homepage of the list manager: [https://mask.io](https://mask.io)
 
 ## Versions based on chain id
 
@@ -88,6 +42,8 @@ npm run cli generate
 | Harmony_Testnet |  1666700000 | [latest][link-harmony_testnet] | [token-list][viewer-harmony_testnet] |
 | Palm            | 11297108109 | [latest][link-palm]            | [token-list][viewer-palm]            |
 | Solana          |      solana | [latest][link-solana]          | [token-list][viewer-solana]          |
+
+<!-- end versions -->
 
 [link-mainnet]: https://tokens.r2d2.to/latest/1/tokens.json
 [link-ropsten]: https://tokens.r2d2.to/latest/3/tokens.json
@@ -151,5 +107,3 @@ npm run cli generate
 [viewer-harmony_testnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666700000/tokens.json
 [viewer-palm]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/11297108109/tokens.json
 [viewer-solana]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/solana/tokens.json
-
-<!-- end versions -->
