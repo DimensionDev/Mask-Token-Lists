@@ -2,7 +2,10 @@ import { ChainId, FungibleToken } from '../type'
 import { writeTokensToFile } from '../utils'
 import { blockedTokenAddressMapping } from '../utils/blockedTokenAddressMapping'
 import { uniqBy } from 'lodash'
-import { prefetchCryptoRankCoins } from '../cache/cryptorank/batch'
+import * as fs from 'node:fs/promises'
+import { pick } from 'lodash'
+import axios from 'axios'
+import { cryptoRankcacheDir } from '../utils/file'
 import { CryptoRank } from '../providers/cryptoRank'
 import { CoinMarketCap } from '../providers/coinmarketcap'
 import { SubScan } from '../providers/subScan'
@@ -73,4 +76,24 @@ export async function generate(targetChains: ChainId[]) {
 
   console.log('Generate success!')
   process.exit(0)
+}
+
+async function prefetchCryptoRankCoins() {
+  console.log('Prefetch CryptoRank Coins from remote.')
+  const res = await axios.get<{ data: any[] }>('https://api.cryptorank.io/v0/coins', {
+    headers: {
+      accept: 'application/json, text/plain, */*',
+      'content-type': 'application/json; charset=utf-8',
+      'User-Agent':
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+    },
+  })
+  const result = []
+
+  for (const contentJSONElement of res.data.data) {
+    result.push(pick(contentJSONElement, ['rank', 'key', 'name', 'symbol', 'type', 'image', 'tokens']))
+  }
+
+  await fs.writeFile(`${cryptoRankcacheDir}/data.json`, JSON.stringify(result))
+  console.log(`Prefetched done, the list length is ${result.length}`)
 }
