@@ -20,7 +20,7 @@ jobs:
           key: npm-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
 
       - name: NPM install
-        run: npm run install
+        run: npm install
         if: steps.npm-cache.outputs.cache-hit != 'true'
 
       # - name: Sync Conflux Token List
