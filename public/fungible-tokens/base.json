@@ -41,7 +41,7 @@
   },
   {
     "name": "Magic Internet Money",
-    "symbol": "MM",
+    "symbol": "MIM",
     "address": "0x4A3A6Dd60A34bB2Aba60D73B4C88315E9CeB6A3D",
     "chainId": 8453,
     "decimals": 18,
