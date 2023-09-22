@@ -93,7 +93,7 @@ async function prefetchCryptoRankCoins() {
   for (const contentJSONElement of res.data.data) {
     result.push(pick(contentJSONElement, ['rank', 'key', 'name', 'symbol', 'type', 'image', 'tokens']))
   }
-
+  await fs.mkdir(cryptoRankcacheDir, { recursive: true })
   await fs.writeFile(`${cryptoRankcacheDir}/data.json`, JSON.stringify(result))
   console.log(`Prefetched done, the list length is ${result.length}`)
 }
