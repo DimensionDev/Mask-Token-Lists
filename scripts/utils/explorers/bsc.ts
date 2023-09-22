@@ -17,7 +17,7 @@ export async function fetchBSC(url: string) {
   page.once('error', (error) => console.log('Failed to load BSC Page!', error))
   await page.setViewport({ width: 1080, height: 1024 })
 
-  const tableSelector = '#ContentPlaceHolder1_divresult'
+  const tableSelector = '#ContentPlaceHolder1_tblErc20Tokens'
   const tableElementHandler = await page.waitForSelector(tableSelector)
   const tableElement = await tableElementHandler?.evaluate((x) => x.innerHTML)
 
