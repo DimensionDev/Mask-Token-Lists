@@ -29,7 +29,7 @@ export async function generate(targetChains: ChainId[]) {
   await prefetchCryptoRankCoins()
 
   for (const chain of targetChains) {
-    console.log(new Array(process.stdout.rows).fill('*').join(''))
+    console.log('*'.repeat(process.stdout.rows))
     console.log(`The current chain id is: ${chain}`)
 
     const latestReleaseTokenList: FungibleToken[] = await getLatestReleasedTokenList(chain)
