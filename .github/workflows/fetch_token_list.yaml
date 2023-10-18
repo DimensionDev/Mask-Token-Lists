@@ -70,7 +70,7 @@ jobs:
       - name: Sync Scroll Token List
         id: sync-token-list-scroll
         run: |
-          node node_modules/puppeteer/install.js && npm run cli generate -- --include=534352 && npm run lint-fix
+          npm run cli generate -- --include=534352 --static && npm run lint-fix
 
       - name: Sync Polygon Token List
         id: sync-token-list-polygon
