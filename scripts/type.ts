@@ -25,6 +25,7 @@ export enum ChainId {
   Arbitrum = 42161,
   Celo = 42220,
   Avalanche = 43114,
+  Scroll = 534352,
   Aurora = 1313161554,
   Harmony = 1666600000,
   Palm = 11297108109,
