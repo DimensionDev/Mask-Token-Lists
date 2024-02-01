@@ -47,21 +47,21 @@ export interface FungibleToken {
 }
 
 export interface Provider {
-  getProviderName(): Providers
+  getProviderType(): ProviderType
   isSupportChain(chainId: ChainId): boolean
   generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]>
 }
 
-export enum Providers {
-  coinGeoko = 'coin-geeoko',
-  explorer = 'explorer',
-  cryptoRank = 'crypto-rank',
-  coinMarketCap = 'coinmarketcap',
-  subScan = 'subscan',
-  solanaFm = 'solanaFm',
-  x1testnet = 'x1testnet',
+export enum ProviderType {
+  CoinGeoko = 'coingecko',
+  Explorer = 'explorer',
+  CryptoRank = 'crypto-rank',
+  CoinMarketCap = 'coinmarketcap',
+  SubScan = 'subscan',
+  SolanaFM = 'solanaFm',
+  X1Testnet = 'x1-testnet',
 }
 
 export interface FungibleTokenProvider extends FungibleToken {
-  provider: Providers
+  provider: ProviderType
 }

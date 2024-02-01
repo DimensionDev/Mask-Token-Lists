@@ -1,4 +1,4 @@
-import { ChainId, FungibleToken, Provider, Providers } from '../type'
+import { ChainId, FungibleToken, Provider, ProviderType } from '../type'
 import * as fs from 'node:fs/promises'
 import { generateLogoURL } from '../utils/asset'
 import { differenceBy, some, sortBy, uniqBy } from 'lodash'
@@ -149,8 +149,8 @@ export class CryptoRank implements Provider {
     )
   }
 
-  getProviderName(): Providers {
-    return Providers.cryptoRank
+  getProviderType(): ProviderType {
+    return ProviderType.CryptoRank
   }
 
   isSupportChain(chainId: ChainId): boolean {
