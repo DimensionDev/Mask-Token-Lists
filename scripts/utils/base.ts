@@ -90,4 +90,5 @@ export const rpcMapping: Partial<Record<ChainId, string>> = {
   [ChainId.Aurora]: 'https://mainnet.aurora.dev',
   [ChainId.Optimistic]: 'https://node.onekey.so/optimism',
   [ChainId.Conflux]: 'https://evm.confluxrpc.com',
+  [ChainId.X1Testnet]: 'https://testrpc.x1.tech',
 }
