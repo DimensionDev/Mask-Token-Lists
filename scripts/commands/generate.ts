@@ -15,6 +15,7 @@ import { SolanaFm } from '../providers/solanaFm'
 import { isSameAddress, getLatestReleasedTokenList } from '../utils/helpers'
 import { readTokenInfoFromContract } from './readTokenInfoFromContract'
 import { rankByMarketCap } from './rankByMarketCap'
+import { X1Testnet } from '../providers/x1-testnet'
 
 const coinGeckoAPI = new CoinGecko()
 const explorerAPI = new Explorer()
@@ -22,8 +23,9 @@ const cryptoRankAPI = new CryptoRank()
 const coinMarketCapAPI = new CoinMarketCap()
 const subScanAPI = new SubScan()
 const SolanaFmAPI = new SolanaFm()
+const x1Testnet = new X1Testnet()
 
-const providers = [coinGeckoAPI, explorerAPI, coinMarketCapAPI, subScanAPI, cryptoRankAPI, SolanaFmAPI]
+const providers = [coinGeckoAPI, explorerAPI, coinMarketCapAPI, subScanAPI, cryptoRankAPI, SolanaFmAPI, x1Testnet]
 
 export async function generate(targetChains: ChainId[]) {
   await prefetchCryptoRankCoins()

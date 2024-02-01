@@ -59,6 +59,7 @@ export enum Providers {
   coinMarketCap = 'coinmarketcap',
   subScan = 'subscan',
   solanaFm = 'solanaFm',
+  x1testnet = 'x1testnet',
 }
 
 export interface FungibleTokenProvider extends FungibleToken {
