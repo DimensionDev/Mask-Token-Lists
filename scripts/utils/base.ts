@@ -52,16 +52,16 @@ export const explorerDecimalPageMapping: Partial<Record<ChainId, (address: strin
 }
 
 export const explorerFetchMapping: Partial<Record<ChainId, (url: string) => Promise<FungibleToken[]>>> = {
-  [ChainId.Mainnet]: fetchETH,
-  [ChainId.BNB]: fetchBSC,
-  [ChainId.Polygon]: fetchPolygon,
-  [ChainId.Arbitrum]: fetchArbitrum,
-  [ChainId.Avalanche]: fetchAvalanche,
-  [ChainId.Fantom]: fetchFantom,
   [ChainId.xDai]: fetchGnosis,
-  [ChainId.Aurora]: fetchAurora,
-  [ChainId.Optimistic]: fetchOptimistic,
   [ChainId.Conflux]: fetchConflux,
+  // [ChainId.Mainnet]: fetchETH,
+  // [ChainId.BNB]: fetchBSC,
+  // [ChainId.Polygon]: fetchPolygon,
+  // [ChainId.Arbitrum]: fetchArbitrum,
+  // [ChainId.Avalanche]: fetchAvalanche,
+  // [ChainId.Fantom]: fetchFantom,
+  // [ChainId.Aurora]: fetchAurora,
+  // [ChainId.Optimistic]: fetchOptimistic,
 }
 
 export const explorerFetchTokenDecimalMapping: Partial<
