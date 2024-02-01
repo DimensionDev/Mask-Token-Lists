@@ -62,6 +62,7 @@ For example, we want to add new chain called `canto` ,chain id is 7700.
 | Fantom          |         250 | [latest][link-fantom]          | [token-list][viewer-fantom]          |
 | Boba            |         288 | [latest][link-boba]            | [token-list][viewer-boba]            |
 | Polygon         |         137 | [latest][link-polygon]         | [token-list][viewer-polygon]         |
+| X1 Testnet      |         195 | [latest][link-x1testnet]       | [token-list][viewer-x1testnet]       |
 | Mumbai          |       80001 | [latest][link-mumbai]          | [token-list][viewer-mumbai]          |
 | Stardust        |         588 | [latest][link-stardust]        | [token-list][viewer-stardust]        |
 | Astar           |         592 | [latest][link-astar]           | [token-list][viewer-astar]           |
@@ -96,6 +97,7 @@ For example, we want to add new chain called `canto` ,chain id is 7700.
 [link-fantom]: https://tokens.r2d2.to/latest/250/tokens.json
 [link-boba]: https://tokens.r2d2.to/latest/288/tokens.json
 [link-polygon]: https://tokens.r2d2.to/latest/137/tokens.json
+[link-x1testnet]: https://tokens.r2d2.to/latest/195/tokens.json
 [link-mumbai]: https://tokens.r2d2.to/latest/80001/tokens.json
 [link-stardust]: https://tokens.r2d2.to/latest/588/tokens.json
 [link-astar]: https://tokens.r2d2.to/latest/592/tokens.json
@@ -127,6 +129,7 @@ For example, we want to add new chain called `canto` ,chain id is 7700.
 [viewer-fantom]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/250/tokens.json
 [viewer-boba]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/288/tokens.json
 [viewer-polygon]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/137/tokens.json
+[viewer-x1testnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/195/tokens.json
 [viewer-mumbai]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/80001/tokens.json
 [viewer-stardust]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/588/tokens.json
 [viewer-astar]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/592/tokens.json
