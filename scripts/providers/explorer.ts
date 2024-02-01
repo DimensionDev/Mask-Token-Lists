@@ -1,4 +1,4 @@
-import { ChainId, FungibleToken, Provider, Providers } from '../type'
+import { ChainId, FungibleToken, Provider, ProviderType } from '../type'
 import {
   explorerFetchMapping,
   explorerPagesMapping,
@@ -13,8 +13,8 @@ import StealthPlugin from 'puppeteer-extra-plugin-stealth'
 puppeteer.use(StealthPlugin())
 
 export class Explorer implements Provider {
-  getProviderName(): Providers {
-    return Providers.explorer
+  getProviderType(): ProviderType {
+    return ProviderType.Explorer
   }
 
   isSupportChain(chainId: ChainId): boolean {
