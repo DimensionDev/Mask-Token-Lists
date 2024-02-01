@@ -87,6 +87,11 @@ jobs:
         run: |
           node node_modules/puppeteer/install.js && npm run cli generate -- --include=1 && npm run lint-fix
 
+      - name: Sync X1 Testnet token list
+        id: sync-token-list-x1-testnet
+        run: |
+          npm run cli generate -- --include=195 && npm run lint-fix
+
       - name: Prettier Check
         run: npm run prettier
 
