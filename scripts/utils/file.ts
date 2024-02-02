@@ -27,6 +27,8 @@ function generate(tokens: FungibleToken[]) {
   const tokenList = generateTokenList(
     tokens.map((x) => ({
       ...x,
+      // Make sure it's number
+      decimals: +x.decimals,
       address: x.chainId !== ChainId.Solana ? EthereumAddress.checksumAddress(x.address) : x.address,
     })),
     {
