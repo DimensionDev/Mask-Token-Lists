@@ -1,8 +1,8 @@
-import { ChainId, FungibleToken, Provider, ProviderType } from '../type'
+import { ChainId, FungibleToken, Provider, Providers } from '../type'
 
 export class X1Testnet implements Provider {
-  getProviderType(): ProviderType {
-    return ProviderType.X1Testnet
+  getProviderName(): Providers {
+    return Providers.x1testnet
   }
   async generateFungibleTokens(chainId: ChainId, exclude: FungibleToken[]): Promise<FungibleToken[]> {
     const tokens: FungibleToken[] = [

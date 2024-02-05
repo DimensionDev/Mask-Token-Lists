@@ -8,7 +8,7 @@ import type { AbiItem } from 'web3-utils'
 import Web3 from 'web3'
 import { getLatestReleasedTokenList } from '../utils/helpers'
 
-export async function readTokenInfoFromContract(chainId: ChainId, toAddList?: FungibleToken[]) {
+export async function readTokenInfoFromContract(chainId: ChainId, toAddList: FungibleToken[]) {
   const rpcUrl = rpcMapping[chainId] ?? ''
   if (!rpcUrl) return toAddList
   const tokenList: FungibleToken[] = toAddList ?? (await getLatestReleasedTokenList(chainId))

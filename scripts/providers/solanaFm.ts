@@ -1,4 +1,4 @@
-import { ChainId, FungibleToken, Provider, ProviderType } from '../type'
+import { ChainId, FungibleToken, Provider, Providers } from '../type'
 import * as fs from 'node:fs/promises'
 import { cryptoRankcacheDir } from '../utils'
 import { explorerDecimalPageMapping, explorerFetchTokenDecimalMapping } from '../utils/base'
@@ -84,8 +84,8 @@ export class SolanaFm implements Provider {
     return results
   }
 
-  getProviderType(): ProviderType {
-    return ProviderType.SolanaFM
+  getProviderName(): Providers {
+    return Providers.solanaFm
   }
 
   isSupportChain(chainId: ChainId): boolean {
