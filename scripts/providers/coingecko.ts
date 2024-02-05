@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { ChainId, FungibleToken, Provider, ProviderType } from '../type'
+import { ChainId, FungibleToken, Provider, Providers } from '../type'
 import urlcat from 'urlcat'
 import { differenceBy, some, uniqBy } from 'lodash'
 import { generateLogoURL } from '../utils/asset'
@@ -87,8 +87,8 @@ interface Platform {
 const { TOTAL, COIN_GEOKO_PAGE_SIZE, PROXY_WAIT_TIME } = getConfig()
 
 export class CoinGecko implements Provider {
-  getProviderType(): ProviderType {
-    return ProviderType.CoinGeoko
+  getProviderName(): Providers {
+    return Providers.coinGeoko
   }
 
   private async getCurrentChainPlatformId(chainId: ChainId) {

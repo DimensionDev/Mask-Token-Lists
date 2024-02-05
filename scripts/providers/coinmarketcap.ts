@@ -1,4 +1,4 @@
-import { ChainId, FungibleToken, Provider, ProviderType } from '../type'
+import { ChainId, FungibleToken, Provider, Providers } from '../type'
 import axios from 'axios'
 import urlcat from 'urlcat'
 import { differenceBy, pick, some, uniqBy } from 'lodash'
@@ -146,8 +146,8 @@ export class CoinMarketCap implements Provider {
     )
   }
 
-  getProviderType(): ProviderType {
-    return ProviderType.CoinMarketCap
+  getProviderName(): Providers {
+    return Providers.coinMarketCap
   }
 
   isSupportChain(chainId: ChainId): boolean {

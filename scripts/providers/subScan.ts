@@ -1,4 +1,4 @@
-import { ChainId, FungibleToken, Provider, ProviderType } from '../type'
+import { ChainId, FungibleToken, Provider, Providers } from '../type'
 import urlcat from 'urlcat'
 import axios from 'axios'
 import { delay } from '../utils'
@@ -88,8 +88,8 @@ export class SubScan implements Provider {
     return [...topList, ...exclude]
   }
 
-  getProviderType(): ProviderType {
-    return ProviderType.SubScan
+  getProviderName(): Providers {
+    return Providers.subScan
   }
 
   isSupportChain(chainId: ChainId): boolean {

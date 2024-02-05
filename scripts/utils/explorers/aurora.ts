@@ -18,20 +18,21 @@ export async function fetchAurora(url: string) {
   page.once('error', (error) => console.log('Failed to load Aurora Page!', error))
   await page.setViewport({ width: 1080, height: 1024 })
 
-  const tableSelector = '.chakra-table'
-  await page.waitForSelector(tableSelector)
+  const loadingSelector = '.table-content-loader'
+  const tableSelector = '.stakes-table-container'
+  await page.waitForSelector(loadingSelector, { hidden: true })
   const tableElementHandler = await page.waitForSelector(tableSelector)
   const tableElement = await tableElementHandler?.evaluate((x) => x.innerHTML)
   await browser.close()
   const q = cheerio.load(tableElement ?? '')
-  const table = q('tbody tr').map((_, x) => x)
+  const table = q('table tbody tr').map((_, x) => x)
   let results: FungibleToken[] = []
 
   for (const x of table) {
-    const fullName = q('a.chakra-link .chakra-skeleton', x).text()
+    const fullName = q('[data-test="token_link"]', x).text()
     if (!fullName) continue
 
-    const pageLink = q('a.chakra-link', x).attr('href')
+    const pageLink = q('[data-test="token_link"]', x).attr('href')
     if (!pageLink) continue
 
     const address = toChecksumAddress(pageLink?.replace('/token/', ''))

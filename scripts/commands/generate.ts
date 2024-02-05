@@ -23,9 +23,9 @@ const cryptoRankAPI = new CryptoRank()
 const coinMarketCapAPI = new CoinMarketCap()
 const subScanAPI = new SubScan()
 const SolanaFmAPI = new SolanaFm()
-const x1TestnetAPI = new X1Testnet()
+const x1Testnet = new X1Testnet()
 
-const providers = [coinGeckoAPI, explorerAPI, coinMarketCapAPI, subScanAPI, cryptoRankAPI, SolanaFmAPI, x1TestnetAPI]
+const providers = [coinGeckoAPI, explorerAPI, coinMarketCapAPI, subScanAPI, cryptoRankAPI, SolanaFmAPI, x1Testnet]
 
 export async function generate(targetChains: ChainId[]) {
   await prefetchCryptoRankCoins()
@@ -41,12 +41,12 @@ export async function generate(targetChains: ChainId[]) {
     for (const p of providers) {
       if (p.isSupportChain(chain as ChainId)) {
         try {
-          console.log(`Fetching the chain id is ${chain}'s tokens from ${p.getProviderType()}...`)
+          console.log(`Fetching the chain id is ${chain}'s tokens from ${p.getProviderName()}...`)
           const tokens = await p.generateFungibleTokens(chain, latestReleaseTokenList)
 
           result = [...result, ...tokens]
         } catch (e) {
-          console.log(`Fetch the chain failed by ${p.getProviderType()}`)
+          console.log(`Fetch the chain failed by ${p.getProviderName()}`)
           console.log(e)
         }
       }
