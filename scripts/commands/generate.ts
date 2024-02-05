@@ -54,8 +54,6 @@ export async function generate(targetChains: ChainId[]) {
 
     const resultReadFromContract = await readTokenInfoFromContract(chain, result)
 
-    if (!resultReadFromContract) return
-
     console.log(`The current chain get ${resultReadFromContract.length} tokens`, { result: resultReadFromContract })
     if (resultReadFromContract.length) {
       const tokens = uniqBy([...latestReleaseTokenList, ...resultReadFromContract], (x) =>
