@@ -37,6 +37,11 @@ jobs:
         run: |
           npm run cli generate -- --include=1088 --static && npm run lint-fix
 
+      - name: Sync Manta Token List
+        id: sync-token-list-manta
+        run: |
+          npm run cli generate -- --include=169 --static && npm run lint-fix
+
       - name: Sync Solana Token List
         id: sync-token-list-solana
         run: |

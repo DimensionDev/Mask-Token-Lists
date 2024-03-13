@@ -23,6 +23,7 @@ export enum ChainId {
   Moonbeam = 1284,
   Moonriver = 1285,
   Arbitrum = 42161,
+  Manta = 169,
   Celo = 42220,
   Avalanche = 43114,
   Scroll = 534352,
