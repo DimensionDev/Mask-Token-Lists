@@ -42,6 +42,16 @@ jobs:
         run: |
           npm run cli generate -- --include=169 --static && npm run lint-fix
 
+      - name: Sync Linea Token List
+        id: sync-token-list-linea
+        run: |
+          npm run cli generate -- --include=59144 --static && npm run lint-fix
+
+      - name: Sync ZKSync Token List
+        id: sync-token-list-zksync
+        run: |
+          npm run cli generate -- --include=324 --static && npm run lint-fix
+
       - name: Sync Solana Token List
         id: sync-token-list-solana
         run: |

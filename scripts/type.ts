@@ -24,6 +24,7 @@ export enum ChainId {
   Moonriver = 1285,
   Arbitrum = 42161,
   Manta = 169,
+  Linea = 59144,
   Celo = 42220,
   Avalanche = 43114,
   Scroll = 534352,
@@ -33,6 +34,7 @@ export enum ChainId {
   Solana = 'Solana',
   X1Testnet = 195,
   X1 = 196,
+  ZKSync = 324,
 }
 
 export interface FungibleToken {
