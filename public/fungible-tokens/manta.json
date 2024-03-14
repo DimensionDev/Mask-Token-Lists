@@ -1,0 +1,50 @@
+[
+  {
+    "name": "MANTA",
+    "symbol": "MANTA",
+    "address": "0x95CeF13441Be50d20cA4558CC0a27B601aC544E5",
+    "decimals": 18,
+    "chainId": 169,
+    "logoURI": "https://s3.openocean.finance/token_logos/logos/1705573568419_3909238394592638.PNG"
+  },
+  {
+    "name": "StakeStone Ether",
+    "symbol": "STONE",
+    "address": "0xEc901DA9c68E90798BbBb74c11406A32A70652C3",
+    "decimals": 18,
+    "chainId": 169,
+    "logoURI": "https://s3.openocean.finance/token_logos/logos/1704871627809_46567452258674025.png"
+  },
+  {
+    "name": "Bridged USD Coin (Manta Pacific)",
+    "symbol": "USDC",
+    "address": "0xb73603c5d87fa094b7314c74ace2e64d165016fb",
+    "decimals": 6,
+    "chainId": 169,
+    "logoURI": "https://s3.openocean.finance/token_logos/logos/1696854390695_9268415263413137.png"
+  },
+  {
+    "name": "Bridged Tether (Manta Pacific)",
+    "symbol": "USDT",
+    "address": "0xf417f5a458ec102b90352f697d6e2ac3a3d2851f",
+    "decimals": 6,
+    "chainId": 169,
+    "logoURI": "https://s3.openocean.finance/token_logos/logos/1704871492997_20965532266384757.png"
+  },
+  {
+    "name": "Bridged Wrapped Ether (Manta Pacific)",
+    "symbol": "WETH",
+    "address": "0x0dc808adce2099a9f62aa87d9670745aba741746",
+    "decimals": 18,
+    "chainId": 169,
+    "logoURI": "https://s3.openocean.finance/token_logos/logos/1704871506364_5434002482450826.png"
+  },
+  {
+    "name": "Ethereum",
+    "symbol": "ETH",
+    "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+    "decimals": 18,
+    "chainId": 169,
+    "logoURI": "https://s3.openocean.finance/token_logos/logos/1704871520659_24217901857510093.png"
+  }
+]

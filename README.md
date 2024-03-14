@@ -68,9 +68,10 @@ For example, we want to add new chain called `canto` ,chain id is 7700.
 | Astar           |         592 | [latest][link-astar]           | [token-list][viewer-astar]           |
 | Conflux         |        1030 | [latest][link-conflux]         | [token-list][viewer-conflux]         |
 | Metis           |        1088 | [latest][link-metis]           | [token-list][viewer-metis]           |
+| Manta           |         169 | [latest][link-manta]           | [token-list][viewer-manta]           |
+| Linea           |       59144 | [latest][link-linea]           | [token-list][viewer-linea]           |
 | Moonbeam        |        1284 | [latest][link-moonbeam]        | [token-list][viewer-moonbeam]        |
 | Moonriver       |        1285 | [latest][link-moonriver]       | [token-list][viewer-moonriver]       |
-| Metis           |        1088 | [latest][link-metis]           | [token-list][viewer-metis]           |
 | Arbitrum        |       42161 | [latest][link-arbitrum]        | [token-list][viewer-arbitrum]        |
 | Celo            |       42220 | [latest][link-celo]            | [token-list][viewer-celo]            |
 | Avalanche       |       43114 | [latest][link-avalanche]       | [token-list][viewer-avalanche]       |
@@ -78,6 +79,7 @@ For example, we want to add new chain called `canto` ,chain id is 7700.
 | Harmony         |  1666600000 | [latest][link-harmony]         | [token-list][viewer-harmony]         |
 | Harmony_Testnet |  1666700000 | [latest][link-harmony_testnet] | [token-list][viewer-harmony_testnet] |
 | Palm            | 11297108109 | [latest][link-palm]            | [token-list][viewer-palm]            |
+| ZKSync          |         324 | [latest][link-zksync]          | [token-list][viewer-zksync]          |
 | Solana          |      solana | [latest][link-solana]          | [token-list][viewer-solana]          |
 
 <!-- end versions -->
@@ -104,9 +106,11 @@ For example, we want to add new chain called `canto` ,chain id is 7700.
 [link-astar]: https://tokens.r2d2.to/latest/592/tokens.json
 [link-conflux]: https://tokens.r2d2.to/latest/1030/tokens.json
 [link-metis]: https://tokens.r2d2.to/latest/1088/tokens.json
+[link-manta]: https://tokens.r2d2.to/latest/169/tokens.json
+[link-zksync]: https://tokens.r2d2.to/latest/325/tokens.json
+[link-linea]: https://tokens.r2d2.to/latest/59144/tokens.json
 [link-moonbeam]: https://tokens.r2d2.to/latest/1284/tokens.json
 [link-moonriver]: https://tokens.r2d2.to/latest/1285/tokens.json
-[link-metis]: https://tokens.r2d2.to/latest/metis/tokens.json
 [link-arbitrum]: https://tokens.r2d2.to/latest/42161/tokens.json
 [link-celo]: https://tokens.r2d2.to/latest/42220/tokens.json
 [link-avalanche]: https://tokens.r2d2.to/latest/43114/tokens.json
@@ -136,10 +140,12 @@ For example, we want to add new chain called `canto` ,chain id is 7700.
 [viewer-stardust]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/588/tokens.json
 [viewer-astar]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/592/tokens.json
 [viewer-conflux]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1030/tokens.json
-[viewer-metis]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1088/tokens.json
 [viewer-moonbeam]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1284/tokens.json
 [viewer-moonriver]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1285/tokens.json
 [viewer-metis]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1088/tokens.json
+[viewer-manta]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/169/tokens.json
+[viewer-zksync]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/324/tokens.json
+[viewer-linea]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/59144/tokens.json
 [viewer-arbitrum]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42161/tokens.json
 [viewer-celo]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42220/tokens.json
 [viewer-avalanche]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/43114/tokens.json
