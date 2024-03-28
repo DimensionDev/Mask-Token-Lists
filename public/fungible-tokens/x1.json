@@ -1,0 +1,18 @@
+[
+  {
+    "chainId": 196,
+    "address": "0xd89e6add9e421e30110180ba8122612575c37501",
+    "decimals": 6,
+    "name": "USDT Token",
+    "symbol": "USDT",
+    "logoURI": "https://raw.githubusercontent.com/MetisProtocol/metis-bridge-resources/master/tokens/USDT/logo.png"
+  },
+  {
+    "chainId": 196,
+    "address": "0x954684dd1a425268d20adafa3db354525b1326e7",
+    "decimals": 6,
+    "name": "Wrapped Ether",
+    "symbol": "WETH",
+    "logoURI": "https://scroll-tech.github.io/token-list/data/WETH/logo.png"
+  }
+]

@@ -112,6 +112,11 @@ jobs:
         run: |
           npm run cli generate -- --include=195 && npm run lint-fix
 
+      - name: Sync X1 token list
+        id: sync-token-list-x1
+        run: |
+          npm run cli generate -- --include=196 && npm run lint-fix
+
       - name: Prettier Check
         run: npm run prettier
 
