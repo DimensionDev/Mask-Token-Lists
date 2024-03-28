@@ -1,0 +1,34 @@
+[
+  {
+    "chainId": 196,
+    "address": "0x1e4a5963abfd975d8c9021ce480b42188849d41d",
+    "decimals": 6,
+    "name": "Tether USD",
+    "symbol": "USDT",
+    "logoURI": "https://raw.githubusercontent.com/MetisProtocol/metis-bridge-resources/master/tokens/USDT/logo.png"
+  },
+  {
+    "chainId": 196,
+    "address": "0xea034fb02eb1808c2cc3adbc15f447b93cbe08e1",
+    "decimals": 8,
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "logoURI": "https://static.okx.com/cdn/wallet/logo/WBTC-20230804.png"
+  },
+  {
+    "chainId": 196,
+    "address": "0xc5015b9d9161dca7e18e32f6f25c4ad850731fd4",
+    "decimals": 18,
+    "name": "Dai Stablecoin",
+    "symbol": "DAI",
+    "logoURI": "https://static.okx.com/cdn/wallet/logo/dai01.png"
+  },
+  {
+    "chainId": 196,
+    "address": "0x74b7f16337b8972027f6196a17a631ac6de26d22",
+    "decimals": 6,
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "logoURI": "https://static.okx.com/cdn/wallet/logo/USDC.png"
+  }
+]

@@ -112,6 +112,11 @@ jobs:
         run: |
           npm run cli generate -- --include=195 && npm run lint-fix
 
+      - name: Sync X Layer token list
+        id: sync-token-list-x-layer
+        run: |
+          npm run cli generate -- --include=196 --static && npm run lint-fix
+
       - name: Prettier Check
         run: npm run prettier
 
