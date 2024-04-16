@@ -1,23 +1,22 @@
 {
-  "proseWrap": "always",
-  "trailingComma": "all",
-  "printWidth": 120,
-  "semi": false,
-  "singleQuote": true,
-  "bracketSameLine": true,
-  "tabWidth": 2,
-  "overrides": [
-    {
-      "files": "README.md",
-      "options": {
-        "printWidth": 160
-      }
-    },
-    {
-      "files": ["*rc", "package.json", "tsconfig*", "*.md", "*.yaml", "*.yml"],
-      "options": {
-        "tabWidth": 2
-      }
-    }
-  ]
+    "printWidth": 120,
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "insertPragma": false,
+    "requirePragma": false,
+    "proseWrap": "preserve",
+    "endOfLine": "auto",
+    "overrides": [
+        {
+            "files": "*.md",
+            "options": {
+                "printWidth": 60
+            }
+        }
+    ]
 }

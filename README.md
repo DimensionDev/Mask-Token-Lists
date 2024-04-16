@@ -2,43 +2,8 @@
 
 The token lists for Mask Network.
 
-- List Name: Mask Network
-- Link to the official homepage of the list manager: [https://mask.io](https://mask.io)
-
-## How to add new chain
-
-For example, we want to add new chain called `canto` ,chain id is 7700.
-
-### Add static token list
-
-1. Create the list at `public/fungible-tokens/canto.json` with type `FungibleToken[]`
-2. Add the definition `canto = 7700` for `ChainId` at `scripts/type.ts` .
-3. Add the new workflow job at `.github/workflows/fetch_token_list.yaml`.
-
-   ```
-     - name: Sync Canto Token List
-       id: sync-token-list-canto
-       run: |
-         npm run cli generate -- --include=7700 --static && npm run lint-fix
-   ```
-
-### Add auto-updated token list by querying providers
-
-1. Add the definition `canto = 7700` for `ChainId` at `scripts/type.ts` .
-2. Write scripts to query token info providers includes `[coinGeckoAPI, explorerAPI, coinMarketCapAPI, subScanAPI, cryptoRankAPI, SolanaFmAPI]` if the specific
-   provider exsits and required by PM. For example, to query from explorer scan website, you can add script at `scripts/utils/explorers/canto.ts` with specified
-   dom selector. If you want the data from coingecko, then edit the `scripts/providers/coingecko.ts` to satifiy the requirement of coingecko api.
-3. Add the new workflow job at `.github/workflows/fetch_token_list.yaml`.
-
-   ```
-     - name: Sync Canto Token List
-       id: sync-token-list-canto
-       run: |
-         node node_modules/puppeteer/install.js && npm run cli generate -- --include=7700 && npm run lint-fix
-   ```
-
-   To run scripts query contract and rank_by_market_cap directly, just add the relative config at`.github/workflows/read_contract.yaml` and
-   `.github/workflows/rank_by_market_cap.yaml`
+-   List Name: Mask Network
+-   Link to the official homepage of the list manager: [https://mask.io](https://mask.io)
 
 ## Versions based on chain id
 
