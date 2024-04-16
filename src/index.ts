@@ -1,4 +1,5 @@
-import { mkdirSync, writeFileSync } from 'fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { parse } from 'semver'
 
 import { CHAINS } from '@/constants/chain';
 import { MaskTokenList } from '@/providers/mask/TokenList';
@@ -10,6 +11,17 @@ async function main() {
         try {
             const funibleTokenList = await MaskTokenList.getFungibleTokenList(chain);
             const nonFungibleTokenList = await MaskTokenList.getNonFungibleTokenList(chain);
+
+            const PackageJSON = JSON.parse(readFileSync('./package.json', 'utf8'))
+            const parsedVersion = parse(PackageJSON.version);
+
+            funibleTokenList.version.major = parsedVersion?.major ?? 0;
+            funibleTokenList.version.minor = parsedVersion?.minor ?? 0;
+            funibleTokenList.version.patch = parsedVersion?.patch ?? 0;
+
+            nonFungibleTokenList.version.major = parsedVersion?.major ?? 0;
+            nonFungibleTokenList.version.minor = parsedVersion?.minor ?? 0;
+            nonFungibleTokenList.version.patch = parsedVersion?.patch ?? 0;
 
             console.log(`[INFO] Saving: ${chain.name} (${chain.chainId})\n`);
 
