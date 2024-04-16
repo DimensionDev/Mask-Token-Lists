@@ -27,12 +27,15 @@ The token lists for Mask Network.
 | Fantom          |         250 | [latest][link-fantom]          | [token-list][viewer-fantom]          |
 | Boba            |         288 | [latest][link-boba]            | [token-list][viewer-boba]            |
 | Polygon         |         137 | [latest][link-polygon]         | [token-list][viewer-polygon]         |
-| X1 Testnet      |         195 | [latest][link-x1testnet]       | [token-list][viewer-x1testnet]       |
+| X Layer Testnet |         195 | [latest][link-xlayertestnet]   | [token-list][viewer-xlayertestnet]   |
+| X Layer         |         196 | [latest][link-xlayer]          | [token-list][viewer-xlayer]          |
 | Mumbai          |       80001 | [latest][link-mumbai]          | [token-list][viewer-mumbai]          |
 | Stardust        |         588 | [latest][link-stardust]        | [token-list][viewer-stardust]        |
 | Astar           |         592 | [latest][link-astar]           | [token-list][viewer-astar]           |
 | Conflux         |        1030 | [latest][link-conflux]         | [token-list][viewer-conflux]         |
 | Metis           |        1088 | [latest][link-metis]           | [token-list][viewer-metis]           |
+| Manta           |         169 | [latest][link-manta]           | [token-list][viewer-manta]           |
+| Linea           |       59144 | [latest][link-linea]           | [token-list][viewer-linea]           |
 | Moonbeam        |        1284 | [latest][link-moonbeam]        | [token-list][viewer-moonbeam]        |
 | Moonriver       |        1285 | [latest][link-moonriver]       | [token-list][viewer-moonriver]       |
 | Arbitrum        |       42161 | [latest][link-arbitrum]        | [token-list][viewer-arbitrum]        |
@@ -42,6 +45,7 @@ The token lists for Mask Network.
 | Harmony         |  1666600000 | [latest][link-harmony]         | [token-list][viewer-harmony]         |
 | Harmony_Testnet |  1666700000 | [latest][link-harmony_testnet] | [token-list][viewer-harmony_testnet] |
 | Palm            | 11297108109 | [latest][link-palm]            | [token-list][viewer-palm]            |
+| ZKSync          |         324 | [latest][link-zksync]          | [token-list][viewer-zksync]          |
 | Solana          |      solana | [latest][link-solana]          | [token-list][viewer-solana]          |
 
 <!-- end versions -->
@@ -62,12 +66,16 @@ The token lists for Mask Network.
 [link-fantom]: https://tokens.r2d2.to/latest/250/tokens.json
 [link-boba]: https://tokens.r2d2.to/latest/288/tokens.json
 [link-polygon]: https://tokens.r2d2.to/latest/137/tokens.json
-[link-x1testnet]: https://tokens.r2d2.to/latest/195/tokens.json
+[link-xlayertestnet]: https://tokens.r2d2.to/latest/195/tokens.json
+[link-xlayer]: https://tokens.r2d2.to/latest/196/tokens.json
 [link-mumbai]: https://tokens.r2d2.to/latest/80001/tokens.json
 [link-stardust]: https://tokens.r2d2.to/latest/588/tokens.json
 [link-astar]: https://tokens.r2d2.to/latest/592/tokens.json
 [link-conflux]: https://tokens.r2d2.to/latest/1030/tokens.json
 [link-metis]: https://tokens.r2d2.to/latest/1088/tokens.json
+[link-manta]: https://tokens.r2d2.to/latest/169/tokens.json
+[link-zksync]: https://tokens.r2d2.to/latest/325/tokens.json
+[link-linea]: https://tokens.r2d2.to/latest/59144/tokens.json
 [link-moonbeam]: https://tokens.r2d2.to/latest/1284/tokens.json
 [link-moonriver]: https://tokens.r2d2.to/latest/1285/tokens.json
 [link-arbitrum]: https://tokens.r2d2.to/latest/42161/tokens.json
@@ -94,14 +102,18 @@ The token lists for Mask Network.
 [viewer-fantom]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/250/tokens.json
 [viewer-boba]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/288/tokens.json
 [viewer-polygon]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/137/tokens.json
-[viewer-x1testnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/195/tokens.json
+[viewer-xlayertestnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/195/tokens.json
+[viewer-xlayer]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/196/tokens.json
 [viewer-mumbai]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/80001/tokens.json
 [viewer-stardust]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/588/tokens.json
 [viewer-astar]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/592/tokens.json
 [viewer-conflux]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1030/tokens.json
-[viewer-metis]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1088/tokens.json
 [viewer-moonbeam]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1284/tokens.json
 [viewer-moonriver]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1285/tokens.json
+[viewer-metis]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1088/tokens.json
+[viewer-manta]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/169/tokens.json
+[viewer-zksync]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/324/tokens.json
+[viewer-linea]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/59144/tokens.json
 [viewer-arbitrum]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42161/tokens.json
 [viewer-celo]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42220/tokens.json
 [viewer-avalanche]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/43114/tokens.json
