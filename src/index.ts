@@ -13,9 +13,9 @@ async function main() {
 
             console.log(`[INFO] Saving: ${chain.name} (${chain.chainId})\n`);
 
-            mkdirSync(`./dist/${chain.chainId}`, { recursive: true });
-            writeFileSync(`./dist/${chain.chainId}/tokens.json`, JSON.stringify(funibleTokenList));
-            writeFileSync(`./dist/${chain.chainId}/non-fungible-tokens.json`, JSON.stringify(nonFungibleTokenList));
+            mkdirSync(`./dist/latest/${chain.chainId}`, { recursive: true });
+            writeFileSync(`./dist/latest/${chain.chainId}/tokens.json`, JSON.stringify(funibleTokenList));
+            writeFileSync(`./dist/latest/${chain.chainId}/non-fungible-tokens.json`, JSON.stringify(nonFungibleTokenList));
         } catch (error) {
             console.error(`[ERROR] Fetching: ${chain.name} (${chain.chainId})`);
             console.error(error);
