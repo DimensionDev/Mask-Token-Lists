@@ -23,6 +23,10 @@ async function main() {
             nonFungibleTokenList.version.minor = parsedVersion?.minor ?? 0;
             nonFungibleTokenList.version.patch = parsedVersion?.patch ?? 0;
 
+            const isoString = new Date().toISOString();
+            funibleTokenList.timestamp = isoString;
+            nonFungibleTokenList.timestamp = isoString;
+
             console.log(`[INFO] Saving: ${chain.name} (${chain.chainId})\n`);
 
             mkdirSync(`./dist/latest/${chain.chainId}`, { recursive: true });
