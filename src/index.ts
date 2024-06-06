@@ -1,40 +1,68 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'fs';
-import { parse } from 'semver'
+import { parse } from 'semver';
 
 import { CHAINS } from '@/constants/chain';
 import { MaskTokenList } from '@/providers/mask/TokenList';
+import { DEFAULT_TOKEN_LIST_SETTINGS } from '@/constants';
+import { Chain } from '@/types';
+import { FileTokenList } from '@/providers/fs/TokenList';
+
+function readPackageVersion() {
+    const PackageJSON = JSON.parse(readFileSync('./package.json', 'utf8'));
+    const parsedVersion = parse(PackageJSON.version);
+    return {
+        major: parsedVersion?.major ?? 0,
+        minor: parsedVersion?.minor ?? 0,
+        patch: parsedVersion?.patch ?? 0,
+    };
+}
+
+async function loadTokenLists(chain: Chain) {
+    if (chain.fileId) {
+        return {
+            funibleTokenList: await FileTokenList.getFungibleTokenList(chain),
+        };
+    } else {
+        return {
+            funibleTokenList: await MaskTokenList.getFungibleTokenList(chain),
+            nonFungibleTokenList: await MaskTokenList.getNonFungibleTokenList(chain),
+        };
+    }
+}
 
 async function main() {
+    const isoString = new Date().toISOString();
+    const version = readPackageVersion();
+
     for (const chain of CHAINS) {
         console.log(`[INFO] Fetching: ${chain.name} (${chain.chainId})`);
 
         try {
-            const funibleTokenList = await MaskTokenList.getFungibleTokenList(chain);
-            const nonFungibleTokenList = await MaskTokenList.getNonFungibleTokenList(chain);
+            const { funibleTokenList, nonFungibleTokenList } = await loadTokenLists(chain);
 
-            const PackageJSON = JSON.parse(readFileSync('./package.json', 'utf8'))
-            const parsedVersion = parse(PackageJSON.version);
+            if (funibleTokenList) {
+                Object.assign(funibleTokenList, version);
+                Object.assign(funibleTokenList, DEFAULT_TOKEN_LIST_SETTINGS);
+                funibleTokenList.timestamp = isoString;
 
-            funibleTokenList.version.major = parsedVersion?.major ?? 0;
-            funibleTokenList.version.minor = parsedVersion?.minor ?? 0;
-            funibleTokenList.version.patch = parsedVersion?.patch ?? 0;
+                mkdirSync(`./dist/latest/${chain.chainId}`, { recursive: true });
+                writeFileSync(`./dist/latest/${chain.chainId}/tokens.json`, JSON.stringify(funibleTokenList));
+            }
 
-            nonFungibleTokenList.version.major = parsedVersion?.major ?? 0;
-            nonFungibleTokenList.version.minor = parsedVersion?.minor ?? 0;
-            nonFungibleTokenList.version.patch = parsedVersion?.patch ?? 0;
+            if (nonFungibleTokenList) {
+                Object.assign(funibleTokenList, version);
+                Object.assign(nonFungibleTokenList, DEFAULT_TOKEN_LIST_SETTINGS);
+                nonFungibleTokenList.timestamp = isoString;
 
-            const isoString = new Date().toISOString();
-            funibleTokenList.timestamp = isoString;
-            nonFungibleTokenList.timestamp = isoString;
-
-            console.log(`[INFO] Saving: ${chain.name} (${chain.chainId})\n`);
-
-            mkdirSync(`./dist/latest/${chain.chainId}`, { recursive: true });
-            writeFileSync(`./dist/latest/${chain.chainId}/tokens.json`, JSON.stringify(funibleTokenList));
-            writeFileSync(`./dist/latest/${chain.chainId}/non-fungible-tokens.json`, JSON.stringify(nonFungibleTokenList));
+                writeFileSync(
+                    `./dist/latest/${chain.chainId}/non-fungible-tokens.json`,
+                    JSON.stringify(nonFungibleTokenList),
+                );
+            }
         } catch (error) {
             console.error(`[ERROR] Fetching: ${chain.name} (${chain.chainId})`);
             console.error(error);
+            throw error;
         }
     }
 }

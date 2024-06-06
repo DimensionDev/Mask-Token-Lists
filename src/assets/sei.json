@@ -1,0 +1,18 @@
+[
+    {
+      "chainId": 1329,
+      "address": "0x3894085Ef7Ff0f0aeDf52E2A2704928d1Ec074F1",
+      "decimals": 6,
+      "name": "USDC",
+      "symbol": "USDC",
+      "logoURI": "https://dzyb4dm7r8k8w.cloudfront.net/prod/logos/0x3894085Ef7Ff0f0aeDf52E2A2704928d1Ec074F1/logo.png"
+    },
+    {
+      "chainId": 1329,
+      "address": "0xB75D0B03c06A926e488e2659DF1A861F860bD3d1",
+      "decimals": 6,
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "logoURI": "https://dzyb4dm7r8k8w.cloudfront.net/prod/logos/0xB75D0B03c06A926e488e2659DF1A861F860bD3d1/logo.png"
+    }
+  ]
