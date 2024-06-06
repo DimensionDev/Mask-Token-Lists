@@ -41,7 +41,7 @@ async function main() {
             const { funibleTokenList, nonFungibleTokenList } = await loadTokenLists(chain);
 
             if (funibleTokenList) {
-                Object.assign(funibleTokenList, version);
+                Object.assign(funibleTokenList.version, version);
                 Object.assign(funibleTokenList, DEFAULT_TOKEN_LIST_SETTINGS);
                 funibleTokenList.timestamp = isoString;
 
@@ -50,7 +50,7 @@ async function main() {
             }
 
             if (nonFungibleTokenList) {
-                Object.assign(funibleTokenList, version);
+                Object.assign(funibleTokenList.version, version);
                 Object.assign(nonFungibleTokenList, DEFAULT_TOKEN_LIST_SETTINGS);
                 nonFungibleTokenList.timestamp = isoString;
 
