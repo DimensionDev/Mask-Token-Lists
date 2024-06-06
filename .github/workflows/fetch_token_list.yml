@@ -1,68 +1,67 @@
 name: Fetch token list
 
 on:
-  push:
-    branches:
-      - master
+    push:
+        branches:
+            - master
 
 jobs:
-  fetch-list:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Use node_modules cache
-        uses: actions/cache@v2
-        id: npm-cache
-        with:
-          path: |
-            node_modules
-          key: npm-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
+    fetch-list:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use node_modules cache
+              uses: actions/cache@v2
+              id: npm-cache
+              with:
+                  path: |
+                      node_modules
+                  key: npm-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
 
-      - name: NPM install
-        run: npm install
-        if: steps.npm-cache.outputs.cache-hit != 'true'
+            - name: NPM install
+              run: npm install
+              if: steps.npm-cache.outputs.cache-hit != 'true'
 
-      - name: Fetch Token Lists
-        run: |
-          npx ts-node ./src/index.ts
+            - name: Fetch Token Lists
+              run: |
+                  npx ts-node ./src/index.ts
 
-      - name: Get Package Version
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@master
+            - name: Get Package Version
+              id: package-version
+              uses: martinbeentjes/npm-get-version-action@master
 
-      - name: Create version folder
-        run: |
-          cp -r ./dist/latest ./dist/v${{ steps.package-version.outputs.current-version }}
+            - name: Create version folder
+              run: |
+                  cp -r ./dist/latest ./dist/v${{ steps.package-version.outputs.current-version }}
 
-      - name: Tag Package Version
-        run: git tag v${{ steps.package-version.outputs.current-version }}
+            - name: Tag Package Version
+              run: git tag v${{ steps.package-version.outputs.current-version }}
 
-      - name: Create Release Package
-        uses: montudor/action-zip@v1
-        with:
-          args:
-            zip -qq -r v${{ steps.package-version.outputs.current-version }}.zip dist/v${{
-            steps.package-version.outputs.current-version }}
+            - name: Create Release Package
+              uses: montudor/action-zip@v1
+              with:
+                  args: zip -qq -r v${{ steps.package-version.outputs.current-version }}.zip dist/v${{
+                      steps.package-version.outputs.current-version }}
 
-      - name: Upload Latest Release
-        uses: actions/upload-artifact@v2
-        with:
-          name: v${{ steps.package-version.outputs.current-version }}.zip
-          path: v${{ steps.package-version.outputs.current-version }}.zip
+            - name: Upload Latest Release
+              uses: actions/upload-artifact@v2
+              with:
+                  name: v${{ steps.package-version.outputs.current-version }}.zip
+                  path: v${{ steps.package-version.outputs.current-version }}.zip
 
-      - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: v${{ steps.package-version.outputs.current-version }}.zip
-          asset_name: v${{ steps.package-version.outputs.current-version }}.zip
-          tag: v${{ steps.package-version.outputs.current-version }}
-          overwrite: true
+            - name: Upload binaries to release
+              uses: svenstaro/upload-release-action@v2
+              with:
+                  repo_token: ${{ secrets.GITHUB_TOKEN }}
+                  file: v${{ steps.package-version.outputs.current-version }}.zip
+                  asset_name: v${{ steps.package-version.outputs.current-version }}.zip
+                  tag: v${{ steps.package-version.outputs.current-version }}
+                  overwrite: true
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          keep_files: true
-          cname: tokens.r2d2.to
+            - name: Deploy
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./dist
+                  keep_files: true
+                  cname: tokens.r2d2.to

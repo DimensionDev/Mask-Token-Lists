@@ -27,12 +27,14 @@ export interface Chain {
     name: string;
     // the numeric chain id
     chainId: number | 'solana';
+    // the file name in the assets/ folder
+    fileId?: string;
     // the blockchain id on Dimension/assets
-    assetId: string;
+    assetId?: string;
     // the blockchain id on CoinMarketCap
-    coinMarketCapId: string;
+    coinMarketCapId?: string;
     // the blockchain id on CoinGecko
-    coinGeckoId: string;
+    coinGeckoId?: string;
 }
 
 export interface Ticker {

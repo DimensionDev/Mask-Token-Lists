@@ -1,6 +1,6 @@
 {
     "name": "mask-token-lists",
-    "version": "0.0.75",
+    "version": "0.0.76",
     "repository": "https://github.com/DimensionDev/Mask-Token-Lists.git",
     "license": "MIT",
     "author": "guanbinrui <guanbinrui@mask.io>",
@@ -13,7 +13,8 @@
         "lodash": "^4.17.21",
         "node-fetch-cache": "^4.1.0",
         "semver": "^7.6.0",
-        "urlcat": "^2.0.4"
+        "urlcat": "^2.0.4",
+        "zod": "^3.23.8"
     },
     "devDependencies": {
         "@types/lodash": "^4.14.186",
