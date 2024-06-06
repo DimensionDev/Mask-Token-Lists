@@ -5,6 +5,8 @@ import { MASK_TOKEN_LIST_ROOT_URL } from '@/constants';
 import { fetchJSON } from '@/helpers/fetchJSON';
 import { Provider } from '@/providers/types/TokenList';
 import { Chain, FungibleToken, NonFungibleToken, TokenList as ChainTokenList } from '@/types';
+import { NotFoundError } from '@/constants/error';
+import { createTokenList } from '@/helpers/createTokenList';
 
 class TokenList implements Provider {
     async getFungibleTokenList(chain: Chain, signal?: AbortSignal) {
@@ -19,10 +21,17 @@ class TokenList implements Provider {
     }
 
     async getNonFungibleTokenList(chain: Chain, signal?: AbortSignal): Promise<ChainTokenList<NonFungibleToken>> {
-        const url = urlcat(MASK_TOKEN_LIST_ROOT_URL, '/latest/:chainId/non-fungible-tokens.json', {
-            chainId: chain.chainId,
-        });
-        return fetchJSON<ChainTokenList<NonFungibleToken>>(url, { signal });
+        try {
+            const url = urlcat(MASK_TOKEN_LIST_ROOT_URL, '/latest/:chainId/non-fungible-tokens.json', {
+                chainId: chain.chainId,
+            });
+            return await fetchJSON<ChainTokenList<NonFungibleToken>>(url, { signal });
+        } catch (error) {
+            if (error instanceof NotFoundError) {
+                return createTokenList([]);
+            }
+            throw error;
+        }
     }
 }
 

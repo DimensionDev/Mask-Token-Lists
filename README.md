@@ -29,6 +29,7 @@ The token lists for Mask Network.
 | Polygon         |         137 | [latest][link-polygon]         | [token-list][viewer-polygon]         |
 | X Layer Testnet |         195 | [latest][link-xlayertestnet]   | [token-list][viewer-xlayertestnet]   |
 | X Layer         |         196 | [latest][link-xlayer]          | [token-list][viewer-xlayer]          |
+| Sei             |        1329 | [latest][link-sei]             | [token-list][viewer-sei]             |
 | Mumbai          |       80001 | [latest][link-mumbai]          | [token-list][viewer-mumbai]          |
 | Stardust        |         588 | [latest][link-stardust]        | [token-list][viewer-stardust]        |
 | Astar           |         592 | [latest][link-astar]           | [token-list][viewer-astar]           |
@@ -68,6 +69,7 @@ The token lists for Mask Network.
 [link-polygon]: https://tokens.r2d2.to/latest/137/tokens.json
 [link-xlayertestnet]: https://tokens.r2d2.to/latest/195/tokens.json
 [link-xlayer]: https://tokens.r2d2.to/latest/196/tokens.json
+[link-sei]: https://tokens.r2d2.to/latest/1329/tokens.json
 [link-mumbai]: https://tokens.r2d2.to/latest/80001/tokens.json
 [link-stardust]: https://tokens.r2d2.to/latest/588/tokens.json
 [link-astar]: https://tokens.r2d2.to/latest/592/tokens.json
@@ -104,6 +106,7 @@ The token lists for Mask Network.
 [viewer-polygon]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/137/tokens.json
 [viewer-xlayertestnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/195/tokens.json
 [viewer-xlayer]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/196/tokens.json
+[viewer-sei]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1329/tokens.json
 [viewer-mumbai]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/80001/tokens.json
 [viewer-stardust]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/588/tokens.json
 [viewer-astar]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/592/tokens.json
