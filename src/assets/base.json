@@ -742,5 +742,237 @@
         "symbol": "weETH",
         "name": "Wrapped eETH",
         "logoURI": "https://www.okx.com/cdn/web3/currency/token/8453-0x04c0599ae5a44757c0af6f9ec3b93da8976c150a-96.png/type=default_350_0?v=1730921398153"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b",
+        "decimals": 18,
+        "symbol": "VIRTUAL",
+        "name": "Virtual Protocol",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/8453-0x0b3e328455c4059eeb9e3f84b5543f74e24e7e1b-97.png/type=default_350_0?v=1732307157464"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x24fcfc492c1393274b6bcd568ac9e225bec93584",
+        "decimals": 18,
+        "symbol": "MAVIA",
+        "name": "Heroes of Mavia",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/small/8453-0x24fcfc492c1393274b6bcd568ac9e225bec93584-97?v=1737828818911"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x777b2839832982b35213063d850848369390ee16",
+        "decimals": 18,
+        "symbol": "JARVIS",
+        "name": "JARVIS",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/small/8453-0x777b2839832982b35213063d850848369390ee16-97?v=1737826614528"
+    },
+    {
+        "chainId": 8453,
+        "address": "0xacf80a4e55f5f28e1e7d261a221ca495db5bcbb3",
+        "decimals": 18,
+        "symbol": "XAVI",
+        "name": "XAVI by Virtuals",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/small/8453-0xacf80a4e55f5f28e1e7d261a221ca495db5bcbb3-97?v=1737865151248"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x41e0fe1317bd6e8944b037cd59b22d428c1434c2",
+        "decimals": 18,
+        "symbol": "VIRTU ",
+        "name": "Virtu  by Virtuals",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/small/8453-0x41e0fe1317bd6e8944b037cd59b22d428c1434c2-96?v=1737832119374"
+    },
+    {
+        "chainId": 8453,
+        "address": "0xfc60aa1ffca50ce08b3cdec9626c0bb9e9b09bec",
+        "decimals": 18,
+        "symbol": "VIS",
+        "name": "Envision",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/small/8453-0xfc60aa1ffca50ce08b3cdec9626c0bb9e9b09bec-96?v=1737831559443"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x490a4b510d0ea9f835d2df29eb73b4fca5071937",
+        "decimals": 18,
+        "symbol": "VITA",
+        "name": "VitaDAO Token",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_V.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x50d7a818e5e339ebe13b17e130b5b608fac354dc",
+        "decimals": 18,
+        "symbol": "VISION",
+        "name": "VISION ai by Virtuals",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/small/8453-0x50d7a818e5e339ebe13b17e130b5b608fac354dc-97?v=1737854577439"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x6745bd10c2b5524842a58d1e3b83d90bdaf4fafc",
+        "decimals": 18,
+        "symbol": "VIDEO",
+        "name": "Videocoin by Drakula",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/small/8453-0x6745bd10c2b5524842a58d1e3b83d90bdaf4fafc-96?v=1737832088015"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x3203856eac03d343f9d5245ba2f39861838a7b36",
+        "decimals": 18,
+        "symbol": "AVI",
+        "name": "Aviator",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/small/8453-0x3203856eac03d343f9d5245ba2f39861838a7b36-97?v=1737844134018"
+    },
+    {
+        "chainId": 8453,
+        "address": "0xd9349d0420f3bdacf2b8c093041599f0876f4f53",
+        "decimals": 18,
+        "symbol": "JAVIER",
+        "name": "Javier Ramirez by Virtuals",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_J.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x50135affdf7a114b1d24fe063b669d5f7ae6f3dc",
+        "decimals": 18,
+        "symbol": "ELVIRA",
+        "name": "Elvira by Virtuals",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_E.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x39597a85843e82a905f968cae60d712850a315b6",
+        "decimals": 18,
+        "symbol": "VIBE",
+        "name": "cosmic vibes",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_V.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0xd461a534af11ef58e9f9add73129a1f45485a8dc",
+        "decimals": 18,
+        "symbol": "KEVIN",
+        "name": "Kevin",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/small/8453-0xd461a534af11ef58e9f9add73129a1f45485a8dc-97?v=1737841095655"
+    },
+    {
+        "chainId": 8453,
+        "address": "0xadbe4467bd82491adf1d479100da636acde51eb9",
+        "decimals": 18,
+        "symbol": "EVIL",
+        "name": "fun Evolved Virtual Intelligence Legion",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_E.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x44ee7818e499a0695977fe1f3e0202dd7b0aa615",
+        "decimals": 18,
+        "symbol": "VINE",
+        "name": "fun VINECOIN ",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_V.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0xd64f84ba71026585d2959ff7917d65575c6b182a",
+        "decimals": 18,
+        "symbol": "VINE",
+        "name": "fun VINECOIN ",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_V.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x3ff7bc59bb21b333ec5f5c0282ada56cd7733218",
+        "decimals": 18,
+        "symbol": "VIONA",
+        "name": "fun Virtuals Operating AI",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_V.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0xc85ee078ce86e9f0938a992446d9d072aa75e68c",
+        "decimals": 18,
+        "symbol": "VIX",
+        "name": "Macro-Economic Agent",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_V.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x9a74a3e9cdea9cbeb6d4c52c3ee53dcd15b4ec4c",
+        "decimals": 18,
+        "symbol": "VirtPrint",
+        "name": "Virtual Printer",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/small/8453-0x9a74a3e9cdea9cbeb6d4c52c3ee53dcd15b4ec4c-97?v=1737858219689"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x08e79d71172ea36bf85294725745b5f3fc704e29",
+        "decimals": 18,
+        "symbol": "INNOVIA",
+        "name": "Innovia AI",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_I.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x410d7abfb8fc13fdfb6b5cca018cdb8cecaae355",
+        "decimals": 18,
+        "symbol": "VICTOR",
+        "name": "VICTOR PUP by Virtuals",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_V.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x0840f1ba5ae83524ea9fff7c6e01928d86975750",
+        "decimals": 18,
+        "symbol": "Vine",
+        "name": "Based Vine Coin",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_V.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0xbc5f413a3f0a11090ae1082e28613da36ae24aa6",
+        "decimals": 18,
+        "symbol": "VINNY",
+        "name": "Vinny by Virtuals",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_V.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0xfb0785731fbd655ba9f271f3efe21debde9392a1",
+        "decimals": 18,
+        "symbol": "VISTAS",
+        "name": "Nomadic Vistas",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/small/8453-0xfb0785731fbd655ba9f271f3efe21debde9392a1-97?v=1737773577902"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x7ad900cdb8a2edf729ddbc26e521d81bc45e97fb",
+        "decimals": 18,
+        "symbol": "OCTAVI",
+        "name": "Octavia Goetia by Virtuals",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_O.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x08b385fcf0d841d974c6b69292c18bbbd959f63c",
+        "decimals": 9,
+        "symbol": "GALVIN",
+        "name": "Galvin",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_G.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x07609d76e2e098766ad4e2b70b84f05b215d380a",
+        "decimals": 18,
+        "symbol": "VISION",
+        "name": "ONCHAIN VISION",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_V.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0xacfd97106bbe5d931ac430be76a8e362832d48f4",
+        "decimals": 6,
+        "symbol": "VIRGO",
+        "name": "Virgo",
+        "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_V.png/type=default_350_0"
     }
 ]
