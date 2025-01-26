@@ -43,6 +43,7 @@ export const CHAINS: Chain[] = [
         id: 'base',
         name: 'base',
         chainId: 8453,
+        fileId: 'base.json',
     },
     {
         id: 'sokol',
