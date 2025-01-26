@@ -44,7 +44,7 @@ jobs:
                       steps.package-version.outputs.current-version }}
 
             - name: Upload Latest Release
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v4
               with:
                   name: v${{ steps.package-version.outputs.current-version }}.zip
                   path: v${{ steps.package-version.outputs.current-version }}.zip
