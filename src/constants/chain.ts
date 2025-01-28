@@ -198,7 +198,7 @@ export const CHAINS: Chain[] = [
     },
     {
         id: 'scroll',
-        name: 'Scroll',
+        name: 'scroll',
         chainId: 534352,
         fileId: 'scroll.json',
     },
