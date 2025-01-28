@@ -42,6 +42,7 @@ The token lists for Mask Network.
 | Arbitrum        |       42161 | [latest][link-arbitrum]        | [token-list][viewer-arbitrum]        |
 | Celo            |       42220 | [latest][link-celo]            | [token-list][viewer-celo]            |
 | Avalanche       |       43114 | [latest][link-avalanche]       | [token-list][viewer-avalanche]       |
+| Scroll          |      534352 | [latest][link-scroll]          | [token-list][viewer-scroll]          |
 | Aurora          |  1313161554 | [latest][link-aurora]          | [token-list][viewer-aurora]          |
 | Harmony         |  1666600000 | [latest][link-harmony]         | [token-list][viewer-harmony]         |
 | Harmony_Testnet |  1666700000 | [latest][link-harmony_testnet] | [token-list][viewer-harmony_testnet] |
@@ -83,6 +84,7 @@ The token lists for Mask Network.
 [link-arbitrum]: https://tokens.r2d2.to/latest/42161/tokens.json
 [link-celo]: https://tokens.r2d2.to/latest/42220/tokens.json
 [link-avalanche]: https://tokens.r2d2.to/latest/43114/tokens.json
+[link-scroll]: https://tokens.r2d2.to/latest/534352/tokens.json
 [link-aurora]: https://tokens.r2d2.to/latest/1313161554/tokens.json
 [link-harmony]: https://tokens.r2d2.to/latest/1666600000/tokens.json
 [link-harmony_testnet]: https://tokens.r2d2.to/latest/1666700000/tokens.json
@@ -120,6 +122,7 @@ The token lists for Mask Network.
 [viewer-arbitrum]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42161/tokens.json
 [viewer-celo]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/42220/tokens.json
 [viewer-avalanche]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/43114/tokens.json
+[viewer-scroll]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/534352/tokens.json
 [viewer-aurora]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1313161554/tokens.json
 [viewer-harmony]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666600000/tokens.json
 [viewer-harmony_testnet]: https://tokenlists.org/token-list?url=https://tokens.r2d2.to/latest/1666700000/tokens.json

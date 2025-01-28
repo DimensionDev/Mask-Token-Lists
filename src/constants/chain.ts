@@ -196,4 +196,10 @@ export const CHAINS: Chain[] = [
         name: 'solana',
         chainId: 'solana',
     },
+    {
+        id: 'scroll',
+        name: 'Scroll',
+        chainId: 534352,
+        fileId: 'scroll.json',
+    },
 ];
