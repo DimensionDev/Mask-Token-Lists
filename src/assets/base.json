@@ -974,5 +974,13 @@
         "symbol": "VIRGO",
         "name": "Virgo",
         "logoURI": "https://www.okx.com/cdn/web3/currency/token/default-logo/token_custom_logo_default_V.png/type=default_350_0"
+    },
+    {
+        "chainId": 8453,
+        "address": "0x55cd6469f597452b5a7536e2cd98fde4c1247ee4",
+        "decimals": 18,
+        "name": "Luna by Virtuals",
+        "symbol": "LUNA",
+        "logoURI": "https://static.debank.com/image/base_token/logo_url/0x55cd6469f597452b5a7536e2cd98fde4c1247ee4/0e6ed3da19bd8bb1ca57602ad05ec68a.png"
     }
 ]

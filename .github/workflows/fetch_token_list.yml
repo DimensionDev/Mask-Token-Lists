@@ -24,7 +24,7 @@ jobs:
 
             - name: Fetch Token Lists
               run: |
-                  npx ts-node ./src/index.ts
+                  npm run build
 
             - name: Get Package Version
               id: package-version
